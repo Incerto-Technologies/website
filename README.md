@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Increto Observability Project
+
+## Overview
+
+Welcome to the Increto Observability Project! This project is built on Next.js and utilizes Mongoose to provide a streamlined observability experience for your applications.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up and run the project locally.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure that you have the following installed on your machine:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Node.js](https://nodejs.org/)
+- [pnpm](https://pnpm.io/) (Fast, disk space efficient package manager)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Installation
 
-## Learn More
+1. **Clone the Repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/increto/observability-project.git
+   cd observability-project
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install Dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   pnpm install
+   ```
 
-## Deploy on Vercel
+### Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Customize the project settings by updating configuration files according to your requirements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Running the Application
+
+1. **Development Mode:**
+
+   Start the development server:
+
+   ```bash
+   pnpm dev
+   ```
+
+   Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
+
+2. **Production Mode:**
+
+   For a production-ready build:
+
+   ```bash
+   pnpm build
+   pnpm start
+   ```
+
+   Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Deployment
+
+Deploy the application on your preferred hosting platform. Don't forget to set necessary environment variables for security and optimal performance.
+
+## Exploring the Project
+
+Dive into the project to explore its observability features. Monitor, analyze, and optimize your applications effortlessly with Next.js and Mongoose.
+
+## Support and Feedback
+
+If you encounter any issues or have questions, please reach out to our community or email us at [support@increto.in](mailto:support@increto.in). Your feedback is essential!
