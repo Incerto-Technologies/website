@@ -1,8 +1,10 @@
-# Increto Observability Project
+# Increto Website
+
+<img width="400" alt="Profile Green" src="https://github.com/Incerto-Technologies/website/assets/90978643/8463733c-1c18-4d48-8986-786995ed4556">
 
 ## Overview
 
-Welcome to the Increto Observability Project! This project is built on Next.js and utilizes Mongoose to provide a streamlined observability experience for your applications.
+Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions
 
 ## Getting Started
 
