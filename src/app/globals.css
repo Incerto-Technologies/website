@@ -14,4 +14,21 @@ body {
 
 .head-title {
   background: linear-gradient(90deg, #0f937c 10.75%, #0f9 89.89%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-background {
+  background: linear-gradient(360deg, #000000 -1.68%, rgba(0, 0, 0, 0) 98.26%),
+    url("/backgrounds/homepage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+@layer utilities {
+  .w-container {
+    @apply mx-auto max-w-[1280px];
+  }
 }

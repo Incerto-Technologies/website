@@ -1,4 +1,6 @@
 "use client";
+import { ArrowOutward } from "@/components/icons/ArrowOutward";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -6,8 +8,8 @@ import { useState } from "react";
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <header className="h-20 bg-primary bg-opacity-30 font-manrope backdrop-blur-3xl">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-4 md:px-20">
+    <header className="fixed top-0 z-50 h-20 w-full bg-primary bg-opacity-30 font-manrope backdrop-blur-3xl">
+      <div className="w-container flex items-center justify-between px-5 py-4 md:px-20">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -118,5 +120,3 @@ export const Navbar = () => {
     </header>
   );
 };
-
-// Checking
