@@ -19,7 +19,7 @@ export const ShowCase = () => {
           alt="App Dashboard"
           width={680}
           height={980}
-          className="drop-shadow-3xl h-full w-4/6 rounded-[50px]"
+          className="h-full w-4/6 rounded-[50px] drop-shadow-3xl"
         />
       </div>
       <div className="mt-28 flex h-full w-full items-end justify-between">
@@ -28,7 +28,7 @@ export const ShowCase = () => {
           alt="App Dashboard"
           width={680}
           height={980}
-          className="drop-shadow-3xl h-full w-4/6  rounded-[50px]"
+          className="h-full w-4/6 rounded-[50px]  drop-shadow-3xl"
         />
         <div className="flex min-h-full w-3/6 items-end justify-end">
           <p className="h-full w-5/6 text-[27px] font-medium ">
