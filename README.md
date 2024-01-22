@@ -22,8 +22,8 @@ Ensure that you have the following installed on your machine:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/increto/observability-project.git
-   cd observability-project
+   git clone https://github.com/increto/website.git
+   cd website
    ```
 
 2. **Install Dependencies:**
