@@ -1,18 +1,16 @@
-import { Features } from "@/components/sections/Home/Features/Features";
-import { Hero } from "@/components/sections/Home/Hero/Hero";
-import { ShowCase } from "@/components/sections/Home/ShowCase/ShowCase";
-import { Navbar } from "@/components/sections/navbar/Navbar";
-import { Button } from "@/components/ui/buttons/Button";
+import { DefaultLayout } from "@/components/layouts/DefaultLayout";
+import { Features } from "@/components/templates/Homepage/Features";
+import { Hero } from "@/components/templates/Homepage/Hero";
+import { TechnoMap } from "@/components/templates/Homepage/TechnoMap";
+import { WhyUs } from "@/components/templates/Homepage/WhyUs";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main className="font-manrope">
-        <Hero />
-        <ShowCase />
-        <Features />
-      </main>
-    </>
+    <DefaultLayout>
+      <Hero />
+      <Features />
+      <WhyUs />
+      <TechnoMap />
+    </DefaultLayout>
   );
 }
