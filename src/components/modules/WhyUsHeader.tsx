@@ -1,7 +1,7 @@
 export const WhyUsHeader = () => {
   return (
     <div className="sticky top-[10%] h-32">
-      <h3 className="text-center font-gotham text-2xl font-medium leading-8 tracking-tighter md:text-4xl md:leading-10 md:tracking-tightest">
+      <h3 className="text-center font-gotham text-2xl font-medium leading-8 tracking-tighter md:mx-auto md:w-4/5 md:text-4xl md:leading-10 md:tracking-tightest">
         Elevating Your Business with Incerto&apos;s{" "}
         <span className="features-title text-clip-all">Unique</span> Expertise
       </h3>

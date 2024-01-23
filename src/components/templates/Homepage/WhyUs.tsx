@@ -11,16 +11,16 @@ export const WhyUs = () => {
     <section className="w-container relative mt-52">
       <WhyUsHeader />
 
-      <div className="mt-[50px] flex flex-col-reverse md:flex-row">
+      <div className="mt-[50px] flex px-5">
         {/* Side bar */}
-        <div className="mt-[50px]  w-1/6">
-          <div className="top-sticky sticky flex w-full flex-col items-center justify-center gap-14 py-20">
+        <div className="mt-[50px] w-1/6">
+          <div className="top-sticky sticky flex w-full flex-col items-center justify-center gap-14 py-10">
             {data.data.map((item, index) => {
               return (
                 <div
                   key={index}
                   data-view={index === currentViewSlide}
-                  className="h-[8px] w-[8px] rounded-full bg-[#414141] data-[view=true]:bg-accent-light md:h-[12px] md:w-[12px]"
+                  className="h-[12px] w-[12px] rounded-full bg-[#414141] data-[view=true]:bg-accent-light"
                 ></div>
               );
             })}
@@ -28,7 +28,7 @@ export const WhyUs = () => {
         </div>
 
         {/* Cards */}
-        <div className="mx-auto flex w-5/6 flex-col justify-center gap-96 md:mx-2">
+        <div className="flex w-5/6 flex-col justify-center gap-96">
           {data.data.map((item, index) => {
             return (
               <WhyUsCard
