@@ -1,4 +1,4 @@
-import { CustomerLogo } from "./CustomerLogo";
+import { CustomerLogo } from "../../modules/CustomerLogo";
 import Marquee from "react-fast-marquee";
 
 const CustomersLogoData = [
@@ -22,8 +22,8 @@ const CustomersLogoData = [
 
 export const Customers = () => {
   return (
-    <div className="mt-40">
-      <Marquee autoFill pauseOnHover>
+    <div className="mt-32 md:mt-36">
+      <Marquee autoFill>
         {CustomersLogoData.map((logo, index) => (
           <CustomerLogo
             src={logo.src}

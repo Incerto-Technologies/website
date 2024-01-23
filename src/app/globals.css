@@ -3,17 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 237, 237, 237, 1;
+  --foreground-rgb: #dedede;
   --background-rgb: 0, 0, 0;
 }
 
 body {
-  color: rgba(var(--foreground-rgb));
+  color: var(--foreground-rgb);
   background: rgba(var(--background-rgb));
+}
+
+.features-title {
+  background: linear-gradient(90deg, #0f937c 50.05%, #0f9 100.7%);
 }
 
 .head-title {
   background: linear-gradient(90deg, #0f937c 10.75%, #0f9 89.89%);
+}
+
+.text-clip-all {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25,6 +32,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+.top-sticky {
+  top: calc(25% + 200px);
+}
+
+@media (min-width: 768px) {
+  .top-sticky {
+    top: calc(20% + 128px);
+  }
 }
 
 @layer utilities {

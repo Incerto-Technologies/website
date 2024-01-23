@@ -5,6 +5,28 @@ import { gotham, manrope } from "./fonts";
 export const metadata: Metadata = {
   title: "Incerto",
   description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
+  icons: [
+    {
+      rel: "apple-touch-icon",
+      url: "/logos/apple-touch-icon.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/logos/favicon-32x32.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/logos/favicon-16x16.png",
+    },
+    {
+      rel: "icon",
+      url: "/logos/favicon.ico",
+    },
+  ],
 };
 
 export default function RootLayout({
