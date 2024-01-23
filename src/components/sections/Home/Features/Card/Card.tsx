@@ -8,15 +8,15 @@ export type FeatureCardProps = {
 
 export const Card = ({ icon, title, description }: FeatureCardProps) => {
   return (
-    <div>
-      <div className=""></div>
-      <div className="">
-        <Image
-          src={"/backgrounds/app-image.png"}
-          alt="app dashboard"
-          width={680}
-          height={980}
-        />
+    <div className="aspect-[281/174] w-56">
+      <div className="flex flex-col items-center gap-4">
+        {icon()}
+        <h4 className="font-semibold">{title}</h4>
+      </div>
+      <div className="mt-6">
+        <p className="text-center text-sm leading-5 tracking-wide text-[#959595]">
+          {description}
+        </p>
       </div>
     </div>
   );
