@@ -48,6 +48,23 @@ body {
   backdrop-filter: blur(27px);
 }
 
+/* Animation Desktop Map */
+
+.map-box-animation {
+  background-color: #0f9;
+  /* color: rgb(29 29 29 /1); */
+  animation: pulseEffect 2s ease-in-out 0s alternate infinite;
+}
+
+@keyframes pulseEffect {
+  0% {
+    filter: drop-shadow(0 0 75px #0f9);
+  }
+  100% {
+    filter: drop-shadow(0 0 50px #0f9);
+  }
+}
+
 @layer utilities {
   .w-container {
     @apply mx-auto max-w-[1280px];

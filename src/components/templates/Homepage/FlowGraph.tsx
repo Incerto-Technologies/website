@@ -3,7 +3,7 @@ import { FlowGraphMobile } from "@/components/modules/FlowGraphMobile";
 
 export const FlowGraph = () => {
   return (
-    <div className="mt-52 bg-accent">
+    <div className="mt-52 ">
       <div className="w-container pt-28">
         <h3 className=" mx-auto w-3/5 text-center font-gotham text-[34px] font-medium leading-10 tracking-[-0.68px]">
           Observability That’s Built for{" "}
