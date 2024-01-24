@@ -30,6 +30,7 @@ const FeaturesData: FeatureCardProps[] = [
     icon: DisabledVisible,
     title: "In-house observability tradeoffs",
     description: `With all engineers focused on building core business solutions, allocation of resources to build observability in-house leads to bandwidth issues`,
+
   },
 ];
 
@@ -47,6 +48,7 @@ export const Features = () => {
         Are you a business owner grappling with challenges in understanding and
         optimizing your system&apos;s performance and Facing issues like...
       </p> */}
+
 
       <div className="mx-auto mt-[52px] flex w-5/6 flex-wrap justify-center gap-[52px] md:mt-28 md:gap-20">
         {FeaturesData.map((feature, index) => (
