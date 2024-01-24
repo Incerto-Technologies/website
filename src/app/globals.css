@@ -44,6 +44,10 @@ body {
   }
 }
 
+.blur-card {
+  backdrop-filter: blur(27px);
+}
+
 @layer utilities {
   .w-container {
     @apply mx-auto max-w-[1280px];
