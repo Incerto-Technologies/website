@@ -51,14 +51,14 @@ body {
 /* Animation Desktop Map */
 
 .map-box-animation {
-  background-color: #0f9;
+  /* background-color: #07d58e; */
   /* color: rgb(29 29 29 /1); */
   animation: pulseEffect 2s ease-in-out 0s alternate infinite;
 }
 
 @keyframes pulseEffect {
   0% {
-    filter: drop-shadow(0 0 75px #0f9);
+    filter: drop-shadow(0 0 30px #0f9);
   }
   100% {
     filter: drop-shadow(0 0 50px #0f9);
@@ -67,6 +67,7 @@ body {
 
 @layer utilities {
   .w-container {
-    @apply mx-auto max-w-[1280px];
+    /* @apply mx-auto max-w-[1280px]; */
+    @apply mx-auto max-w-[1440px];
   }
 }
