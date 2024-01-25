@@ -19,7 +19,7 @@ export const Navbar = () => {
         </Link>
 
         {/* Mobile Nav Bar */}
-        <nav className="flex h-full w-full items-center justify-end md:hidden">
+        <nav className="flex h-full w-full items-center justify-end lg:hidden">
           {/* Hamburger */}
           <button
             className="relative"
@@ -90,7 +90,7 @@ export const Navbar = () => {
         </nav>
 
         {/* Desktop Nav Bar */}
-        <nav className="hidden md:block">
+        <nav className="hidden lg:block">
           <ul className="flex items-center gap-[60px]">
             <li>
               <Link href="/about">Home</Link>

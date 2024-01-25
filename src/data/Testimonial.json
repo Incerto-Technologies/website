@@ -2,26 +2,26 @@
   "data": [
     {
       "id": 0,
-      "name": "Pranav Khambayatkar",
+      "name": "Pranav Khambayatka1",
       "position": "Senior VP Engineering at Fyers",
-      "profile": "/logos/logo100x100.png",
-      "companyLogo": "Fyers",
+      "profile": "/logos/apple-touch-icon.png",
+      "companyLogo": "/logos/customers/fyers.png",
       "message": "Incerto has been a great help in transforming Fyers observability landscape. Their end-to-end implementation with open source technologies provided meaningful insights into our infrastructure. Real-time observability and proactive alerting mitigated issues swiftly, reducing MTTR (Mean time to resolve) significantly. Crucially, Incerto ensured seamless SIEM compliance and delivered a highly customized solution tailored to our unique needs."
     },
     {
       "id": 1,
-      "name": "Pranav Khambayatkar",
+      "name": "Pranav Khambayatkar2",
       "position": "Senior VP Engineering at Fyers",
-      "profile": "/logos/logo100x100.png",
-      "companyLogo": "Fyers",
+      "profile": "/logos/apple-touch-icon.png",
+      "companyLogo": "/logos/customers/fyers.png",
       "message": "Incerto has been a great help in transforming Fyers observability landscape. Their end-to-end implementation with open source technologies provided meaningful insights into our infrastructure. Real-time observability and proactive alerting mitigated issues swiftly, reducing MTTR (Mean time to resolve) significantly. Crucially, Incerto ensured seamless SIEM compliance and delivered a highly customized solution tailored to our unique needs."
     },
     {
       "id": 2,
-      "name": "Pranav Khambayatkar",
+      "name": "Pranav Khambayatkar3",
       "position": "Senior VP Engineering at Fyers",
-      "profile": "/logos/logo100x100.png",
-      "companyLogo": "Fyers",
+      "profile": "/logos/apple-touch-icon.png",
+      "companyLogo": "/logos/customers/fyers.png",
       "message": "Incerto has been a great help in transforming Fyers observability landscape. Their end-to-end implementation with open source technologies provided meaningful insights into our infrastructure. Real-time observability and proactive alerting mitigated issues swiftly, reducing MTTR (Mean time to resolve) significantly. Crucially, Incerto ensured seamless SIEM compliance and delivered a highly customized solution tailored to our unique needs."
     }
   ]

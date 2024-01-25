@@ -1,0 +1,237 @@
+"use client";
+import { Quotes } from "../elements/icons/Quotes";
+import testimonial from "@/data/Testimonial.json";
+
+import {
+  Carousel,
+  CarouselItem,
+  useCarouselItem,
+  CarouselItems,
+  useCarousel,
+} from "chakra-framer-carousel";
+import { classNameMerge } from "@/utils/classNameMerge";
+import Image from "next/image";
+import { Button } from "../elements/Button";
+import { RightArrow } from "../elements/icons/RightArrow";
+import { LeftArrow } from "../elements/icons/LeftArrow";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+
+type ICard = {
+  name: string;
+  message: string;
+  companyLogo: string;
+  position: string;
+  id: number;
+  profile: string;
+  setCurrentCardId: Dispatch<SetStateAction<number>>;
+};
+
+export const TestimonialCarousel = () => {
+  const [currentCardId, setCurrentCardId] = useState<number>(1);
+
+  return (
+    <Carousel>
+      <CarouselItems
+        style={{
+          maxWidth: "900px",
+          justifyContent: "start",
+        }}
+      >
+        {testimonial.data.map((card, index) => {
+          return (
+            <CarouselItem index={index} key={`${card.name}--${index}`}>
+              <Card {...card} setCurrentCardId={setCurrentCardId} />
+            </CarouselItem>
+          );
+        })}
+      </CarouselItems>
+      <Toolbar currentCardId={currentCardId} />
+    </Carousel>
+  );
+};
+
+function Toolbar({ currentCardId }: { currentCardId: number }) {
+  const { onNext, onPrevious, numberOfSlides, findPosition } = useCarousel();
+
+  useEffect(() => {
+    console.log(currentCardId);
+  }, [currentCardId]);
+  return (
+    <div className="mt-14 flex items-center justify-center gap-10 md:mt-20 md:gap-16">
+      <Button
+        className="bg-black hover:outline-none focus:outline-none"
+        onClick={onPrevious}
+      >
+        <LeftArrow />
+      </Button>
+      <div className="flex gap-4">
+        {[...Array(numberOfSlides)].map((_, index) => (
+          <div
+            key={index}
+            className={classNameMerge(
+              "h-[10px] w-[10px] rounded-full drop-shadow-3xl",
+              findPosition(index) != "center"
+                ? "bg-[#414141]"
+                : "bg-accent-light",
+            )}
+          ></div>
+        ))}
+      </div>
+      <Button
+        onClick={onNext}
+        className="bg-black hover:outline-none focus:outline-none"
+      >
+        <RightArrow />
+      </Button>
+    </div>
+  );
+}
+
+function Card({
+  name,
+  companyLogo,
+  position: staffPosition,
+  profile,
+  message,
+  id,
+  setCurrentCardId,
+}: ICard) {
+  const { onClickHandler, position } = useCarouselItem();
+
+  const isCenter = position === "center";
+  // if (position === "center") setCurrentCardId(id);
+
+  // useEffect(() => {
+  //   console.log(position, id, "position");
+  // }, [id, position, setCurrentCardId]);
+
+  const classes = {
+    containerStyle: {
+      base: `relative bg-[#121815]`,
+      center:
+        "max-w-[620px] w-full text-xs leading-5 md:text-md p-8 md:px-16 md:py-10 opacity-100 transition duration-300 ease-in-out md:aspect-[7] rounded-[20px] backdrop-blur-xl",
+      notCenter:
+        "max-w-[400px] py-6 px-10 opacity-70 hover:opacity-100 transition duration-300 ease-in-out md:aspect-[7] rounded-xl backdrop-blur-md",
+    },
+    messageStyle: {
+      center: "leading-7",
+      notCenter: "leading-4 text-sm",
+    },
+    avatarContainerStyle: {
+      base: "flex items-center justify-between w-full",
+      center: "mt-10",
+      notCenter: "mt-5",
+      heading: {
+        base: "  font-bold",
+        center: "text-lg",
+        notCenter: "text-xs",
+      },
+      para: {
+        base: "leading-[6px] text-[#929292]",
+        center: "text-sm",
+        notCenter: "text-[9px]",
+      },
+    },
+  };
+
+  return (
+    <div
+      onClick={onClickHandler}
+      className={classNameMerge(
+        classes.containerStyle.base,
+        isCenter
+          ? classes.containerStyle.center
+          : classes.containerStyle.notCenter,
+      )}
+      data-position={position}
+      data-id={id}
+      // className=" data-[position=left]:translate-z-[0px] data-[position=right]:translate-z-[0px]
+
+      // md:data-[position=left]:opacity-1 md:data-[position=right]:opacity-1
+
+      // data-[position=left]:translate-x-[100%] data-[position=right]:translate-x-[-100%]
+
+      // data-[position=left]:scale-[1] data-[position=right]:scale-[1]
+      // data-[position=left]:opacity-0 data-[position=right]:opacity-0
+
+      // md:data-[position=left]:translate-x-[40%] md:data-[position=right]:translate-x-[-40%]"
+
+      style={{
+        transform:
+          position == "left"
+            ? "translateX(40%) scale(1) translateZ(0px)"
+            : position == "right"
+              ? "translateX(-40%) scale(1) translateZ(0px)"
+              : "",
+      }}
+    >
+      {isCenter && (
+        <div className="absolute left-[-50%] top-[-50%] flex h-full w-full items-center justify-center  ">
+          <Quotes />
+        </div>
+      )}
+
+      <div>
+        <p
+          className={
+            isCenter
+              ? classes.messageStyle.center
+              : classes.messageStyle.notCenter
+          }
+        >
+          {message}
+        </p>
+      </div>
+      <div
+        className={classNameMerge(
+          classes.avatarContainerStyle.base,
+          isCenter
+            ? classes.avatarContainerStyle.center
+            : classes.avatarContainerStyle.notCenter,
+        )}
+      >
+        <div className="flex w-full items-center gap-6">
+          <Image
+            src={profile}
+            width={isCenter ? 50 : 25}
+            height={isCenter ? 50 : 25}
+            className="rounded-full"
+            alt={name}
+          />
+          <div>
+            <h4
+              className={classNameMerge(
+                classes.avatarContainerStyle.heading.base,
+                isCenter
+                  ? classes.avatarContainerStyle.heading.center
+                  : classes.avatarContainerStyle.heading.notCenter,
+              )}
+            >
+              {name}
+            </h4>
+            <p
+              className={classNameMerge(
+                classes.avatarContainerStyle.para.base,
+                isCenter
+                  ? classes.avatarContainerStyle.para.center
+                  : classes.avatarContainerStyle.para.notCenter,
+              )}
+            >
+              {staffPosition}
+            </p>
+          </div>
+        </div>
+        <div className="hidden w-2/6 md:block">
+          <Button className="rounded-lg">
+            <Image
+              src={companyLogo}
+              width={isCenter ? 100 : 50}
+              height={isCenter ? 50 : 25}
+              alt={name}
+            />
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
