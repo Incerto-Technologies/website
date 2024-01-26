@@ -7,6 +7,10 @@
   --background-rgb: 0, 0, 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground-rgb);
   background: rgba(var(--background-rgb));
@@ -70,6 +74,11 @@ body {
     /* @apply mx-auto max-w-[1280px]; */
     @apply mx-auto max-w-[1440px];
   }
+}
+
+.footer-bg-shade {
+  border-radius: 30px 30px 0px 0px;
+  background: linear-gradient(0deg, #080808 0%, rgba(8, 8, 8, 0) 80%);
 }
 
 /* ================================= */

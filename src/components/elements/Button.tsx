@@ -1,6 +1,5 @@
 "use client";
 import { classNameMerge } from "@/utils/classNameMerge";
-
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";

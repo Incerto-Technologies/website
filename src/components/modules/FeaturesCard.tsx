@@ -6,10 +6,10 @@ export type FeatureCardProps = {
 
 export const Card = ({ icon, title, description }: FeatureCardProps) => {
   return (
-    <div className="w-full md:aspect-[281/174] md:w-56">
+    <div className="w-full md:aspect-[281/174] md:w-60">
       <div className="flex flex-col items-center gap-4">
         {icon()}
-        <h4 className="text-center text-lg font-semibold tracking-[-0.18px]">
+        <h4 className="text-center text-lg font-semibold tracking-[-0.18px] md:italic">
           {title}
         </h4>
       </div>
