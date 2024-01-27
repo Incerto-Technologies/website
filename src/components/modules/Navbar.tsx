@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ArrowOutwardGreen } from "../elements/icons/ArrowOutwardGreen";
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -67,23 +68,18 @@ export const Navbar = () => {
             }
           >
             <li>
-              <Link href="/about">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/">About</Link>
             </li>
             <li>
               <Link
-                href="/about"
+                href="/"
                 className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#888]  px-[18px] py-2.5"
               >
                 <p className="font-medium text-accent-light">Get in touch</p>
-                <Image
-                  src={"/icons/arrow_outward.svg"}
-                  alt="Go to link arrow"
-                  width={10}
-                  height={10}
-                />
+                <ArrowOutwardGreen />
               </Link>
             </li>
           </ul>
@@ -93,14 +89,14 @@ export const Navbar = () => {
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-[60px]">
             <li>
-              <Link href="/about">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/">About</Link>
             </li>
             <li>
               <Link
-                href="/about"
+                href="#contact"
                 className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#888]  px-[18px] py-2.5"
               >
                 <p className="font-medium text-accent-light">Get in touch</p>

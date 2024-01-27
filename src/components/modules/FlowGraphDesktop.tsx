@@ -346,7 +346,7 @@ export const FlowGraphDesktop = () => {
           id="dpath13Animate"
           fill="freeze"
           attributeName="stroke-dashoffset"
-          begin="dpath11Animate.end+6"
+          begin="dpath4Animate.end+6"
           dur="3s"
           from="200"
           to="-1710"
@@ -754,6 +754,7 @@ export const FlowGraphDesktop = () => {
       <path
         fill="#0C4A3F"
         d="M517.275 205.392h-74.55a7.607 7.607 0 0 0-7.607 7.607v74.55a7.607 7.607 0 0 0 7.607 7.607h74.55a7.607 7.607 0 0 0 7.607-7.607v-74.55a7.607 7.607 0 0 0-7.607-7.607Z"
+        className="map-box-animation"
       />
       <path fill="url(#pattern0)" d="M516 244.5h-72v11h72v-11Z" />
       <path

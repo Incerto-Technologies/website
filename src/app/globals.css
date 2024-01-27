@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
 }
 
 body {
@@ -66,8 +67,6 @@ body {
 /* Animation Desktop Map */
 
 .map-box-animation {
-  /* background-color: #07d58e; */
-  /* color: rgb(29 29 29 /1); */
   animation: pulseEffect 2s ease-in-out 0s alternate infinite;
 }
 
@@ -82,7 +81,6 @@ body {
 
 @layer utilities {
   .w-container {
-    /* @apply mx-auto max-w-[1280px]; */
     @apply mx-auto max-w-[1440px];
   }
 }

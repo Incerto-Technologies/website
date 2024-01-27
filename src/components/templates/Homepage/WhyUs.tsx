@@ -15,7 +15,7 @@ export const WhyUs = () => {
       <div className="relative mx-auto hidden w-5/6 gap-28 px-5 lg:flex">
         {/* Side bar */}
         <div className="w-[16px]">
-          <div className="top-sticky sticky flex w-full flex-col items-center justify-center gap-14 py-10">
+          <div className="top-sticky sticky flex w-full flex-col items-center justify-center gap-14 py-5">
             {data.data.map((item, index) => {
               return (
                 <div

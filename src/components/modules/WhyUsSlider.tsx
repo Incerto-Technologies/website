@@ -100,14 +100,14 @@ export const WhyUsSlider = () => {
             exit="exit"
             transition={sliderTransition}
           >
-            <div className="mx-auto h-[300px] w-[300px] md:h-3/6 md:w-5/6">
+            <div className="mx-auto h-[300px] w-[300px]  md:h-[600px] md:w-5/6">
               <Image
                 src={Cards.data[activeImageIndex].image}
                 alt={Cards.data[activeImageIndex].title}
-                width={300}
-                height={250}
+                width={1200}
+                height={1200}
                 loading="lazy"
-                className="h-full w-full object-contain md:object-cover"
+                className="h-full w-full object-contain"
               />
             </div>
           </motion.div>

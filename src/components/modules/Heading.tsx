@@ -1,5 +1,6 @@
 import { Button } from "@/components/elements/Button";
 import { ArrowOutward } from "@/components/elements/icons/ArrowOutward";
+import Link from "next/link";
 
 export const Heading = () => {
   return (
@@ -17,12 +18,15 @@ export const Heading = () => {
         Build observability that adapts to your infra, not the other way around
       </p>
       {/* TODO: Get function details */}
-      <Button className="font-[800]">
+      <Link
+        href={"#contact"}
+        className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[800] text-secondary"
+      >
         <div className="flex items-center justify-center gap-2.5">
           <p>Get in touch</p>
           <ArrowOutward />
         </div>
-      </Button>
+      </Link>
     </section>
   );
 };
