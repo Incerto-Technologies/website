@@ -106,7 +106,7 @@ export const ContactCard = () => {
           onClick={() => {
             submitForm();
           }}
-          role="submit"
+          role="button"
         >
           <div className="flex gap-3">
             <p className="font-bold">Send Enquiry</p>

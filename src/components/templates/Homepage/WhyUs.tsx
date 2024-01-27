@@ -3,17 +3,18 @@ import { useState } from "react";
 import { WhyUsCard } from "../../modules/WhyUsCard";
 import data from "@/data/WhyUs.json";
 import { WhyUsHeader } from "@/components/modules/WhyUsHeader";
+import { WhyUsSlider } from "@/components/modules/WhyUsSlider";
 
 export const WhyUs = () => {
   const [currentViewSlide, setCurrentViewSlide] = useState(0);
 
   return (
-    <section className="w-container relative mt-52">
+    <section className="w-container  mt-[200px] md:px-4 lg:px-8">
       <WhyUsHeader />
 
-      <div className="mt-[50px] flex px-5">
+      <div className="relative mx-auto hidden w-5/6 gap-28 px-5 lg:flex">
         {/* Side bar */}
-        <div className="mt-[50px] w-1/6">
+        <div className="w-[16px]">
           <div className="top-sticky sticky flex w-full flex-col items-center justify-center gap-14 py-10">
             {data.data.map((item, index) => {
               return (
@@ -28,7 +29,7 @@ export const WhyUs = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex w-5/6 flex-col justify-center gap-96">
+        <div className="flex w-full flex-col items-center justify-center gap-96">
           {data.data.map((item, index) => {
             return (
               <WhyUsCard
@@ -41,6 +42,9 @@ export const WhyUs = () => {
           })}
         </div>
       </div>
+
+      {/* Mobile and Table */}
+      <WhyUsSlider />
     </section>
   );
 };

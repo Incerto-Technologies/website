@@ -37,23 +37,32 @@ const FeaturesData: FeatureCardProps[] = [
 
 export const Features = () => {
   return (
-    <div className="w-container mt-36 px-3">
-      <h2 className="text-center font-gotham text-2xl font-medium leading-[33px] tracking-[-0.48px] md:text-4xl md:tracking-[-0.68px]">
-        Let’s Understand some of the
+    <div className="w-container mt-40 px-3">
+      <h2 className="text-center font-gotham text-2xl font-medium leading-[33px] tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
+        Limitations of legacy
         <span className="features-title text-clip-all">
           {" "}
-          Silent Strains on Your Business
+          observability tools
         </span>
       </h2>
 
-      <p className="mx-auto mt-8 w-3/4 text-center text-[24px] text-sm font-medium leading-6 tracking-wide text-[#959595] md:mt-5 md:w-4/6 md:leading-7 md:tracking-wide md:text-secondary">
+      <p className="mx-auto mt-8 w-3/4 text-center text-[24px] text-sm font-medium leading-6 tracking-wide text-[#959595] md:mt-[22px] md:w-4/6 md:leading-7 md:tracking-wide md:text-secondary">
         Are you a business owner grappling with challenges in understanding and
         optimizing your system&apos;s performance and Facing issues like...
       </p>
 
-      <div className="mx-auto mt-[52px] flex w-5/6 flex-wrap justify-center gap-[52px] md:mt-28 md:gap-16 lg:max-w-[1000px]">
+      <div className="mx-auto mt-[52px] flex w-full flex-wrap justify-center gap-[52px] px-9 md:mt-[101px] md:gap-[61px] lg:gap-x-[61px]">
         {FeaturesData.map((feature, index) => (
-          <Card key={`${feature.title}--${index}`} {...feature} />
+          <div
+            className={
+              index < 3
+                ? "h-full w-full md:w-1/2 lg:aspect-video lg:max-w-[360px]"
+                : "h-full w-full md:w-1/2 lg:aspect-video lg:max-w-[360px]"
+            }
+            key={`${feature.title}--${index}`}
+          >
+            <Card {...feature} />
+          </div>
         ))}
       </div>
     </div>

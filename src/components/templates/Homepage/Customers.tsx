@@ -1,5 +1,10 @@
+// "use client";
+import dynamic from "next/dynamic";
 import { CustomerLogo } from "../../modules/CustomerLogo";
 import Marquee from "react-fast-marquee";
+// const Marquee = dynamic(() =>
+//   import("react-fast-marquee").then((mod) => mod.default),
+// );
 
 const CustomersLogoData = [
   {

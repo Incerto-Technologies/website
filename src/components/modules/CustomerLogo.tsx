@@ -13,6 +13,7 @@ export const CustomerLogo = ({ src, alt }: Props) => {
         alt={alt}
         width={"100"}
         height={"48"}
+        loading="lazy"
         className="h-full object-contain object-center"
       />
     </div>
