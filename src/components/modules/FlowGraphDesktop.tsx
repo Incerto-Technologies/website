@@ -414,15 +414,29 @@ export const FlowGraphDesktop = () => {
         ></animate>
       </use>
 
-      <use stroke="#0F9" strokeDasharray="200 1710" href="#dpath16">
+      <use
+        stroke="#0F9"
+        strokeDasharray="200 1710"
+        strokeOpacity="0"
+        href="#dpath16"
+      >
         <animate
           id="dpath16Animate"
           fill="freeze"
           attributeName="stroke-dashoffset"
-          begin="0.2s;dpath18Animate.end-1"
+          begin="dpath15Animate.end-1"
           dur="3s"
           from="200"
           to="-1710"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="stroke-opacity"
+          begin="dpath16Animate.begin-0.01"
+          dur="0.01s"
+          from="0"
+          repeatCount="1"
+          to="1"
         ></animate>
       </use>
 
@@ -436,7 +450,7 @@ export const FlowGraphDesktop = () => {
           id="dpath17Animate"
           fill="freeze"
           attributeName="stroke-dashoffset"
-          begin="dpath16Animate.end-1"
+          begin="dpath13Animate.end-1"
           dur="3s"
           from="200"
           to="-1710"
@@ -462,7 +476,7 @@ export const FlowGraphDesktop = () => {
           id="dpath18Animate"
           fill="freeze"
           attributeName="stroke-dashoffset"
-          begin="dpath17Animate.end-1"
+          begin="dpath19Animate.end-1"
           dur="3s"
           from="200"
           to="-1710"
@@ -471,6 +485,162 @@ export const FlowGraphDesktop = () => {
           fill="freeze"
           attributeName="stroke-opacity"
           begin="dpath18Animate.begin-0.01"
+          dur="0.01s"
+          from="0"
+          repeatCount="1"
+          to="1"
+        ></animate>
+      </use>
+
+      <use
+        stroke="#0F9"
+        strokeDasharray="200 1010"
+        strokeOpacity="0"
+        href="#dpath19"
+      >
+        <animate
+          id="dpath19Animate"
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="dpath17Animate.end-1"
+          dur="3s"
+          from="200"
+          to="-1710"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="stroke-opacity"
+          begin="dpath19Animate.begin-0.01"
+          dur="0.01s"
+          from="0"
+          repeatCount="1"
+          to="1"
+        ></animate>
+      </use>
+
+      <use
+        stroke="#0F9"
+        strokeDasharray="200 1010"
+        strokeOpacity="0"
+        href="#dpath20"
+      >
+        <animate
+          id="dpath20Animate"
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="dpath21Animate.end-1"
+          dur="3s"
+          from="200"
+          to="-1710"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="stroke-opacity"
+          begin="dpath20Animate.begin-0.01"
+          dur="0.01s"
+          from="0"
+          repeatCount="1"
+          to="1"
+        ></animate>
+      </use>
+
+      <use
+        stroke="#0F9"
+        strokeDasharray="200 1010"
+        strokeOpacity="0"
+        href="#dpath21"
+      >
+        <animate
+          id="dpath21Animate"
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="dpath22Animate.end-1"
+          dur="3s"
+          from="200"
+          to="-1710"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="stroke-opacity"
+          begin="dpath21Animate.begin-0.01"
+          dur="0.01s"
+          from="0"
+          repeatCount="1"
+          to="1"
+        ></animate>
+      </use>
+
+      <use
+        stroke="#0F9"
+        strokeDasharray="200 1010"
+        strokeOpacity="0"
+        href="#dpath22"
+      >
+        <animate
+          id="dpath22Animate"
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="dpath24Animate.end-1"
+          dur="3s"
+          from="200"
+          to="-1710"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="stroke-opacity"
+          begin="dpath22Animate.begin-0.01"
+          dur="0.01s"
+          from="0"
+          repeatCount="1"
+          to="1"
+        ></animate>
+      </use>
+
+      <use
+        stroke="#0F9"
+        strokeDasharray="200 1010"
+        strokeOpacity="0"
+        href="#dpath23"
+      >
+        <animate
+          id="dpath23Animate"
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="dpath17Animate.end-1"
+          dur="3s"
+          from="200"
+          to="-1710"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="stroke-opacity"
+          begin="dpath23Animate.begin-0.01"
+          dur="0.01s"
+          from="0"
+          repeatCount="1"
+          to="1"
+        ></animate>
+      </use>
+
+      <use
+        stroke="#0F9"
+        strokeDasharray="200 1010"
+        strokeOpacity="0"
+        href="#dpath24"
+      >
+        <animate
+          id="dpath24Animate"
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          begin="dpath18Animate.end-1"
+          dur="3s"
+          from="200"
+          to="-1710"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="stroke-opacity"
+          begin="dpath24Animate.begin-0.01"
           dur="0.01s"
           from="0"
           repeatCount="1"

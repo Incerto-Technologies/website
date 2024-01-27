@@ -43,9 +43,9 @@ export const Testimonial = () => {
   };
 
   return (
-    <div className="w-container relative">
+    <div className="w-container relative mt-[100px]">
       <div className="">
-        <h3 className="mx-auto w-5/6 text-center font-gotham text-2xl font-medium leading-8 tracking-tighter md:text-4xl md:leading-[3rem] md:tracking-tight">
+        <h3 className="mx-auto w-5/6 text-center font-gotham text-2xl font-medium leading-8 tracking-tighter md:text-[34px] md:leading-[3rem] md:tracking-[-0.68]">
           Ready for the real world –{" "}
           <span className="features-title text-clip-all">
             Hear from our customers

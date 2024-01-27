@@ -17,7 +17,7 @@ export const Footer = ({ isBackground = false }: FooterProps) => {
       )}
     >
       <div
-        className="w-full bg-cover bg-no-repeat"
+        className="w-full bg-bottom bg-no-repeat object-contain md:bg-cover"
         style={{
           backgroundImage: `url("/backgrounds/footer-vector.png")`,
         }}
@@ -36,6 +36,12 @@ export const Footer = ({ isBackground = false }: FooterProps) => {
               <h4 className="text-lg font-bold text-accent-light md:text-2xl">
                 Incerto Technologies Pvt.Ltd
               </h4>
+              <Link
+                href={"mailto:contact@incerto.com"}
+                className="hidden text-sm font-medium leading-6 tracking-wide text-[#959595] md:block"
+              >
+                contact@incerto.com
+              </Link>
               <p className="font-medium leading-6 tracking-wide text-[#959595] md:hidden">
                 Incerto Technologies is a ....
               </p>
@@ -67,9 +73,12 @@ export const Footer = ({ isBackground = false }: FooterProps) => {
             >
               <LinkedIn />
             </Link>
-            <p className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]">
+            <Link
+              href={"mailto:contact@incerto.com"}
+              className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]"
+            >
               contact@incerto.com
-            </p>
+            </Link>
           </div>
 
           <div className="mt-5 md:hidden">
