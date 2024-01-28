@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
     await connectDb();
 
-    const Contact = await ContactModel.create({ message });
+    const Contact = await ContactModel.create({ email, message });
 
     if (!Contact) {
       return Response.json(
