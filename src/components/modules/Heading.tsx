@@ -14,7 +14,7 @@ export const Heading = () => {
         </h1>
       </div>
 
-      <p className=" text-center font-medium leading-7 tracking-wide md:px-16 md:text-sm md:leading-[26px]">
+      <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
         Build observability that adapts to your infra, not the other way around
       </p>
       {/* TODO: Get function details */}

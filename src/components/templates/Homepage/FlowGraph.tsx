@@ -9,7 +9,7 @@ export const FlowGraph = () => {
           Observability That’s Built for{" "}
           <span className="text-accent-light">Developers Like YOU</span>
         </h3>
-        <p className="mx-auto my-6 text-center font-medium  xl:w-4/6">
+        <p className="mx-auto my-6 text-center font-semibold xl:w-4/6">
           Incerto’s unique approach leverages the trifecta of OpenTelemetry for
           unified telemetry collection, Clichouse to speed up queries from any
           data source, and Grafana to visualise Metrics, Logs, and Traces in a

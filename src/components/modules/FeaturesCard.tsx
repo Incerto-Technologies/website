@@ -14,7 +14,7 @@ export const Card = ({ icon, title, description }: FeatureCardProps) => {
         </h4>
       </div>
       <div className="mt-[22px]">
-        <p className="text-center text-sm leading-5 tracking-wide text-[#959595]">
+        <p className="text-center text-sm font-medium leading-[22px] tracking-wide text-[#959595]">
           {description}
         </p>
       </div>

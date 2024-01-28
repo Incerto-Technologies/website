@@ -10,19 +10,35 @@
     },
     {
       "id": 1,
-      "name": "Pranav Khambayatkar",
-      "position": "Senior VP Engineering at Fyers",
+      "name": "Kunal Singh",
+      "position": "Co-Founder Discite Analytics & AI",
       "profile": "/logos/apple-touch-icon.png",
       "companyLogo": "/logos/customers/fyers.png",
-      "message": "Incerto has been a great help in transforming Fyers observability landscape. Their end-to-end implementation with open source technologies provided meaningful insights into our infrastructure. Real-time observability and proactive alerting mitigated issues swiftly, reducing MTTR (Mean time to resolve) significantly. Crucially, Incerto ensured seamless SIEM compliance and delivered a highly customized solution tailored to our unique needs."
+      "message": "I would highly recommend them. They bring very high ownership to the projects they work on with no followups required, and they are really good problem solvers so its easy to trust them with some critical issues you are facing."
     },
     {
       "id": 2,
-      "name": "Pranav Khambayatkar",
-      "position": "Senior VP Engineering at Fyers",
+      "name": "Sunil Naik",
+      "position": "Director Dhruv Technology Solutions",
       "profile": "/logos/apple-touch-icon.png",
       "companyLogo": "/logos/customers/fyers.png",
-      "message": "Incerto has been a great help in transforming Fyers observability landscape. Their end-to-end implementation with open source technologies provided meaningful insights into our infrastructure. Real-time observability and proactive alerting mitigated issues swiftly, reducing MTTR (Mean time to resolve) significantly. Crucially, Incerto ensured seamless SIEM compliance and delivered a highly customized solution tailored to our unique needs."
+      "message": "This team has some rare skills with incredible flexibility and subject matter expertise. They have worked diligently to meet and exceed our expectations."
+    },
+    {
+      "id": 3,
+      "name": "Aditya Pushpati",
+      "position": "CEO Ving",
+      "profile": "/logos/apple-touch-icon.png",
+      "companyLogo": "/logos/customers/fyers.png",
+      "message": "Meticulous. That’s the word I would use to describe our engagement with Incerto Technologies. Their planning and attention to detail was commendable. The team looked into aspects that we missed and suggested the multiple options to choose from, in terms of approach to meet our product goals. Very professional and consultative."
+    },
+    {
+      "id": 4,
+      "name": "Vishal Sharma",
+      "position": "CEO Nuvo Retail",
+      "profile": "/logos/apple-touch-icon.png",
+      "companyLogo": "/logos/customers/fyers.png",
+      "message": "Incerto has been instrumental in our app development efforts. Their expertise in software architecture has significantly improved our application. With a keen eye for detail, they addressed and resolved security issues, maintaining a strong and secure codebase. Incerto’s consultative approach makes them our preferred choice for tackling software challenges. Highly recommended for their proficiency and dedication!"
     }
   ]
 }

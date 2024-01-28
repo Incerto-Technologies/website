@@ -1,44 +1,180 @@
 export const FlowGraphDesktop = () => {
+  // const staticStorkeColor = "#DEDEDE09";
+  // const staticStorkeColor = "rgba(52, 52, 52, 0.9)";
+  // const staticStorkeColor = "#121815";
+  // const staticStorkeColor = "#0F937C";FAFF69
+  // const staticStorkeColor = "#FAFF69";
+  // const staticStorkeColor = "#fafafa06";
+  // const staticStorkeColor = "#dedede03";
+  const staticStorkeColor = "#0f9";
+  const staticStrokeWidth = 2;
+  const usestaticStrokeWidth = 1.5;
+
+  // const animateStrokeColor = "#0F9";
+  // const animateStrokeColor = "#0F937C";
+  // const animateStrokeColor = "#fff";
+  // const animateStrokeColor = "#FAFF69";
+  const animateStrokeColor = "rgba(52, 52, 52, 0.9)";
+  const animateStrokeWidth = 3;
+
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
       width="906"
       height="501"
       viewBox="0 0 906 501"
       fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <use stroke="#121815" href="#dpath1"></use>
-      <use stroke="#121815" href="#dpath2"></use>
-      <use stroke="#121815" href="#dpath3"></use>
-      <use stroke="#121815" href="#dpath4"></use>
-      <use stroke="#121815" href="#dpath5"></use>
-      <use stroke="#121815" href="#dpath6"></use>
-      <use stroke="#121815" href="#dpath7"></use>
-      <use stroke="#121815" href="#dpath8"></use>
-      <use stroke="#121815" href="#dpath9"></use>
-      <use stroke="#121815" href="#dpath10"></use>
-      <use stroke="#121815" href="#dpath11"></use>
-      <use stroke="#121815" href="#dpath12"></use>
-      <use stroke="#121815" href="#dpath13"></use>
-      <use stroke="#121815" href="#dpath14"></use>
-      <use stroke="#121815" href="#dpath15"></use>
-      <use stroke="#121815" href="#dpath16"></use>
-      <use stroke="#121815" href="#dpath17"></use>
-      <use stroke="#121815" href="#dpath18"></use>
-      <use stroke="#121815" href="#dpath19"></use>
-      <use stroke="#121815" href="#dpath20"></use>
-      <use stroke="#121815" href="#dpath21"></use>
-      <use stroke="#121815" href="#dpath22"></use>
-      <use stroke="#121815" href="#dpath23"></use>
-      <use stroke="#121815" href="#dpath24"></use>
-      <use stroke="#121815" href="#dpath25"></use>
-      <use stroke="#121815" href="#dpath26"></use>
-      <use stroke="#121815" href="#dpath27"></use>
-      <use stroke="#121815" href="#dpath28"></use>
+      {/* <use stroke="#121815" href="#dpath1"></use> */}
+      <use
+        stroke={staticStorkeColor}
+        xlinkHref="#dpath1"
+        strokeWidth={usestaticStrokeWidth}
+        // href="#dpath1"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath2"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath3"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath4"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath5"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath6"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath7"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath8"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath9"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath10"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath11"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath12"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath13"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath14"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath15"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath16"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath17"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath18"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath19"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath20"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath21"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath22"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath23"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath24"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath25"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath26"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath27"
+      ></use>
+      <use
+        stroke={staticStorkeColor}
+        strokeWidth={usestaticStrokeWidth}
+        href="#dpath28"
+      ></use>
 
       {/* Animation section */}
-      <use stroke="#0F9" strokeDasharray="200 1710" href="#dpath1">
+      <use
+        stroke={animateStrokeColor}
+        strokeWidth={animateStrokeWidth}
+        strokeDasharray="200 1710"
+        href="#dpath1"
+      >
         <animate
           id="dpath1Animate"
           fill="freeze"
@@ -51,9 +187,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath2"
       >
         <animate
@@ -77,9 +214,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath3"
       >
         <animate
@@ -103,9 +241,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath4"
       >
         <animate
@@ -129,9 +268,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath5"
       >
         <animate
@@ -155,9 +295,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath6"
       >
         <animate
@@ -181,9 +322,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath7"
       >
         <animate
@@ -207,9 +349,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath8"
       >
         <animate
@@ -233,9 +376,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath9"
       >
         <animate
@@ -259,9 +403,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath10"
       >
         <animate
@@ -285,9 +430,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath11"
       >
         <animate
@@ -311,9 +457,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath12"
       >
         <animate
@@ -337,9 +484,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath13"
       >
         <animate
@@ -363,9 +511,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath14"
       >
         <animate
@@ -389,9 +538,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath15"
       >
         <animate
@@ -415,9 +565,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath16"
       >
         <animate
@@ -441,9 +592,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1710"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath17"
       >
         <animate
@@ -467,9 +619,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1010"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath18"
       >
         <animate
@@ -493,9 +646,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1010"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath19"
       >
         <animate
@@ -519,9 +673,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1010"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath20"
       >
         <animate
@@ -545,9 +700,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1010"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath21"
       >
         <animate
@@ -571,9 +727,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1010"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath22"
       >
         <animate
@@ -597,9 +754,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1010"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath23"
       >
         <animate
@@ -623,9 +781,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeDasharray="200 1010"
         strokeOpacity="0"
+        strokeWidth={animateStrokeWidth}
         href="#dpath24"
       >
         <animate
@@ -649,9 +808,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeOpacity={0}
         strokeDasharray="200 1000"
+        strokeWidth={animateStrokeWidth}
         href="#dpath25"
       >
         <animate
@@ -675,9 +835,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeOpacity={0}
         strokeDasharray="200 1000"
+        strokeWidth={animateStrokeWidth}
         href="#dpath26"
       >
         <animate
@@ -701,9 +862,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeOpacity={0}
         strokeDasharray="200 1000"
+        strokeWidth={animateStrokeWidth}
         href="#dpath27"
       >
         <animate
@@ -727,9 +889,10 @@ export const FlowGraphDesktop = () => {
       </use>
 
       <use
-        stroke="#0F9"
+        stroke={animateStrokeColor}
         strokeOpacity={0}
         strokeDasharray="200 1000"
+        strokeWidth={animateStrokeWidth}
         href="#dpath28"
       >
         <animate
@@ -971,143 +1134,284 @@ export const FlowGraphDesktop = () => {
         {/* ================ lines ================== */}
         <path
           d="M43 44H245.691C249.893 44 253.299 47.4058 253.299 51.6072V137V222.393C253.299 226.594 256.704 230 260.906 230H292.001"
-          strokeWidth="1.52143"
+          // strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath1"
         />
         <path
           d="M96.5 44H245.691C249.893 44 253.299 47.4058 253.299 51.6071V137V222.393C253.299 226.594 256.704 230 260.906 230H292.001"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath2"
         />
         <path
           d="M150.5 44H245.691C249.892 44 253.298 47.4058 253.298 51.6071V137V222.393C253.298 226.594 256.704 230 260.905 230H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath3"
         />
         <path
           d="M204 44H245.691C249.892 44 253.298 47.4058 253.298 51.6071V137V222.393C253.298 226.594 256.704 230 260.905 230H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath4"
         />
         <path
           d="M43.5 144H245.624C249.826 144 253.232 147.406 253.232 151.607V187V222.393C253.232 226.594 256.637 230 260.839 230H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath5"
         />
         <path
           d="M97 144H245.624C249.826 144 253.232 147.406 253.232 151.607V187V222.393C253.232 226.594 256.637 230 260.839 230H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath6"
         />
         <path
           d="M150 144H245.554C249.755 144 253.161 147.406 253.161 151.607V187V222.393C253.161 226.594 256.567 230 260.768 230H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath7"
         />
         <path
           d="M204 144H245.691C249.892 144 253.298 147.406 253.298 151.607V187V222.393C253.298 226.594 256.704 230 260.905 230H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath8"
         />
         <path
           d="M43 198H234.451C238.653 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.666 242H292.001"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath9"
         />
         <path
           d="M96 198H234.451C238.653 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.666 242H292.001"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath10"
         />
         <path
           d="M149 198H234.451C238.652 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.665 242H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath11"
         />
         <path
           d="M203 198H234.451C238.652 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.665 242H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath12"
         />
         <path
           d="M43 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292.001"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath13"
         />
         <path
           d="M96 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292.001"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath14"
         />
         <path
           d="M150.5 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath15"
         />
         <path
           d="M204 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath16"
         />
         <path
           d="M43 403H234.46C238.661 403 242.067 399.594 242.067 395.393V261.607C242.067 257.406 245.473 254 249.674 254H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath17"
         />
         <path
           d="M97 403H234.46C238.661 403 242.067 399.594 242.067 395.393V261.607C242.067 257.406 245.473 254 249.674 254H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath18"
         />
         <path
           d="M151 403H234.722C238.923 403 242.329 399.594 242.329 395.393V261.607C242.329 257.406 245.735 254 249.936 254H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath19"
         />
         <path
           d="M204 403H234.545C238.747 403 242.153 399.594 242.153 395.393V261.607C242.153 257.406 245.558 254 249.76 254H292"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath20"
         />
         <path
           d="M43 455.668H245.701C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.714 268.532 260.915 268.532H292.104"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath21"
         />
         <path
           d="M96.5 455.668H245.701C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.714 268.532 260.915 268.532H292.104"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath22"
         />
         <path
           d="M150.5 455.668H245.7C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.713 268.532 260.915 268.532H292.104"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath23"
         />
         <path
           d="M204 455.668H245.7C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.713 268.532 260.915 268.532H292.104"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath24"
         />
         <path
           d="M739.403 70.7461H714.3C710.098 70.7461 706.693 74.1519 706.693 78.3532V150.241V222.128C706.693 226.33 703.287 229.735 699.085 229.735H667.896"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath25"
         />
         <path
           d="M739.403 201.589H725.472C721.271 201.589 717.865 204.995 717.865 209.196V234.3C717.865 238.501 714.459 241.907 710.258 241.907H667.896"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath26"
         />
         <path
           d="M739.403 326.346H725.472C721.271 326.346 717.865 322.94 717.865 318.739V261.685C717.865 257.484 714.459 254.078 710.258 254.078H667.896"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath27"
         />
         <path
           d="M739.403 455.668H714.3C710.098 455.668 706.693 452.262 706.693 448.061V362.1V276.139C706.693 271.938 703.287 268.532 699.085 268.532H667.896"
-          strokeWidth="1.52143"
+          strokeWidth={staticStrokeWidth}
           id="dpath28"
+        />
+
+        <path
+          d="M43 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292.001"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M43 403H234.46C238.661 403 242.067 399.594 242.067 395.393V261.607C242.067 257.406 245.473 254 249.674 254H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M43 455.668H245.701C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.714 268.532 260.915 268.532H292.104"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M43 198H234.451C238.653 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.666 242H292.001"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M43 44H245.691C249.893 44 253.299 47.4058 253.299 51.6072V137V222.393C253.299 226.594 256.704 230 260.906 230H292.001"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M96.5 44H245.691C249.893 44 253.299 47.4058 253.299 51.6071V137V222.393C253.299 226.594 256.704 230 260.906 230H292.001"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M150.5 44H245.691C249.892 44 253.298 47.4058 253.298 51.6071V137V222.393C253.298 226.594 256.704 230 260.905 230H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M43.5 144H245.624C249.826 144 253.232 147.406 253.232 151.607V187V222.393C253.232 226.594 256.637 230 260.839 230H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M204 44H245.691C249.892 44 253.298 47.4058 253.298 51.6071V137V222.393C253.298 226.594 256.704 230 260.905 230H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M97 144H245.624C249.826 144 253.232 147.406 253.232 151.607V187V222.393C253.232 226.594 256.637 230 260.839 230H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M150 144H245.554C249.755 144 253.161 147.406 253.161 151.607V187V222.393C253.161 226.594 256.567 230 260.768 230H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M204 144H245.691C249.892 144 253.298 147.406 253.298 151.607V187V222.393C253.298 226.594 256.704 230 260.905 230H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M739.403 70.7461H714.3C710.098 70.7461 706.693 74.1519 706.693 78.3532V150.241V222.128C706.693 226.33 703.287 229.735 699.085 229.735H667.896"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M96 198H234.451C238.653 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.666 242H292.001"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M149 198H234.451C238.652 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.665 242H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M203 198H234.451C238.652 198 242.058 201.406 242.058 205.607V234.393C242.058 238.594 245.464 242 249.665 242H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M739.403 201.589H725.472C721.271 201.589 717.865 204.995 717.865 209.196V234.3C717.865 238.501 714.459 241.907 710.258 241.907H667.896"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M96.5 455.668H245.701C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.714 268.532 260.915 268.532H292.104"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M150.5 455.668H245.7C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.713 268.532 260.915 268.532H292.104"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M204 455.668H245.7C249.902 455.668 253.308 452.262 253.308 448.061V362.1V276.139C253.308 271.938 256.713 268.532 260.915 268.532H292.104"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M739.403 455.668H714.3C710.098 455.668 706.693 452.262 706.693 448.061V362.1V276.139C706.693 271.938 703.287 268.532 699.085 268.532H667.896"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M96 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292.001"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M150.5 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M204 303.333H234.546C238.747 303.333 242.153 299.928 242.153 295.726V261.607C242.153 257.406 245.559 254 249.76 254H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M97 403H234.46C238.661 403 242.067 399.594 242.067 395.393V261.607C242.067 257.406 245.473 254 249.674 254H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M151 403H234.722C238.923 403 242.329 399.594 242.329 395.393V261.607C242.329 257.406 245.735 254 249.936 254H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M204 403H234.545C238.747 403 242.153 399.594 242.153 395.393V261.607C242.153 257.406 245.558 254 249.76 254H292"
+          strokeWidth="1.52143"
+        />
+
+        <path
+          d="M739.403 326.346H725.472C721.271 326.346 717.865 322.94 717.865 318.739V261.685C717.865 257.484 714.459 254.078 710.258 254.078H667.896"
+          strokeWidth="1.52143"
         />
 
         {/* =============== patterns =================== */}

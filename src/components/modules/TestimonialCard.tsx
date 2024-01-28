@@ -18,41 +18,36 @@ export const TestimonialCard = ({
   return (
     <animated.div
       className={
-        "relative flex h-fit w-[280px] flex-col justify-center rounded-3xl bg-[#121815] px-8 py-9 backdrop-blur-xl md:h-fit md:w-[580px] md:px-16 md:py-10"
+        "relative flex h-fit w-[280px] flex-col justify-center rounded-[20px] bg-[#121815] px-8 py-9 backdrop-blur-[27px] md:h-fit md:w-[632px] md:px-16 md:py-10"
       }
     >
-      {/* <div className="absolute  left-[390px] top-[50%] z-40">
-        <Quotes />
-      </div> */}
-
       <div>
-        <p className="text-xs leading-5">{message}</p>
+        <p className="leading-[27px]">{message}</p>
       </div>
 
-      <div className="mt-7 flex h-full w-full items-center justify-between">
-        <div className="flex gap-4">
+      <div className="mt-[38px] flex h-full w-full items-center justify-between">
+        <div className="flex items-center gap-6">
           <Image
             src={profile}
-            width={25}
-            height={25}
+            width={40}
+            height={40}
+            className="rounded-full"
             alt={name}
-            loading={"lazy"}
           />
           <div>
-            <h4 className="text-sm font-bold">{name}</h4>
-            <p className="text-[10px] leading-[12px] text-[#929292]">
-              {position}
-            </p>
+            <h4 className="text-[18px] font-bold">{name}</h4>
+            <p className="text-[14px] text-[#929292]">{position}</p>
           </div>
         </div>
         <div className="hidden md:block">
-          <Button className="rounded-[10px]">
+          <Button className="rounded-[10px] px-[18px] py-[10px]">
             <Image
               src={companyLogo}
               width={100}
               height={100}
               alt={name}
               loading={"lazy"}
+              className="object-contain"
             />
           </Button>
         </div>

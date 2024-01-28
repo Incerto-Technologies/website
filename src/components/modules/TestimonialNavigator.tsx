@@ -26,10 +26,6 @@ export const TestimonialNavigator = ({
       <div className="">
         {Array(numberOfSlides)
           .fill(0)
-          .slice(
-            numberOfSlides < 5 ? 0 : currentSlide,
-            numberOfSlides < 5 ? undefined : 5,
-          )
           .map((_, i) => (
             <button
               key={i}
