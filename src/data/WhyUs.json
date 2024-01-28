@@ -3,38 +3,38 @@
     {
       "title": "Solve Unknown Problems in Minutes",
       "description": "Custom deep instrumentation is the key to solving any unknown problem. Get high cardinality, and high dimensional instrumentation through correlated distributed traces, custom metrics, and centralised logs tailored for your services powered by OpenTelemetry",
-      "image": "/backgrounds/stacking/slide1.png",
+      "image": "/backgrounds/stacking/slide1.svg",
       "id": 0
     },
     {
       "title": "Own Your Observability",
       "description": "We build custom observability with telemetry Backend (Open Telemetry), optimised lightning-fast OLAP store (Clickhouse), and dynamic visualisations (Grafana), all on your infrastructure. Observability achieves its full potential when we don’t hesitate to instrument and there’s no SaaS ingestion cost saga involved",
-      "image": "/backgrounds/stacking/slide2.png",
+      "image": "/backgrounds/stacking/slide2.svg",
       "id": 1
     },
     {
       "title": "Unmatched Efficiency",
       "description": "Extensive sampling to store only required telemetry and autoscaling collector based on load. Optimised Clickhouse clusters for your read-write patterns using materialised views, Indexing, and right CodeCS. Sub-second Grafana panels, with custom dashboards for the team's needs",
-      "image": "/backgrounds/stacking/slide3.png",
+      "image": "/backgrounds/stacking/slide3.svg",
       "id": 2
     },
     {
       "title": "Custom Telemetry Backend",
       "description": "Integrate our telemetry backend with custom services, managed services, all languages, and everything you need to observe. We make sure there are no gaps, covering all SLIs and SLOs",
-      "image": "/backgrounds/stacking/slide4.png",
+      "image": "/backgrounds/stacking/slide4.svg",
       "id": 3
     },
 
     {
       "title": "Highly Secure & Compliant",
       "description": "Can’t share data with vendors? \n Storage requirement of years? \n Security compliance? \n \n Our solution caters to all your compliance needs effortlessly",
-      "image": "/backgrounds/stacking/slide5.png",
+      "image": "/backgrounds/stacking/slide5.svg",
       "id": 4
     },
     {
       "title": "Observability Cultures",
       "description": "Observability is a socio-technical space",
-      "image": "/backgrounds/stacking/slide6.png",
+      "image": "/backgrounds/stacking/slide6.svg",
       "id": 5
     }
   ]

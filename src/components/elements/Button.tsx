@@ -3,6 +3,7 @@ import { classNameMerge } from "@/utils/classNameMerge";
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
+  disabled?: boolean;
 }
 
 export const Button = ({
@@ -28,6 +29,7 @@ export const Button = ({
 
   return (
     <button
+      disabled={props.disabled}
       className={
         // check if className is passed and merge it with the default classes
         className

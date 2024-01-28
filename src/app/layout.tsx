@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { gotham, manrope } from "./fonts";
+import { ModalProvider } from "@/components/elements/ModalProvider";
 
 export const metadata: Metadata = {
   title: "Incerto",
@@ -37,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${gotham.variable}`}>
-        {children}
+        <ModalProvider>{children}</ModalProvider>
       </body>
     </html>
   );

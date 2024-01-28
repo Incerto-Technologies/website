@@ -85,6 +85,7 @@ const FooterBackground = dynamic(
 
 import { Testimonial } from "@/components/templates/Homepage/Testimonial";
 import { WhyUs } from "@/components/templates/Homepage/WhyUs";
+import { Modal } from "@/components/elements/Modal";
 
 export default function Home() {
   return (
@@ -98,6 +99,7 @@ export default function Home() {
         <Contact />
         <Footer isBackground />
       </FooterBackground>
+      <Modal />
     </DefaultLayout>
   );
 }

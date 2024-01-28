@@ -15,7 +15,7 @@ export const AppTextArea = ({
   return (
     <div className="relative w-full ">
       <TextAreaAutoSize
-        className="min-h-[120px] w-full rounded border border-[#5C5C5C] bg-inherit px-4 py-2 focus:outline-none"
+        className="min-h-[120px] w-full rounded border border-[#5C5C5C] bg-[#121815] px-4 py-2 focus:outline-none"
         id={id}
         name={props.name}
         onChange={props.onChange}

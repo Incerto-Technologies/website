@@ -8,7 +8,7 @@ export const Input = ({ className, labelName, ...props }: InputProps) => {
   return (
     <div className="relative w-full ">
       <input
-        className="w-full rounded border border-[#5C5C5C] bg-inherit py-2 pl-4 focus:outline-none"
+        className="w-full rounded border border-[#5C5C5C] bg-[#121815] py-2 pl-4  focus:outline-none"
         {...props}
       />
       <label
