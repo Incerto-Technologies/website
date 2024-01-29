@@ -3,15 +3,12 @@ import { TestimonialCard } from "@/components/modules/TestimonialCard";
 import { TestimonialCarousel } from "@/components/modules/TestimonialCarousel";
 import { TestimonialNavigator } from "@/components/modules/TestimonialNavigator";
 import testimonialData from "@/data/Testimonial.json";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export const Testimonial = () => {
   const [currentCardId, setCurrentCardId] = useState(0);
   const [goToSlide, setGoToSlide] = useState(0);
-  const [offset, setOffset] = useState(2);
-
-  const divRef = useRef(null);
 
   const getCurrentCardId = useCallback(() => {
     return goToSlide;
@@ -44,14 +41,6 @@ export const Testimonial = () => {
     } else setGoToSlide(0);
   };
 
-  // useEffect(() => {
-  //   if (window.innerWidth < 1080) {
-  //     setOffset(1);
-  //   } else {
-  //     setOffset(2);
-  //   }
-  // }, [setOffset]);
-
   return (
     <div className="w-container relative mt-[100px]">
       <div className="">
@@ -67,7 +56,6 @@ export const Testimonial = () => {
         <TestimonialCarousel
           cards={TestimonialCards}
           setCurrentCardId={setCurrentCardId}
-          // offset={offset}
           offset={1}
           showArrows={false}
           width="100%"
@@ -90,8 +78,3 @@ export const Testimonial = () => {
     </div>
   );
 };
-{
-  /* <div className="absolute  left-[390px] top-[50%] z-40">
-<Quotes />
-</div> */
-}
