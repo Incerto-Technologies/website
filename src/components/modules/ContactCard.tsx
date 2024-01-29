@@ -152,8 +152,9 @@ export const ContactCard = () => {
       children: (
         // <Modal message={data.message} status={status} setModal={setModal} />
         <Modal
-          message={
+          message={ 
             "Thanks for showing interest. Our engineers will reach back soon."
+
           }
           status={200}
           setModal={setModal}

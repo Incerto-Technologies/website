@@ -1,9 +1,11 @@
 "use client";
+
 import { TestimonialCard } from "@/components/modules/TestimonialCard";
 import { TestimonialCarousel } from "@/components/modules/TestimonialCarousel";
 import { TestimonialNavigator } from "@/components/modules/TestimonialNavigator";
 import testimonialData from "@/data/Testimonial.json";
 import { useCallback, useState } from "react";
+ 
 import { v4 as uuidv4 } from "uuid";
 
 export const Testimonial = () => {
@@ -48,6 +50,7 @@ export const Testimonial = () => {
           Ready for the Real World –{" "}
           <span className="features-title text-clip-all">
             Hear from Our Customers
+
           </span>
         </h3>
       </div>
@@ -57,6 +60,7 @@ export const Testimonial = () => {
           cards={TestimonialCards}
           setCurrentCardId={setCurrentCardId}
           offset={1}
+
           showArrows={false}
           width="100%"
           height="100%"
@@ -67,6 +71,7 @@ export const Testimonial = () => {
       </div>
 
       <div className="mt-8 md:mt-2">
+
         <TestimonialNavigator
           numberOfSlides={TestimonialCards.length}
           currentSlide={goToSlide}
@@ -78,3 +83,4 @@ export const Testimonial = () => {
     </div>
   );
 };
+ 

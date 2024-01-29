@@ -9,6 +9,7 @@ export const Heading = () => {
         <h1 className="text-center font-gotham text-[30px] font-medium leading-[42px] tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[60px] md:tracking-tightest">
           <span>
             End-to-End Open Source Observability That’s Custom-built on
+
           </span>
           <span className="head-title text-clip-all"> Your Infrastructure</span>
         </h1>

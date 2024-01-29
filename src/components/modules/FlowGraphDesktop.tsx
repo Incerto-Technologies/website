@@ -1705,6 +1705,7 @@ export const FlowGraphDesktop = () => {
           width="666"
           height="375"
           href="/logos/aws1.png"
+
         ></image>
         <image
           id="image7_1_95"

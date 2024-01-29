@@ -14,6 +14,7 @@ export const FlowGraph = () => {
           unified telemetry collection, Clickhouse to speed up queries from any
           data source, and Grafana for dynamic visualisation of Metrics, Logs,
           and Traces in a single frame
+
         </p>
       </div>
       <div className="mt-11">
@@ -28,3 +29,4 @@ export const FlowGraph = () => {
   );
 };
 // visualise
+

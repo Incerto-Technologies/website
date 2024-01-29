@@ -10,6 +10,7 @@ export const WhyUsHeader = () => {
       </h3>
       <p className="mx-auto mt-[32px] w-5/6 text-center text-sm font-medium leading-6 tracking-wide text-[#DEDEDE] md:w-3/6">
         Real-time observability with all the data, all the context, for all the
+ 
         teams
       </p>
       <div className="mt-[22px] flex w-full justify-center">

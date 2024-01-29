@@ -17,8 +17,9 @@ export const TestimonialCard = ({
 }: ICard) => {
   return (
     <animated.div
-      className={
+      className={ 
         "relative flex h-fit w-[300px] flex-col justify-center rounded-[20px] bg-[#121815] px-8 py-9 backdrop-blur-[27px] md:h-fit md:w-[632px] md:px-16 md:py-10"
+ 
       }
     >
       <div>
@@ -38,15 +39,16 @@ export const TestimonialCard = ({
             <h4 className="text-[18px] font-bold">{name}</h4>
             <p className="text-[14px] text-[#929292]">{position}</p>
           </div>
-        </div>
+        </div> 
         <div className="hidden">
           {/* <div className="hidden md:block"> */}
+ 
           <Button className="rounded-[10px] px-[18px] py-[10px]">
             <Image
               src={companyLogo}
               width={100}
               height={100}
-              alt={name}
+ 
               className="object-contain"
             />
           </Button>

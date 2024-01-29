@@ -34,7 +34,9 @@ export const Footer = ({ isBackground = false }: FooterProps) => {
           <div className="mt-8 flex w-full flex-col items-start gap-14 md:flex-row md:items-center md:justify-between lg:gap-48">
             <div className="w-full">
               <h4 className="text-lg font-bold text-accent-light md:text-2xl">
+
                 Incerto Technologies Pvt Ltd
+
               </h4>
               <Link
                 href={"mailto:contact@incerto.com"}

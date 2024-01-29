@@ -121,12 +121,12 @@ export const WhyUsSlider = () => {
             exit="exit"
             transition={sliderTextTransition}
             className="mt-5 px-[42px]"
-          >
+          > 
             <h4 className="font-gotham font-bold leading-6 text-secondary text-opacity-85">
               {Cards.data[activeImageIndex].title}
             </h4>
 
-            <p className="mt-3 text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
+ 
               {Cards.data[activeImageIndex].description}
             </p>
           </motion.div>

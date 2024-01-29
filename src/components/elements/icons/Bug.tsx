@@ -6,6 +6,7 @@ export const Bug = () => {
       height="44"
       viewBox="0 0 36 38"
       // viewBox="0 0 45 44"
+ 
       fill="none"
     >
       <path
