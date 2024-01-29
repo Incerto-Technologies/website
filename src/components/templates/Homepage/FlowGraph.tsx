@@ -12,8 +12,8 @@ export const FlowGraph = () => {
         <p className="mx-auto my-6 px-2 text-center font-semibold xl:w-4/6">
           Incerto’s unique approach leverages the trifecta of OpenTelemetry for
           unified telemetry collection, Clickhouse to speed up queries from any
-          data source, and Grafana to visualise Metrics, Logs, and Traces in a
-          single frame
+          data source, and Grafana for dynamic visualisation of Metrics, Logs,
+          and Traces in a single frame
         </p>
       </div>
       <div className="mt-11">
@@ -27,3 +27,4 @@ export const FlowGraph = () => {
     </div>
   );
 };
+// visualise

@@ -32,8 +32,8 @@
       "id": 4
     },
     {
-      "title": "Observability Cultures",
-      "description": "Observability is a socio-technical space",
+      "title": "Observability Culture",
+      "description": "As infrastructure grows at a rapid pace, having right observability practices is the only solution to maintaining low MTTR and MTTD. With Incerto as your observability partner you will always be exposed to best practices and culture",
       "image": "/backgrounds/stacking/slide6.svg",
       "id": 5
     }
