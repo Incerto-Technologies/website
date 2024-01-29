@@ -2,9 +2,10 @@ export const Bug = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="36"
-      height="38"
+      width="45"
+      height="44"
       viewBox="0 0 36 38"
+      // viewBox="0 0 45 44"
       fill="none"
     >
       <path
