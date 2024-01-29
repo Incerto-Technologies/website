@@ -15,7 +15,7 @@ const FeaturesData: FeatureCardProps[] = [
   {
     icon: Filter,
     title: "Numerous Bottlenecks with SaaS Vendors",
-    description: `Reluctant to instruments, expensive custom metrics, unpredictable bills, no sampling control, and more! Freedom from these limitations is a must to get full observability`,
+    description: `Reluctant to instrument, expensive custom metrics, unpredictable bills, no sampling control, and more! Freedom from these limitations is a must to get full observability`,
   },
   {
     icon: Bug,
