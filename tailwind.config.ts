@@ -17,7 +17,8 @@ const config: Config = {
 
       fontFamily: {
         manrope: ["var(--font-manrope)"], // paragraph font family
-        gotham: ["var(--font-gotham)"], // heading font family
+        // gotham: ["var(--font-gotham)"], // heading font family
+        gotham: ["var(--font-manrope)"], // heading font family
       },
     },
 
