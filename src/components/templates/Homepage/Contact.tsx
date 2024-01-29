@@ -5,7 +5,7 @@ export const Contact = () => {
   return (
     <section className="w-container mt-36 md:mt-52" id="contact">
       <div>
-        <h3 className="text-center font-gotham text-[34px] font-medium leading-[48px] tracking-[-0.68px]">
+        <h3 className="px-3 text-center font-gotham text-[34px] font-medium leading-[48px] tracking-[-0.68px]">
           {/* Find issues before your users do! */}
           Find Issues Before Your Users Do!
         </h3>
