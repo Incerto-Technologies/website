@@ -48,7 +48,7 @@ export const Features = () => {
 
       <p className="mx-auto mt-8 w-3/4 text-center text-[24px] text-sm font-medium leading-6 tracking-wide text-[#959595] md:mt-[22px] md:w-4/6 md:leading-7 md:tracking-wide md:text-secondary">
         Are you a business owner grappling with challenges in understanding and
-        optimizing your system&apos;s performance and Facing issues like...
+        optimizing your system&apos;s performance and facing issues like...
       </p>
 
       <div className="mx-auto mt-[52px] flex w-full flex-wrap justify-center gap-[52px] px-9 md:mt-[101px] md:gap-[61px] lg:gap-x-[61px]">
