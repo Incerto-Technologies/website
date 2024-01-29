@@ -30,7 +30,7 @@ const Modal = ({ message, status, setModal }: ModalProps) => {
       <div className="rounded-[20px] bg-[#121815] p-8">
         <div className="flex w-full items-center justify-between">
           <h3 className="font-gotham text-[24px] font-medium">
-            Message from Incertno
+            Message from Incerto
           </h3>
           <button
             onClick={() => {
@@ -153,7 +153,7 @@ export const ContactCard = () => {
         // <Modal message={data.message} status={status} setModal={setModal} />
         <Modal
           message={
-            "Your Thanks for showing interest. Our engineers will reach back soon"
+            "Thanks for showing interest. Our engineers will reach back soon."
           }
           status={200}
           setModal={setModal}

@@ -25,19 +25,19 @@ const FeaturesData: FeatureCardProps[] = [
 
   {
     icon: EnergyPower,
-    title: "In-house observability tradeoffs",
+    title: "In-house Observability Tradeoffs",
     description: `With all engineers focused on building core business solutions, allocation of resources to build observability in-house leads to bandwidth issues`,
   },
   {
     icon: SearchEye,
-    title: "Lack of observability understanding",
+    title: "Lack of Observability Understanding",
     description: `Implementing the right culture of observability practices from Day 1 is priceless`,
   },
 ];
 
 export const Features = () => {
   return (
-    <div className="w-container mt-40 px-3">
+    <div className="w-container px-3">
       <h2 className="text-center font-gotham text-2xl font-medium leading-[33px] tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
         Limitations of legacy
         <span className="features-title text-clip-all">

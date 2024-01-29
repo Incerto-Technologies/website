@@ -1,15 +1,17 @@
 "use client";
-import { Quotes } from "@/components/elements/icons/Quotes";
 import { TestimonialCard } from "@/components/modules/TestimonialCard";
 import { TestimonialCarousel } from "@/components/modules/TestimonialCarousel";
 import { TestimonialNavigator } from "@/components/modules/TestimonialNavigator";
 import testimonialData from "@/data/Testimonial.json";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export const Testimonial = () => {
   const [currentCardId, setCurrentCardId] = useState(0);
   const [goToSlide, setGoToSlide] = useState(0);
+  const [offset, setOffset] = useState(2);
+
+  const divRef = useRef(null);
 
   const getCurrentCardId = useCallback(() => {
     return goToSlide;
@@ -42,6 +44,14 @@ export const Testimonial = () => {
     } else setGoToSlide(0);
   };
 
+  // useEffect(() => {
+  //   if (window.innerWidth < 1080) {
+  //     setOffset(1);
+  //   } else {
+  //     setOffset(2);
+  //   }
+  // }, [setOffset]);
+
   return (
     <div className="w-container relative mt-[100px]">
       <div className="">
@@ -53,11 +63,12 @@ export const Testimonial = () => {
         </h3>
       </div>
 
-      <div className=" mx-auto mt-14 h-[350px] w-[290px] md:mt-36 md:w-[80%] md:max-w-[900px]">
+      <div className="mx-auto mt-14 h-[600px] w-[300px] md:h-[400px] md:w-[500px] lg:mt-36 lg:w-[80%] lg:max-w-[900px]">
         <TestimonialCarousel
           cards={TestimonialCards}
           setCurrentCardId={setCurrentCardId}
-          offset={2}
+          // offset={offset}
+          offset={1}
           showArrows={false}
           width="100%"
           height="100%"
@@ -67,7 +78,7 @@ export const Testimonial = () => {
         />
       </div>
 
-      <div className="mt-10 md:mt-2">
+      <div className="mt-8 md:mt-2">
         <TestimonialNavigator
           numberOfSlides={TestimonialCards.length}
           currentSlide={goToSlide}
