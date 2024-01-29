@@ -19,7 +19,7 @@ const FeaturesData: FeatureCardProps[] = [
   },
   {
     icon: Bug,
-    title: "Compliance issues",
+    title: "Compliance Issues",
     description: `No alternative but to share data with the vendors? Don’t let the data-sharing dilemma stop you from implementing observability`,
   },
 
