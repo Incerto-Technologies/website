@@ -131,28 +131,37 @@ export const ContactCard = () => {
     }
 
     // Submit form data
-    setIsLoading(true);
+    // setIsLoading(true);
 
     // Send data to server
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(formData),
-    });
+    // const res = await fetch("/api/contact", {
+    //   method: "POST",
+    //   body: JSON.stringify(formData),
+    // });
 
     // Get response
-    const data = await res.json();
-    const status = res.status;
+    // const data = await res.json();
+    // const status = res.status;
 
     // Loading done
-    setIsLoading(false);
+    // setIsLoading(false);
 
     // Toggle Modal and show message
     setModal({
       toggle: true,
       children: (
-        <Modal message={data.message} status={status} setModal={setModal} />
+        // <Modal message={data.message} status={status} setModal={setModal} />
+        <Modal
+          message={
+            "Your Thanks for showing interest. Our engineers will reach back soon"
+          }
+          status={200}
+          setModal={setModal}
+        />
       ),
     });
+
+    setFormData({ email: "", message: "" });
   };
 
   return (

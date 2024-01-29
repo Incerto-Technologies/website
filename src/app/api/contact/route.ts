@@ -1,5 +1,5 @@
-import { ContactModel } from "@/database/model/contact";
-import { connectDb } from "./../../../database/index";
+// import { ContactModel } from "@/database/model/contact";
+// import { connectDb } from "./../../../database/index";
 
 export async function POST(req: Request) {
   try {
@@ -12,16 +12,16 @@ export async function POST(req: Request) {
       );
     }
 
-    await connectDb();
+    // await connectDb();
 
-    const Contact = await ContactModel.create({ email, message });
+    // const Contact = await ContactModel.create({ email, message });
 
-    if (!Contact) {
-      return Response.json(
-        { message: "Something went wrong!, try again later" },
-        { status: 500 },
-      );
-    }
+    // if (!Contact) {
+    //   return Response.json(
+    //     { message: "Something went wrong!, try again later" },
+    //     { status: 500 },
+    //   );
+    // }
 
     const data = {
       message:
