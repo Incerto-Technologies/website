@@ -39,10 +39,10 @@ export const Features = () => {
   return (
     <div className="w-container px-3">
       <h2 className="text-center font-gotham text-2xl font-medium leading-[33px] tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
-        Limitations of legacy
+        Limitations of Legacy
         <span className="features-title text-clip-all">
           {" "}
-          observability tools
+          Observability Tools
         </span>
       </h2>
 

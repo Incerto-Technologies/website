@@ -6,8 +6,8 @@ export const FlowGraph = () => {
     <div className="mt-[200px] bg-black pb-[100px]">
       <div className="w-container px-2 pt-[100px] md:px-10">
         <h3 className="mx-auto text-center font-gotham text-[24px] font-medium leading-[33px] tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
-          Observability That’s Built for{" "}
-          <span className="text-accent-light">Developers Like YOU</span>
+          Observability that&apos;s Built for{" "}
+          <span className="text-accent-light">Developers like You</span>
         </h3>
         <p className="mx-auto my-6 text-center font-semibold xl:w-4/6">
           Incerto’s unique approach leverages the trifecta of OpenTelemetry for

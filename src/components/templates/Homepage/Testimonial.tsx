@@ -45,9 +45,9 @@ export const Testimonial = () => {
     <div className="w-container relative mt-[100px]">
       <div className="">
         <h3 className="mx-auto w-5/6 text-center font-gotham text-2xl font-medium leading-8 tracking-tighter md:text-[34px] md:leading-[3rem] md:tracking-[-0.68]">
-          Ready for the real world –{" "}
+          Ready for the Real World –{" "}
           <span className="features-title text-clip-all">
-            Hear from our customers
+            Hear from Our Customers
           </span>
         </h3>
       </div>
