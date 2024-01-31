@@ -68,4 +68,3 @@ export const Features = () => {
     </div>
   );
 };
-// hi

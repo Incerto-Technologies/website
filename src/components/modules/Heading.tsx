@@ -8,7 +8,7 @@ export const Heading = () => {
       <div className="mx-auto w-full xl:w-5/6 3xl:w-4/6">
         <h1 className="text-center font-gotham text-[30px] font-medium leading-[42px] tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[60px] md:tracking-tightest">
           <span>
-            End-to-End Open Source Observability That’s Custom-built on
+            End-to-End Open Source Observability <br /> Custom-built on
           </span>
           <span className="head-title text-clip-all"> Your Infrastructure</span>
         </h1>
@@ -17,7 +17,6 @@ export const Heading = () => {
       <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
         Build observability that adapts to your infra, not the other way around
       </p>
-      {/* TODO: Get function details */}
       <Link
         href={"#contact"}
         className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[800] text-secondary"

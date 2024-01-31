@@ -8,12 +8,9 @@ import { Quotes } from "../elements/icons/Quotes";
 export const TestimonialCard = ({
   profile,
   companyLogo,
-  currentCardId,
-  id,
   message,
   name,
   position,
-  getCurrentCardId,
 }: ICard) => {
   return (
     <animated.div
