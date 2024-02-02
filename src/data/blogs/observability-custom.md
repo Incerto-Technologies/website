@@ -1,31 +1,19 @@
----
-title: "Custom Observability : Alternative to Rigid SaaS products"
-meta_title: "Custom observability"
-description: "Custom observability is a tailored observability solution for institutions need"
-date: 2023-12-05T05:00:00Z
-image: "/images/blog/kid.jpg"
-categories: ["Observability"]
-author: "Anurag Pandey"
-tags: ["observability", "grafana", "opentelemetry", "clickhouse"]
-draft: false
----
-
-<br>
-
 ### **What is observability ?**
-Ability to see all important and relevant aspects of infrastructure/business at one place. This allows institutions to debug problems, set early alerts, analyze performance, ensure healthy working of business and more. 
 
+Ability to see all important and relevant aspects of infrastructure/business at one place. This allows institutions to debug problems, set early alerts, analyze performance, ensure healthy working of business and more.
 
 ### **How to setup End To End Observability**
+
 It comprises of three parts :
 
-1. Instrumenting code : Process needs to emit telemetry data (Traces, Metrics and Logs), for which code need to be modified (build with suitable SDKs). Checkout [OpenTelemetry Instrumentation](https://opentelemetry.io/docs/concepts/instrumentation/). 
+1. Instrumenting code : Process needs to emit telemetry data (Traces, Metrics and Logs), for which code need to be modified (build with suitable SDKs). Checkout [OpenTelemetry Instrumentation](https://opentelemetry.io/docs/concepts/instrumentation/).
 2. Architecting Telemetry Backend : Starts with identifying: What Telemetry data, from where and how much will be generated. After an idea of scale choose an OLAP/Timeseries Database (e.g. ClickHouse, Influx DB) which will store the data (it will have to be sharded and replicated). Design the telemetry data flow : how many collectors to put where, how and where to process the data, where to do the load balancing. Note that format of telemetry data has been standardized and heavy lifting is done by [OTel Collectors](https://opentelemetry.io/docs/collector/).
 3. Dashboarding : Involves creating suitable dashboards for visualizing telemetry data, recommended tool is [Grafana](https://grafana.com/). We assure you it has got everything you need to make an awesome dashboard (whooping 58K stars on Github).
 
 ### **Existing Solutions**
 
 There are lot of existing solutions e.g. Datadog, Splunk, Signoz, Dynatrace. Common practice among all is charging on the usage of their products i.e logs ingested, hosts, users and monthly and more.
+
 > **Imagine if shoes were free but you had to pay for each step in them!**
 
 All the tools required to achieve an awesome in-house observability solution are Opensource : [OpenTelemetry](https://github.com/orgs/open-telemetry/repositories), [ClickHouse](https://github.com/ClickHouse/ClickHouse) and [Grafana](https://github.com/grafana/grafana) (More than **100000 Stars On Github**).
