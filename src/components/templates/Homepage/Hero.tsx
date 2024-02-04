@@ -1,5 +1,5 @@
 import { Customers } from "./Customers";
-import { Heading } from "../../modules/Heading";
+import { Heading } from "../../modules/Heading.tmp";
 
 export const Hero = () => {
   return (

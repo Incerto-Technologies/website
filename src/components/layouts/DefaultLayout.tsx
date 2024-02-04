@@ -4,7 +4,7 @@ export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
-      <main className="font-manrope">{children}</main>
+      <main className="bg-primary font-manrope">{children}</main>
     </>
   );
 };

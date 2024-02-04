@@ -30,7 +30,7 @@ export const Navbar = () => {
   return (
     <header
       className={classNameMerge(
-        "fixed top-0 z-[150] w-full bg-black font-manrope transition-opacity ease-linear  lg:h-20 lg:bg-opacity-30 lg:backdrop-blur-2xl",
+        "fixed top-0 z-[150] w-full bg-primary font-manrope transition-opacity ease-linear  lg:h-20 lg:bg-opacity-30 lg:backdrop-blur-2xl",
         !navbarOpen ? " bg-opacity-30 backdrop-blur-2xl" : "",
       )}
     >

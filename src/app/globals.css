@@ -32,7 +32,7 @@ body {
 }
 
 .home-background {
-  background: linear-gradient(360deg, #000000 -1.68%, rgba(0, 0, 0, 0) 98.26%),
+  background: linear-gradient(360deg, #080808 -1.68%, rgba(0, 0, 0, 0) 98.26%),
     url("/backgrounds/homepage.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,18 +40,21 @@ body {
 }
 
 .top-sticky {
-  top: calc(25% + 200px);
+  /* top: calc(25% + 200px); */
+  top: -20%;
 }
 
 @media (min-width: 1024px) {
   .top-sticky {
-    margin-top: 60px;
-    top: calc(20% + 240px);
+    /* margin-top: 60px;
+    top: calc(20% + 240px); */
+    top: calc(20%);
+
     /* top: calc(50%); */
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1440px) {
   .top-sticky {
     margin-top: 20px;
 

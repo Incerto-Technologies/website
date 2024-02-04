@@ -1,4 +1,4 @@
-import { Blog, SearchTag } from "./../../data/Blogs";
+import { Blog, Blogs, SearchTag } from "./../../data/Blogs";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
@@ -12,7 +12,7 @@ type BlogState = {
 const slice = createSlice({
   name: "blog",
   initialState: {
-    Blogs: [],
+    Blogs: Blogs,
     search: "",
     searchTag: null,
     currentBlog: null,

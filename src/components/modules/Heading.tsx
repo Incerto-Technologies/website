@@ -1,3 +1,4 @@
+import { Button } from "@/components/elements/Button";
 import { ArrowOutward } from "@/components/elements/icons/ArrowOutward";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ export const Heading = () => {
         <h1 className="text-center font-gotham text-[30px] font-medium leading-[42px] tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[60px] md:tracking-tightest">
           <span>
             End-to-End Open Source Observability <br /> Custom-built on
-          </span>@@
+          </span>
           <span className="head-title text-clip-all"> Your Infrastructure</span>
         </h1>
       </div>
