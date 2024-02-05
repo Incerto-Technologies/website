@@ -19,7 +19,7 @@ export const TestimonialNavigator = ({
 }: Props) => {
   return (
     <section className="flex items-center justify-center gap-12">
-      <Button onClick={onPrevious} className="bg-black focus:outline-none">
+      <Button onClick={onPrevious} className="bg-primary focus:outline-none">
         <LeftArrow />
       </Button>
 
@@ -36,7 +36,7 @@ export const TestimonialNavigator = ({
             ></button>
           ))}
       </div>
-      <Button onClick={onNext} className="bg-black focus:outline-none">
+      <Button onClick={onNext} className="bg-primary focus:outline-none">
         <RightArrow />
       </Button>
     </section>
