@@ -28,7 +28,7 @@ export const Heading = () => {
         </div>
       </Link>
 
-      <div className="mt-[38px] flex w-full justify-center">
+      <div className="mt-[38px] flex w-full max-w-[689px] justify-center">
         <Image
           src={"/backgrounds/dashboard.png"}
           alt="Dashboard"
