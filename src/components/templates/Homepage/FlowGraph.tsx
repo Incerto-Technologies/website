@@ -18,7 +18,7 @@ export const FlowGraph = () => {
       </div>
       <div className="mt-11">
         {/* <div className="mx-auto hidden w-full justify-center md:flex md:w-5/6 lg:w-full">*/}
-        <div className="mx-auto hidden w-full justify-center md:flex md:w-3/6 lg:w-full">
+        <div className="mx-auto hidden w-full justify-center md:flex md:w-5/6 lg:w-full">
           <FlowGraphDesktop />
         </div>
         <div className="flex items-center justify-center md:hidden">

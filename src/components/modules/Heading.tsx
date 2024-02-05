@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Heading = () => {
   return (
-    <section className="w-container mt-24 flex flex-col items-center justify-center gap-[32px] px-6 md:mt-[54px] md:w-5/6 md:gap-[34px]">
+    <section className="w-container mt-[54px] flex flex-col items-center justify-center gap-[32px] px-6 md:w-5/6 md:gap-[34px]">
       <div className="mx-auto w-full xl:w-5/6 3xl:w-4/6">
         <h1 className="text-center font-gotham text-[30px] font-medium leading-[42px] tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[60px] md:tracking-tightest">
           <span>
