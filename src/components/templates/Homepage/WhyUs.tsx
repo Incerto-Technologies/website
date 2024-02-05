@@ -22,7 +22,7 @@ export const WhyUs = () => {
                 <div
                   key={index}
                   data-view={index === currentViewSlide}
-                  className="h-[12px] w-[12px] rounded-full bg-[#414141] data-[view=true]:bg-accent-light  "
+                  className="h-[12px] w-[12px] rounded-full bg-[#414141] data-[view=true]:bg-[#00FF99]"
                 ></div>
               );
             })}

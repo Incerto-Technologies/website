@@ -12,7 +12,7 @@ export const BlogCard = ({
   markdown,
 }: Blog) => {
   return (
-    <div className="min-h-[372px] w-full max-w-[350px]">
+    <div className="h-full  min-h-[372px] w-full max-w-[350px]">
       {/* <div className="h-[372px] w-[33%] max-w-[350px]"> */}
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[30px]">
         <Image
@@ -33,9 +33,11 @@ export const BlogCard = ({
           <p className="w-full font-semibold text-primary">{author}</p>
         </div>
       </div>
-      <div className="mt-11">
+      <div className="mt-11 bg-red-400">
         <h3 className="font-blod text-xl leading-8 tracking-wide">{title}</h3>
-        <p className="mt-4 font-medium text-[#9E9E9E]">{description}</p>
+        <p className="mt-4 h-[72px] font-medium text-[#9E9E9E]">
+          {description}
+        </p>
         <div className="flex h-full justify-end   ">
           <Button
             // href={`/blog/${markdown.replace(".md", "")}`}

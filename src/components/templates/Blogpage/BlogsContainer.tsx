@@ -9,7 +9,8 @@ export const BlogsContainer = () => {
     // <div className="gird grid-cols-3 gap-10">
     <div className="w-container mx-auto mt-[84px] flex justify-center">
       {/* // <div className="gird grid-cols-3 gap-10"> */}
-      <div className="flex w-4/5 flex-wrap justify-center gap-10">
+      {/* <div className="flex w-4/5 flex-wrap justify-center gap-10"> */}
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
         {Blogs.map((blog, index) => (
           <BlogCard {...blog} key={index} />
         ))}
