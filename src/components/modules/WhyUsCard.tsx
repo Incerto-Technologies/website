@@ -53,7 +53,7 @@ export const WhyUsCard = ({
           width={1200}
           data-id={id}
           // className="h-full w-full rounded-3xl bg-center object-cover data-[id='4']:object-contain"
-          className="h-full w-full rounded-3xl bg-center object-cover data-[id='4']:object-contain"
+          className="rounded-3xl bg-center object-contain"
           height={1200}
           loading="lazy"
           src={image}
