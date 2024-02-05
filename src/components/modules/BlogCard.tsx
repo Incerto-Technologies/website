@@ -12,7 +12,7 @@ export const BlogCard = ({
   markdown,
 }: Blog) => {
   return (
-    <div className="h-full  min-h-[372px] w-full max-w-[350px]">
+    <div className="mx-auto  h-full min-h-[372px] w-4/5 max-w-[350px] md:w-full">
       {/* <div className="h-[372px] w-[33%] max-w-[350px]"> */}
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[30px]">
         <Image
@@ -33,19 +33,19 @@ export const BlogCard = ({
           <p className="w-full font-semibold text-primary">{author}</p>
         </div>
       </div>
-      <div className="mt-11 bg-red-400">
+      <div className="bg- red-400 mt-11 flex flex-col gap-6 md:h-[304px] md:justify-between md:gap-0">
         <h3 className="font-blod text-xl leading-8 tracking-wide">{title}</h3>
-        <p className="mt-4 h-[72px] font-medium text-[#9E9E9E]">
-          {description}
+        <p className="font-medium text-[#9E9E9E]">
+          {description.length > 123
+            ? `${description.slice(0, 123)}...`
+            : description}
         </p>
-        <div className="flex h-full justify-end   ">
-          <Button
-            // href={`/blog/${markdown.replace(".md", "")}`}
-            className="my-2 mt-[34px] w-full rounded-[20px] border border-accent-light bg-transparent px-5 py-[14px]"
-          >
-            <p className="text-center">Read More</p>
-          </Button>
-        </div>
+        <Link
+          href={`/blog/${markdown.replace(".md", "")}`}
+          className="w-full rounded-[20px] border border-accent-light bg-transparent px-5 py-[14px]"
+        >
+          <p className="text-center">Read More</p>
+        </Link>
       </div>
     </div>
   );

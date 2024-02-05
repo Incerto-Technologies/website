@@ -11,7 +11,7 @@ export const BlogHero = () => {
   const { Blogs, search, searchTag } = useTypedSelector((state) => state.blog);
   return (
     <section className="home-background flex h-full flex-col justify-center">
-      <div className="w-container align-center mt-20 md:pt-44">
+      <div className="w-container align-center mt-20 w-5/6 md:pt-44">
         <h1 className="text-center text-3xl font-bold">
           Discover cool updates and blogs here
         </h1>

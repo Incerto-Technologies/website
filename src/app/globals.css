@@ -54,14 +54,14 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .top-sticky {
     margin-top: 20px;
 
     top: calc(20% + 200px);
-    /* top: calc(50%); */
+    /* top: calc(50%); 
   }
-}
+} */
 
 .blur-card {
   backdrop-filter: blur(27px);
