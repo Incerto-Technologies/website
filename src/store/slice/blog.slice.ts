@@ -20,9 +20,15 @@ const slice = createSlice({
   reducers: {
     setSearch: (state, action: PayloadAction<string>) => {
       state.search = action.payload;
-      state.Blogs = state.Blogs.filter((blog) =>
-        blog.title.includes(state.search),
-      );
+      if (state.search === "") {
+        state.Blogs = Blogs;
+        return;
+      }
+      state.Blogs = state.Blogs.filter((blog) => {
+        // blog.title.includes(state.search),
+        const regex = new RegExp(state.search, "i"); // 'i' for case-insensitive search
+        return regex.test(blog.title);
+      });
     },
 
     setSearchTag: (state, action: PayloadAction<SearchTag>) => {

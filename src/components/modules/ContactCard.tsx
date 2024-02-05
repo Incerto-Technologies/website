@@ -11,7 +11,7 @@ import { Loader } from "../elements/Loader";
 
 type FormData = {
   email: string;
-  message: string;
+  // message: string;
 };
 
 type ModalProps = {
@@ -73,12 +73,10 @@ const Modal = ({ message, status, setModal }: ModalProps) => {
 export const ContactCard = () => {
   const [formData, setFormData] = useState<FormData>({
     email: "",
-    message: "",
   });
 
   const [errorFormData, setErrorFormData] = useState<FormData>({
     email: "",
-    message: "",
   });
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -90,7 +88,7 @@ export const ContactCard = () => {
     let emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
     let errorFormData = {
       email: "",
-      message: "",
+      // message: "",
     };
 
     // Validate email
@@ -112,13 +110,13 @@ export const ContactCard = () => {
     }
 
     // Validate message
-    if (!formData.message.trim()) {
-      errorFormData = {
-        ...errorFormData,
-        message: "Message is required",
-      };
-      isValid = false;
-    }
+    // if (!formData.message.trim()) {
+    //   errorFormData = {
+    //     ...errorFormData,
+    //     message: "Message is required",
+    //   };
+    //   isValid = false;
+    // }
 
     setErrorFormData(errorFormData);
     return isValid;
@@ -161,7 +159,7 @@ export const ContactCard = () => {
       ),
     });
 
-    setFormData({ email: "", message: "" });
+    setFormData({ email: "" });
   };
 
   return (
@@ -186,7 +184,7 @@ export const ContactCard = () => {
           </p>
         )}
       </div>
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <AppTextArea
           onChange={(e) => {
             setFormData({
@@ -204,7 +202,7 @@ export const ContactCard = () => {
             {errorFormData.message}
           </p>
         )}
-      </div>
+      </div> */}
       <div className="mt-8 flex items-center justify-center">
         <Button
           className={classNameMerge(

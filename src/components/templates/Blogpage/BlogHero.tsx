@@ -5,6 +5,7 @@ import { Tags } from "@/data/Blogs";
 import { useAppDispatch, useTypedSelector } from "@/hooks/store";
 import { setSearch, setSearchTag } from "@/store/slice/blog.slice";
 import { classNameMerge } from "@/utils/classNameMerge";
+import { setServers } from "dns";
 
 export const BlogHero = () => {
   const dispatch = useAppDispatch();
@@ -27,6 +28,9 @@ export const BlogHero = () => {
           <input
             className="w-full bg-[#232323] text-lg font-medium placeholder:text-white focus:outline-none"
             placeholder="Search"
+            onChange={(e) => {
+              dispatch(setSearch(e.target.value));
+            }}
           />
         </div>
         <div className="hidden gap-[24px] md:flex">
