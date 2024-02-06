@@ -2,6 +2,7 @@ import { Blog } from "@/data/Blogs";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../elements/Button";
+import { getBlogUrl } from "@/utils/getBlogUrl";
 
 export const BlogCard = ({
   image,
@@ -41,7 +42,7 @@ export const BlogCard = ({
             : description}
         </p>
         <Link
-          href={`/blog/${markdown.replace(".md", "")}`}
+          href={getBlogUrl(title)}
           className="w-full rounded-[20px] border border-accent-light bg-transparent px-5 py-[14px]"
         >
           <p className="text-center">Read More</p>

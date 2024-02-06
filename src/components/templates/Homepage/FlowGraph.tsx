@@ -21,7 +21,7 @@ export const FlowGraph = () => {
         <div className="mx-auto hidden w-full justify-center md:flex md:w-5/6 lg:w-full">
           <FlowGraphDesktop />
         </div>
-        <div className="flex items-center justify-center md:hidden">
+        <div className="mt-10 flex items-center justify-center md:hidden">
           <FlowGraphMobile />
         </div>
       </div>
