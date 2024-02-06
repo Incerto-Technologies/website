@@ -9,15 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
-        secondary: "#EDEDED",
+        primary: "#080808",
+        secondary: "#ededed",
         accent: "#0F937C",
         "accent-light": "#00FF99",
       },
 
       fontFamily: {
         manrope: ["var(--font-manrope)"], // paragraph font family
-        gotham: ["var(--font-gotham)"], // heading font family
+        // gotham: ["var(--font-gotham)"], // heading font family
+        gotham: ["var(--font-manrope)"], // heading font family
       },
     },
 
@@ -42,13 +43,13 @@ const config: Config = {
     },
 
     letterSpacing: {
-      tightest: "-.88px",
-      tighter: "-.44px",
-      tight: "-.22px",
+      tightest: "-0.88px",
+      tighter: "-0.44px",
+      tight: "-0.22px",
       normal: "0",
-      wide: ".28px",
-      wider: ".56px",
-      widest: ".88px",
+      wide: "0.28px",
+      wider: "0.56px",
+      widest: "0.88px",
     },
     boxShadow: {
       "3xl": "0px 0px 300px 0px rgba(0, 255, 153, 0.1)",
