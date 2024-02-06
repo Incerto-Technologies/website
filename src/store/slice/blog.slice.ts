@@ -1,9 +1,10 @@
-import { Blog, Blogs, SearchTag } from "./../../data/Blogs";
+import { Blog, SearchTag } from "./../../data/Blogs";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 type BlogState = {
   Blogs: Blog[];
+  ConstBlogs: Blog[];
   search: string;
   searchTag: SearchTag;
   currentBlog: Blog | null;
@@ -12,7 +13,8 @@ type BlogState = {
 const slice = createSlice({
   name: "blog",
   initialState: {
-    Blogs: Blogs,
+    Blogs: [],
+    ConstBlogs: [],
     search: "",
     searchTag: null,
     currentBlog: null,
@@ -21,19 +23,19 @@ const slice = createSlice({
     setSearch: (state, action: PayloadAction<string>) => {
       state.search = action.payload;
       if (state.search === "") {
-        state.Blogs = Blogs;
+        state.Blogs = state.ConstBlogs;
         return;
       }
-      state.Blogs = state.Blogs.filter((blog) => {
-        // blog.title.includes(state.search),
-        const regex = new RegExp(state.search, "i"); // 'i' for case-insensitive search
+
+      state.Blogs = state.ConstBlogs.filter((blog) => {
+        const regex = new RegExp(state.search, "i");
         return regex.test(blog.title);
       });
     },
 
     setSearchTag: (state, action: PayloadAction<SearchTag>) => {
       state.searchTag = action.payload;
-      state.Blogs = state.Blogs.filter((blog) =>
+      state.Blogs = state.ConstBlogs.filter((blog) =>
         //   @ts-ignore
         blog.tags.includes(state.searchTag),
       );
@@ -42,9 +44,15 @@ const slice = createSlice({
     setCurrentBlog: (state, action: PayloadAction<Blog>) => {
       state.currentBlog = action.payload;
     },
+
+    setConstBlog: (state, action: PayloadAction<Blog[]>) => {
+      state.Blogs = action.payload;
+      state.ConstBlogs = action.payload;
+    },
   },
 });
 
-export const { setSearch, setSearchTag, setCurrentBlog } = slice.actions;
+export const { setConstBlog, setSearch, setSearchTag, setCurrentBlog } =
+  slice.actions;
 
 export default slice.reducer;
