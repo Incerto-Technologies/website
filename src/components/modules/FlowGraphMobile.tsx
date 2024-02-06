@@ -5,10 +5,10 @@ export const FlowGraphMobile = () => {
     <svg
       width="250"
       height="450"
-      viewBox="0 0 196 450"
+      viewBox="0 0 230 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
+      // xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       {/* Animations */}
       {/* <use href="#path1" stroke="#121815"></use> */}
@@ -46,7 +46,7 @@ export const FlowGraphMobile = () => {
           id="path1Animate"
           fill="freeze"
           attributeName="stroke-dashoffset"
-          begin="0s;path8Animate.end+5"
+          begin="1s;path8Animate.end+5"
           dur="3s"
           from="200"
           to="-1000"
