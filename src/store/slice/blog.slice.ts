@@ -8,6 +8,7 @@ type BlogState = {
   search: string;
   searchTag: SearchTag;
   currentBlog: Blog | null;
+  createBlog: Partial<Blog> | null;
 };
 
 const slice = createSlice({
@@ -18,6 +19,7 @@ const slice = createSlice({
     search: "",
     searchTag: null,
     currentBlog: null,
+    createBlog: null,
   } as BlogState,
   reducers: {
     setSearch: (state, action: PayloadAction<string>) => {
@@ -49,10 +51,19 @@ const slice = createSlice({
       state.Blogs = action.payload;
       state.ConstBlogs = action.payload;
     },
+
+    setCreateBlog: (state, action: PayloadAction<Partial<Blog>>) => {
+      state.createBlog = action.payload;
+    },
   },
 });
 
-export const { setConstBlog, setSearch, setSearchTag, setCurrentBlog } =
-  slice.actions;
+export const {
+  setConstBlog,
+  setSearch,
+  setSearchTag,
+  setCurrentBlog,
+  setCreateBlog,
+} = slice.actions;
 
 export default slice.reducer;

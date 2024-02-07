@@ -1,6 +1,3 @@
-// import { DefaultLayout } from "@/components/layouts/DefaultLayout";
-// import { Hero } from "@/components/templates/Homepage/Hero";
-
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(
@@ -36,9 +33,6 @@ const Contact = dynamic(
     ssr: false,
   },
 );
-// import { Footer } from "@/components/modules/Footer";
-// import { Contact } from "@/components/templates/Homepage/Contact";
-
 const Features = dynamic(
   () =>
     import("@/components/templates/Homepage/Features").then(
@@ -48,10 +42,6 @@ const Features = dynamic(
     ssr: false,
   },
 );
-
-// const WhyUs = dynamic(() =>
-//   import("@/components/templates/Homepage/WhyUs").then((mod) => mod.WhyUs),
-// );
 
 const FlowGraph = dynamic(
   () =>
@@ -63,12 +53,6 @@ const FlowGraph = dynamic(
   },
 );
 
-// const Testimonial = dynamic(() =>
-//   import("@/components/templates/Homepage/Testimonial").then(
-//     (mod) => mod.Testimonial,
-//   ),
-// );
-
 const FooterBackground = dynamic(
   () =>
     import("@/components/templates/Homepage/FooterBackground").then(
@@ -78,11 +62,6 @@ const FooterBackground = dynamic(
     ssr: false,
   },
 );
-
-// import { Features } from "@/components/templates/Homepage/Features";
-// import { FlowGraph } from "@/components/templates/Homepage/FlowGraph";
-// import { FooterBackground } from "@/components/templates/Homepage/FooterBackground";
-
 import { Testimonial } from "@/components/templates/Homepage/Testimonial";
 import { WhyUs } from "@/components/templates/Homepage/WhyUs";
 import { Modal } from "@/components/elements/Modal";
