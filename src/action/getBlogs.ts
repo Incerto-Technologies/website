@@ -1,4 +1,3 @@
-import { Blog } from "@/data/Blogs";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
 

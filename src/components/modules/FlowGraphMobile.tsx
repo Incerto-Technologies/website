@@ -5,10 +5,10 @@ export const FlowGraphMobile = () => {
     <svg
       width="250"
       height="450"
-      viewBox="0 0 230 450"
+      viewBox="0 0 196 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      // xmlnsXlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       {/* Animations */}
       {/* <use href="#path1" stroke="#121815"></use> */}
@@ -46,7 +46,7 @@ export const FlowGraphMobile = () => {
           id="path1Animate"
           fill="freeze"
           attributeName="stroke-dashoffset"
-          begin="1s;path8Animate.end+5"
+          begin="0s;path8Animate.end+5"
           dur="3s"
           from="200"
           to="-1000"
@@ -1253,12 +1253,7 @@ export const FlowGraphMobile = () => {
 
         {/* ======================================== Images ======================================== */}
         <image id="image1_2_2" width="1061" height="938" href="/logos/go.png" />
-        <image
-          id="image4_2_2"
-          width="666"
-          height="375"
-          href="/logos/aws1.png"
-        />
+        <image id="image4_2_2" width="666" height="375" href="/logos/aws.png" />
         <image
           id="image2_2_2"
           width="267"

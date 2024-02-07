@@ -1,24 +1,15 @@
 import { Blog } from "@/data/Blogs";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../elements/Button";
 import { getBlogUrl } from "@/utils/getBlogUrl";
 
-export const BlogCard = ({
-  image,
-  title,
-  description,
-  categories,
-  author,
-  markdown,
-}: Blog) => {
+export const BlogCard = ({ image, title, description, author }: Blog) => {
   return (
     <div className="mx-auto  h-full min-h-[372px] w-4/5 max-w-[350px] md:w-full">
-      {/* <div className="h-[372px] w-[33%] max-w-[350px]"> */}
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[30px]">
         <Image
           src={image}
-          alt={"Hi"}
+          alt={title}
           height={370}
           width={300}
           className="object-contian h-full w-full"

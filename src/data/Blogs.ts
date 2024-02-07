@@ -27,13 +27,8 @@ export const Blogs: Blog[] = [
     author: "Shiva Pundir",
     tags: ["observability", "grafana", "opentelemetry", "clickhouse"],
     draft: false,
-    markdown: `
-
-<br>
-    ### **What is observability ?**
-    
+    markdown: `# **What is observability ?**
     Generally speaking, observability is the extent to which you can understand the internal state or condition of a complex system based only on knowledge of its external outputs. But in IT and cloud computing observability also refers to software tools and practices for aggregating, correlating and analyzing a steady stream of performance data from a distributed application along with the hardware and network it runs on, in order to more effectively monitor, troubleshoot and debug the application and the network to meet customer experience expectations, service level agreements (SLAs) and other business requirements. The data associated with this is called "telemetry data".
-    
     ### **Telemetry Data Types**
     
     \`\`\`markdown
@@ -48,8 +43,8 @@ export const Blogs: Blog[] = [
     \`\`\`
     
     ### **Use Cases**
-    
-    #### **\#1 Indian Brokerage Firm**
+
+    #### **#1 Indian Brokerage Firm**
     
     ##### **Problem**
     
@@ -105,8 +100,6 @@ export const Blogs: Blog[] = [
     tags: ["observability", "opentelemetry"],
     draft: false,
     markdown: `
-
-<br>
     ### **Introduction**
     
     By default, OpenTelemetry OTLP exporters (and other exporters too) send telemetry data directly to the specified endpoint. While this is effective in many scenarios, there are situations where transient network issues or destination unavailability may result in the loss of telemetry data.
@@ -124,8 +117,7 @@ export const Blogs: Blog[] = [
     ### **Configuration**
     
     The config for \`OTLP\` exporter and \`file storage\` extension might look something like this-
-    
-    \`\`\`yaml
+\`\`\`yaml
     otlp:
       endpoint: \${env:OTEL_COLLECTOR_ENDPOINT}
       tls:
@@ -143,12 +135,12 @@ export const Blogs: Blog[] = [
       timeout: 5s
       \`\`\`
     
-    \`\`\`yaml
+      \`\`\`
     file_storage/otlp:
       directory: /var/lib/otelcol/file_storage
       timeout: 1s
       \`\`\`
-    
+
     Find the full settings for OTLP exporter [here](https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/exporterhelper/README.md) and for file storage extension [here](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/storage/filestorage).
     
     ### **Conclusion**
