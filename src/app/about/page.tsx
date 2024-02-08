@@ -1,4 +1,5 @@
 import { DefaultLayout } from "@/components/layouts/DefaultLayout";
+import { AboutHero } from "@/components/modules/AboutHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,9 +16,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <DefaultLayout>
-      <section className="flex h-full min-h-screen items-center justify-center bg-primary py-36">
-        <h1 className="text-4xl font-bold text-white">About Us</h1>
-      </section>
+      <AboutHero />
     </DefaultLayout>
   );
 }

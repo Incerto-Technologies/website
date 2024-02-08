@@ -15,11 +15,6 @@ export const BlogHero = () => {
         <h1 className="text-center text-3xl font-bold">
           Discover cool updates and blogs here
         </h1>
-        <p className="mx-auto mt-10 px-3 text-center text-sm leading-6 tracking-[2%] md:w-4/6">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s.
-        </p>
       </div>
       <div className="w-container mt-[72px] flex justify-between gap-[18px] px-[20px] md:mt-[137px]  md:justify-start md:gap-[30px] md:px-0">
         <div className="flex items-center gap-2 rounded-2xl bg-[#232323] px-5 py-2.5 md:w-3/5">
