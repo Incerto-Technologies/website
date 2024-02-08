@@ -8,7 +8,7 @@ export const Team = () => {
         People powering incerto
       </h3>
       <div className="flex w-full items-center justify-center">
-        <div className="mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 md:gap-x-[110px] md:gap-y-28">
+        <div className="mx-auto mt-10 grid grid-cols-1 md:gap-x-[110px] md:gap-y-28 lg:grid-cols-2">
           {teamMembers.map((member) => (
             <div key={uuid()} className="w-full max-w-[550px] md:flex md:gap-7">
               <Image

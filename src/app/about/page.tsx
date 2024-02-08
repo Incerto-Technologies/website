@@ -25,7 +25,8 @@ export default function page() {
       <OurVision />
       <Team />
       <div className="mt-[150px] md:mt-[200px]">
-        <FooterBackground className="bg-center md:bg-center xl:bg-top">
+        <FooterBackground className="">
+          {/* <FooterBackground className="bg-center md:bg-center xl:bg-top"> */}
           <GetInTouch />
           <Footer isBackground />
         </FooterBackground>
