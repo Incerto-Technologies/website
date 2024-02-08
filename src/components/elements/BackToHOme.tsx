@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 
-export default function Product() {
+export const BackToHOme = () => {
   const router = useRouter();
   router.replace("/");
-  return <div>page</div>;
-}
+  return <div>BackToHOme</div>;
+};

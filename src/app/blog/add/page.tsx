@@ -1,8 +1,7 @@
 import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 import { AddBlogForm } from "@/components/modules/AddBlogForm";
 import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
-
-const page = async () => {
+export default async function page() {
   return (
     <DefaultLayout>
       <ReduxProdiver>
@@ -12,5 +11,4 @@ const page = async () => {
       </ReduxProdiver>
     </DefaultLayout>
   );
-};
-export default page;
+}

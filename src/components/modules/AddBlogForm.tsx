@@ -3,26 +3,26 @@ import { useAppDispatch, useTypedSelector } from "@/hooks/store";
 import { Input } from "../elements/Input";
 import MarkdownEditor from "@uiw/react-md-editor";
 import { setCreateBlog } from "@/store/slice/blog.slice";
-import { useRouter } from "next/navigation";
 import { Button } from "../elements/Button";
 import { Blog } from "@/types/Blogs";
 import { createBlogAction } from "@/action/createBlogAction";
 import { AppTextArea } from "../elements/AppTextArea";
+import { useEffect, useState } from "react";
 
 export const AddBlogForm = () => {
   const { createBlog } = useTypedSelector((state) => state.blog);
 
-  const router = useRouter();
+  const [token, setToken] = useState("");
 
   const dispatch = useAppDispatch();
   // get the token from localstorage
-  const token = localStorage.getItem("token");
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) setToken(token);
+    if (!token) window.location.href = "/login";
+  }, [token]);
 
   // if no token is found, redirect to login page
-  if (!token) {
-    router.push("/login");
-    return;
-  }
 
   const handleSubmit = async () => {
     console.log(createBlog, "createBlog before validation");

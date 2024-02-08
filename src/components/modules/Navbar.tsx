@@ -128,11 +128,11 @@ export const Navbar = () => {
               <li key={index + name}>
                 <Link
                   href={path}
-                  className={
-                    window.location.pathname === path
-                      ? "font-[800] text-[#00FF00]"
-                      : "text-white"
-                  }
+                  // className={
+                  //   window.location.pathname === path
+                  //     ? "font-[800] text-[#00FF00]"
+                  //     : "text-white"
+                  // }
                 >
                   {name}
                 </Link>
