@@ -5,30 +5,30 @@ import Link from "next/link";
 
 export const Heading = () => {
   return (
-    <section className="mt-24 flex flex-col items-end justify-between gap-[38px] md:mt-[60px] md:flex-row md:items-center ">
-      <div className="flex w-full flex-col gap-[34px] px-6 md:pl-6">
-        <h1 className="font-gotham text-[30px] font-medium leading-[42px] tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[60px] md:tracking-tightest">
+    <section className="w-container mt-[54px] flex flex-col items-center justify-center gap-[32px] px-6 md:w-5/6 md:gap-[34px]">
+      <div className="mx-auto w-full xl:w-5/6 3xl:w-4/6">
+        <h1 className="text-center font-gotham text-[30px] font-medium leading-[42px] tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[60px] md:tracking-tightest">
           <span>
             End-to-End Open Source Observability <br /> Custom-built on
           </span>
           <span className="head-title text-clip-all"> Your Infrastructure</span>
         </h1>
-
-        <p className="font-medium leading-7 tracking-wide md:leading-[26px]">
-          Build observability that adapts to your infra, not the other way
-          around
-        </p>
-        <Link
-          href={"#contact"}
-          className="w-[164px] rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
-        >
-          <div className="flex items-center justify-center gap-2.5">
-            <p>Get in touch</p>
-            <ArrowOutward />
-          </div>
-        </Link>
       </div>
-      <div className="mt-[38px] flex w-full max-w-[400px] justify-end pl-6 md:pl-0">
+
+      <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
+        Build observability that adapts to your infra, not the other way around
+      </p>
+      <Link
+        href={"#contact"}
+        className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
+      >
+        <div className="flex items-center justify-center gap-2.5">
+          <p>Get in touch</p>
+          <ArrowOutward />
+        </div>
+      </Link>
+
+      <div className="mt-[38px] flex w-full max-w-[689px] justify-center">
         <Image
           src={"/backgrounds/dashboard.png"}
           alt="Dashboard"

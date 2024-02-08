@@ -123,10 +123,13 @@ export const Navbar = () => {
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-[60px]">
             <li>
+              <Link href="/">Our Products</Link>
+            </li>
+            <li>
               <Link href="/">About us</Link>
             </li>
             <li>
-              <Link href="/">Blogs</Link>
+              <Link href="/blog">Blogs</Link>
             </li>
             <li>
               <Link

@@ -35,7 +35,7 @@ export const GoPreviousPageButton = () => {
             <path
               d="M7.82451 13.5L13.4245 19.1L11.9995 20.5L3.99951 12.5L11.9995 4.5L13.4245 5.9L7.82451 11.5H19.9995V13.5H7.82451Z"
               fill="black"
-              fill-opacity="0.870588"
+              fillOpacity="0.870588"
             />
           </g>
         </svg>

@@ -27,7 +27,8 @@ const CustomersLogoData = [
 
 export const Customers = () => {
   return (
-    <div className="mt-10 md:mt-[171px]">
+    // <div className="mt-10 md:mt-[171px]">
+    <div className="mt-5">
       <Marquee autoFill>
         {CustomersLogoData.map((logo, index) => (
           <CustomerLogo

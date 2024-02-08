@@ -28,6 +28,16 @@ export const metadata: Metadata = {
       url: "/logos/favicon.ico",
     },
   ],
+  openGraph: {
+    images: [
+      {
+        url: "/backgrounds/dashboard.png",
+        width: 1080,
+        height: 1080,
+        alt: "Dashboard",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
