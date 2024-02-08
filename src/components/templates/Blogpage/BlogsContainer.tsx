@@ -1,9 +1,9 @@
 "use client";
 import { BlogCard } from "@/components/modules/BlogCard";
 import { BlogCardMobile } from "@/components/modules/BlogCardMobile";
-import { Blog } from "@/data/Blogs";
 import { useAppDispatch, useTypedSelector } from "@/hooks/store";
 import { setConstBlog } from "@/store/slice/blog.slice";
+import { Blog } from "@/types/Blogs";
 import { useEffect } from "react";
 
 type Props = {

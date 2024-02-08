@@ -4,6 +4,7 @@ import { manrope } from "./fonts";
 import { ModalProvider } from "@/components/elements/ModalProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://incerto.in"),
   title: "Incerto",
   description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
   icons: [
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://incerto-website.vercel.app/meta/incerto.png",
+        url: "/meta/incerto.png",
         width: 1080,
         height: 1080,
         alt: "Dashboard",
@@ -39,7 +40,6 @@ export const metadata: Metadata = {
     ],
     description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
     title: "Incerto",
-    url: "https://incerto-website.vercel.app",
   },
 };
 

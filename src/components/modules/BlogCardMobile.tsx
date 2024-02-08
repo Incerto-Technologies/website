@@ -1,4 +1,4 @@
-import { Blog } from "@/data/Blogs";
+import { Blog } from "@/types/Blogs";
 import { getBlogUrl } from "@/utils/getBlogUrl";
 import Image from "next/image";
 import Link from "next/link";

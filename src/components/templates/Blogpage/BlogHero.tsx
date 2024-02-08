@@ -1,9 +1,9 @@
 "use client";
 import { Button } from "@/components/elements/Button";
 import { SearchIcon } from "@/components/elements/icons/SearchIcon";
-import { Tags } from "@/data/Blogs";
 import { useAppDispatch, useTypedSelector } from "@/hooks/store";
 import { setSearch, setSearchTag } from "@/store/slice/blog.slice";
+import { Tags } from "@/types/Blogs";
 import { classNameMerge } from "@/utils/classNameMerge";
 
 export const BlogHero = () => {

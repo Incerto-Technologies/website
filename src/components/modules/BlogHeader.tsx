@@ -1,7 +1,7 @@
-import { Blog } from "@/data/Blogs";
 import { NoteIcon } from "../elements/icons/NoteIcon";
 import { Folder } from "../elements/icons/Folder";
 import { Calendar } from "../elements/icons/Calendar";
+import { Blog } from "@/types/Blogs";
 
 export const BlogHeader = ({ title, author, tags, date }: Blog) => {
   const inputDate = new Date(date);

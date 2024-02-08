@@ -1,7 +1,7 @@
-import { Blog } from "@/data/Blogs";
 import Image from "next/image";
 import Link from "next/link";
 import { getBlogUrl } from "@/utils/getBlogUrl";
+import { Blog } from "@/types/Blogs";
 
 export const BlogCard = ({ image, title, description, author }: Blog) => {
   return (

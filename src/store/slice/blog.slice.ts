@@ -1,4 +1,4 @@
-import { Blog, SearchTag } from "./../../data/Blogs";
+import { Blog, SearchTag } from "../../types/Blogs";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 

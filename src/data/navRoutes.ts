@@ -5,7 +5,7 @@ export const navRoutes = [
   },
   {
     name: "Blogs",
-    path: "/",
+    path: "/blog",
   },
   {
     name: "Contact us",
