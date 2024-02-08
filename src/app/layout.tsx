@@ -31,12 +31,15 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https/incerto-website.vercel.app/meta/incerto.png",
+        url: "https://incerto-website.vercel.app/meta/incerto.png",
         width: 1080,
         height: 1080,
         alt: "Dashboard",
       },
     ],
+    description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
+    title: "Incerto",
+    url: "https://incerto-website.vercel.app",
   },
 };
 
