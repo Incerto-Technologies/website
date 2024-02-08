@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/backgrounds/dashboard.png",
+        url: "https://incerto-website.vercel.app/backgrounds/dashboard.png",
         width: 1080,
         height: 1080,
         alt: "Dashboard",
