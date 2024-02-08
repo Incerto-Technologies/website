@@ -8,7 +8,9 @@ export const connectDb = async () => {
     return cachedConnection;
   }
 
-  const connection = await mongoose.connect(process.env.DB_URL! as string);
+  const connection = await mongoose.connect(
+    process.env.MONGODB_URI!.replace("myFirstDatabase", "incerto") as string,
+  );
 
   console.log("Database connected");
   cachedConnection = connection;
