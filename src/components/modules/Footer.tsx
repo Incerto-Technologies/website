@@ -5,16 +5,23 @@ import { LinkedIn } from "../elements/icons/LinkedIn";
 import { BackToTop } from "../elements/BackToTop";
 
 type FooterProps = {
-  isBackground: boolean;
+  isBackground?: boolean;
+  isTextWhite?: boolean;
 };
 
-export const Footer = ({ isBackground = false }: FooterProps) => {
+export const Footer = ({
+  isBackground = false,
+  isTextWhite = false,
+}: FooterProps) => {
   return (
     <div
       className={classNameMerge(
         "h-full w-full",
         isBackground ? "footer-bg-shade" : "",
       )}
+      style={{
+        color: isTextWhite ? "white" : "#959595",
+      }}
     >
       <div
         className="w-full bg-bottom bg-no-repeat object-contain md:bg-cover"
@@ -37,10 +44,10 @@ export const Footer = ({ isBackground = false }: FooterProps) => {
                 Incerto Technologies Pvt Ltd
               </h4>
               <Link
-                href={"mailto:contact@incerto.com"}
+                href={"mailto:support@incerto.com"}
                 className="hidden text-sm font-medium leading-6 tracking-wide text-[#959595] md:block"
               >
-                contact@incerto.com
+                support@incerto.com
               </Link>
               <p className="font-medium leading-6 tracking-wide text-[#959595] md:hidden">
                 Incerto Technologies is a ....
@@ -48,6 +55,7 @@ export const Footer = ({ isBackground = false }: FooterProps) => {
             </div>
             <div className="mt-0 flex w-full flex-col md:flex-row md:gap-10 lg:gap-28 xl:gap-40">
               <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-16">
+                <Link href={"/"}>Our Products</Link>
                 <Link href={"/"}>About Us</Link>
                 <Link href={"/"}>Blog</Link>
               </div>
@@ -74,10 +82,10 @@ export const Footer = ({ isBackground = false }: FooterProps) => {
               <LinkedIn />
             </Link>
             <Link
-              href={"mailto:contact@incerto.com"}
+              href={"mailto:support@incerto.com"}
               className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]"
             >
-              contact@incerto.com
+              support@incerto.com
             </Link>
           </div>
 

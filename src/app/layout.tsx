@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://incerto.in"),
   title: "Incerto",
   description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
+  publisher: "Incerto",
   icons: [
     {
       rel: "apple-touch-icon",
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
     ],
     description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
     title: "Incerto",
+    type: "website",
   },
 };
 

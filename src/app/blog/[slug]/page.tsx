@@ -2,6 +2,7 @@ import { GoPreviousPageButton } from "@/components/elements/GoPreviousPageButton
 import { AppMarkDown } from "@/components/modules/AppMarkDown";
 import { BlogHeader } from "@/components/modules/BlogHeader";
 import { BlogNotFound } from "@/components/modules/BlogNotFound";
+import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
 
@@ -28,7 +29,9 @@ export default async function page({ params }: { params: { slug: string } }) {
         <div>
           <AppMarkDown markdown={blog.markdown || ""} />
         </div>
+        <div></div>
       </section>
+      <Footer isBackground isTextWhite />
     </main>
   );
 }
