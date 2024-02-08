@@ -46,14 +46,13 @@ export const AppMarkDown = ({ markdown }: Props) => {
               language={match[1]}
               // showLineNumbers
               // wrapLongLines
-              style={atelierForestLight}
-              customStyle={{
-                backgroundColor: "#D5E5DF",
-                border: "1.3px solid #0F937C",
-                borderRadius: "10px 10px 0 0",
-                scrollbarColor: "#0F937C #D5E5DF",
-                // overflow: "hidden",
-              }}
+              style={oneDark}
+              // customStyle={{
+              // backgroundColor: "#D5E5DF",
+              // border: "1.3px solid #0F937C",
+              // borderRadius: "10px 10px 0 0",
+              // scrollbarColor: "#0F937C #D5E5DF",
+              // }}
             >
               {String(children).replace(/\n$/, "")}
             </SyntaxHighlighter>

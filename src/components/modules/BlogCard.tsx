@@ -34,7 +34,7 @@ export const BlogCard = ({ image, title, description, author }: Blog) => {
         </p>
         <Link
           href={getBlogUrl(title)}
-          className="w-full rounded-[20px] border border-accent-light bg-transparent px-5 py-[14px]"
+          className="w-full rounded-[20px] border border-[#0F937C] bg-transparent px-5 py-[14px]"
         >
           <p className="text-center">Read More</p>
         </Link>

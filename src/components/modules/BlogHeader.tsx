@@ -14,7 +14,7 @@ export const BlogHeader = ({ title, author, tags, date }: Blog) => {
   const formatedDate = inputDate.toLocaleDateString("en-US", options);
 
   return (
-    <div className="mb-[50px] mt-5 md:mb-[100px] md:mt-[40px]">
+    <div className="mb-[50px] mt-5 text-black md:mb-[100px] md:mt-[40px]">
       <h1 className="text-[22px] font-bold leading-8 tracking-tighter md:text-[32px] md:leading-[46px] md:tracking-[-0.64px]">
         {`${title}`}
       </h1>

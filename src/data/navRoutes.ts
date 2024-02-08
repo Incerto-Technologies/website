@@ -1,11 +1,11 @@
 export const navRoutes = [
   {
     name: "Our Products",
-    path: "/",
+    path: "/products",
   },
   {
     name: "About us",
-    path: "/",
+    path: "/about",
   },
   {
     name: "Blogs",

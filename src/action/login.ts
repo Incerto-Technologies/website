@@ -51,7 +51,10 @@ export const login = async (user: { email: string; password: string }) => {
     }
 
     // ? if user does not exists then create new user
-    const password = await bycrpt.hash(user.password, process.env.SALT_ROUNDS!);
+    const password = await bycrpt.hash(
+      user.password,
+      parseInt(process.env.SALT_ROUNDS!),
+    );
 
     const newUser = await UserModel.create({
       email: user.email,

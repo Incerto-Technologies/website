@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "../elements/Button";
 import { Blog } from "@/types/Blogs";
 import { createBlogAction } from "@/action/createBlogAction";
+import { AppTextArea } from "../elements/AppTextArea";
 
 export const AddBlogForm = () => {
   const { createBlog } = useTypedSelector((state) => state.blog);
@@ -14,8 +15,18 @@ export const AddBlogForm = () => {
   const router = useRouter();
 
   const dispatch = useAppDispatch();
+  // get the token from localstorage
+  const token = localStorage.getItem("token");
 
-  const handleSubmit = () => {
+  // if no token is found, redirect to login page
+  if (!token) {
+    router.push("/login");
+    return;
+  }
+
+  const handleSubmit = async () => {
+    console.log(createBlog, "createBlog before validation");
+
     // validate the createblog object
     if (!createBlog) return;
 
@@ -26,20 +37,14 @@ export const AddBlogForm = () => {
       }
     });
 
-    // get the token from localstorage
-    const token = localStorage.getItem("token");
-
-    // if no token is found, redirect to login page
-    if (!token) {
-      router.push("/login");
-      return;
-    }
-
     // dispatch the createBlog action
-    createBlogAction({
+    const newBlog = await createBlogAction({
       ...(createBlog as Blog),
       token,
     });
+
+    alert(newBlog.message);
+    console.log(newBlog);
   };
 
   return (
@@ -69,6 +74,17 @@ export const AddBlogForm = () => {
             );
           }}
         />
+        <AppTextArea
+          labelName="Description"
+          onChange={(e) => {
+            dispatch(
+              setCreateBlog({
+                ...createBlog,
+                description: e.target.value,
+              }),
+            );
+          }}
+        />
         <Input
           placeholder="image"
           labelName="image url"
@@ -82,7 +98,7 @@ export const AddBlogForm = () => {
           }}
         />
         <Input
-          placeholder="categories"
+          placeholder="categories (comma separated)"
           labelName="categories"
           onChange={(e) => {
             dispatch(
@@ -108,7 +124,7 @@ export const AddBlogForm = () => {
           }}
         />
         <Input
-          placeholder="tags"
+          placeholder="tags (comma separated)"
           labelName="tags"
           onChange={(e) => {
             dispatch(

@@ -12,6 +12,8 @@ interface BlogRequest extends Blog {
 
 export const createBlogAction = async (blog: BlogRequest) => {
   try {
+    console.log(blog, "blog object");
+
     if (!blog)
       return {
         message: "No blog object provided",
@@ -44,16 +46,18 @@ export const createBlogAction = async (blog: BlogRequest) => {
       };
 
     const newBlog = await BlogModel.create(blog);
+    const blogJSON = newBlog.toJSON();
+
     return {
       message: "Blog created successfully",
       success: true,
-      data: newBlog,
+      blog: blogJSON,
     };
   } catch (error) {
+    console.log(error, "error in create blog action");
     return {
       message: "An error occured",
       success: false,
-      error,
     };
   }
 };
