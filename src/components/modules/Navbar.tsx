@@ -36,7 +36,7 @@ export const Navbar = () => {
         !navbarOpen ? " bg-opacity-30 backdrop-blur-2xl" : "",
       )}
     >
-      <div className="w-container flex items-center justify-between  px-5 py-4 md:px-20">
+      <div className="w-container flex items-center justify-between  px-5 py-8 md:px-20">
         {/* Logo */}
         <Link href="/">
           <Image
