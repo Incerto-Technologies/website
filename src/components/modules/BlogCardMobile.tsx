@@ -3,9 +3,19 @@ import { getBlogUrl } from "@/utils/getBlogUrl";
 import Image from "next/image";
 import Link from "next/link";
 
-export const BlogCardMobile = ({ image, title, author, profile }: Blog) => {
+interface Props extends Blog {
+  _id: string;
+}
+
+export const BlogCardMobile = ({
+  image,
+  title,
+  author,
+  profile,
+  _id,
+}: Props) => {
   return (
-    <Link href={getBlogUrl(title)}>
+    <Link href={getBlogUrl(_id)}>
       <div className="mt-16 px-[20px]">
         <Image
           className="rounded-[30px]"

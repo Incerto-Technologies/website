@@ -12,11 +12,7 @@ export default async function page({ params }: { params: { slug: string } }) {
   await connectDb();
 
   const [data, blogs] = await Promise.all([
-    BlogModel.findOne({
-      title: {
-        $regex: new RegExp(params.slug.replaceAll("-", " "), "i"),
-      },
-    }).lean(),
+    BlogModel.findById(params.slug).lean(),
     BlogModel.find({}).limit(3).lean(),
   ]);
 
@@ -49,7 +45,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           {/* @ts-ignore */}
           <BlogCardMobile {...blogs[0]} />
         </div>
-        <div className="hidden grid-cols-3 text-black md:grid">
+        <div className="mx-auto hidden w-5/6 grid-cols-2  gap-11 text-black md:grid xl:grid-cols-3">
           {blogs.map((blog, index) => (
             <div key={index}>
               {/* @ts-ignore */}

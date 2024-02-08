@@ -9,6 +9,7 @@ import { useEffect } from "react";
 type Props = {
   blogs: Blog[];
 };
+
 export const BlogsContainer = ({ blogs }: Props) => {
   const dispatch = useAppDispatch();
 

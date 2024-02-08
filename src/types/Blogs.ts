@@ -10,6 +10,7 @@ export type Blog = {
   draft: false;
   markdown: string;
   profile?: string;
+  _id: string;
 };
 
 export const Tags = ["all", "linux", "observability"];

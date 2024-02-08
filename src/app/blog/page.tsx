@@ -1,16 +1,18 @@
+import { getBlogs } from "@/action/getBlogs";
 import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 import { Footer } from "@/components/modules/Footer";
 import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
 import { RrwebProvider } from "@/components/modules/RrwebProvider";
 import { BlogHero } from "@/components/templates/Blogpage/BlogHero";
-import { Blogs } from "@/components/templates/Blogpage/Blogs";
-export default function page() {
+import { BlogsContainer } from "@/components/templates/Blogpage/BlogsContainer";
+export default async function page() {
+  const blogs = await getBlogs();
   return (
     <RrwebProvider>
       <ReduxProdiver>
         <DefaultLayout>
           <BlogHero />
-          <Blogs />
+          <BlogsContainer blogs={blogs} />
           <Footer isBackground={false} />
         </DefaultLayout>
       </ReduxProdiver>

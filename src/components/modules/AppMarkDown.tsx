@@ -119,7 +119,17 @@ export const AppMarkDown = ({ markdown }: Props) => {
           );
         },
         a(props) {
-          return (
+          return props.children?.toString().toLowerCase() == "book a demo" ||
+            props.children?.toString().toLowerCase() == "get in touch" ? (
+            <span className="flex w-full justify-center">
+              <a
+                className="rounded-2xl bg-[#0F937C] px-5 py-3 text-secondary"
+                href={props.href as string}
+              >
+                {props.children}
+              </a>
+            </span>
+          ) : (
             <a
               className="text-[#0F937C] hover:underline"
               href={props.href as string}
