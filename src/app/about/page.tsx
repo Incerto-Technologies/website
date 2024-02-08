@@ -1,5 +1,7 @@
 import { DefaultLayout } from "@/components/layouts/DefaultLayout";
-import { AboutHero } from "@/components/modules/AboutHero";
+import { AboutHero } from "@/components/templates/About/AboutHero";
+import { OurVision } from "@/components/templates/About/OurVision";
+import { Team } from "@/components/templates/About/Team";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,6 +19,8 @@ export default function page() {
   return (
     <DefaultLayout>
       <AboutHero />
+      <OurVision />
+      <Team />
     </DefaultLayout>
   );
 }
