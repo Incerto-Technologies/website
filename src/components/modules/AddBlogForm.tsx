@@ -3,57 +3,122 @@ import { useAppDispatch, useTypedSelector } from "@/hooks/store";
 import { Input } from "../elements/Input";
 import MarkdownEditor from "@uiw/react-md-editor";
 import { setCreateBlog } from "@/store/slice/blog.slice";
-import { getUser } from "@/action/getUser";
-import { setUser } from "@/store/slice/user.slice";
-import { useCallback, useEffect } from "react";
-import { log } from "console";
 import { useRouter } from "next/navigation";
 import { Button } from "../elements/Button";
-
-type Props = {
-  isAdmin: boolean;
-};
+import { Blog } from "@/types/Blogs";
+import { createBlogAction } from "@/action/createBlogAction";
 
 export const AddBlogForm = () => {
   const { createBlog } = useTypedSelector((state) => state.blog);
-  const { isAdmin } = useTypedSelector((state) => state.user);
 
   const router = useRouter();
 
   const dispatch = useAppDispatch();
 
-  const getUserInfo = useCallback(async () => {
+  const handleSubmit = () => {
+    // validate the createblog object
+    if (!createBlog) return;
+
+    Object.keys(createBlog).forEach((key) => {
+      if (!createBlog[key as keyof typeof createBlog]) {
+        alert("All fields are required");
+        return;
+      }
+    });
+
+    // get the token from localstorage
     const token = localStorage.getItem("token");
+
+    // if no token is found, redirect to login page
     if (!token) {
       router.push("/login");
       return;
     }
-    const user = await getUser(token);
 
-    console.log(user, "user");
-    if (!user) return;
-    dispatch(
-      setUser({
-        ...user.user,
-        token: user.token,
-      }),
-    );
-    console.log(user.user.isAdmin);
-  }, [dispatch, router]);
-
-  useEffect(() => {
-    getUserInfo();
-  }, [getUserInfo]);
+    // dispatch the createBlog action
+    createBlogAction({
+      ...(createBlog as Blog),
+      token,
+    });
+  };
 
   return (
     <div className=" w-3/6">
       <div className="mx-auto flex flex-col gap-10">
-        <Input placeholder="title" labelName="title" />
-        <Input placeholder="meta_title" labelName="meta_title" />
-        <Input placeholder="image" labelName="image url" />
-        <Input placeholder="categories" labelName="categories" />
-        <Input placeholder="author" labelName="author" />
-        <Input placeholder="tags" labelName="tags" />
+        <Input
+          placeholder="title"
+          labelName="title"
+          onChange={(e) => {
+            dispatch(
+              setCreateBlog({
+                ...createBlog,
+                title: e.target.value,
+              }),
+            );
+          }}
+        />
+        <Input
+          placeholder="meta_title"
+          labelName="meta_title"
+          onChange={(e) => {
+            dispatch(
+              setCreateBlog({
+                ...createBlog,
+                meta_title: e.target.value,
+              }),
+            );
+          }}
+        />
+        <Input
+          placeholder="image"
+          labelName="image url"
+          onChange={(e) => {
+            dispatch(
+              setCreateBlog({
+                ...createBlog,
+                image: e.target.value,
+              }),
+            );
+          }}
+        />
+        <Input
+          placeholder="categories"
+          labelName="categories"
+          onChange={(e) => {
+            dispatch(
+              setCreateBlog({
+                ...createBlog,
+                categories: e.target.value
+                  .split(",")
+                  .map((item) => item.trim()),
+              }),
+            );
+          }}
+        />
+        <Input
+          placeholder="author"
+          labelName="author"
+          onChange={(e) => {
+            dispatch(
+              setCreateBlog({
+                ...createBlog,
+                author: e.target.value,
+              }),
+            );
+          }}
+        />
+        <Input
+          placeholder="tags"
+          labelName="tags"
+          onChange={(e) => {
+            dispatch(
+              setCreateBlog({
+                ...createBlog,
+                tags: e.target.value.split(",").map((item) => item.trim()),
+              }),
+            );
+          }}
+        />
       </div>
       <div className="mt-10 w-full" data-color-mode="dark">
         <MarkdownEditor
@@ -74,7 +139,7 @@ export const AddBlogForm = () => {
         <Button
           className="mt-10 rounded-md"
           onClick={() => {
-            console.log(createBlog);
+            handleSubmit();
           }}
         >
           Save
