@@ -12,9 +12,9 @@ export const FooterBackground = ({
     <div
       className={
         !className
-          ? `bg-[url("/backgrounds/mobile-footer.png")] bg-cover bg-top bg-no-repeat md:bg-[url("/backgrounds/desktop-footer.png")] md:bg-cover md:bg-top`
+          ? `bg-[url("/backgrounds/mobile-footer.webp")] bg-cover bg-top bg-no-repeat md:bg-[url("/backgrounds/desktop-footer.webp")] md:bg-cover md:bg-top`
           : classNameMerge(
-              `bg-[url("/backgrounds/mobile-footer.png")] bg-cover bg-top bg-no-repeat md:bg-[url("/backgrounds/desktop-footer.png")] md:bg-cover md:bg-top`,
+              `bg-[url("/backgrounds/mobile-footer.webp")] bg-cover bg-top bg-no-repeat md:bg-[url("/backgrounds/desktop-footer.webp")] md:bg-cover md:bg-top`,
               className,
             )
       }

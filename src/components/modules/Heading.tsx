@@ -36,7 +36,7 @@ export const Heading = () => {
       </section>
       <div className="w-container mt-[38px] flex w-full justify-center px-[20px] lg:px-[192px]">
         <Image
-          src={"/backgrounds/dashboard.png"}
+          src={"/backgrounds/dashboard.webp"}
           alt="Dashboard"
           width={1080}
           height={1080}
