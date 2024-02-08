@@ -7,8 +7,13 @@ import { BlogNotFound } from "@/components/modules/BlogNotFound";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
+import { isValidObjectId } from "mongoose";
 
 export default async function page({ params }: { params: { slug: string } }) {
+  if (!isValidObjectId(params.slug)) {
+    return <BlogNotFound />;
+  }
+
   await connectDb();
 
   const [data, blogs] = await Promise.all([
