@@ -1,14 +1,12 @@
 "use client";
 
 import { Input } from "../elements/Input";
-import { AppTextArea } from "../elements/AppTextArea";
 import { Dispatch, ReactNode, SetStateAction, useState } from "react";
 import { Button } from "../elements/Button";
 import { Send } from "../elements/icons/Send";
 import { useModalContext } from "../elements/ModalProvider";
 import { classNameMerge } from "@/utils/classNameMerge";
 import { Loader } from "../elements/Loader";
-import { contactUs } from "@/action/contactUs";
 
 type FormData = {
   email: string;
@@ -124,7 +122,12 @@ export const ContactCard = () => {
     setIsLoading(true);
 
     // Send data to server
-    const res = await contactUs(formData.email);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
 
     // Loading done
     setIsLoading(false);
@@ -135,8 +138,8 @@ export const ContactCard = () => {
       children: (
         // <Modal message={data.message} status={status} setModal={setModal} />
         <Modal
-          message={res.message}
-          success={res.success}
+          message={data.message}
+          success={data.success}
           setModal={setModal}
         />
       ),
