@@ -3,7 +3,7 @@ import { FlowGraphMobile } from "@/components/modules/FlowGraphMobile";
 
 export const FlowGraph = () => {
   return (
-    <div className="mt-[200px] pb-[100px]">
+    <div className="mt-[200px] bg-accent pb-[100px]">
       <div className="w-container px-2 pt-[100px] md:px-10">
         <h3 className="mx-auto text-center font-gotham text-[24px] font-medium leading-[33px] tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
           Observability that&apos;s Built for{" "}
@@ -21,7 +21,7 @@ export const FlowGraph = () => {
         <div className="mx-auto hidden w-full justify-center md:flex md:w-5/6 lg:w-full">
           <FlowGraphDesktop />
         </div>
-        <div className="mx-auto mt-10 flex w-full justify-center md:hidden">
+        <div className="mx-auto mt-10 flex w-full justify-center text-white md:hidden">
           <FlowGraphMobile />
         </div>
       </div>

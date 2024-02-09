@@ -3,7 +3,6 @@ import Image from "next/image";
 import { animated } from "react-spring";
 import { ICard } from "./TestimonialCarousel";
 import { Button } from "../elements/Button";
-import { Quotes } from "../elements/icons/Quotes";
 
 export const TestimonialCard = ({
   profile,
@@ -13,7 +12,7 @@ export const TestimonialCard = ({
   position,
 }: ICard) => {
   return (
-    <animated.div
+    <div
       className={
         "relative flex h-fit w-[300px] flex-col justify-center rounded-[20px] bg-[#121815] px-8 py-9 backdrop-blur-[27px] md:h-fit md:w-[632px] md:px-16 md:py-10"
       }
@@ -36,19 +35,19 @@ export const TestimonialCard = ({
             <p className="text-[14px] text-[#929292]">{position}</p>
           </div>
         </div>
-        <div className="hidden">
+        <div className="hidden md:block">
           {/* <div className="hidden md:block"> */}
-          <Button className="rounded-[10px] px-[18px] py-[10px]">
+          <Button className="h-[46px] w-[121px] rounded-[10px] py-0">
             <Image
               src={companyLogo}
               width={100}
               height={100}
-              alt={name}
-              className="object-contain"
+              alt={position}
+              className="h-full w-full object-cover"
             />
           </Button>
         </div>
       </div>
-    </animated.div>
+    </div>
   );
 };

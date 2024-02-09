@@ -37,6 +37,10 @@ const slice = createSlice({
 
     setSearchTag: (state, action: PayloadAction<SearchTag>) => {
       state.searchTag = action.payload;
+      if (state.searchTag == "all") {
+        state.Blogs = state.ConstBlogs;
+        return;
+      }
       state.Blogs = state.ConstBlogs.filter((blog) =>
         //   @ts-ignore
         blog.tags.includes(state.searchTag),
