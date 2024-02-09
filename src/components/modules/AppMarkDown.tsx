@@ -1,21 +1,26 @@
 "use client";
+import { useEffect } from "react";
+
 import Markdown from "react-markdown";
+
+// default unified extension
 import remarkGfm from "remark-gfm";
 
+// Theme
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+// code High Lighter
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-import {
-  oneDark,
-  oneLight,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+// Video plugin
+import rehypeVideo from "rehype-video";
 
-import {
-  paraisoLight,
-  atelierDuneLight,
-  atelierForestLight,
-} from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { useEffect } from "react";
+// Math md cplugin
+import remarkMath from "remark-math";
+
+// Math Ui components
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 
 type Props = {
   markdown: string;
@@ -32,7 +37,8 @@ export const AppMarkDown = ({ markdown }: Props) => {
 
   return (
     <Markdown
-      rehypePlugins={[remarkGfm]}
+      rehypePlugins={[rehypeVideo, rehypeKatex]}
+      remarkPlugins={[remarkGfm, remarkMath]}
       components={{
         code(props) {
           const { children, className, node, ...rest } = props;
