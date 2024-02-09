@@ -1,12 +1,12 @@
 export const FlowGraphDesktop = () => {
   // const staticStorkeColor = "#DEDEDE09";
-  const staticStorkeColor = "rgba(52, 52, 52, 0.9)";
+  // const staticStorkeColor = "rgba(52, 52, 52, 0.9)";
   // const staticStorkeColor = "#121815";
   // const staticStorkeColor = "#0F937C";FAFF69
   // const staticStorkeColor = "#FAFF69";
   // const staticStorkeColor = "#fafafa06";
   // const staticStorkeColor = "#dedede03";
-  // const staticStorkeColor = "#0f9";
+  const staticStorkeColor = "#fff";
   const staticStrokeWidth = 2;
   // const staticStrokeWidth = 1.52143;
   const usestaticStrokeWidth = 2;

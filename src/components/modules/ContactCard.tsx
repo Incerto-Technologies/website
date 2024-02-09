@@ -8,6 +8,7 @@ import { Send } from "../elements/icons/Send";
 import { useModalContext } from "../elements/ModalProvider";
 import { classNameMerge } from "@/utils/classNameMerge";
 import { Loader } from "../elements/Loader";
+import { contactUs } from "@/action/contactUs";
 
 type FormData = {
   email: string;
@@ -16,7 +17,7 @@ type FormData = {
 
 type ModalProps = {
   message: string;
-  status: number;
+  success: boolean;
   setModal: Dispatch<
     SetStateAction<{
       toggle: boolean;
@@ -24,7 +25,7 @@ type ModalProps = {
     }>
   >;
 };
-const Modal = ({ message, status, setModal }: ModalProps) => {
+const Modal = ({ message, success, setModal }: ModalProps) => {
   {
     return (
       <div className="rounded-[20px] bg-[#121815] p-8">
@@ -60,7 +61,7 @@ const Modal = ({ message, status, setModal }: ModalProps) => {
         <p
           className={classNameMerge(
             "text-center text-lg font-bold ",
-            status == 200 ? "text-accent" : "text-red-500",
+            success ? "text-accent" : "text-red-500",
           )}
         >
           {message}
@@ -109,15 +110,6 @@ export const ContactCard = () => {
       isValid = false;
     }
 
-    // Validate message
-    // if (!formData.message.trim()) {
-    //   errorFormData = {
-    //     ...errorFormData,
-    //     message: "Message is required",
-    //   };
-    //   isValid = false;
-    // }
-
     setErrorFormData(errorFormData);
     return isValid;
   };
@@ -129,20 +121,13 @@ export const ContactCard = () => {
     }
 
     // Submit form data
-    // setIsLoading(true);
+    setIsLoading(true);
 
     // Send data to server
-    // const res = await fetch("/api/contact", {
-    //   method: "POST",
-    //   body: JSON.stringify(formData),
-    // });
-
-    // Get response
-    // const data = await res.json();
-    // const status = res.status;
+    const res = await contactUs(formData.email);
 
     // Loading done
-    // setIsLoading(false);
+    setIsLoading(false);
 
     // Toggle Modal and show message
     setModal({
@@ -150,10 +135,8 @@ export const ContactCard = () => {
       children: (
         // <Modal message={data.message} status={status} setModal={setModal} />
         <Modal
-          message={
-            "Thanks for showing interest. Our engineers will reach back soon."
-          }
-          status={200}
+          message={res.message}
+          success={res.success}
           setModal={setModal}
         />
       ),
