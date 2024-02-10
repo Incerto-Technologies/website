@@ -47,6 +47,7 @@ export const createBlogAction = async (blog: BlogRequest) => {
 
     const newBlog = await BlogModel.create({
       ...blog,
+      profile: user.profile,
     });
     const blogJSON = newBlog.toJSON();
 

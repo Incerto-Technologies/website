@@ -1,5 +1,6 @@
 import { connectDb } from "@/database";
 import { ContactModel } from "@/database/model/contact";
+import { sendMail } from "@/utils/sendMail";
 
 export async function POST(request: Request) {
   try {
@@ -29,7 +30,33 @@ export async function POST(request: Request) {
           success: true,
         },
         {
-          status: 200,
+          status: 400,
+        },
+      );
+    }
+
+    const isMailSent = await sendMail(
+      `New Interest in Our Product - User's Email:  ${email}`,
+      `Hi Support team,
+
+      Great news! A user has shown interest in our product through the website's contact form. Please find their details below:
+      
+      User's Email: ${email}
+      
+      Feel free to reach out and provide any additional information or assistance they might need.
+      
+      Best,
+      Incerto Technologies`,
+    );
+
+    if (!isMailSent) {
+      return Response.json(
+        {
+          message: "Something went wrong, try again later",
+          success: true,
+        },
+        {
+          status: 500,
         },
       );
     }
@@ -53,7 +80,7 @@ export async function POST(request: Request) {
         success: true,
       },
       {
-        status: 200,
+        status: 500,
       },
     );
   }

@@ -11,18 +11,28 @@ import { Input } from "@/components/elements/Input";
 type LoginForm = {
   email: string;
   password: string;
+  profile?: string;
 };
 export const LoginForm = () => {
   const [userLoginCredentials, setUserLoginCredentials] = useState<LoginForm>({
     email: "",
     password: "",
+    profile: "",
   });
+
   const router = useRouter();
+  const [isSignIn, setIsSignIn] = useState(true);
 
   const handleSubmit = async () => {
     const isValidEmail = validateEmail(userLoginCredentials.email);
 
     if (!isValidEmail || userLoginCredentials.password === "") {
+      alert("all fields are required");
+      return;
+    }
+
+    if (!isSignIn && !userLoginCredentials.profile) {
+      alert("Profile url is required");
       return;
     }
 
@@ -44,22 +54,64 @@ export const LoginForm = () => {
     });
   };
   return (
-    <div className="mt-6 flex flex-col gap-5">
-      <Input
-        name="email"
-        labelName="Email"
-        type="email"
-        onChange={handleChange}
-      />
-      <Input
-        labelName="password"
-        name="password"
-        type="password"
-        onChange={handleChange}
-      />
-      <Button className="rounded-md" role="submit" onClick={handleSubmit}>
-        Login
-      </Button>
-    </div>
+    <>
+      <h2 className="text-3xl font-bold">
+        {isSignIn ? "Welcome back!, login" : "Create a new account"}
+      </h2>
+
+      <div className="mt-6 flex flex-col gap-5">
+        <Input
+          name="email"
+          labelName="Email"
+          type="email"
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <Input
+          labelName="Password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={handleChange}
+        />{" "}
+        {!isSignIn && (
+          <Input
+            labelName="Profile"
+            name="profile"
+            type="profile"
+            placeholder="Profile (Use cloudinary to get url)"
+            onChange={handleChange}
+          />
+        )}
+        <Button className="rounded-md" role="submit" onClick={handleSubmit}>
+          {isSignIn ? "Sign in" : "Sign up"}
+        </Button>
+        {isSignIn ? (
+          <div className="flex gap-1">
+            <p>Create a new account</p>
+            <button
+              className="font-medium text-accent"
+              onClick={() => {
+                setIsSignIn(false);
+              }}
+            >
+              Sign up
+            </button>
+          </div>
+        ) : (
+          <div className="flex gap-1">
+            <p>Already have an account</p>
+            <button
+              onClick={() => {
+                setIsSignIn(true);
+              }}
+              className="font-medium text-accent"
+            >
+              Sign in
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 };

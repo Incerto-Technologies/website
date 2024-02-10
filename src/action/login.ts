@@ -6,7 +6,11 @@ import { validateEmail } from "@/utils/validateEmail";
 import jwt from "jsonwebtoken";
 import bycrpt from "bcrypt";
 
-export const login = async (user: { email: string; password: string }) => {
+export const login = async (user: {
+  email: string;
+  password: string;
+  profile?: string;
+}) => {
   try {
     if (!validateEmail(user.email) || !user.password) {
       return {
@@ -50,6 +54,12 @@ export const login = async (user: { email: string; password: string }) => {
       };
     }
 
+    if (!user.profile)
+      return {
+        message: "profile image is required",
+        success: false,
+      };
+
     // ? if user does not exists then create new user
     const password = await bycrpt.hash(
       user.password,
@@ -59,6 +69,7 @@ export const login = async (user: { email: string; password: string }) => {
     const newUser = await UserModel.create({
       email: user.email,
       password: password,
+      profile: user.profile,
     });
 
     if (!newUser) {

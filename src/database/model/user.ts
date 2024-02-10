@@ -6,6 +6,7 @@ export type User = {
   lastLogin: Date;
   isAdmin: boolean;
   verified: boolean;
+  profile: string;
 };
 
 // Interface to model the User Schema.
@@ -15,6 +16,7 @@ export interface IUserDocument extends User, Document {}
 const UserSchema = new Schema<IUserDocument>({
   email: { type: String, required: true },
   password: { type: String, required: true, select: false },
+  profile: { type: String, required: true },
   lastLogin: { type: Date, required: true, default: Date.now() },
   isAdmin: { type: Boolean, required: true, default: false },
   verified: { type: Boolean, required: true, default: false },

@@ -8,7 +8,6 @@ const Login = () => {
       <ReduxProdiver>
         <section className="w-container flex min-h-screen flex-col items-center justify-center">
           <div className="mx-auto w-5/6 max-w-[400px]">
-            <h2 className="text-3xl font-bold">Login</h2>
             <LoginForm />
           </div>
         </section>
