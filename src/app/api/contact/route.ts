@@ -27,7 +27,7 @@ export async function POST(request: Request) {
       return Response.json(
         {
           message: "Something went wrong, try again later",
-          success: true,
+          success: false,
         },
         {
           status: 400,
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
       return Response.json(
         {
           message: "Something went wrong, try again later",
-          success: true,
+          success: false,
         },
         {
           status: 500,
@@ -77,7 +77,7 @@ export async function POST(request: Request) {
     return Response.json(
       {
         message: "Something went wrong, try again later",
-        success: true,
+        success: false,
       },
       {
         status: 500,
