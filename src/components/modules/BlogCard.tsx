@@ -15,7 +15,7 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
             width={300}
             className="object-contian h-full w-full"
           />
-          <div className="absolute bottom-5 left-1/2 flex w-full max-w-[170px] -translate-x-1/2 items-center justify-center gap-2.5 rounded-[20px] bg-white px-4 py-2.5">
+          {/* <div className="absolute bottom-5 left-1/2 flex w-full max-w-[170px] -translate-x-1/2 items-center justify-center gap-2.5 rounded-[20px] bg-white px-4 py-2.5">
             <Image
               src={"/logos/avatar/kunalsingh.webp"}
               alt={author}
@@ -24,7 +24,7 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
               className="h-[30px] w-[30px] rounded-full object-cover"
             />
             <p className="w-full font-semibold text-primary">{author}</p>
-          </div>
+          </div> */}
         </div>
       </Link>
       <div className="bg- red-400 mt-11 flex flex-col gap-6 md:h-[304px] md:justify-between md:gap-0">

@@ -16,7 +16,7 @@ export const teamMembers = [
     education: "Bangalore University",
     description:
       "Hi, I’m Shiva. I enjoy the observability space for its complexity and the intricate puzzle it presents, requiring a keen eye for detail and a passion for unraveling intricate system behaviors.",
-    image: "/images/team/siva.png",
+    image: "/images/team/shiva.png",
     linkedIn: "https://www.linkedin.com/in/shivapundir/",
   },
   {
