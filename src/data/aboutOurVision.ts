@@ -4,14 +4,13 @@ import { Target } from "@/components/elements/icons/Target";
 export const aboutOurVision = [
   {
     icon: Target,
-    title: "Our Vision",
+    title: " Bleeding edge observability, affordable for everyone.",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "Building standardised observability with efficient and flexible products combined with exceptional service.",
   },
   {
     icon: NewRelease,
-    title: "Our Approach",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    title: "Real tech. Real people",
+    description: "Meet the team that makes it happen",
   },
 ];

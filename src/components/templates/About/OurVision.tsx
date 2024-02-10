@@ -20,8 +20,11 @@ export const OurVision = () => {
             <div>
               <Quotes />
               <h2 className="mt-[16px] text-[30px] font-medium leading-[44px] tracking-[-1.2px] md:text-[34px] md:tracking-[-1.34px]">
-                We are constantly seeking to strike the right balance between
-                <span className="text-accent-light"> efficiency and speed</span>
+                In a world inundated with data,
+                <span className="text-accent-light">
+                  {" "}
+                  true power lies in its interpretation
+                </span>
               </h2>
             </div>
           </div>

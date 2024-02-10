@@ -144,7 +144,7 @@ export const Navbar = () => {
                 className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#DEDEDE]  px-[18px] py-2.5"
               >
                 <p className="font-medium">Get in touch</p>
-                <ArrowOutwardGreen />
+                {/* <ArrowOutwardGreen /> */}
               </Link>
             </li>
           </ul>
