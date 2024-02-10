@@ -27,6 +27,6 @@ export const teamMembers = [
     description:
       "Hi, I’m Shikhar. I like sloving hard problems that challenges my critical thinking skills and push me to learn and grow.",
     image: "/images/team/shikhar.jpeg",
-    linkedIn: "https://www.linkedin.com/in/anurag-pandey-5a11ba113/",
+    linkedIn: "https://www.linkedin.com/in/shikharparhoon/",
   },
 ];
