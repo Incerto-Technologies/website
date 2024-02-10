@@ -45,7 +45,9 @@ export const createBlogAction = async (blog: BlogRequest) => {
         success: false,
       };
 
-    const newBlog = await BlogModel.create(blog);
+    const newBlog = await BlogModel.create({
+      ...blog,
+    });
     const blogJSON = newBlog.toJSON();
 
     return {
