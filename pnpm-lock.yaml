@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '-':
+    specifier: ^0.0.1
+    version: 0.0.1
   '@popmotion/popcorn':
     specifier: ^0.4.4
     version: 0.4.4
@@ -35,6 +38,9 @@ dependencies:
   framer-motion:
     specifier: ^10.18.0
     version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
+  g:
+    specifier: ^2.0.1
+    version: 2.0.1
   jsonwebtoken:
     specifier: ^9.0.2
     version: 9.0.2
@@ -44,6 +50,9 @@ dependencies:
   next:
     specifier: 14.1.0
     version: 14.1.0(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0)
+  pnpm:
+    specifier: ^8.15.1
+    version: 8.15.1
   react:
     specifier: ^18
     version: 18.2.0
@@ -132,6 +141,10 @@ devDependencies:
     version: 5.3.3
 
 packages:
+
+  /-@0.0.1:
+    resolution: {integrity: sha512-3HfneK3DGAm05fpyj20sT3apkNcvPpCuccOThOPdzz8sY7GgQGe0l93XH9bt+YzibcTIgUAIMoyVJI740RtgyQ==}
+    dev: false
 
   /@aashutoshrathi/word-wrap@1.2.6:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
@@ -4828,6 +4841,10 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
+  /g@2.0.1:
+    resolution: {integrity: sha512-Fi6Ng5fZ/ANLQ15H11hCe+09sgUoNvDEBevVgx3KoYOhsH5iLNPn54hx0jPZ+3oSWr+xajnp2Qau9VmPsc7hTA==}
+    dev: false
+
   /gauge@3.0.2:
     resolution: {integrity: sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q==}
     engines: {node: '>=10'}
@@ -7436,6 +7453,12 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       find-up: 3.0.0
+    dev: false
+
+  /pnpm@8.15.1:
+    resolution: {integrity: sha512-gxz0xfi4N0r3FSHU0VPbSdcIbeYVwq98tenX64umMN2sRv6kldZD5VLvLmijqpmj5en77oaWcClnUE31xZyycw==}
+    engines: {node: '>=16.14'}
+    hasBin: true
     dev: false
 
   /postcss-import@15.1.0(postcss@8.4.33):
