@@ -43,12 +43,20 @@ export const Footer = ({
               <h4 className="text-lg font-bold text-accent-light md:text-2xl">
                 Incerto Technologies Pvt Ltd
               </h4>
-              <Link
-                href={"mailto:support@incerto.com"}
-                className="hidden text-sm font-medium leading-6 tracking-wide text-[#959595] md:block"
-              >
-                support@incerto.com
-              </Link>
+              <div>
+                <Link
+                  href={"mailto:support@incerto.com"}
+                  className="hidden text-sm font-medium leading-6 tracking-wide text-[#959595] md:block"
+                >
+                  support@incerto.com
+                </Link>
+                <Link
+                  href={"tel:+919591653409"}
+                  className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]"
+                >
+                  +91 95916 53409
+                </Link>
+              </div>
               <p className="font-medium leading-6 tracking-wide text-[#959595] md:hidden">
                 Incerto Technologies is a ....
               </p>
@@ -81,12 +89,20 @@ export const Footer = ({
             >
               <LinkedIn />
             </Link>
-            <Link
-              href={"mailto:support@incerto.com"}
-              className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]"
-            >
-              support@incerto.com
-            </Link>
+            <div className="flex flex-col">
+              <Link
+                href={"mailto:support@incerto.com"}
+                className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]"
+              >
+                support@incerto.com
+              </Link>
+              <Link
+                href={"tel:+919591653409"}
+                className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]"
+              >
+                +91 95916 53409
+              </Link>
+            </div>
           </div>
 
           <div className="mt-5 md:hidden">

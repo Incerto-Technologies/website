@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 
 export const OurVision = () => {
   return (
-    <section className="relative mt-[94px] min-h-[550px] md:mt-[200px]">
+    <section className="relative mt-[94px] min-h-[550px] md:mt-[50px]">
       <div
         className="w-fullbg-cover z-0 hidden h-full min-h-[550px] bg-center bg-no-repeat md:absolute md:left-0 md:top-0 md:block md:w-1/2 md:rounded-br-[20px] md:rounded-tr-[20px]"
         style={{

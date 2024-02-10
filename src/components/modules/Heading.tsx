@@ -24,15 +24,17 @@ export const Heading = () => {
           Build observability that adapts to your infra, not the other way
           around
         </p>
-        <Link
-          href={"#contact"}
-          className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
-        >
-          <div className="flex items-center justify-center gap-2.5">
-            <p>Get in touch</p>
-            <ArrowOutward />
-          </div>
-        </Link>
+        <div className="flex gap-[20px]">
+          <Link
+            href={"https://play.incerto.in"}
+            className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
+          >
+            <div className="flex items-center justify-center gap-2.5">
+              <p>Playground</p>
+              {/* <ArrowOutward /> */}
+            </div>
+          </Link>
+        </div>
       </section>
       <div className="w-container mt-[38px] flex w-full justify-center px-[20px] lg:px-[192px]">
         <Image
@@ -46,3 +48,12 @@ export const Heading = () => {
     </>
   );
 };
+// {/* <Link
+// href={"#contact"}
+// className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
+// >
+// <div className="flex items-center justify-center gap-2.5">
+//   <p>Get in touch</p>
+//   {/* <ArrowOutward /> */}
+// </div>
+// </Link> */}
