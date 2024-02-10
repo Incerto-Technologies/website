@@ -11,7 +11,11 @@ export const sendMail = async (subject: string, body: string) => {
 
     const mailOptions = {
       from: process.env.EMAIL!,
-      to: ["shiva@incerto.in", "shikhar.sharma@incerto.in"],
+      to: [
+        // "shiva@incerto.in",
+        // "shikhar.sharma@incerto.in",
+        "vimalic555@gmail.com",
+      ],
       subject: subject,
       text: body,
     };
