@@ -36,7 +36,7 @@ export const Team = () => {
                     {member.name}
                   </h4>
                   <p>-</p>
-                  <p className="text-sm tracking-[-0.28px] text-yellow-400">
+                  <p className="text-sm font-bold tracking-[-0.28px] text-accent-light">
                     {member.position}
                   </p>
 
