@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowOutwardGreen } from "../elements/icons/ArrowOutwardGreen";
+// import { ArrowOutwardGreen } from "../elements/icons/ArrowOutwardGreen";
 import { ArrowRight } from "../elements/icons/ArrowRight";
 import { navRoutes } from "@/data/navRoutes";
 import { v4 as uuid } from "uuid";
@@ -139,13 +139,15 @@ export const Navbar = () => {
               </li>
             ))}
             <li>
-              <Link
-                href="#contact"
+              <button
+                onClick={() => {
+                  router.push("/#contact");
+                }}
                 className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#DEDEDE]  px-[18px] py-2.5"
               >
                 <p className="font-medium">Get in touch</p>
                 {/* <ArrowOutwardGreen /> */}
-              </Link>
+              </button>
             </li>
           </ul>
         </nav>
