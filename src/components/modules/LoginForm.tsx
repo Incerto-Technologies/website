@@ -38,7 +38,7 @@ export const LoginForm = () => {
 
     const userData = await login(userLoginCredentials);
     if (userData.success && userData.user) {
-      router.push("/blog/add");
+      router.back();
       console.log(userData.token);
 
       localStorage.setItem("token", userData.token);

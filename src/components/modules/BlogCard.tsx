@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { getBlogUrl } from "@/utils/getBlogUrl";
 import { Blog } from "@/types/Blogs";
+import { BlogLink } from "./BlogLink";
 
 export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
   return (
     <div className="mx-auto  h-full min-h-[372px] w-4/5 max-w-[350px] md:w-full">
-      <Link href={getBlogUrl(_id)}>
+      <BlogLink id={_id}>
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[30px]">
           <Image
             src={image}
@@ -26,9 +27,7 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
             <p className="w-full font-semibold text-primary">{author}</p>
           </div> */}
         </div>
-      </Link>
-      <div className="bg- red-400 mt-11 flex flex-col gap-6 md:h-[304px] md:justify-between md:gap-0">
-        <Link href={getBlogUrl(_id)}>
+        <div className="bg- red-400 mt-11 flex flex-col gap-6 md:h-[304px] md:justify-between md:gap-0">
           <h3
             className="font-blod text-xl leading-8 tracking-wide"
             style={{
@@ -42,14 +41,11 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
               ? `${description.slice(0, 123)}...`
               : description}
           </p>
-        </Link>
-        <Link
-          href={getBlogUrl(_id)}
-          className="w-full rounded-[20px] border border-[#0F937C] bg-transparent px-5 py-[14px]"
-        >
-          <p className="text-center">Read More</p>
-        </Link>
-      </div>
+          <div className="w-full rounded-[20px] border border-[#0F937C] bg-transparent px-5 py-[14px]">
+            <p className="text-center">Read More</p>
+          </div>
+        </div>
+      </BlogLink>
     </div>
   );
 };

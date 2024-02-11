@@ -2,6 +2,7 @@ import { Blog } from "@/types/Blogs";
 import { getBlogUrl } from "@/utils/getBlogUrl";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogLink } from "./BlogLink";
 
 interface Props extends Blog {
   _id: string;
@@ -15,7 +16,7 @@ export const BlogCardMobile = ({
   _id,
 }: Props) => {
   return (
-    <Link href={getBlogUrl(_id)}>
+    <BlogLink id={_id}>
       <div className="mt-16 px-[20px]">
         <Image
           className="rounded-[30px]"
@@ -36,6 +37,6 @@ export const BlogCardMobile = ({
           <p className="text-sm capitalize">{author}</p>
         </div>
       </div>
-    </Link>
+    </BlogLink>
   );
 };

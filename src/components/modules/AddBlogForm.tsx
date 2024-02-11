@@ -8,11 +8,20 @@ import { Blog } from "@/types/Blogs";
 import { createBlogAction } from "@/action/createBlogAction";
 import { AppTextArea } from "../elements/AppTextArea";
 import { useEffect, useState } from "react";
+import { editBlogAction } from "@/action/editBlogAction";
+import { useRouter } from "next/navigation";
 
-export const AddBlogForm = () => {
+type Props = {
+  isEdit?: boolean;
+  blog?: Blog;
+};
+
+export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
   const { createBlog } = useTypedSelector((state) => state.blog);
 
   const [token, setToken] = useState("");
+
+  const router = useRouter();
 
   const dispatch = useAppDispatch();
   // get the token from localstorage
@@ -20,7 +29,9 @@ export const AddBlogForm = () => {
     const token = localStorage.getItem("token");
     if (token) setToken(token);
     if (!token) window.location.href = "/login";
-  }, [token]);
+
+    if (isEdit && blog) dispatch(setCreateBlog(blog));
+  }, [token, isEdit, blog, dispatch]);
 
   // if no token is found, redirect to login page
 
@@ -31,20 +42,33 @@ export const AddBlogForm = () => {
     if (!createBlog) return;
 
     Object.keys(createBlog).forEach((key) => {
+      if (key == "draft" || key == "__v" || key == "_id") return;
       if (!createBlog[key as keyof typeof createBlog]) {
         alert("All fields are required");
+        console.log("this fields is required", key);
         return;
       }
+      console.log(key);
     });
 
+    let newBlog;
     // dispatch the createBlog action
-    const newBlog = await createBlogAction({
-      ...(createBlog as Blog),
-      token,
-    });
+    if (!isEdit) {
+      newBlog = await createBlogAction({
+        ...(createBlog as any),
+        token,
+      });
+    } else {
+      newBlog = await editBlogAction({
+        ...(createBlog as any),
+        token,
+      });
+    }
 
     alert(newBlog.message);
-    console.log(newBlog);
+    if (newBlog.success) {
+      router.back();
+    }
   };
 
   return (
@@ -53,6 +77,7 @@ export const AddBlogForm = () => {
         <Input
           placeholder="title"
           labelName="title"
+          value={createBlog?.title}
           onChange={(e) => {
             dispatch(
               setCreateBlog({
@@ -64,6 +89,7 @@ export const AddBlogForm = () => {
         />
         <Input
           placeholder="meta_title"
+          value={createBlog?.meta_title}
           labelName="meta_title"
           onChange={(e) => {
             dispatch(
@@ -75,6 +101,7 @@ export const AddBlogForm = () => {
           }}
         />
         <AppTextArea
+          value={createBlog?.description}
           labelName="Description"
           onChange={(e) => {
             dispatch(
@@ -87,6 +114,7 @@ export const AddBlogForm = () => {
         />
         <Input
           placeholder="image"
+          value={createBlog?.image}
           labelName="image url"
           onChange={(e) => {
             dispatch(
@@ -99,6 +127,7 @@ export const AddBlogForm = () => {
         />
         <Input
           placeholder="categories (comma separated)"
+          value={createBlog?.categories?.join(", ")}
           labelName="categories"
           onChange={(e) => {
             dispatch(
@@ -113,6 +142,7 @@ export const AddBlogForm = () => {
         />
         <Input
           placeholder="author"
+          value={createBlog?.author}
           labelName="author"
           onChange={(e) => {
             dispatch(
@@ -126,6 +156,7 @@ export const AddBlogForm = () => {
         <Input
           placeholder="tags (comma separated)"
           labelName="tags"
+          value={createBlog?.tags?.join(", ")}
           onChange={(e) => {
             dispatch(
               setCreateBlog({
