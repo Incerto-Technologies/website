@@ -29,10 +29,15 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
       </Link>
       <div className="bg- red-400 mt-11 flex flex-col gap-6 md:h-[304px] md:justify-between md:gap-0">
         <Link href={getBlogUrl(_id)}>
-          <h3 className="font-blod text-xl leading-8 tracking-wide">
+          <h3
+            className="font-blod text-xl leading-8 tracking-wide"
+            style={{
+              fontWeight: 600,
+            }}
+          >
             {title.length > 60 ? `${title.slice(0, 60)}...` : title}
           </h3>
-          <p className="font-medium text-[#9E9E9E]">
+          <p className="font-medium leading-6 text-[#9E9E9E]">
             {description.length > 123
               ? `${description.slice(0, 123)}...`
               : description}

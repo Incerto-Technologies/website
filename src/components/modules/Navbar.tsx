@@ -32,11 +32,11 @@ export const Navbar = () => {
   return (
     <header
       className={classNameMerge(
-        "fixed top-0 z-[150] w-full bg-primary font-manrope transition-opacity ease-linear  lg:h-20 lg:bg-opacity-30 lg:backdrop-blur-2xl",
+        "fixed top-0 z-[150] w-full bg-primary font-manrope transition-opacity ease-linear  lg:bg-opacity-30 lg:backdrop-blur-2xl",
         !navbarOpen ? " bg-opacity-30 backdrop-blur-2xl" : "",
       )}
     >
-      <div className="w-container flex items-center justify-between  px-5 py-8 md:px-20">
+      <div className="w-container flex items-center justify-between  px-5 py-8 md:px-20 lg:py-3">
         {/* Logo */}
         <Link href="/">
           <Image
