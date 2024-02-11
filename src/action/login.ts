@@ -54,7 +54,7 @@ export const login = async (user: {
       };
     }
 
-    if (!user.profile)
+    if (user.profile === "")
       return {
         message: "profile image is required",
         success: false,
