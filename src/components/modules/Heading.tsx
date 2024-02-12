@@ -22,18 +22,16 @@ export const Heading = () => {
           Build observability that adapts to your infra, not the other way
           around
         </p>
-        <div className="flex gap-[20px]">
+        <div className="flex gap-[10px]">
           <Link
             href={"https://play.incerto.in"}
-            className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
+            className="rounded-[14px] border-[0.5px] border-[#888888] px-[22px] py-[12px] font-[900] text-secondary"
           >
-            <div className="flex items-center justify-center gap-2.5">
-              <p> Explore Playground</p>
-            </div>
+            <p> Explore Playground</p>
           </Link>
           <Link
             href={"#contact"}
-            className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
+            className="rounded-[14px] bg-accent px-[22px] py-[12px] font-[900]  text-secondary"
           >
             <div className="flex items-center justify-center gap-2.5">
               <p> Book a Demo</p>
@@ -41,7 +39,7 @@ export const Heading = () => {
           </Link>
         </div>
       </section>
-      <div className="w-container mt-[38px] flex w-full justify-center px-[20px] lg:px-[192px]">
+      <div className="w-container mt-[38px] flex w-full justify-center px-[20px] md:mt-[71px] lg:px-[192px]">
         <Image
           src={"/backgrounds/dashboard.webp"}
           alt="Dashboard"
