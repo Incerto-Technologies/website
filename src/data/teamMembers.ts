@@ -21,7 +21,7 @@ export const teamMembers = [
   },
   {
     name: "Shikhar Sharma",
-    position: "Partner",
+    position: "Co-founder",
     experience: "Ex Uni Cards",
     education: "IIT Kanpur",
     description:
