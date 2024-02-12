@@ -1,5 +1,3 @@
-import { Button } from "@/components/elements/Button";
-import { ArrowOutward } from "@/components/elements/icons/ArrowOutward";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,8 +28,15 @@ export const Heading = () => {
             className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
           >
             <div className="flex items-center justify-center gap-2.5">
-              <p>Playground</p>
-              {/* <ArrowOutward /> */}
+              <p> Explore Playground</p>
+            </div>
+          </Link>
+          <Link
+            href={"#contact"}
+            className="rounded-[14px] bg-accent px-[18px] py-2.5 font-[600] text-secondary"
+          >
+            <div className="flex items-center justify-center gap-2.5">
+              <p> Book a Demo</p>
             </div>
           </Link>
         </div>

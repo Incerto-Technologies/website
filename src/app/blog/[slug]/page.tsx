@@ -4,10 +4,38 @@ import { BlogCard } from "@/components/modules/BlogCard";
 import { BlogCardMobile } from "@/components/modules/BlogCardMobile";
 import { BlogHeader } from "@/components/modules/BlogHeader";
 import { BlogNotFound } from "@/components/modules/BlogNotFound";
+import { BookDemo } from "@/components/modules/BookDemo";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
+import { Blog } from "@/types/Blogs";
 import { isValidObjectId } from "mongoose";
+import { Metadata } from "next";
+
+type Props = {
+  params: { slug: string };
+};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  await connectDb();
+
+  const blog = (await BlogModel.findById(params.slug).lean()) as Blog;
+
+  if (!blog) {
+    return {
+      title: "Blog not found",
+    };
+  }
+
+  return {
+    title: blog.title as string,
+    description: blog.description as string,
+    openGraph: {
+      images: [blog.image],
+      description: blog.description,
+      title: blog.title,
+    },
+  };
+}
 
 export default async function page({ params }: { params: { slug: string } }) {
   if (!isValidObjectId(params.slug)) {
@@ -26,7 +54,6 @@ export default async function page({ params }: { params: { slug: string } }) {
   }
 
   const blog = data;
-  // const blogsJSON = blogs.map((blog) => blog.toJSON());
 
   return (
     <main className="h-full w-full bg-[#D5E5DF]  font-manrope">
@@ -38,6 +65,9 @@ export default async function page({ params }: { params: { slug: string } }) {
         <BlogHeader {...blog} />
         <div className="overflow text-black">
           <AppMarkDown markdown={blog.markdown || ""} />
+        </div>
+        <div>
+          <BookDemo />
         </div>
         <div className="mt-[94px] md:mt-[144px]">
           <h3 className="text-center text-[22px] font-bold leading-10 tracking-tighter text-black md:text-[32px]">

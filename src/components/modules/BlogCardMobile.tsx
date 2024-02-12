@@ -27,13 +27,13 @@ export const BlogCardMobile = ({
         />
         <h3 className="mt-[24px] font-bold leading-6">{title}</h3>
         <div className="mt-4 flex items-center gap-2.5">
-          <Image
+          {/*          <Image
             src={profile || "/logos/avatar/adityapushpati.webp"}
             alt={author}
             width={24}
             className="rounded-full"
             height={24}
-          />
+          /> */}
           <p className="text-sm capitalize">{author}</p>
         </div>
       </div>

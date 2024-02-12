@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { animated } from "react-spring";
 import { ICard } from "./TestimonialCarousel";
 import { Button } from "../elements/Button";
 

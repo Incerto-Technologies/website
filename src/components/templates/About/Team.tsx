@@ -65,7 +65,9 @@ export const Team = () => {
                   {`Education - ${member.education}`}
                 </p>
 
-                <p className="mt-6 max-w-60">{member.description}</p>
+                <p className="mt-6 text-[#888] md:max-w-60">
+                  {member.description}
+                </p>
               </div>
             </div>
           ))}

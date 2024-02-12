@@ -5,6 +5,7 @@ import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
 import { Blog } from "@/types/Blogs";
 import { UserModel } from "@/database/model/user";
+import { revalidatePath } from "next/cache";
 
 interface BlogRequest extends Blog {
   token: string;
@@ -51,7 +52,7 @@ export const createBlogAction = async (blog: BlogRequest) => {
       createdBy: user._id,
     });
     const blogJSON = newBlog.toJSON();
-
+    revalidatePath("/blog/");
     return {
       message: "Blog created successfully",
       success: true,

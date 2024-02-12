@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
   const blogs = await getBlogs();
+
   return (
     <DefaultLayout>
       <ReduxProdiver>

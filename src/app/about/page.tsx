@@ -18,7 +18,6 @@ export default function page() {
   return (
     <DefaultLayout>
       <AboutHero />
-      <OurVision />
       <Team />
       <div className="mt-[150px] md:mt-[200px]">
         <FooterBackground className="">
