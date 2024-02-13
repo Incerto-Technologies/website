@@ -813,7 +813,7 @@ export const FlowGraphDesktop = () => {
       <use
         stroke={animateStrokeColor}
         strokeOpacity={0}
-        strokeDasharray="200 1000"
+        strokeDasharray="200 1200"
         strokeWidth={animateStrokeWidth}
         href="#dpath25"
       >
@@ -824,7 +824,7 @@ export const FlowGraphDesktop = () => {
           begin="dpath1Animate.end;dpath2Animate.end;dpath3Animate.end;dpath4Animate.end;"
           dur="3s"
           from="800"
-          to="1800"
+          to="2000"
         ></animate>
         <animate
           fill="freeze"
@@ -851,7 +851,7 @@ export const FlowGraphDesktop = () => {
           begin="dpath5Animate.end;dpath6Animate.end;dpath7Animate.end;dpath8Animate.end;dpath9Animate.end;dpath10Animate.end;dpath11Animate.end;dpath12Animate.end;"
           dur="3s"
           from="200"
-          to="2000"
+          to="2200"
         ></animate>
         <animate
           fill="freeze"
@@ -878,7 +878,7 @@ export const FlowGraphDesktop = () => {
           begin="dpath13Animate.end;dpath14Animate.end;dpath15Animate.end;dpath16Animate.end;"
           dur="3s"
           from="200"
-          to="2000"
+          to="2200"
         ></animate>
         <animate
           fill="freeze"
@@ -905,7 +905,7 @@ export const FlowGraphDesktop = () => {
           begin="dpath17Animate.end;dpath18Animate.end;dpath19Animate.end;dpath20Animate.end;dpath21Animate.end;dpath22Animate.end;dpath23Animate.end;dpath24Animate.end;"
           dur="3s"
           from="200"
-          to="2000"
+          to="2200"
         ></animate>
         <animate
           fill="freeze"

@@ -12,7 +12,7 @@ export const teamMembers = [
   {
     name: "Shiva Pundir",
     position: "Co-founder",
-    experience: "Dhruv Technology Solutions",
+    experience: "Ahead",
     education: "Bangalore University",
     description:
       "Hi, I’m Shiva. I enjoy the observability space for its complexity and the intricate puzzle it presents, requiring a keen eye for detail and a passion for unraveling intricate system behaviors.",

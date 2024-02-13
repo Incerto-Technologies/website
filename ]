@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { manrope } from "./fonts";
 import { ModalProvider } from "@/components/elements/ModalProvider";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import {} from "@next/thrid/google";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://incerto.in"),
   title: "Incerto",
@@ -54,7 +55,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable}`}>
         <ModalProvider>{children}</ModalProvider>
-        <GoogleAnalytics gaId="G-SW72R371YM" />
+        <GoogleAnalytics />
       </body>
     </html>
   );

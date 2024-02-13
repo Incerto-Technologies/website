@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@next/third-parties": "^14.1.0",
     "@popmotion/popcorn": "^0.4.4",
     "@reduxjs/toolkit": "^2.1.0",
     "@types/bcrypt": "^5.0.2",
