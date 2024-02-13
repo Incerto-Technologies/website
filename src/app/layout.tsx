@@ -54,7 +54,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable}`}>
         <ModalProvider>{children}</ModalProvider>
-        <GoogleAnalytics gaId="G-SW72R371YM" />
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_GTAG!} />
       </body>
     </html>
   );
