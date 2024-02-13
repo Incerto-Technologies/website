@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     name: "Anurag Pandey",
     position: "Co-founder",
-    experience: "Ex AlphaGrep",
+    experience: "AlphaGrep",
     education: "Chennai Mathematical Institute",
     description:
       "Hi! I am Anurag. Excited about building tech. Observability covers wide ground – from Kernel probes to seamless UI/UX. It is amazing that I got into such an interesting space early on, looking forward to building amazing products.",
@@ -22,10 +22,10 @@ export const teamMembers = [
   {
     name: "Shikhar Sharma",
     position: "Co-founder",
-    experience: "Ex Uni Cards",
+    experience: "Uni Cards",
     education: "IIT Kanpur",
     description:
-      "Hi, I’m Shikhar. I like sloving hard problems that challenges my critical thinking skills and push me to learn and grow.",
+      "Hi, I’m Shikhar. I like solving hard problems that challenges my critical thinking skills and push me to learn and grow.",
     image: "/images/team/shikhar.jpeg",
     linkedIn: "https://www.linkedin.com/in/shikharparhoon/",
   },

@@ -8,15 +8,14 @@ export const Heading = () => {
       <section className="w-container mt-[54px] flex flex-col items-center justify-center gap-[32px] px-6 md:w-5/6 md:gap-[34px]">
         <div className="mx-auto w-full xl:w-5/6 3xl:w-4/6">
           <h1 className="text-center font-gotham text-[30px] font-medium leading-[42px] tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[60px] md:tracking-tightest">
-            {Array.from(heading).map((char, i) => (
-              <span key={i}>{char}</span>
-            ))}{" "}
-            {Array.from(heading1).map((char, i) => (
-              <span className="head-title text-clip-all" key={i}>
-                {char}
-              </span>
-            ))}
-          </h1>
+            <span>
+              End-to-End Open Source Observability <br /> Custom-built on
+            </span>
+            <span className="head-title text-clip-all">
+              {" "}
+              Your Infrastructure
+            </span>
+          </h1>{" "}
         </div>
 
         <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
