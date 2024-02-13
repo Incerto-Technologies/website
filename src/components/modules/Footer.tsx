@@ -43,7 +43,12 @@ export const Footer = ({
           </div>
           <div className="mt-8 flex w-full flex-col items-start gap-14 md:flex-row md:items-center md:justify-between lg:gap-48">
             <div className="w-full">
-              <h4 className="text-lg font-bold text-accent-light md:text-2xl">
+              <h4
+                className={classNameMerge(
+                  "text-lg font-bold md:text-2xl",
+                  isTextWhite ? "text-[#0A0A0A]" : "text-accent-light",
+                )}
+              >
                 Incerto Technologies Pvt Ltd
               </h4>
               <div>
@@ -55,7 +60,7 @@ export const Footer = ({
                 </Link>
                 <Link
                   href={"tel:+919591653409"}
-                  className="mt-2 text-sm font-medium leading-6 tracking-wide text-[#959595]"
+                  className="mt-2 hidden text-sm font-medium leading-6 tracking-wide text-[#959595] md:block"
                 >
                   +91 95916 53409
                 </Link>
