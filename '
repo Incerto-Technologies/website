@@ -1,9 +1,0 @@
-
-import { motion } from "framer-motion";
-type Props = {
-  children: React.ReactNode;
-};
-
-export const TextAnimation = ({ children }: Props) => {
-  return <motion.div>TextAnimation</div>;
-};
