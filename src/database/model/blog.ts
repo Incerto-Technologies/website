@@ -1,4 +1,4 @@
-import { Document, Schema, model, Model } from "mongoose";
+import { Document, Schema, model, Model, Types } from "mongoose";
 
 export type Blog = {
   title: { type: String; required: true };
@@ -12,6 +12,7 @@ export type Blog = {
   draft: false;
   markdown: string;
   profile?: string;
+  createdBy?: Types.ObjectId;
 };
 
 // Interface to model the User Schema.
@@ -22,14 +23,15 @@ const BlogSchema = new Schema<IBlogDocument>({
   title: { type: String, required: true },
   meta_title: { type: String, required: true },
   description: { type: String, required: true },
-  date: { type: String, required: true },
+  date: { type: String, required: false, default: new Date().toISOString() },
   image: { type: String, required: true },
   categories: { type: [String], required: true },
   author: { type: String, required: true },
   tags: { type: [String], required: true },
-  draft: { type: Boolean, required: true },
+  draft: { type: Boolean, required: false, default: false },
   markdown: { type: String, required: true },
   profile: { type: String, required: false },
+  createdBy: { type: Types.ObjectId, ref: "user" },
 });
 
 // Using the singleton pattern to prevent model redefinition

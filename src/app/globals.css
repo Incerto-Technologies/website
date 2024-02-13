@@ -4,12 +4,16 @@
 
 :root {
   --foreground-rgb: #dedede;
-  --background-rgb: 0, 0, 0;
+  --background-rgb: 8, 8, 8;
 }
 
+/* * {
+  outline: 1px solid red;
+} */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
+  /* background-color: #080808; */
 }
 
 body {

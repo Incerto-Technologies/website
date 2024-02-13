@@ -2,12 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowOutwardGreen } from "../elements/icons/ArrowOutwardGreen";
+// import { ArrowOutwardGreen } from "../elements/icons/ArrowOutwardGreen";
 import { ArrowRight } from "../elements/icons/ArrowRight";
 import { navRoutes } from "@/data/navRoutes";
 import { v4 as uuid } from "uuid";
 import { motion } from "framer-motion";
 import { classNameMerge } from "@/utils/classNameMerge";
+import { useRouter } from "next/navigation";
 
 const sliderVariants = {
   incoming: {
@@ -27,14 +28,15 @@ const sliderVariants = {
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const router = useRouter();
   return (
     <header
       className={classNameMerge(
-        "fixed top-0 z-[150] w-full bg-primary font-manrope transition-opacity ease-linear  lg:h-20 lg:bg-opacity-30 lg:backdrop-blur-2xl",
+        "fixed top-0 z-[150] w-full bg-primary font-manrope transition-opacity ease-linear  lg:bg-opacity-30 lg:backdrop-blur-2xl",
         !navbarOpen ? " bg-opacity-30 backdrop-blur-2xl" : "",
       )}
     >
-      <div className="w-container flex items-center justify-between  px-5 py-4 md:px-20">
+      <div className="w-container flex items-center justify-between  px-5 py-8 md:px-20 lg:py-3">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -122,20 +124,30 @@ export const Navbar = () => {
         {/* Desktop Nav Bar */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-[60px]">
+            {navRoutes.slice(0, -1).map(({ path, name }, index) => (
+              <li key={index + name}>
+                <Link
+                  href={path}
+                  // className={
+                  //   window.location.pathname === path
+                  //     ? "font-[800] text-[#00FF00]"
+                  //     : "text-white"
+                  // }
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
             <li>
-              <Link href="/">About us</Link>
-            </li>
-            <li>
-              <Link href="/">Blogs</Link>
-            </li>
-            <li>
-              <Link
-                href="#contact"
-                className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#888]  px-[18px] py-2.5"
+              <button
+                onClick={() => {
+                  router.push("/#contact");
+                }}
+                className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#DEDEDE]  px-[18px] py-2.5"
               >
-                <p className="font-medium text-accent-light">Get in touch</p>
-                <ArrowOutwardGreen />
-              </Link>
+                <p className="font-medium">Get in touch</p>
+                {/* <ArrowOutwardGreen /> */}
+              </button>
             </li>
           </ul>
         </nav>

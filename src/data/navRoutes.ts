@@ -1,11 +1,15 @@
 export const navRoutes = [
+  //  {
+  //  name: "Our Products",
+  // path: "/",
+  //},
   {
     name: "About us",
-    path: "/",
+    path: "/about",
   },
   {
     name: "Blogs",
-    path: "/",
+    path: "/blog",
   },
   {
     name: "Contact us",
