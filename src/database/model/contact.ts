@@ -2,7 +2,6 @@ import { Document, Schema, model, Model } from "mongoose";
 
 export type Contact = {
   email: string;
-  message: string;
   data: Date;
   replied: boolean;
 };
@@ -13,7 +12,6 @@ export interface IContactDocument extends Contact, Document {}
 // Define the schema
 const contactSchema = new Schema<IContactDocument>({
   email: { type: String, required: true },
-  message: { type: String, required: true },
   data: { type: Date, required: true, default: Date.now() },
   replied: { type: Boolean, required: true, default: false },
 });

@@ -1,10 +1,7 @@
-// import { DefaultLayout } from "@/components/layouts/DefaultLayout";
-// import { Hero } from "@/components/templates/Homepage/Hero";
-
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(
-  () => import("@/components/templates/Homepage/Hero").then((mod) => mod.Hero),
+  () => import("@/components/templates/Home/Hero").then((mod) => mod.Hero),
   {
     ssr: false,
   },
@@ -29,19 +26,16 @@ const Footer = dynamic(
 
 const Contact = dynamic(
   () =>
-    import("@/components/templates/Homepage/Contact").then(
+    import("@/components/templates/Home/Contact").then(
       (mod) => mod.Contact,
     ),
   {
     ssr: false,
   },
 );
-// import { Footer } from "@/components/modules/Footer";
-// import { Contact } from "@/components/templates/Homepage/Contact";
-
 const Features = dynamic(
   () =>
-    import("@/components/templates/Homepage/Features").then(
+    import("@/components/templates/Home/Features").then(
       (mod) => mod.Features,
     ),
   {
@@ -49,13 +43,9 @@ const Features = dynamic(
   },
 );
 
-// const WhyUs = dynamic(() =>
-//   import("@/components/templates/Homepage/WhyUs").then((mod) => mod.WhyUs),
-// );
-
 const FlowGraph = dynamic(
   () =>
-    import("@/components/templates/Homepage/FlowGraph").then(
+    import("@/components/templates/Home/FlowGraph").then(
       (mod) => mod.FlowGraph,
     ),
   {
@@ -63,28 +53,17 @@ const FlowGraph = dynamic(
   },
 );
 
-// const Testimonial = dynamic(() =>
-//   import("@/components/templates/Homepage/Testimonial").then(
-//     (mod) => mod.Testimonial,
-//   ),
-// );
-
 const FooterBackground = dynamic(
   () =>
-    import("@/components/templates/Homepage/FooterBackground").then(
+    import("@/components/templates/Home/FooterBackground").then(
       (mod) => mod.FooterBackground,
     ),
   {
     ssr: false,
   },
 );
-
-// import { Features } from "@/components/templates/Homepage/Features";
-// import { FlowGraph } from "@/components/templates/Homepage/FlowGraph";
-// import { FooterBackground } from "@/components/templates/Homepage/FooterBackground";
-
-import { Testimonial } from "@/components/templates/Homepage/Testimonial";
-import { WhyUs } from "@/components/templates/Homepage/WhyUs";
+import { Testimonial } from "@/components/templates/Home/Testimonial";
+import { WhyUs } from "@/components/templates/Home/WhyUs";
 import { Modal } from "@/components/elements/Modal";
 
 export default function Home() {

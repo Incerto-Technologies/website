@@ -1,5 +1,4 @@
-import { Button } from "../elements/Button";
-
+import Link from "next/link";
 export const WhyUsHeader = () => {
   return (
     <div className="mb-[70px]">
@@ -14,9 +13,12 @@ export const WhyUsHeader = () => {
         teams
       </p>
       <div className="mt-[22px] flex w-full justify-center">
-        <Button className="rounded-2xl px-[22px] py-[12px]">
+        <Link
+          href={"/blog/"}
+          className="rounded-2xl bg-accent px-[22px] py-[12px] font-bold text-secondary"
+        >
           Discover How
-        </Button>
+        </Link>
       </div>
     </div>
   );

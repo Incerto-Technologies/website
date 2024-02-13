@@ -1,4 +1,4 @@
-import { Blog, SearchTag } from "./../../data/Blogs";
+import { Blog, SearchTag } from "../../types/Blogs";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
@@ -8,6 +8,7 @@ type BlogState = {
   search: string;
   searchTag: SearchTag;
   currentBlog: Blog | null;
+  createBlog: Partial<Blog> | null;
 };
 
 const slice = createSlice({
@@ -18,6 +19,7 @@ const slice = createSlice({
     search: "",
     searchTag: null,
     currentBlog: null,
+    createBlog: null,
   } as BlogState,
   reducers: {
     setSearch: (state, action: PayloadAction<string>) => {
@@ -35,6 +37,10 @@ const slice = createSlice({
 
     setSearchTag: (state, action: PayloadAction<SearchTag>) => {
       state.searchTag = action.payload;
+      if (state.searchTag == "all") {
+        state.Blogs = state.ConstBlogs;
+        return;
+      }
       state.Blogs = state.ConstBlogs.filter((blog) =>
         //   @ts-ignore
         blog.tags.includes(state.searchTag),
@@ -49,10 +55,19 @@ const slice = createSlice({
       state.Blogs = action.payload;
       state.ConstBlogs = action.payload;
     },
+
+    setCreateBlog: (state, action: PayloadAction<Partial<Blog>>) => {
+      state.createBlog = action.payload;
+    },
   },
 });
 
-export const { setConstBlog, setSearch, setSearchTag, setCurrentBlog } =
-  slice.actions;
+export const {
+  setConstBlog,
+  setSearch,
+  setSearchTag,
+  setCurrentBlog,
+  setCreateBlog,
+} = slice.actions;
 
 export default slice.reducer;

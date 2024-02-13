@@ -35,12 +35,11 @@ const sliderTextVariants = {
 };
 
 const sliderTransition = {
-  delay: 0.2,
+  delay: 0,
 };
 
 const sliderTextTransition = {
   type: "linear",
-  delay: 0.3,
   stiffness: 300,
 };
 
