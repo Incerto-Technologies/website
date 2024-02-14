@@ -19,7 +19,7 @@ export const getUser = async (token: string) => {
       return null;
     }
 
-    return { user: user.toJSON() as User, token };
+    return { user: user as User, token };
     // return null;
   } catch (error) {
     console.log(error, "error");

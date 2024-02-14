@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
-export const sendMail = async (subject: string, body: string) => {
-  return new Promise((reslove, reject) => {
+export const sendMail = async (subject: string, body: string, to?: string) => {
+  return new Promise((reslove) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -11,16 +11,12 @@ export const sendMail = async (subject: string, body: string) => {
 
     const mailOptions = {
       from: process.env.EMAIL!,
-      to: [
-        "shiva@incerto.in",
-        "shikhar.sharma@incerto.in",
-        "anurag@incerto.in",
-      ],
+      to: to ? to : process.env.SEND_MAILS_TO!.split(","),
       subject: subject,
       text: body,
     };
 
-    transporter.sendMail(mailOptions, function (error, info) {
+    transporter.sendMail(mailOptions, function (error) {
       if (error) {
         console.log(error);
         reslove(false);

@@ -1,23 +1,24 @@
 "use client";
-import { useAppDispatch, useTypedSelector } from "@/hooks/store";
-import { setUser } from "@/store/slice/user.slice";
 import { validateEmail } from "@/utils/validateEmail";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { login } from "@/action/login";
 import { Button } from "@/components/elements/Button";
 import { Input } from "@/components/elements/Input";
+import { createUser } from "@/action/createUser";
 
 type LoginForm = {
   email: string;
   password: string;
   profile?: string;
+  userName?: string;
 };
 export const LoginForm = () => {
   const [userLoginCredentials, setUserLoginCredentials] = useState<LoginForm>({
     email: "",
     password: "",
     profile: "",
+    userName: "",
   });
 
   const router = useRouter();
@@ -31,14 +32,24 @@ export const LoginForm = () => {
       return;
     }
 
-    if (!isSignIn && !userLoginCredentials.profile) {
-      alert("Profile url is required");
-      return;
-    }
+    let userData;
+    if (isSignIn) {
+      userData = await login(userLoginCredentials);
+    } else {
+      if (!userLoginCredentials.profile) {
+        alert("Profile url is required");
+        return;
+      }
 
-    const userData = await login(userLoginCredentials);
+      if (!userLoginCredentials.userName) {
+        alert("User Name is required");
+        return;
+      }
+      // @ts-ignore
+      userData = await createUser(userLoginCredentials);
+    }
     if (userData.success && userData.user) {
-      router.back();
+      router.push("/blog/add");
       console.log(userData.token);
 
       localStorage.setItem("token", userData.token);
@@ -75,13 +86,22 @@ export const LoginForm = () => {
           onChange={handleChange}
         />{" "}
         {!isSignIn && (
-          <Input
-            labelName="Profile"
-            name="profile"
-            type="profile"
-            placeholder="Profile (Use cloudinary to get url)"
-            onChange={handleChange}
-          />
+          <>
+            <Input
+              labelName="user name"
+              name="userName"
+              type="text"
+              placeholder="user name"
+              onChange={handleChange}
+            />
+            <Input
+              labelName="Profile"
+              name="profile"
+              type="text"
+              placeholder="Profile (Use cloudinary to get url)"
+              onChange={handleChange}
+            />
+          </>
         )}
         <Button className="rounded-md" role="submit" onClick={handleSubmit}>
           {isSignIn ? "Sign in" : "Sign up"}

@@ -5,12 +5,9 @@ import { UserModel } from "@/database/model/user";
 import { validateEmail } from "@/utils/validateEmail";
 import jwt from "jsonwebtoken";
 import bycrpt from "bcrypt";
+import { sendMail } from "@/utils/sendMail";
 
-export const login = async (user: {
-  email: string;
-  password: string;
-  profile?: string;
-}) => {
+export const login = async (user: { email: string; password: string }) => {
   try {
     if (!validateEmail(user.email) || !user.password) {
       return {
@@ -52,41 +49,12 @@ export const login = async (user: {
         token,
         user: userExistsWithoutPassword,
       };
-    }
-
-    if (user.profile === "")
+    } else {
       return {
-        message: "profile image is required",
-        success: false,
-      };
-
-    // ? if user does not exists then create new user
-    const password = await bycrpt.hash(
-      user.password,
-      parseInt(process.env.SALT_ROUNDS!),
-    );
-
-    const newUser = await UserModel.create({
-      email: user.email,
-      password: password,
-      profile: user.profile,
-    });
-
-    if (!newUser) {
-      return {
-        message: "Failed to create user",
+        message: "User not found, Try to login",
         success: false,
       };
     }
-
-    const token = jwt.sign(user.email, process.env.JWT_SECRET!);
-
-    return {
-      message: "User created",
-      success: true,
-      token,
-      user: newUser.toJSON(),
-    };
   } catch (error) {
     console.log(error);
     return {

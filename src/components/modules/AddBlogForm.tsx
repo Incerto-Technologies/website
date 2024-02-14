@@ -10,6 +10,7 @@ import { AppTextArea } from "../elements/AppTextArea";
 import { useEffect, useState } from "react";
 import { editBlogAction } from "@/action/editBlogAction";
 import { useRouter } from "next/navigation";
+import { getUser } from "@/action/getUser";
 
 type Props = {
   isEdit?: boolean;
@@ -27,11 +28,19 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
   // get the token from localstorage
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) setToken(token);
-    if (!token) window.location.href = "/login";
+
+    if (!token) {
+      router.push("/login");
+      return;
+    }
+    setToken(token);
+    getUser(token).then((res) => {
+      if (!res?.user.verified) router.push("/login/verify");
+      if (!res?.user.isAdmin) router.push("/login");
+    });
 
     if (isEdit && blog) dispatch(setCreateBlog(blog));
-  }, [token, isEdit, blog, dispatch]);
+  }, [token, router, isEdit, blog, dispatch]);
 
   // if no token is found, redirect to login page
 
