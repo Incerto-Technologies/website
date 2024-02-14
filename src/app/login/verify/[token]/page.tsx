@@ -10,7 +10,7 @@ const Verify = async (Props: { params: { token: string } }) => {
     `
   Hi ${user?.email.split("@")[0]},
   Your account is successfully verified. Now you can add your blog.
-  Blog Link: https://${process.env.VERCEL_URL}/blog/add
+  Blog Link: https://${process.env.WEB_URL!}/blog/add
   `,
     user?.email,
   )) as boolean;
