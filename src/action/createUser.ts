@@ -28,11 +28,12 @@ export const createUser = async (user: {
       parseInt(process.env.SALT_ROUNDS!),
     );
 
-    const isIncertoEmailId = user.email.includes("incerto.in");
+    //    const isIncertoEmailId = user.email.includes("incerto.in");
 
     const verificationToken = jwt.sign(user.email, process.env.JWT_SECRET!);
 
     await connectDb();
+
     const [isMailSent, newUser] = await Promise.all([
       sendMail(
         "Icerto verification",
@@ -47,7 +48,6 @@ Click here: https://${process.env.WEB_URL!}/login/verify/${verificationToken}  `
         password: password,
         userName: user.userName,
         profile: user.profile,
-        isAdmin: isIncertoEmailId,
         verificationToken,
       }),
     ]);
@@ -72,7 +72,7 @@ Click here: https://${process.env.WEB_URL!}/login/verify/${verificationToken}  `
       message: "User created",
       success: true,
       token,
-      user: newUser.toJSON(),
+      user: newUser,
     };
   } catch (error) {
     console.log("error from create user", error);

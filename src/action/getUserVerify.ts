@@ -25,7 +25,7 @@ export const getUserVerify = async (token: string) => {
 
     if (!updatedUser)
       return {
-        message: "User not found",
+        message: "Already Verified!",
         success: false,
       };
 

@@ -4,7 +4,7 @@ import { sendMail } from "@/utils/sendMail";
 import React from "react";
 
 const Verify = async (Props: { params: { token: string } }) => {
-  const { success, user } = await getUserVerify(Props.params.token);
+  const { success, message, user } = await getUserVerify(Props.params.token);
   const isMailSent = (await sendMail(
     "Your account is Verified",
     `
@@ -16,7 +16,7 @@ const Verify = async (Props: { params: { token: string } }) => {
   )) as boolean;
   return (
     <div>
-      <VerifyUser success={success} isMailSent={isMailSent} />
+      <VerifyUser success={success} message={message} isMailSent={isMailSent} />
     </div>
   );
 };
