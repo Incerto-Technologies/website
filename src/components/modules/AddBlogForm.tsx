@@ -35,7 +35,10 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
     }
     setToken(token);
     getUser(token).then((res) => {
-      if (!res?.user.verified) router.push("/login/verify");
+      if (!res?.user.verified) {
+        router.push("/login/verify");
+        return;
+      }
       if (!res?.user.isAdmin) router.push("/login");
     });
 
