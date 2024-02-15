@@ -29,6 +29,12 @@ body {
   background: linear-gradient(90deg, #0f937c 10.75%, #0f9 89.89%);
 }
 
+.product-title {
+  background: linear-gradient(90deg, #0f9 1.65%, #0f937c 35.07%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .text-clip-all {
   background-clip: text;
   -webkit-background-clip: text;
@@ -41,6 +47,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+.product-background {
+  background:;
 }
 
 .top-sticky {
