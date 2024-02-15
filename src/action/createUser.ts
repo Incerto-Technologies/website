@@ -40,7 +40,7 @@ export const createUser = async (user: {
         `
 Dear Admin,
 
-Enthusiastic writer here, interested in contributing to Incerto Technologies! I would like to add some blogs. Kindly grant me access.
+Enthusiastic ${user.email.split("@")[0]} writer here, interested in contributing to Incerto Technologies! I would like to add some blogs. Kindly grant me access.
 Click here: https://${process.env.WEB_URL!}/login/verify/${verificationToken}  `,
       ),
       UserModel.create({
