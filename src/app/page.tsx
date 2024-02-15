@@ -26,18 +26,14 @@ const Footer = dynamic(
 
 const Contact = dynamic(
   () =>
-    import("@/components/templates/Home/Contact").then(
-      (mod) => mod.Contact,
-    ),
+    import("@/components/templates/Home/Contact").then((mod) => mod.Contact),
   {
     ssr: false,
   },
 );
 const Features = dynamic(
   () =>
-    import("@/components/templates/Home/Features").then(
-      (mod) => mod.Features,
-    ),
+    import("@/components/templates/Home/Features").then((mod) => mod.Features),
   {
     ssr: false,
   },

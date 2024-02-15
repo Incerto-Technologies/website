@@ -30,6 +30,9 @@ export const WhyUsCard = ({
 
   return (
     <div
+      style={{
+        position: "sticky",
+      }}
       className="top-sticky sticky flex h-[400px] w-full scale-90 items-center justify-between rounded-[20px]  bg-[#121815]  px-[46px] py-[40px]"
       // className="top-sticky sticky flex h-[400px] w-full scale-75 items-center justify-between rounded-[20px] bg-[#121815]  px-[46px]  py-[40px] xl:scale-100"
       ref={ref}

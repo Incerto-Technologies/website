@@ -19,7 +19,7 @@ export const Footer = ({
   return (
     <div
       className={classNameMerge(
-        "h-full w-full",
+        "h-full w-full ",
         isBackground ? "footer-bg-shade" : "",
       )}
       style={{

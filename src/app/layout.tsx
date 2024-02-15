@@ -3,6 +3,7 @@ import "./globals.css";
 import { manrope } from "./fonts";
 import { ModalProvider } from "@/components/elements/ModalProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { MomentumScroll } from "@/components/elements/MomentumScroll";
 export const metadata: Metadata = {
   metadataBase: new URL("https://incerto.in"),
   title: "Incerto",
@@ -53,7 +54,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable}`}>
-        <ModalProvider>{children}</ModalProvider>
+        <MomentumScroll>
+          <ModalProvider>{children}</ModalProvider>
+        </MomentumScroll>
         <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_GTAG!} />
       </body>
     </html>

@@ -30,7 +30,7 @@ export const WhyUs = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex w-full flex-col items-center justify-center gap-[28px]">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-[28px]">
           {data.data.map((item, index) => {
             return (
               <WhyUsCard
