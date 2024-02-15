@@ -25,7 +25,7 @@ export const Hero = () => {
         </p>
       </div>
 
-      <div className="mx-auto mt-[145px] w-full max-w-[980px] px-[20px] md:mt-[110px] md:px-10">
+      <div className="mx-auto mt-[145px] w-full max-w-[980px] overflow-hidden px-[20px] md:mt-[110px] md:px-10">
         {/* <video controls>
           <source
             src={productData.hero.video.src}
