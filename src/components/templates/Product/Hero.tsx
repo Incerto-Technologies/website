@@ -1,4 +1,3 @@
-import { VideoPlayer } from "@/components/elements/VideoPlayer";
 import { productData } from "@/data/product";
 import React from "react";
 import Video from "next-video";
