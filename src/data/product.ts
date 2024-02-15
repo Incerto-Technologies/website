@@ -1,9 +1,20 @@
-import { Graph } from "@/components/elements/icons/Graph";
+import { Cloud } from "@/components/elements/icons/Cloud";
 
 export const productData = {
+  hero: {
+    title: "Revolutionize/ your digital saas products",
+    description:
+      "Build observability that adapts to your infra, not the other way around",
+    icon_title: "Cloud Metrics",
+    icon: Cloud,
+    video: {
+      src: "/video/product1.mp4",
+      type: "video/mp4",
+    },
+  },
   products: [
     {
-      image: "/images/products/product1.png",
+      image: "/images/products/product1.webp",
       title: "Lorem Ipsum/ is simply dummy text",
       lists: [
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -12,7 +23,7 @@ export const productData = {
       ],
     },
     {
-      image: "/images/products/product2.png",
+      image: "/images/products/product2.webp",
       title: "Lorem Ipsum/ is simply dummy text",
       lists: [
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -25,22 +36,22 @@ export const productData = {
     title: "Explore Our /Other Products",
     products: [
       {
-        icon: Graph,
-        image: "/images/products/card.png",
+        icon: Cloud,
+        image: "/images/products/card.webp",
         title: "Cloud Metrics",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       },
       {
-        icon: Graph,
-        image: "/images/products/card.png",
+        icon: Cloud,
+        image: "/images/products/card.webp",
         title: "Cloud Metrics",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       },
       {
-        icon: Graph,
-        image: "/images/products/card.png",
+        icon: Cloud,
+        image: "/images/products/card.webp",
         title: "Cloud Metrics",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
