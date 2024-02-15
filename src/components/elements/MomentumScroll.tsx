@@ -9,10 +9,13 @@ export const MomentumScroll = ({ children }: { children: ReactNode }) => {
       root
       options={{
         lerp: 0.1,
-        duration: 1.5,
         syncTouch: true,
-        touchInertiaMultiplier: 1,
+        touchInertiaMultiplier: 2,
+        wheelMultiplier: 2,
         smoothWheel: true,
+        easing: function easeOutQuart(x: number): number {
+          return 1 - Math.pow(1 - x, 4);
+        },
       }}
     >
       {children}
