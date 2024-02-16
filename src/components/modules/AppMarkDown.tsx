@@ -1,6 +1,3 @@
-"use client";
-import { useEffect } from "react";
-
 import Markdown from "react-markdown";
 
 // default unified extension
@@ -27,14 +24,6 @@ type Props = {
 };
 
 export const AppMarkDown = ({ markdown }: Props) => {
-  useEffect(() => {
-    const html = document.querySelector("html");
-    if (html) html.style.backgroundColor = "#D5E5DF";
-    return () => {
-      if (html) html.style.backgroundColor = "";
-    };
-  }, []);
-
   return (
     <Markdown
       rehypePlugins={[rehypeVideo, rehypeKatex]}
