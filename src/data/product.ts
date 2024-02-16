@@ -28,7 +28,7 @@ export const productData = {
       ],
     },
     {
-      image: "/images/products/product1.webp",
+      image: "/images/products/product2.webp",
       title: "Centralised/ logs",
       lists: [
         "See logs from every service",
@@ -38,7 +38,7 @@ export const productData = {
       ],
     },
     {
-      image: "/images/products/product2.webp",
+      image: "/images/products/product1.webp",
       title: "Correlation/ &  Filtering",
       lists: [
         "Overview of various important metrics helping you to choose the time interval when the error occurred",
