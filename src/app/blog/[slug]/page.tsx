@@ -1,8 +1,9 @@
 import { getBlogById } from "@/action/getBlogById";
 import dynamic from "next/dynamic";
-const AppMarkDown = dynamic(() => import("@/components/modules/AppMarkDown"), {
-  ssr: false,
-});
+import AppMarkDown from "@/components/modules/AppMarkDown";
+//const AppMarkDown = dynamic(() => import("@/components/modules/AppMarkDown"), {
+// ssr: false,
+//});
 
 const GoPreviousPageButton = dynamic(
   () => import("@/components/elements/GoPreviousPageButton"),

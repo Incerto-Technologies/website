@@ -1,4 +1,3 @@
-"use client";
 import Markdown from "react-markdown";
 // default unified extension
 import remarkGfm from "remark-gfm";
@@ -18,7 +17,6 @@ import remarkMath from "remark-math";
 // Math Ui components
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
-import { defaultHead } from "next/head";
 
 type Props = {
   markdown: string;
