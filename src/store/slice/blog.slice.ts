@@ -42,8 +42,9 @@ const slice = createSlice({
         return;
       }
       state.Blogs = state.ConstBlogs.filter((blog) =>
-        //   @ts-ignore
-        blog.tags.includes(state.searchTag),
+        blog.tags.findIndex(
+          (tag) => tag.toLowerCase() === action.payload?.toLowerCase(),
+        ),
       );
     },
 

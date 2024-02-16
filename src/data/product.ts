@@ -11,7 +11,7 @@ export const productData = {
     icon_title: "Cloud Metrics",
     icon: Cloud,
     video: {
-      src: "/video/product.mp4",
+      src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
       type: "video/mp4",
       thumbnail: "/video/thumbnail.webp",
     },
