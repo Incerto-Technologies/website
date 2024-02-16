@@ -1,4 +1,3 @@
-"use client";
 import Markdown from "react-markdown";
 // default unified extension
 import remarkGfm from "remark-gfm";
@@ -23,7 +22,7 @@ type Props = {
   markdown: string;
 };
 
-export const AppMarkDown = ({ markdown }: Props) => {
+const AppMarkDown = ({ markdown }: Props) => {
   return (
     <Markdown
       rehypePlugins={[rehypeVideo, rehypeKatex]}
@@ -139,3 +138,4 @@ export const AppMarkDown = ({ markdown }: Props) => {
     </Markdown>
   );
 };
+export default AppMarkDown;

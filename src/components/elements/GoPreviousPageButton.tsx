@@ -1,9 +1,15 @@
 "use client";
 
+import { useLenis } from "@studio-freight/react-lenis";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export const GoPreviousPageButton = () => {
+const GoPreviousPageButton = () => {
   const router = useRouter();
+  const lenis = useLenis(() => {});
+  useEffect(() => {
+    lenis?.scrollTo(0);
+  }, [lenis]);
 
   return (
     <button
@@ -44,3 +50,4 @@ export const GoPreviousPageButton = () => {
     </button>
   );
 };
+export default GoPreviousPageButton;

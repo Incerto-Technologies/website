@@ -1,9 +1,34 @@
 import { getBlogById } from "@/action/getBlogById";
-import { getBlogs } from "@/action/getBlogs";
-import { GoPreviousPageButton } from "@/components/elements/GoPreviousPageButton";
-import { AppMarkDown } from "@/components/modules/AppMarkDown";
-import { BlogCard } from "@/components/modules/BlogCard";
-import { BlogCardMobile } from "@/components/modules/BlogCardMobile";
+import dynamic from "next/dynamic";
+import AppMarkDown from "@/components/modules/AppMarkDown";
+//const AppMarkDown = dynamic(() => import("@/components/modules/AppMarkDown"), {
+// ssr: false,
+//});
+
+const GoPreviousPageButton = dynamic(
+  () => import("@/components/elements/GoPreviousPageButton"),
+  {
+    ssr: false,
+  },
+);
+
+const BlogCard = dynamic(
+  () => import("@/components/modules/BlogCard").then((mod) => mod.BlogCard),
+  {
+    ssr: false,
+  },
+);
+
+const BlogCardMobile = dynamic(
+  () =>
+    import("@/components/modules/BlogCardMobile").then(
+      (mod) => mod.BlogCardMobile,
+    ),
+  {
+    ssr: false,
+  },
+);
+
 import { BlogHeader } from "@/components/modules/BlogHeader";
 import { BlogNotFound } from "@/components/modules/BlogNotFound";
 import { BookDemo } from "@/components/modules/BookDemo";
@@ -11,10 +36,20 @@ import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
+
 import { Metadata } from "next";
+import { getBlogs } from "@/action/getBlogs";
 type Props = {
   params: { slug: string };
 };
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+  return blogs.map((blog) => ({
+    slug: blog._id.toString(),
+  }));
+}
+
+// export const runtime = "edge"; // 'nodejs' (default) | 'edge'
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { blog } = await getBlogById(params.slug);
 
