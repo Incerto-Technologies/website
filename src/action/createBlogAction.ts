@@ -51,6 +51,7 @@ export const createBlogAction = async (blog: BlogRequest) => {
     });
     const blogJSON = newBlog.toJSON();
     revalidatePath("/blog");
+    revalidatePath("/blog/edit");
     return {
       message: "Blog created successfully",
       success: true,
