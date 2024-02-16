@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export const GoPreviousPageButton = () => {
+const GoPreviousPageButton = () => {
   const router = useRouter();
 
   return (
@@ -44,3 +44,4 @@ export const GoPreviousPageButton = () => {
     </button>
   );
 };
+export default GoPreviousPageButton;

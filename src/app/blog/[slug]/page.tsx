@@ -1,22 +1,17 @@
 import { getBlogById } from "@/action/getBlogById";
 import dynamic from "next/dynamic";
 
-const AppMarkDown = dynamic(
-  () =>
-    import("@/components/modules/AppMarkDown").then((mod) => mod.AppMarkDown),
-  {
-    ssr: false,
-  },
-);
+const AppMarkDown = dynamic(() => import("@/components/modules/AppMarkDown"), {
+  ssr: false,
+});
+
 const GoPreviousPageButton = dynamic(
-  () =>
-    import("@/components/elements/GoPreviousPageButton").then(
-      (mod) => mod.GoPreviousPageButton,
-    ),
+  () => import("@/components/elements/GoPreviousPageButton"),
   {
     ssr: false,
   },
 );
+
 const BlogCard = dynamic(
   () => import("@/components/modules/BlogCard").then((mod) => mod.BlogCard),
   {
@@ -41,6 +36,7 @@ import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
+
 import { Metadata } from "next";
 type Props = {
   params: { slug: string };

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { getBlogUrl } from "@/utils/getBlogUrl";
 import { Blog } from "@/types/Blogs";
 import { BlogLink } from "./BlogLink";
 
