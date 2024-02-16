@@ -1,7 +1,6 @@
 import { productData } from "@/data/product";
 import React from "react";
 import Video from "next-video";
-const myVideo = "/video/product.mp4";
 export const Hero = () => {
   return (
     <div
@@ -33,10 +32,10 @@ export const Hero = () => {
           />
         </video> */}
         <Video
-          src={myVideo}
+          src={productData.hero.video.src}
           accentColor="#0F937C"
           primaryColor="#fff"
-          poster={"/backgrounds/dashboard1.png"}
+          poster={productData.hero.video.thumbnail}
         />
       </div>
     </div>

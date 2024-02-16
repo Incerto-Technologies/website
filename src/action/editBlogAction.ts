@@ -40,17 +40,32 @@ export const editBlogAction = async ({
         success: false,
       };
 
-    let blog = await BlogModel.findOneAndUpdate(
-      {
-        _id,
-        createdBy: user._id,
-      },
-      editedBlog,
-      {
-        new: true,
-      },
-    );
-    console.log(blog);
+    const isAminEmail = process.env
+      .SEND_MAILS_TO!.split(",")
+      .findIndex((email) => email == user.email);
+    let blog;
+    if (isAminEmail >= 0)
+      blog = await BlogModel.findOneAndUpdate(
+        {
+          _id,
+        },
+        editedBlog,
+        {
+          new: true,
+        },
+      );
+    else {
+      blog = await BlogModel.findOneAndUpdate(
+        {
+          _id,
+          createdBy: user._id,
+        },
+        editedBlog,
+        {
+          new: true,
+        },
+      );
+    }
 
     if (!blog) {
       return {

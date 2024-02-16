@@ -14,7 +14,7 @@ export const WhyUsHeader = () => {
       </p>
       <div className="mt-[22px] flex w-full justify-center">
         <Link
-          href={"/blog/"}
+          href={"/blog/65ce75b91385ac9436fb5e07"}
           className="rounded-2xl bg-accent px-[22px] py-[12px] font-bold text-secondary"
         >
           Discover How

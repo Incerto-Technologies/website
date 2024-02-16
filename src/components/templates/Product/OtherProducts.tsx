@@ -23,10 +23,8 @@ export const OtherProducts = () => {
               className="w-full max-w-[300px] rounded-[14.5px] bg-[#002D25] md:rounded-[12px]"
             >
               <div className="mt-[35px] flex items-center gap-[10px] px-[36px] md:mt-[30px] md:gap-[8px] md:px-[30px]">
-                <div className="hidden h-full md:block">
-                  {icon({ size: "34" })}
-                </div>{" "}
-                <div className="h-full md:hidden">{icon({ size: "44" })}</div>{" "}
+                <div className="hidden h-full md:block">{icon()}</div>{" "}
+                <div className="h-full md:hidden">{icon()}</div>{" "}
                 <h4 className="text-[22px] font-semibold leading-6 tracking-[-0.44px] md:text-[18px] md:leading-5 md:tracking-[-0.36]">
                   {title}
                 </h4>
