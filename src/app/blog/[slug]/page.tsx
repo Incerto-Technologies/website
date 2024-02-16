@@ -1,3 +1,5 @@
+import { getBlogById } from "@/action/getBlogById";
+import { getBlogs } from "@/action/getBlogs";
 import { GoPreviousPageButton } from "@/components/elements/GoPreviousPageButton";
 import { AppMarkDown } from "@/components/modules/AppMarkDown";
 import { BlogCard } from "@/components/modules/BlogCard";
@@ -8,17 +10,14 @@ import { BookDemo } from "@/components/modules/BookDemo";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
-import { Blog } from "@/types/Blogs";
 import { isValidObjectId } from "mongoose";
 import { Metadata } from "next";
-
+export const revalidate = 30;
 type Props = {
   params: { slug: string };
 };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  await connectDb();
-
-  const blog = (await BlogModel.findById(params.slug).lean()) as Blog;
+  const { blog } = await getBlogById(params.slug);
 
   if (!blog) {
     return {
@@ -36,7 +35,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-
+export async function getStaticPaths() {
+  const blogs = await getBlogs();
+  const ids = blogs.map(({ _id }) => ({
+    params: {
+      slug: _id.toString(),
+    },
+  }));
+  return {
+    paths: ids,
+    fallback: false,
+  };
+}
 export default async function page({ params }: { params: { slug: string } }) {
   if (!isValidObjectId(params.slug)) {
     return <BlogNotFound />;
