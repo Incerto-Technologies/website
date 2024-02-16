@@ -38,14 +38,14 @@ export const BlogHeader = ({ title, author, tags, date }: Blog) => {
         </div>
       </div>
       <div className="mt-[22px] text-sm font-semibold md:hidden">
-        <div className="flex gap-1.5">
+        <div className="flex h-full gap-1.5">
           <Folder />
           <p className="text-[18px] font-medium capitalize text-[#5D5D5D]">
             {/* {tags.join(" - ")} */}
             {tags[0]}
           </p>
         </div>
-        <div className="cgap-5 mt-2.5 flex">
+        <div className="mt-2.5 flex h-full gap-5">
           <div className="flex items-center gap-1.5">
             <NoteIcon />
             <p className="text-[18px] font-medium text-[#5D5D5D]">{author}</p>
