@@ -1,6 +1,5 @@
 import { getBlogById } from "@/action/getBlogById";
 import dynamic from "next/dynamic";
-export const runtime = "edge"; // 'nodejs' (default) | 'edge'
 const AppMarkDown = dynamic(() => import("@/components/modules/AppMarkDown"), {
   ssr: false,
 });
@@ -38,9 +37,18 @@ import { BlogModel } from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
 
 import { Metadata } from "next";
+import { getBlogs } from "@/action/getBlogs";
 type Props = {
   params: { slug: string };
 };
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+  return blogs.map((blog) => ({
+    slug: blog._id.toString(),
+  }));
+}
+
+// export const runtime = "edge"; // 'nodejs' (default) | 'edge'
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { blog } = await getBlogById(params.slug);
 
