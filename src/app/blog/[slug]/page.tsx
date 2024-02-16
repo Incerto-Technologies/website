@@ -1,6 +1,6 @@
 import { getBlogById } from "@/action/getBlogById";
 import dynamic from "next/dynamic";
-
+export const runtime = "edge"; // 'nodejs' (default) | 'edge'
 const AppMarkDown = dynamic(() => import("@/components/modules/AppMarkDown"), {
   ssr: false,
 });
