@@ -18,7 +18,7 @@ export const BlogCardMobile = ({
   return (
     <BlogLink id={_id}>
       <div className="mt-16 px-[20px]">
-        <img
+        <Image
           className="rounded-[30px]"
           src={image}
           alt={title}
