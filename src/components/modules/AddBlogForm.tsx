@@ -48,8 +48,6 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
   // if no token is found, redirect to login page
 
   const handleSubmit = async () => {
-    console.log(createBlog, "createBlog before validation");
-
     // validate the createblog object
     if (!createBlog) return;
 
@@ -60,7 +58,6 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
         console.log("this fields is required", key);
         return;
       }
-      console.log(key);
     });
 
     let newBlog;

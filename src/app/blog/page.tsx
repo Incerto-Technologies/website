@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Explore the world of observability with our insightful blog articles. Learn about the latest trends, best practices, and tools in observability, empowering you to monitor, analyze, and optimize your systems for peak performance. Stay informed and enhance your observability expertise with our comprehensive blog series.",
   },
 };
-
+export const revalidate = 30;
 export default async function Blog() {
   const blogs = await getBlogs();
 

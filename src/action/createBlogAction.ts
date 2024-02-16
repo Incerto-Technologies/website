@@ -13,8 +13,6 @@ interface BlogRequest extends Blog {
 
 export const createBlogAction = async (blog: BlogRequest) => {
   try {
-    console.log(blog, "blog object");
-
     if (!blog)
       return {
         message: "No blog object provided",
@@ -52,7 +50,7 @@ export const createBlogAction = async (blog: BlogRequest) => {
       createdBy: user._id,
     });
     const blogJSON = newBlog.toJSON();
-    revalidatePath("/blog/");
+    revalidatePath("/blog");
     return {
       message: "Blog created successfully",
       success: true,

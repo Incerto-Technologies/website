@@ -2,6 +2,7 @@
 
 import { connectDb } from "@/database";
 import { UserModel } from "@/database/model/user";
+import { sendMail } from "@/utils/sendMail";
 
 export const getUserVerify = async (token: string) => {
   try {
@@ -28,10 +29,20 @@ export const getUserVerify = async (token: string) => {
         message: "Already Verified!",
         success: false,
       };
+    (await sendMail(
+      "Your account is Verified",
+      `
+  Hi ${updatedUser?.email.split("@")[0]},
+  Your account is successfully verified. Now you can add your blog.
+  Blog Link: https://${process.env.WEB_URL!}/blog/add
+  `,
+      updatedUser?.email,
+    )) as boolean;
 
     return {
       message: "Verified successfully",
       success: true,
+      isMailSent: false,
       user: updatedUser,
     };
   } catch (err) {
