@@ -44,7 +44,9 @@ const slice = createSlice({
       state.Blogs = state.ConstBlogs.filter((blog) =>
         blog.tags.findIndex(
           (tag) => tag.toLowerCase() === action.payload?.toLowerCase(),
-        ),
+        ) >= 0
+          ? true
+          : false,
       );
     },
 
