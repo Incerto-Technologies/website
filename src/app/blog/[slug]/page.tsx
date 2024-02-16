@@ -1,9 +1,39 @@
 import { getBlogById } from "@/action/getBlogById";
-import { getBlogs } from "@/action/getBlogs";
-import { GoPreviousPageButton } from "@/components/elements/GoPreviousPageButton";
-import { AppMarkDown } from "@/components/modules/AppMarkDown";
-import { BlogCard } from "@/components/modules/BlogCard";
-import { BlogCardMobile } from "@/components/modules/BlogCardMobile";
+import dynamic from "next/dynamic";
+
+const AppMarkDown = dynamic(
+  () =>
+    import("@/components/modules/AppMarkDown").then((mod) => mod.AppMarkDown),
+  {
+    ssr: false,
+  },
+);
+const GoPreviousPageButton = dynamic(
+  () =>
+    import("@/components/elements/GoPreviousPageButton").then(
+      (mod) => mod.GoPreviousPageButton,
+    ),
+  {
+    ssr: false,
+  },
+);
+const BlogCard = dynamic(
+  () => import("@/components/modules/BlogCard").then((mod) => mod.BlogCard),
+  {
+    ssr: false,
+  },
+);
+
+const BlogCardMobile = dynamic(
+  () =>
+    import("@/components/modules/BlogCardMobile").then(
+      (mod) => mod.BlogCardMobile,
+    ),
+  {
+    ssr: false,
+  },
+);
+
 import { BlogHeader } from "@/components/modules/BlogHeader";
 import { BlogNotFound } from "@/components/modules/BlogNotFound";
 import { BookDemo } from "@/components/modules/BookDemo";

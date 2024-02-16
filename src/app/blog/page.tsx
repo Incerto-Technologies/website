@@ -4,6 +4,7 @@ import { Footer } from "@/components/modules/Footer";
 import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
 import { BlogHero } from "@/components/templates/Blog/BlogHero";
 import { BlogsContainer } from "@/components/templates/Blog/BlogsContainer";
+import { connectDb } from "@/database";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,9 +17,12 @@ export const metadata: Metadata = {
       "Learn using open-source tools to achieve the most flexible observability and real impact.",
   },
 };
+
 export const revalidate = 30;
+
 export default async function Blog() {
   const blogs = await getBlogs();
+  await connectDb();
 
   return (
     <DefaultLayout>
