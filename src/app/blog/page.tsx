@@ -7,13 +7,13 @@ import { BlogsContainer } from "@/components/templates/Blog/BlogsContainer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Incerto | Blogs",
+  title: "Incerto Blogs: Know more about our work. ",
   description:
-    "Explore the world of observability with our insightful blog articles. Learn about the latest trends, best practices, and tools in observability, empowering you to monitor, analyze, and optimize your systems for peak performance. Stay informed and enhance your observability expertise with our comprehensive blog series.",
+    "Learn using open-source tools to achieve the most flexible observability and real impact.",
   openGraph: {
-    title: "Incerto | Blogs",
+    title: "Incerto Blogs: Know more about our work. ",
     description:
-      "Explore the world of observability with our insightful blog articles. Learn about the latest trends, best practices, and tools in observability, empowering you to monitor, analyze, and optimize your systems for peak performance. Stay informed and enhance your observability expertise with our comprehensive blog series.",
+      "Learn using open-source tools to achieve the most flexible observability and real impact.",
   },
 };
 export const revalidate = 30;

@@ -6,8 +6,8 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { MomentumScroll } from "@/components/elements/MomentumScroll";
 export const metadata: Metadata = {
   metadataBase: new URL("https://incerto.in"),
-  title: "Incerto",
-  description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
+  title: "Incerto: Customised Observability On Your Infrastructure.",
+  description: `Incerto builds customised open-source observability which covers all the compliances and requirements. Solution is so streamlined and flexible that expanding it becomes child play.`,
   publisher: "Incerto",
   icons: [
     {
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
         alt: "Dashboard",
       },
     ],
-    description: `Unlocking Efficiency with Incerto’s Custom End-to-End Observability Solutions`,
-    title: "Incerto",
+    description: `Incerto builds customised open-source observability which covers all the compliances and requirements. Solution is so streamlined and flexible that expanding it becomes child play.`,
+    title: "Incerto: Customised Observability On Your Infrastructure.",
     type: "website",
   },
 };

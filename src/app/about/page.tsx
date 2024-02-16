@@ -8,9 +8,13 @@ import { FooterBackground } from "@/components/templates/Home/FooterBackground";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Incerto | About Us",
+  title: "Meet Incerto: The team that makes it work.",
+  description:
+    "Core principles on which the company works and the team building it.",
   openGraph: {
-    title: "Incerto | About Us",
+    title: "Meet Incerto: The team that makes it work.",
+    description:
+      "Core principles on which the company works and the team building it.",
   },
 };
 

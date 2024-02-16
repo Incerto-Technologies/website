@@ -12,7 +12,6 @@ import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
 import { Metadata } from "next";
-export const revalidate = 30;
 type Props = {
   params: { slug: string };
 };
@@ -35,19 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-export async function getStaticPaths() {
-  const blogs = await getBlogs();
-  const ids = blogs.map(({ _id }) => ({
-    params: {
-      slug: _id.toString(),
-    },
-  }));
-  return {
-    paths: ids,
-    fallback: false,
-  };
-}
-export default async function page({ params }: { params: { slug: string } }) {
+
+export default async function page({ params }: Props) {
   if (!isValidObjectId(params.slug)) {
     return <BlogNotFound />;
   }

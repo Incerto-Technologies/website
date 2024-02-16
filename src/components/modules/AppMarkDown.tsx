@@ -1,5 +1,5 @@
+"use client";
 import Markdown from "react-markdown";
-
 // default unified extension
 import remarkGfm from "remark-gfm";
 
