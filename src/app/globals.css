@@ -150,7 +150,3 @@ body {
   overflow: hidden;
   will-change: transform;
 }
-svg {
-  width: 30px;
-  height: 30px;
-}

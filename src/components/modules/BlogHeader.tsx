@@ -19,29 +19,27 @@ export const BlogHeader = ({ title, author, tags, date }: Blog) => {
         {`${title}`}
       </h1>
       <div className="mt-[22px] hidden gap-8 md:flex">
-        <div className="flex gap-1.5">
-          <NoteIcon />
+        <div className="flex items-center gap-1.5">
+          <NoteIcon size="24" />
           <p className="text-[18px] font-medium text-[#5D5D5D]">{author}</p>
         </div>
-        <div className="flex gap-1.5">
-          <Folder />
+        <div className="flex items-center  gap-1.5">
+          <Folder size="24" />
           <p className="text-[18px] font-medium capitalize text-[#5D5D5D]">
             {/* {tags.join(" - ")} */}
             {tags[0]}
           </p>
         </div>
-        <div className="flex gap-1.5">
-          <Calendar />
+        <div className="flex items-center gap-1.5">
+          <Calendar size="24" />
           <p className="text-[18px] font-medium text-[#5D5D5D]">
             {formatedDate}
           </p>
         </div>
       </div>
       <div className="mt-[22px] text-sm font-semibold md:hidden">
-        <div className="flex h-full gap-1.5">
-          <div className="flex h-full min-h-7 min-w-7 justify-center ">
-            <Folder />
-          </div>
+        <div className="flex h-full items-center gap-1.5">
+          <Folder size="18" />
           <p className="text-[18px] font-medium capitalize text-[#5D5D5D]">
             {/* {tags.join(" - ")} */}
             {tags[0]}
@@ -49,11 +47,11 @@ export const BlogHeader = ({ title, author, tags, date }: Blog) => {
         </div>
         <div className="mt-2.5 flex h-full gap-5">
           <div className="flex items-center gap-1.5">
-            <NoteIcon />
+            <NoteIcon size="20" />
             <p className="text-[18px] font-medium text-[#5D5D5D]">{author}</p>
           </div>
           <div className="flex items-center gap-1.5">
-            <Calendar />
+            <Calendar size="20" />
             <p className="text-[18px] font-medium text-[#5D5D5D]">
               {formatedDate}
             </p>
