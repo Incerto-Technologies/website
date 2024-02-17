@@ -5,14 +5,16 @@ import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
 import { BlogHero } from "@/components/templates/Blog/BlogHero";
 import { BlogsContainer } from "@/components/templates/Blog/BlogsContainer";
 import { Metadata } from "next";
-
 export const metadata: Metadata = {
-  title: "Incerto | Edit Blog",
+  title: "Incerto Blogs: Know more about our work. ",
+  description:
+    "Learn using open-source tools to achieve the most flexible observability and real impact.",
   openGraph: {
-    title: "Incerto | Edit Blog",
+    title: "Incerto Blogs: Know more about our work. ",
+    description:
+      "Learn using open-source tools to achieve the most flexible observability and real impact.",
   },
 };
-
 export const revalidate = 30;
 export async function generateStaticParams() {
   const blogs = await getBlogs();
