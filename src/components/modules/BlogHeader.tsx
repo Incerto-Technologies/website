@@ -39,7 +39,9 @@ export const BlogHeader = ({ title, author, tags, date }: Blog) => {
       </div>
       <div className="mt-[22px] text-sm font-semibold md:hidden">
         <div className="flex h-full gap-1.5">
-          <Folder />
+          <div className="flex h-full min-h-7 min-w-7 justify-center ">
+            <Folder />
+          </div>
           <p className="text-[18px] font-medium capitalize text-[#5D5D5D]">
             {/* {tags.join(" - ")} */}
             {tags[0]}

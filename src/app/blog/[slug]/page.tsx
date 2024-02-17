@@ -42,6 +42,7 @@ import { getBlogs } from "@/action/getBlogs";
 type Props = {
   params: { slug: string };
 };
+export const revalidate = 30;
 export async function generateStaticParams() {
   const blogs = await getBlogs();
   return blogs.map((blog) => ({
