@@ -4,9 +4,13 @@ import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Incerto | Add Blog",
+  title: "Incerto Blogs: Know more about our work. ",
+  description:
+    "Learn using open-source tools to achieve the most flexible observability and real impact.",
   openGraph: {
-    title: "Incerto | Add Blog",
+    title: "Incerto Blogs: Know more about our work. ",
+    description:
+      "Learn using open-source tools to achieve the most flexible observability and real impact.",
   },
 };
 

@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { Blog } from "@/types/Blogs";
 import { UserModel } from "@/database/model/user";
 import { BlogModel } from "@/database/model/blog";
+import { revalidatePath } from "next/cache";
 
 interface BlogRequest extends Blog {
   token: string;
@@ -73,6 +74,8 @@ export const editBlogAction = async ({
         success: false,
       };
     }
+
+    revalidatePath(`/blog/${_id}`, "page");
 
     return {
       message: "Successful updated the blog",
