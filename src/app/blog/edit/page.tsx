@@ -14,6 +14,12 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 30;
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+  return blogs.map((blog) => ({
+    slug: blog._id.toString(),
+  }));
+}
 export default async function page() {
   const blogs = await getBlogs();
   return (
