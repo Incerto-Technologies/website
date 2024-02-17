@@ -25,13 +25,13 @@ export const Heading = () => {
         <div className="flex flex-col gap-[10px] md:flex-row">
           <Link
             href={"https://play.incerto.in"}
-            className="rounded-[14px] border-[0.5px] border-[#888888] px-[22px] py-[12px] font-[900] text-secondary"
+            className="rounded-[14px] border-[0.5px] border-[#888888] px-[22px] py-[12px] font-bold tracking-[1%] text-secondary"
           >
             <p> Explore Playground</p>
           </Link>
           <Link
             href={"#contact"}
-            className="rounded-[14px] bg-accent px-[22px] py-[12px] font-[900]  text-secondary"
+            className="rounded-[14px] bg-accent px-[22px] py-[12px] font-bold tracking-[1%]  text-secondary"
           >
             <div className="flex items-center justify-center gap-2.5">
               <p> Book a Demo</p>

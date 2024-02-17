@@ -170,25 +170,6 @@ export const ContactCard = () => {
           </p>
         )}
       </div>
-      {/* <div className="mt-8">
-        <AppTextArea
-          onChange={(e) => {
-            setFormData({
-              ...formData,
-              message: e.target.value,
-            });
-          }}
-          labelName="Message"
-          id="message"
-          name="message"
-          value={formData.message}
-        />
-        {errorFormData.message && (
-          <p className="mt-1 text-xs text-[#FF0000] md:mt-1 md:text-sm">
-            {errorFormData.message}
-          </p>
-        )}
-      </div> */}
       <div className="mt-8 flex items-center justify-center">
         <Button
           className={classNameMerge(

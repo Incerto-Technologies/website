@@ -3,7 +3,7 @@ import { OurVision } from "./OurVision";
 export const AboutHero = () => {
   return (
     <section className="home-background">
-      <div className="px-[25px] pt-[144px] md:px-0">
+      <div className="px-[25px] pt-[200px] md:px-0">
         <h1 className="text-center text-[30px] font-bold leading-10 tracking-[-1.2px] md:text-[60px] md:leading-[64px] md:tracking-tightest">
           Meet Our Team
         </h1>

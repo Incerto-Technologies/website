@@ -109,33 +109,18 @@ export const Navbar = () => {
                   >
                     <p>{productNavRoutes.name}</p> <ArrowRight />
                   </div>
-                  <AnimatePresence>
-                    {productNavbarOpenMobile && (
-                      <div className="mt-[30px] flex flex-col gap-[28px]">
-                        {productNavRoutes.options.map(
-                          ({ name, path, icon }) => (
-                            <motion.div
-                              initial={{ x: -400 }}
-                              animate={{ x: 0, transitionBehavior: "ease-in" }}
-                              key={uuid()}
-                            >
-                              <Link
-                                className="flex items-center gap-[8px]"
-                                href={path}
-                              >
-                                {icon({ size: "24px" })}
-                                <p className="leading-[20px] tracking-[0.32px]">
-                                  {name}
-                                </p>
-                              </Link>
-                            </motion.div>
-                          ),
-                        )}
-                      </div>
-                    )}
-                  </AnimatePresence>
+                  {productNavbarOpenMobile && (
+                    <div className="mt-[30px] flex gap-[28px]">
+                      {productNavRoutes.options.map(({ name, path, icon }) => (
+                        <motion.div className="flex gap-[8px]" key={uuid()}>
+                          {icon({ size: "24px" })}
+                          <p></p>
+                        </motion.div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="my-[18px] h-[1px] w-full bg-[#373737]"></div>
                   <ul>
-                    <div className="my-[18px] h-[1px] w-full bg-[#373737]"></div>
                     {navRoutes.map(({ path, name }) => (
                       <li key={uuid()}>
                         <Link

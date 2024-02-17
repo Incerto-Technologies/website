@@ -150,3 +150,94 @@ body {
   overflow: hidden;
   will-change: transform;
 }
+
+.lgradient-border {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-radius: 8px;
+  border-image-source: linear-gradient(to bottom, #ffffff, transparent);
+}
+.gradient-borderl {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+
+  position: relative;
+  box-sizing: border-box;
+  padding: 1px;
+
+  color: #fff;
+  background: #000;
+
+  background-clip: padding-box; /* !importanté */
+  border: solid 1px transparent; /* !importanté */
+  border-radius: 8px;
+}
+
+.gr adient-border {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  max-width: 22em;
+
+  position: relative;
+  padding: 3px;
+  box-sizing: border-box;
+
+  color: #fff;
+  background: transparent;
+  background-clip: padding-box; /* !importanté */
+  border: solid 5px transparent; /* !importanté */
+  border-radius: 1em;
+}
+.g radient-border:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  background: linear-gradient(to bottom, #ffffff, #ffffff00);
+}
+/* method 2 -> use background-clip to support border-radius */
+.gradient-borde r {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))
+      padding-box,
+    linear-gradient(to bottom, #ffffff, #ffffff33) border-box;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2) padding-box !important;
+  border: 1px solid transparent;
+}
+
+.gradient-borde {
+  position: relative;
+  padding: 1px 1px;
+  cursor: pointer;
+}
+.gradient-border {
+  position: relative;
+  padding: 1px 2px;
+  background: #767676;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #fff, transparent);
+}

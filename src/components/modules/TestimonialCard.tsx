@@ -42,7 +42,7 @@ export const TestimonialCard = ({
               width={100}
               height={100}
               alt={position}
-              className="h-full w-full object-cover"
+              className="object-contian h-full w-full py-1"
             />
           </Button>
         </div>
