@@ -1,7 +1,11 @@
-import { productData } from "@/data/product";
+"use client";
 import React from "react";
 import Video from "next-video";
+import { useSearchParams } from "next/navigation";
+import { getProductData } from "@/utils/getProductData";
 export const Hero = () => {
+  const searchParams = useSearchParams();
+  const productData = getProductData(searchParams.get("product_name"));
   return (
     <div
       className={`bg-[url("/backgrounds/product-mobile.png")] bg-cover bg-no-repeat pt-[200px] md:bg-[url("/backgrounds/product.png")] md:bg-cover md:bg-left-top md:pt-[150px]`}

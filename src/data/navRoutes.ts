@@ -9,19 +9,19 @@ export const productNavRoutes = {
     {
       name: "Host metrics",
       description: "Infrastructure health",
-      path: "/about",
+      path: "/product?product_name=host_metrics",
       icon: Cloud,
     },
     {
       name: "Trace and Logs",
       description: "Detect the Problems ",
-      path: "/about",
+      path: "/product?product_name=trace_and_logs",
       icon: Document,
     },
     {
       name: "Anomaly Detection",
       description: "Resolve the Problem",
-      path: "/about",
+      path: "/product?product_name=anomaly_detection",
       icon: Code,
     },
   ],

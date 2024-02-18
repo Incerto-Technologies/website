@@ -202,48 +202,53 @@ export const Navbar = () => {
         </div>
       </header>
       <div className="hidden md:block">
-        {productNavbarOpen && (
-          <motion.div
-            className="fixed top-[68px] z-[99] w-full max-w-[640px] bg-transparent transition-all"
-            key="product-nav"
-            onMouseEnter={() => {
-              setProductNavbarOpen(true);
-            }}
-            onMouseLeave={() => {
-              setProductNavbarOpen(false);
-            }}
-            style={{
-              right: "calc( 40% - 250px )",
-            }}
-          >
-            <div className="mt-[10px] rounded-2xl  bg-white bg-opacity-10 px-[45px] py-[28px] backdrop-blur-[50px] transition-all">
-              <h5 className="text-[24px]">Our Products</h5>
-              <div className="mt-[28px] flex gap-5">
-                {productNavRoutes.options.map(
-                  ({ description, name, path, icon }) => (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="min-w-[170px] rounded-lg border border-white border-opacity-20 bg-white bg-opacity-20 py-[28px] pl-[16px]"
-                      key={name}
-                    >
-                      <Link href={path}>
-                        {icon({ size: "34" })}
-                        <h3 className="mt-[8px] w-full font-semibold leading-5 tracking-tight text-white">
-                          {name}
-                        </h3>
-                        <p className="mt-[6px] text-xs font-medium tracking-tight text-[#c9c9c9]">
-                          {description}
-                        </p>
-                      </Link>
-                    </motion.div>
-                  ),
-                )}
+        <AnimatePresence>
+          {productNavbarOpen && (
+            <motion.div
+              initial={{ opacity: 0, backdropFilter: "50px" }}
+              animate={{ opacity: 1, backdropFilter: "10px" }}
+              exit={{ opacity: 0 }}
+              className="fixed top-[68px] z-[99] w-full max-w-[640px] bg-transparent"
+              key="product-nav"
+              onMouseEnter={() => {
+                setProductNavbarOpen(true);
+              }}
+              onMouseLeave={() => {
+                setProductNavbarOpen(false);
+              }}
+              style={{
+                right: "calc( 40% - 250px )",
+              }}
+            >
+              <div className="mt-[10px] rounded-2xl  bg-white bg-opacity-10 px-[45px] py-[28px] backdrop-blur-[50px] transition-all">
+                <h5 className="text-[24px]">Our Products</h5>
+                <div className="mt-[28px] flex gap-5">
+                  {productNavRoutes.options.map(
+                    ({ description, name, path, icon }) => (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="min-w-[170px] rounded-lg border border-white border-opacity-20 bg-white bg-opacity-20 py-[28px] pl-[16px]"
+                        key={name}
+                      >
+                        <Link href={path}>
+                          {icon({ size: "34" })}
+                          <h3 className="mt-[8px] w-full font-semibold leading-5 tracking-tight text-white">
+                            {name}
+                          </h3>
+                          <p className="mt-[6px] text-xs font-medium tracking-tight text-[#c9c9c9]">
+                            {description}
+                          </p>
+                        </Link>
+                      </motion.div>
+                    ),
+                  )}
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

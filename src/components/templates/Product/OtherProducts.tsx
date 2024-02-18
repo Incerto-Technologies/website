@@ -1,11 +1,14 @@
 "use client";
-import { productData } from "@/data/product";
 import Image from "next/image";
 import { v4 as uuid } from "uuid";
 import { FooterBackground } from "../Home/FooterBackground";
 import { Footer } from "@/components/modules/Footer";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { getProductData } from "@/utils/getProductData";
 export const OtherProducts = () => {
+  const searchParams = useSearchParams();
+
+  const productData = getProductData(searchParams.get("product_name"));
   const router = useRouter();
   return (
     <section className="mt-[200px] bg-accent pt-[50px] md:pt-[70px]">

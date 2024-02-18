@@ -1,9 +1,14 @@
+"use client";
 import { Graph } from "@/components/elements/icons/Graph";
-import { productData } from "@/data/product";
 import { classNameMerge } from "@/utils/classNameMerge";
+import { getProductData } from "@/utils/getProductData";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { v4 as uuid } from "uuid";
 export const Products = () => {
+  const searchParams = useSearchParams();
+
+  const productData = getProductData(searchParams.get("product_name"));
   return (
     <section className="w-container mt-[200px] flex flex-col gap-[150px]">
       {productData.products.map(({ image, title, lists }, i) => (

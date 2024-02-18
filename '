@@ -109,18 +109,33 @@ export const Navbar = () => {
                   >
                     <p>{productNavRoutes.name}</p> <ArrowRight />
                   </div>
-                  {productNavbarOpenMobile && (
-                    <div className="mt-[30px] flex gap-[28px]">
-                      {productNavRoutes.options.map(({ name, path, icon }) => (
-                        <motion.div className="flex gap-[8px]" key={uuid()}>
-                          {icon({ size: "24px" })}
-                          <p></p>
-                        </motion.div>
-                      ))}
-                    </div>
-                  )}
-                  <div className="my-[18px] h-[1px] w-full bg-[#373737]"></div>
+                  <AnimatePresence>
+                    {productNavbarOpenMobile && (
+                      <div className="mt-[30px] flex flex-col gap-[28px]">
+                        {productNavRoutes.options.map(
+                          ({ name, path, icon }) => (
+                            <motion.div
+                              initial={{ x: -400 }}
+                              animate={{ x: 0, transitionBehavior: "ease-in" }}
+                              key={uuid()}
+                            >
+                              <Link
+                                className="flex items-center gap-[8px]"
+                                href={path}
+                              >
+                                {icon({ size: "24px" })}
+                                <p className="leading-[20px] tracking-[0.32px]">
+                                  {name}
+                                </p>
+                              </Link>
+                            </motion.div>
+                          ),
+                        )}
+                      </div>
+                    )}
+                  </AnimatePresence>
                   <ul>
+                    <div className="my-[18px] h-[1px] w-full bg-[#373737]"></div>
                     {navRoutes.map(({ path, name }) => (
                       <li key={uuid()}>
                         <Link
@@ -190,10 +205,10 @@ export const Navbar = () => {
         <AnimatePresence>
           {productNavbarOpen && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, backdropFilter: "50px" }}
+              animate={{ opacity: 1, backdropFilter: "50px" }}
               exit={{ opacity: 0 }}
-              className="fixed top-[65px] z-[99] w-full max-w-[640px] "
+              className="fixed top-[68px] z-[99] w-full max-w-[640px] bg-transparent"
               key="product-nav"
               onMouseEnter={() => {
                 setProductNavbarOpen(true);
@@ -205,7 +220,7 @@ export const Navbar = () => {
                 right: "calc( 40% - 250px )",
               }}
             >
-              <div className="mt-[10px] rounded-2xl bg-white bg-opacity-10 px-[45px] py-[28px] backdrop-blur-[50px]">
+              <div className="mt-[10px] rounded-2xl  bg-white bg-opacity-10 px-[45px] py-[28px] backdrop-blur-[50px] transition-all">
                 <h5 className="text-[24px]">Our Products</h5>
                 <div className="mt-[28px] flex gap-5">
                   {productNavRoutes.options.map(
