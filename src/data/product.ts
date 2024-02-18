@@ -5,10 +5,9 @@ import { Document } from "@/components/elements/icons/Document";
 
 const CloudMetrics = {
   hero: {
-    title: "Distributed Tracing/ and Centralised Logging",
-    description:
-      "Detects and resolves infrastructure wide issues from a single dashboard",
-    icon_title: "Cloud Metrics",
+    title: "Host/ metrics",
+    description: "Monitor complete machine behavior",
+    icon_title: "Host Metrics",
     icon: Cloud,
     video: {
       src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
@@ -19,32 +18,21 @@ const CloudMetrics = {
   products: [
     {
       image: "/images/products/product1.webp",
-      title: "Distributed/ Tracing",
+      title: "Important/ Numbers",
       lists: [
-        "Trace the user request across service and infrastructure",
-        "Limitless custom dimension for each span",
-        "Filter based on dimension, latency, errors, services and more",
-        "Correlated with corresponding logs",
+        "See important metrics like CPU Load, Network throughput, free RAM, etc on top",
+        "Time Series graphs for memory, disk, and networks.",
+        "Aggregated Avg, Maximum, and Minimum alongside all Timeseries",
+        "Explore the flame graph to find out the most time-consuming functions",
+        "Filter based on hostname and service names.",
       ],
     },
     {
       image: "/images/products/product2.webp",
-      title: "Centralised/ logs",
+      title: "All/ Integration",
       lists: [
-        "See logs from every service",
-        "Every log is colour coded based on the severity text",
-        "Pinpoint the logs via different filters present in realtime",
-        "High dimensionality data giving all the context without instrumentation",
-      ],
-    },
-    {
-      image: "/images/products/product1.webp",
-      title: "Correlation/ &  Filtering",
-      lists: [
-        "Overview of various important metrics helping you to choose the time interval when the error occurred",
-        "Correlated traces, metrics and logs based on spanId, TraceID and time",
-        "Search for any attribute, resource, substring in logs to filter relevant data",
-        "See the aggregated dimensions having errors e.g. ports, urls, traces, hosts",
+        "Check the process details like threads, physical or virtual memory per PID and more",
+        "Have a separate dashboard for all your managed services, orchestration tools, databases, and more.",
       ],
     },
   ],
@@ -54,34 +42,30 @@ const CloudMetrics = {
       {
         icon: Activity,
         image: "/images/products/card.webp",
-        title: "Distributed Tracing",
+        title: "Distributed Tracing and Centralised Logging",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
-      {
-        icon: Document,
-        image: "/images/products/card.webp",
-        title: "Logging",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        path: "/product?product_name=trace_and_logs",
       },
       {
         icon: Code,
         image: "/images/products/card.webp",
-        title: "Anomaly Detection",
+        title: "Root Cause Analysis",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        path: "/product?product_name=anomaly_detection",
       },
     ],
   },
 };
+
 const tracesAndLogs = {
   hero: {
     title: "Distributed Tracing/ and Centralised Logging",
     description:
       "Detects and resolves infrastructure wide issues from a single dashboard",
-    icon_title: "Cloud Metrics",
-    icon: Cloud,
+    icon_title: "Trace and Logs",
+    icon: Document,
     video: {
       src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
       type: "video/mp4",
@@ -124,36 +108,32 @@ const tracesAndLogs = {
     title: "Explore Our /Other Products",
     products: [
       {
-        icon: Activity,
+        icon: Cloud,
         image: "/images/products/card.webp",
-        title: "Distributed Tracing",
+        title: "Host mertics",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        path: "/product?product_name=host_metrics",
       },
-      {
-        icon: Document,
-        image: "/images/products/card.webp",
-        title: "Logging",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
+
       {
         icon: Code,
         image: "/images/products/card.webp",
-        title: "Anomaly Detection",
+        title: "Root Cause Analysis",
+        path: "/product?product_name=anomaly_detection",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       },
     ],
   },
 };
+
 const anomalyDetection = {
   hero: {
-    title: "Distributed Tracing/ and Centralised Logging",
-    description:
-      "Detects and resolves infrastructure wide issues from a single dashboard",
-    icon_title: "Cloud Metrics",
-    icon: Cloud,
+    title: "Root Cause/ Analysis",
+    description: "Dynamically narrow down on root cause.",
+    icon_title: "Root Cause Analysis",
+    icon: Code,
     video: {
       src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
       type: "video/mp4",
@@ -163,32 +143,21 @@ const anomalyDetection = {
   products: [
     {
       image: "/images/products/product1.webp",
-      title: "Distributed/ Tracing",
+      title: "Error/ Status",
       lists: [
-        "Trace the user request across service and infrastructure",
-        "Limitless custom dimension for each span",
-        "Filter based on dimension, latency, errors, services and more",
-        "Correlated with corresponding logs",
+        "Errors across traces and logs grouped by Service.",
+        "Quickly spot dimensions that caused errors e.g hosts, urls etc.",
+        "Filter based on dimensions and more.",
       ],
     },
     {
       image: "/images/products/product2.webp",
-      title: "Centralised/ logs",
+      title: "Dynamic/ distribution",
       lists: [
-        "See logs from every service",
-        "Every log is colour coded based on the severity text",
-        "Pinpoint the logs via different filters present in realtime",
-        "High dimensionality data giving all the context without instrumentation",
-      ],
-    },
-    {
-      image: "/images/products/product1.webp",
-      title: "Correlation/ &  Filtering",
-      lists: [
-        "Overview of various important metrics helping you to choose the time interval when the error occurred",
-        "Correlated traces, metrics and logs based on spanId, TraceID and time",
-        "Search for any attribute, resource, substring in logs to filter relevant data",
-        "See the aggregated dimensions having errors e.g. ports, urls, traces, hosts",
+        "Select the dimensions and dynamically see the pie charts.",
+        `A clear distinction between “what” and “where”.`,
+        "Dynamically group based on dimensions which have majority values.",
+        "Analyze the heatmap and time series to see the root cause.",
       ],
     },
   ],
@@ -196,23 +165,19 @@ const anomalyDetection = {
     title: "Explore Our /Other Products",
     products: [
       {
-        icon: Activity,
+        icon: Cloud,
         image: "/images/products/card.webp",
-        title: "Distributed Tracing",
+        title: "Host mertics",
+        path: "/product?product_name=host_metrics",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       },
+
       {
         icon: Document,
         image: "/images/products/card.webp",
-        title: "Logging",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
-      {
-        icon: Code,
-        image: "/images/products/card.webp",
-        title: "Anomaly Detection",
+        path: "/product?product_name=trace_and_logs",
+        title: "Distributed Tracing and Centralised Logging",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       },

@@ -5,11 +5,18 @@ import { FooterBackground } from "../Home/FooterBackground";
 import { Footer } from "@/components/modules/Footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { getProductData } from "@/utils/getProductData";
+import { useLenis } from "@studio-freight/react-lenis";
 export const OtherProducts = () => {
   const searchParams = useSearchParams();
+  const lenis = useLenis(() => {});
+
+  const router = useRouter();
+  const handleOtherProductClick = (path: string) => {
+    router.push(path);
+    lenis?.scrollTo(0);
+  };
 
   const productData = getProductData(searchParams.get("product_name"));
-  const router = useRouter();
   return (
     <section className="mt-[200px] bg-accent pt-[50px] md:pt-[70px]">
       <h3 className="text-center text-[24px] font-semibold tracking-tighter md:text-[34px] md:leading-[50px] md:tracking-[0.68px]">
@@ -20,10 +27,13 @@ export const OtherProducts = () => {
       </h3>
       <div className="mt-[50px] flex flex-col flex-wrap items-center justify-center gap-[20.5px] md:flex-row md:gap-[22px] md:px-5">
         {productData.otherProducts.products.map(
-          ({ image, title, description, icon }) => (
-            <div
+          ({ image, path, title, description, icon }) => (
+            <button
+              onClick={() => {
+                handleOtherProductClick(path);
+              }}
               key={uuid()}
-              className="w-full max-w-[300px] rounded-[14.5px] bg-[#002D25] md:rounded-[12px]"
+              className="w-full max-w-[300px] rounded-[14.5px] bg-[#002D25] hover:outline-none focus:outline-none md:rounded-[12px]"
             >
               <div className="mt-[35px] flex items-center gap-[10px] px-[36px] md:mt-[30px] md:gap-[8px] md:px-[30px]">
                 <div className="hidden h-full md:block">
@@ -48,7 +58,7 @@ export const OtherProducts = () => {
                   />
                 </div>
               </div>
-            </div>
+            </button>
           ),
         )}
       </div>

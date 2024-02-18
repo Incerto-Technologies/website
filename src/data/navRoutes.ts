@@ -19,7 +19,7 @@ export const productNavRoutes = {
       icon: Document,
     },
     {
-      name: "Anomaly Detection",
+      name: "Root case Analysis",
       description: "Resolve the Problem",
       path: "/product?product_name=anomaly_detection",
       icon: Code,
