@@ -1,41 +1,37 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { ArrowOutwardGreen } from "../elements/icons/ArrowOutwardGreen";
 import { ArrowRight } from "../elements/icons/ArrowRight";
 import { navRoutes, productNavRoutes } from "@/data/navRoutes";
 import { v4 as uuid } from "uuid";
 import { AnimatePresence, motion } from "framer-motion";
 import { classNameMerge } from "@/utils/classNameMerge";
-import { useRouter } from "next/navigation";
-
-const sliderVariants = {
-  incoming: {
-    x: -1000,
-    z: 100,
-  },
-  active: (navbarOpen: boolean) => ({
-    opacitx: 1,
-    x: navbarOpen ? 0 : -600,
-    z: 100,
-  }),
-  exit: {
-    z: 100,
-    x: -1000,
-  },
-};
-
+import { usePathname, useRouter } from "next/navigation";
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const router = useRouter();
   const [productNavbarOpen, setProductNavbarOpen] = useState(false);
   const [productNavbarOpenMobile, setProductNavbarOpenMobile] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(true);
+  const pathname = usePathname();
+  useEffect(() => {
+    console.log(pathname);
+
+    const isHomepage = pathname == "/" || pathname == "/#contact";
+    setIsHomePage(isHomepage);
+    console.log(isHomePage);
+  }, [isHomePage, pathname]);
   return (
     <motion.div
-      animate={{ opacity: 1, y: 0 }}
-      className="opacity-0"
-      transition={{ delay: 1.7, ease: "easeInOut", duration: 0.7 }}
+      animate={{ opacity: 1 }}
+      className={isHomePage ? "opacity-0" : ""}
+      transition={{
+        delay: isHomePage ? 1.5 : 0,
+        ease: "easeInOut",
+        duration: isHomePage ? 0.4 : 0,
+      }}
     >
       <header
         className={classNameMerge(
