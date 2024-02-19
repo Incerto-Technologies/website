@@ -118,9 +118,12 @@ export const Navbar = () => {
                               initial={{ x: -400 }}
                               animate={{ x: 0, transitionBehavior: "ease-in" }}
                               key={uuid()}
+                              onClick={() => {
+                                setNavbarOpen(false);
+                              }}
                             >
                               <Link
-                                className="flex items-center gap-[8px]"
+                                className="flex w-full items-center gap-[8px]"
                                 href={path}
                               >
                                 {icon({ size: "24px" })}

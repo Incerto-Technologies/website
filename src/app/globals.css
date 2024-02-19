@@ -266,3 +266,9 @@ body {
     background-position: 0 50%;
   }
 }
+
+.text-clip-all {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
