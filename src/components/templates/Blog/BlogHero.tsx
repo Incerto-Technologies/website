@@ -15,22 +15,8 @@ export const BlogHero = () => {
   return (
     <section className="home-background flex h-full flex-col justify-center">
       <div className="w-container align-center w-5/6 pt-[150px] md:pt-[200px]">
-        <h1 className="text-center text-3xl font-bold"></h1>
-        <h1 className="relative text-center font-gotham text-[30px] font-[900]  leading-[40px] tracking-[-1.2px] md:text-[44px] md:leading-[50px] md:tracking-tightest">
-          <TextAnimation
-            text={"Discover cool updates and"}
-            once
-            className=""
-            el="span"
-          />
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, ease: "easeInOut" }}
-            className="animate-gradient-text relative bottom-[8px]"
-          >
-            blogs here
-          </motion.span>
+        <h1 className="text-center text-3xl font-bold">
+          Discover cool updates and blogs here
         </h1>
       </div>
       <div className="w-container relative mt-[72px] flex justify-between gap-[18px] px-[20px] md:mt-[223px]  md:justify-start md:gap-[30px] md:px-0">
