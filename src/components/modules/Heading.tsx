@@ -25,7 +25,7 @@ export const Heading = () => {
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="opacity-0"
-          transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+          transition={{ delay: 1.7, ease: "easeInOut", duration: 0.7 }}
         >
           <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
             Build observability that adapts to your infra, not the other way
@@ -35,7 +35,7 @@ export const Heading = () => {
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="opacity-0"
-          transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+          transition={{ delay: 1.7, ease: "easeInOut", duration: 0.7 }}
         >
           <div className="flex flex-col gap-[10px] md:flex-row">
             <Link
@@ -58,7 +58,7 @@ export const Heading = () => {
       <motion.div
         animate={{ opacity: 1, y: 0 }}
         className="opacity-0"
-        transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+        transition={{ delay: 1.7, ease: "easeInOut", duration: 0.7 }}
       >
         <div className="w-container mt-[38px] flex w-full justify-center px-[20px] md:mt-[71px] lg:px-[192px]">
           <Image

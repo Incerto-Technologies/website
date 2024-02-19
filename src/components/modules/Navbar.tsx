@@ -35,7 +35,7 @@ export const Navbar = () => {
     <motion.div
       animate={{ opacity: 1, y: 0 }}
       className="opacity-0"
-      transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+      transition={{ delay: 1.7, ease: "easeInOut", duration: 0.7 }}
     >
       <header
         className={classNameMerge(
