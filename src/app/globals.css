@@ -237,17 +237,7 @@ body {
 }
 
 .animate-gradient-text {
-  background: linear-gradient(
-    90deg,
-    rgba(15, 147, 124, 1) 0%,
-    rgba(57, 189, 159, 1) 12%,
-    rgba(113, 164, 145, 1) 26%,
-    rgba(37, 172, 69, 1) 35%,
-    rgba(78, 232, 26, 1) 48%,
-    rgba(204, 247, 214, 1) 71%,
-    rgba(0, 255, 153, 1) 95%,
-    rgba(0, 255, 153, 1) 95%
-  );
+  background: linear-gradient(90deg, #0f937c, #00ff99);
   background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
