@@ -23,7 +23,7 @@ body {
 }
 
 .head-title {
-  background: linear-gradient(90deg, #0f937c 10.75%, #0f9 89.89%);
+  background: linear-gradient(0deg, #0f937c, #0f9);
 }
 
 .product-title {
@@ -32,12 +32,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.text-clip-all {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .home-background {
   background: linear-gradient(360deg, #080808 -1.68%, rgba(0, 0, 0, 0) 98.26%),
     url("/backgrounds/homepage.png");
@@ -240,4 +234,35 @@ body {
   margin: -1px;
   border-radius: 8px;
   background-image: linear-gradient(to bottom, #fff, transparent);
+}
+
+.animate-gradient-text {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 147, 124, 1) 0%,
+    rgba(57, 189, 159, 1) 12%,
+    rgba(113, 164, 145, 1) 26%,
+    rgba(37, 172, 69, 1) 35%,
+    rgba(78, 232, 26, 1) 48%,
+    rgba(204, 247, 214, 1) 71%,
+    rgba(0, 255, 153, 1) 95%,
+    rgba(0, 255, 153, 1) 95%
+  );
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

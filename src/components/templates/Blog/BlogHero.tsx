@@ -1,23 +1,39 @@
 "use client";
 import { Button } from "@/components/elements/Button";
+import { TextAnimation } from "@/components/elements/TextAnimation";
 import { SearchIcon } from "@/components/elements/icons/SearchIcon";
 import { useAppDispatch, useTypedSelector } from "@/hooks/store";
 import { setSearch, setSearchTag } from "@/store/slice/blog.slice";
 import { Tags } from "@/types/Blogs";
 import { classNameMerge } from "@/utils/classNameMerge";
 import { useState } from "react";
+import { motion } from "framer-motion";
 export const BlogHero = () => {
   const dispatch = useAppDispatch();
   const [open, setOpen] = useState(false);
   const { searchTag } = useTypedSelector((state) => state.blog);
   return (
     <section className="home-background flex h-full flex-col justify-center">
-      <div className="w-container align-center mt-20 w-5/6 md:pt-44">
-        <h1 className="text-center text-3xl font-bold">
-          Discover cool updates and blogs here
+      <div className="w-container align-center w-5/6 pt-[150px] md:pt-[200px]">
+        <h1 className="text-center text-3xl font-bold"></h1>
+        <h1 className="relative text-center font-gotham text-[30px] font-[900]  leading-[40px] tracking-[-1.2px] md:text-[44px] md:leading-[50px] md:tracking-tightest">
+          <TextAnimation
+            text={"Discover cool updates and"}
+            once
+            className=""
+            el="span"
+          />
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, ease: "easeInOut" }}
+            className="animate-gradient-text relative bottom-[8px]"
+          >
+            blogs here
+          </motion.span>
         </h1>
       </div>
-      <div className="w-container relative mt-[72px] flex justify-between gap-[18px] px-[20px] md:mt-[137px]  md:justify-start md:gap-[30px] md:px-0">
+      <div className="w-container relative mt-[72px] flex justify-between gap-[18px] px-[20px] md:mt-[223px]  md:justify-start md:gap-[30px] md:px-0">
         <div className="flex items-center gap-2 rounded-2xl bg-[#232323] px-5 py-2.5 md:w-3/5">
           <SearchIcon />
           <input
