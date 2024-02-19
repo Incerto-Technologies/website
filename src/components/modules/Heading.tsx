@@ -22,38 +22,55 @@ export const Heading = () => {
             </motion.span>
           </h1>
         </div>
-
-        <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
-          Build observability that adapts to your infra, not the other way
-          around
-        </p>
-        <div className="flex flex-col gap-[10px] md:flex-row">
-          <Link
-            href={"https://play.incerto.in"}
-            className="rounded-[14px] border-[0.5px] border-[#888888] px-[22px] py-[12px] font-bold tracking-[1%] text-secondary"
-          >
-            <p> Explore Playground</p>
-          </Link>
-          <Link
-            href={"#contact"}
-            className="rounded-[14px] bg-accent px-[22px] py-[12px] font-bold tracking-[1%]  text-secondary"
-          >
-            <div className="flex items-center justify-center gap-2.5">
-              <p> Book a Demo</p>
-            </div>
-          </Link>
-        </div>
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="opacity-0"
+          transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+        >
+          <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
+            Build observability that adapts to your infra, not the other way
+            around
+          </p>
+        </motion.div>
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="opacity-0"
+          transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+        >
+          <div className="flex flex-col gap-[10px] md:flex-row">
+            <Link
+              href={"https://play.incerto.in"}
+              className="rounded-[14px] border-[0.5px] border-[#888888] px-[22px] py-[12px] font-bold tracking-[1%] text-secondary"
+            >
+              <p> Explore Playground</p>
+            </Link>
+            <Link
+              href={"#contact"}
+              className="rounded-[14px] bg-accent px-[22px] py-[12px] font-bold tracking-[1%]  text-secondary"
+            >
+              <div className="flex items-center justify-center gap-2.5">
+                <p> Book a Demo</p>
+              </div>
+            </Link>
+          </div>
+        </motion.div>
       </section>
-      <div className="w-container mt-[38px] flex w-full justify-center px-[20px] md:mt-[71px] lg:px-[192px]">
-        <Image
-          src={"/backgrounds/homepage-bg.png"}
-          // src={"/backgrounds/dashboard.webp"}
-          alt="Dashboard"
-          width={1080}
-          height={1080}
-          className="w-full object-cover"
-        />
-      </div>
+      <motion.div
+        animate={{ opacity: 1, y: 0 }}
+        className="opacity-0"
+        transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+      >
+        <div className="w-container mt-[38px] flex w-full justify-center px-[20px] md:mt-[71px] lg:px-[192px]">
+          <Image
+            src={"/backgrounds/homepage-bg.png"}
+            // src={"/backgrounds/dashboard.webp"}
+            alt="Dashboard"
+            width={1080}
+            height={1080}
+            className="w-full object-cover"
+          />
+        </div>
+      </motion.div>
     </>
   );
 };

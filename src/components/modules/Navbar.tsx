@@ -32,7 +32,11 @@ export const Navbar = () => {
   const [productNavbarOpen, setProductNavbarOpen] = useState(false);
   const [productNavbarOpenMobile, setProductNavbarOpenMobile] = useState(false);
   return (
-    <div>
+    <motion.div
+      animate={{ opacity: 1, y: 0 }}
+      className="opacity-0"
+      transition={{ delay: 1.7, ease: "easeInOut", duration: 1.3 }}
+    >
       <header
         className={classNameMerge(
           "fixed top-0 z-[150] w-full bg-primary font-manrope transition-opacity ease-linear  lg:bg-opacity-30 lg:backdrop-blur-[50px]",
@@ -248,6 +252,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
