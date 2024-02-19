@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-// import { ArrowOutwardGreen } from "../elements/icons/ArrowOutwardGreen";
+import { useState } from "react";
 import { ArrowRight } from "../elements/icons/ArrowRight";
 import { navRoutes, productNavRoutes } from "@/data/navRoutes";
 import { v4 as uuid } from "uuid";
@@ -14,15 +13,9 @@ export const Navbar = () => {
   const router = useRouter();
   const [productNavbarOpen, setProductNavbarOpen] = useState(false);
   const [productNavbarOpenMobile, setProductNavbarOpenMobile] = useState(false);
-  const [isHomePage, setIsHomePage] = useState(true);
   const pathname = usePathname();
-  useEffect(() => {
-    console.log(pathname);
+  const [isHomePage] = useState(pathname == "/" || pathname == "/#contact");
 
-    const isHomepage = pathname == "/" || pathname == "/#contact";
-    setIsHomePage(isHomepage);
-    console.log(isHomePage);
-  }, [isHomePage, pathname]);
   return (
     <motion.div
       animate={{ opacity: 1 }}
