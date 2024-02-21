@@ -17,7 +17,7 @@ const CloudMetrics = {
   },
   products: [
     {
-      image: "/images/products/logging.gif",
+      image: "/images/products/HostMetrics.gif",
       title: "Important/ Numbers",
       lists: [
         "See important metrics like CPU Load, Network throughput, free RAM, etc on top",
@@ -28,7 +28,7 @@ const CloudMetrics = {
       ],
     },
     {
-      image: "/images/products/traces.gif",
+      image: "/images/products/HostMetrics.gif",
       title: "All/ Integration",
       lists: [
         "Check the process details like threads, physical or virtual memory per PID and more",
