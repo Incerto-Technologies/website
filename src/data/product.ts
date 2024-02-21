@@ -17,7 +17,7 @@ const CloudMetrics = {
   },
   products: [
     {
-      image: "/images/products/product1.webp",
+      image: "/images/products/logging.gif",
       title: "Important/ Numbers",
       lists: [
         "See important metrics like CPU Load, Network throughput, free RAM, etc on top",
@@ -28,7 +28,7 @@ const CloudMetrics = {
       ],
     },
     {
-      image: "/images/products/product2.webp",
+      image: "/images/products/traces.gif",
       title: "All/ Integration",
       lists: [
         "Check the process details like threads, physical or virtual memory per PID and more",
@@ -74,7 +74,7 @@ const tracesAndLogs = {
   },
   products: [
     {
-      image: "/images/products/product1.webp",
+      image: "/images/products/logging.gif",
       title: "Distributed/ Tracing",
       lists: [
         "Trace the user request across service and infrastructure",
@@ -84,7 +84,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/product2.webp",
+      image: "/images/products/traces.gif",
       title: "Centralised/ logs",
       lists: [
         "See logs from every service",
@@ -94,7 +94,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/product1.webp",
+      image: "/images/products/logging.gif",
       title: "Correlation/ &  Filtering",
       lists: [
         "Overview of various important metrics helping you to choose the time interval when the error occurred",
