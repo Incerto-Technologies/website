@@ -94,7 +94,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/logging.gif",
+      image: "/images/products/traces1.gif",
       title: "Correlation/ &  Filtering",
       lists: [
         "Overview of various important metrics helping you to choose the time interval when the error occurred",
