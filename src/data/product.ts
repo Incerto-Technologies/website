@@ -74,8 +74,8 @@ const tracesAndLogs = {
   },
   products: [
     {
-      image: "/images/products/logging.gif",
       title: "Distributed/ Tracing",
+      image: "/images/products/traces.gif",
       lists: [
         "Trace the user request across service and infrastructure",
         "Limitless custom dimension for each span",
@@ -84,7 +84,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/traces.gif",
+      image: "/images/products/logging.gif",
       title: "Centralised/ logs",
       lists: [
         "See logs from every service",
