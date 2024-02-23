@@ -19,13 +19,13 @@ export const Products = () => {
             i == 1 ? "md:flex-row-reverse" : "",
           )}
         >
-          <div className="h-full w-full flex justify-center items-center">
+          <div className="flex h-full w-full items-center justify-center">
             <Image
               alt={title}
               src={image}
               width={1080}
               height={1080}
-              className="h- full aspect-[560/270] w-[560px] rounded-xl border-2 border-[#B5B5B5] object-cover md:rounded-[20px]"
+              className="w-full rounded-xl md:rounded-[20px]"
             />
           </div>
           <div className="w-full">
