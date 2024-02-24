@@ -23,8 +23,8 @@ export const Products = () => {
             <Image
               alt={title}
               src={image}
-              width={1080}
-              height={1080}
+              width={2560}
+              height={2560}
               className="w-full rounded-xl md:rounded-[20px]"
             />
           </div>

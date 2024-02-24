@@ -10,7 +10,7 @@ const CloudMetrics = {
     icon_title: "Host Metrics",
     icon: Cloud,
     video: {
-      src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
+      src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1708764614/HM_video_fjkoay.mp4",
       type: "video/mp4",
       thumbnail: "/video/hm-thumbnail.webp",
     },
@@ -135,8 +135,8 @@ const anomalyDetection = {
     icon_title: "Root Cause Analysis",
     icon: Code,
     video: {
-      src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
-      type: "video/mp4",
+      src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1708764470/hlhtbv4vg81fqvsic8gi.mkv",
+      type: "video/mkv",
       thumbnail: "/video/rca-thumbnail.webp",
     },
   },

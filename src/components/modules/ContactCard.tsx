@@ -173,7 +173,7 @@ export const ContactCard = () => {
       <div className="mt-8 flex items-center justify-center">
         <Button
           className={classNameMerge(
-            "rounded-2xl bg-[#0F937C] px-5 py-3 disabled:opacity-50",
+            "rounded-2xl bg-[#0F937C] px-5 py-3 transition-all duration-200 ease-in hover:bg-[#035749] disabled:opacity-50",
             isLoading ? " cursor-not-allowed" : "cursor-pointer",
           )}
           onClick={() => {
