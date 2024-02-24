@@ -15,8 +15,7 @@ export const BlogHero = () => {
     <section className="home-background flex h-full flex-col justify-center">
       <div className="w-container align-center w-5/6 pt-[150px] md:pt-[200px]">
         <h1 className="text-center text-[34px] font-semibold leading-10 tracking-[-0.68px] md:text-[44px] md:leading-[60px]">
-          Discover cool updates and{" "}
-          <span className="features-title text-clip-all"> blogs here</span>
+          Discover cool updates and blogs here
         </h1>
       </div>
       <div className="w-container relative mt-[72px] flex justify-between gap-[18px] px-[20px] md:mt-[223px]  md:justify-start md:gap-[30px] md:px-0">
