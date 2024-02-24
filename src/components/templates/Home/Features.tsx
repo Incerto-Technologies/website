@@ -46,7 +46,7 @@ export const Features = () => {
         </span>
       </h2>
 
-      <p className="mx-auto mt-8 w-3/4 text-center text-[24px] text-sm font-medium leading-6 tracking-wide text-[#959595] md:mt-[22px] md:w-4/6 md:leading-7 md:tracking-wide md:text-secondary">
+      <p className="mx-auto mt-8 w-3/4 text-center text-sm font-medium leading-6 tracking-wide text-[#959595] md:mt-[22px] md:w-4/6 md:text-[16px] md:leading-7 md:tracking-wide md:text-secondary">
         Are you a business owner grappling with challenges in understanding and
         optimizing your system&apos;s performance and facing issues like...
       </p>
