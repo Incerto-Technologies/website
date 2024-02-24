@@ -14,16 +14,6 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
             width={300}
             className="object-contian h-full w-full"
           />
-          {/* <div className="absolute bottom-5 left-1/2 flex w-full max-w-[170px] -translate-x-1/2 items-center justify-center gap-2.5 rounded-[20px] bg-white px-4 py-2.5">
-            <Image
-              src={"/logos/avatar/kunalsingh.webp"}
-              alt={author}
-              width={30}
-              height={30}
-              className="h-[30px] w-[30px] rounded-full object-cover"
-            />
-            <p className="w-full font-semibold text-primary">{author}</p>
-          </div> */}
         </div>
         <div className="bg- red-400 mt-11 flex flex-col gap-6 md:h-[304px] md:justify-between md:gap-0">
           <h3
@@ -39,8 +29,10 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
               ? `${description.slice(0, 123)}...`
               : description}
           </p>
-          <div className="w-full rounded-[20px] border border-[#0F937C] bg-transparent px-5 py-[14px]">
-            <p className="text-center">Read More</p>
+          <div className="w-full rounded-[20px] border border-accent-light bg-transparent px-5 py-[14px]">
+            <p className="text-center font-bold tracking-[1%] text-accent-light">
+              Read More
+            </p>
           </div>
         </div>
       </BlogLink>

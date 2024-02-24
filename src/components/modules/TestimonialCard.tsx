@@ -36,13 +36,13 @@ export const TestimonialCard = ({
         </div>
         <div className="hidden md:block">
           {/* <div className="hidden md:block"> */}
-          <Button className="h-[46px] w-[121px] rounded-[10px] py-0">
+          <Button className="h-[46px] w-[121px] rounded-[10px] py-0 transition-all duration-200 ease-in hover:bg-[#035749]">
             <Image
               src={companyLogo}
               width={100}
               height={100}
               alt={position}
-              className="h-full w-full object-cover"
+              className="object-contian h-full w-full py-1"
             />
           </Button>
         </div>

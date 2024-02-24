@@ -45,7 +45,7 @@ export const Footer = ({
             <div className="w-full">
               <h4
                 className={classNameMerge(
-                  "text-lg font-bold md:text-2xl md:text-accent-light",
+                  "text-lg font-bold md:text-2xl ",
                   isTextWhite ? "text-[#0A0A0A]" : "text-accent-light",
                 )}
               >

@@ -41,7 +41,7 @@ export const WhyUsCard = ({
         <h1 className="font-gotham font-medium leading-6 text-secondary text-opacity-85 md:text-2xl md:font-bold md:leading-[34px]">
           {title}
         </h1>
-        <p className="mt-[22px] text-sm font-medium leading-[26px] tracking-wide text-[#888]">
+        <p className="mt-[22px] text-[16px] font-medium leading-[26px] tracking-wide text-[#888]">
           {description.split("\n").map((line, index) => (
             <React.Fragment key={index}>
               {line}

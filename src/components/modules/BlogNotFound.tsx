@@ -1,12 +1,16 @@
 "use client";
 import React from "react";
+import { NotFound } from "./NotFound";
+import { DefaultLayout } from "../layouts/DefaultLayout";
 
 export const BlogNotFound = () => {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center">
-      <h1 className="text-4xl font-semibold text-secondary">
-        404 | No blog found
-      </h1>
-    </div>
+    <DefaultLayout>
+      <NotFound
+        text="404 | Blog Not Found"
+        btnText="Return to blogpage"
+        redirectPath="/blog"
+      />
+    </DefaultLayout>
   );
 };

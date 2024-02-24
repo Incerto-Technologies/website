@@ -1,9 +1,14 @@
+"use client";
 import { Graph } from "@/components/elements/icons/Graph";
-import { productData } from "@/data/product";
 import { classNameMerge } from "@/utils/classNameMerge";
+import { getProductData } from "@/utils/getProductData";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { v4 as uuid } from "uuid";
 export const Products = () => {
+  const searchParams = useSearchParams();
+
+  const productData = getProductData(searchParams.get("product_name"));
   return (
     <section className="w-container mt-[200px] flex flex-col gap-[150px]">
       {productData.products.map(({ image, title, lists }, i) => (
@@ -14,12 +19,12 @@ export const Products = () => {
             i == 1 ? "md:flex-row-reverse" : "",
           )}
         >
-          <div className="w-full">
+          <div className="flex h-full w-full items-center justify-center">
             <Image
               alt={title}
               src={image}
-              width={1080}
-              height={1080}
+              width={2560}
+              height={2560}
               className="w-full rounded-xl md:rounded-[20px]"
             />
           </div>

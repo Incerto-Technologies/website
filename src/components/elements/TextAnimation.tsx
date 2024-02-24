@@ -77,7 +77,7 @@ export const TextAnimation = ({
         aria-hidden
       >
         {textArray.map((line, lineIndex) => (
-          <span className="block" key={`${line}-${lineIndex}`}>
+          <span className="" key={`${line}-${lineIndex}`}>
             {line.split(" ").map((word, wordIndex) => (
               <span
                 className="inline-block overflow-hidden"

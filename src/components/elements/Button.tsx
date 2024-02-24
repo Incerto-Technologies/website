@@ -22,7 +22,7 @@ export const Button = ({
     },
     secondary: {
       sm: `rounded-xl border border-[#888] px-[12px] py-1.5 font-semibold text-accent-light text-sm`,
-      md: `rounded-[14px] border border-[#888] px-[18px] py-2.5 font-bold text-accent-light`,
+      md: `rounded-[14px] tracking-[1%] border border-[#888] px-[18px] py-2.5 font-bold text-accent-light`,
       lg: `rounded-2xl border border-[#888] px-[22px] py-3 font-bold text-accent-light text-lg `,
     },
   };

@@ -3,7 +3,7 @@ import { ContactCard } from "@/components/modules/ContactCard";
 
 export const Contact = () => {
   return (
-    <section className="w-container mt-36 md:mt-52" id="contact">
+    <section className="w-container pt-36 md:mt-52 md:pt-24" id="contact">
       <div>
         <h3 className="px-3 text-center font-gotham text-[34px] font-medium leading-[48px] tracking-[-0.68px]">
           {/* Find issues before your users do! */}
