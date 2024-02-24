@@ -44,7 +44,7 @@ export const OtherProducts = () => {
                   {title}
                 </h4>
               </div>
-              <p className="mt-[24px] px-[36px] font-medium leading-7 tracking-[-0.32px] md:mt-[20px] md:px-[30px] md:text-sm md:leading-[22px] md:tracking-[-0.28px]">
+              <p className="mt-[24px] h-10 px-[36px] text-start font-medium leading-7 tracking-[-0.32px] md:mt-[20px] md:px-[30px] md:text-sm md:leading-[22px] md:tracking-[-0.28px]">
                 {description}
               </p>
               <div className="mt-[35px] flex h-full w-full items-center justify-end md:mt-[30px]">
