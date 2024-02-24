@@ -40,19 +40,18 @@ const CloudMetrics = {
     title: "Explore Our /Other Products",
     products: [
       {
-        icon: Activity,
+        icon: Document,
         image: "/images/products/card.webp",
         title: "Distributed Tracing and Centralised Logging",
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Detect and resolve infrastructure wide issues from a single dashboard",
         path: "/product?product_name=trace_and_logs",
       },
       {
         icon: Code,
         image: "/images/products/card.webp",
         title: "Root Cause Analysis",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Dynamically narrow down on root cause.",
         path: "/product?product_name=anomaly_detection",
       },
     ],
@@ -111,8 +110,7 @@ const tracesAndLogs = {
         icon: Cloud,
         image: "/images/products/card.webp",
         title: "Host mertics",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Monitor complete machine behavior",
         path: "/product?product_name=host_metrics",
       },
 
@@ -121,8 +119,7 @@ const tracesAndLogs = {
         image: "/images/products/card.webp",
         title: "Root Cause Analysis",
         path: "/product?product_name=anomaly_detection",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Dynamically narrow down on root cause.",
       },
     ],
   },
@@ -169,8 +166,7 @@ const anomalyDetection = {
         image: "/images/products/card.webp",
         title: "Host mertics",
         path: "/product?product_name=host_metrics",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Monitor complete machine behavior",
       },
 
       {
@@ -179,7 +175,7 @@ const anomalyDetection = {
         path: "/product?product_name=trace_and_logs",
         title: "Distributed Tracing and Centralised Logging",
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Detect and resolve infrastructure wide issues from a single dashboard",
       },
     ],
   },

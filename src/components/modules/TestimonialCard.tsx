@@ -36,7 +36,7 @@ export const TestimonialCard = ({
         </div>
         <div className="hidden md:block">
           {/* <div className="hidden md:block"> */}
-          <Button className="h-[46px] w-[121px] rounded-[10px] py-0 transition-all duration-200 ease-in hover:bg-[#035749]">
+          <Button className="h-[46px] w-[121px] rounded-[10px] py-0">
             <Image
               src={companyLogo}
               width={100}
