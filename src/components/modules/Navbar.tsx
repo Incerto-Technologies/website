@@ -170,16 +170,7 @@ export const Navbar = () => {
             <ul className="flex h-full items-center gap-x-[60px] py-2.5">
               {navRoutes.slice(0, -1).map(({ path, name }, index) => (
                 <li key={index + name}>
-                  <Link
-                    href={path}
-                    // className={
-                    //   window.location.pathname === path
-                    //     ? "font-[800] text-[#00FF00]"
-                    //     : "text-white"
-                    // }
-                  >
-                    {name}
-                  </Link>
+                  <Link href={path}>{name}</Link>
                 </li>
               ))}
               <li>
@@ -187,7 +178,7 @@ export const Navbar = () => {
                   onClick={() => {
                     router.push("/#contact");
                   }}
-                  className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#DEDEDE]  px-[18px] py-2.5"
+                  className="flex items-center justify-between gap-2.5 rounded-[14px] border border-[#DEDEDE] px-[18px] py-2.5 transition ease-in hover:border-[#888888]  hover:bg-[#ededed] hover:text-[#0a0a0a]"
                 >
                   <p className="font-medium">Get in touch</p>
                   {/* <ArrowOutwardGreen /> */}
