@@ -63,7 +63,7 @@ const tracesAndLogs = {
   hero: {
     title: "Distributed Tracing/ and Centralised Logging",
     description:
-      "Detects and resolves infrastructure wide issues from a single dashboard",
+      "Detect and resolve infrastructure wide issues from a single dashboard",
     icon_title: "Trace and Logs",
     icon: Document,
     video: {
