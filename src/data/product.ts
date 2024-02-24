@@ -12,12 +12,12 @@ const CloudMetrics = {
     video: {
       src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
       type: "video/mp4",
-      thumbnail: "/video/thumbnail.webp",
+      thumbnail: "/video/hm-thumbnail.webp",
     },
   },
   products: [
     {
-      image: "/images/products/HostMetrics.gif",
+      image: "/images/products/hm1.gif",
       title: "Important/ Numbers",
       lists: [
         "See important metrics like CPU Load, Network throughput, free RAM, etc on top",
@@ -28,7 +28,7 @@ const CloudMetrics = {
       ],
     },
     {
-      image: "/images/products/HostMetrics.gif",
+      image: "/images/products/hm2.gif",
       title: "All/ Integration",
       lists: [
         "Check the process details like threads, physical or virtual memory per PID and more",
@@ -75,7 +75,7 @@ const tracesAndLogs = {
   products: [
     {
       title: "Distributed/ Tracing",
-      image: "/images/products/traces.gif",
+      image: "/images/products/trace2.gif",
       lists: [
         "Trace the user request across service and infrastructure",
         "Limitless custom dimension for each span",
@@ -84,7 +84,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/logging.gif",
+      image: "/images/products/trace2.gif",
       title: "Centralised/ logs",
       lists: [
         "See logs from every service",
@@ -94,7 +94,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/traces1.gif",
+      image: "/images/products/trace3.gif",
       title: "Correlation/ &  Filtering",
       lists: [
         "Overview of various important metrics helping you to choose the time interval when the error occurred",
@@ -137,12 +137,12 @@ const anomalyDetection = {
     video: {
       src: "https://res.cloudinary.com/dnjh5jsmh/video/upload/v1708082911/TracesLogs_whnqm4.mp4",
       type: "video/mp4",
-      thumbnail: "/video/thumbnail.webp",
+      thumbnail: "/video/rca-thumbnail.webp",
     },
   },
   products: [
     {
-      image: "/images/products/product1.webp",
+      image: "/images/products/rca1.gif",
       title: "Error/ Status",
       lists: [
         "Errors across traces and logs grouped by Service.",
@@ -151,7 +151,7 @@ const anomalyDetection = {
       ],
     },
     {
-      image: "/images/products/product2.webp",
+      image: "/images/products/rca2.gif",
       title: "Dynamic/ distribution",
       lists: [
         "Select the dimensions and dynamically see the pie charts.",

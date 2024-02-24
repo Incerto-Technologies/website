@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/elements/Button";
-import { TextAnimation } from "@/components/elements/TextAnimation";
 import { SearchIcon } from "@/components/elements/icons/SearchIcon";
 import { useAppDispatch, useTypedSelector } from "@/hooks/store";
 import { setSearch, setSearchTag } from "@/store/slice/blog.slice";
@@ -15,8 +14,9 @@ export const BlogHero = () => {
   return (
     <section className="home-background flex h-full flex-col justify-center">
       <div className="w-container align-center w-5/6 pt-[150px] md:pt-[200px]">
-        <h1 className="text-center text-3xl font-bold">
-          Discover cool updates and blogs here
+        <h1 className="text-center text-[34px] font-semibold leading-10 tracking-[-0.68px] md:text-[44px] md:leading-[60px]">
+          Discover cool updates and{" "}
+          <span className="features-title text-clip-all"> blogs here</span>
         </h1>
       </div>
       <div className="w-container relative mt-[72px] flex justify-between gap-[18px] px-[20px] md:mt-[223px]  md:justify-start md:gap-[30px] md:px-0">
