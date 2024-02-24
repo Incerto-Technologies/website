@@ -17,15 +17,7 @@ export const Navbar = () => {
   const [isHomePage] = useState(pathname == "/" || pathname == "/#contact");
 
   return (
-    <motion.div
-      animate={{ opacity: 1 }}
-      className={isHomePage ? "opacity-0" : ""}
-      transition={{
-        delay: isHomePage ? 1.5 : 0,
-        ease: "easeInOut",
-        duration: isHomePage ? 0.4 : 0,
-      }}
-    >
+    <>
       <header
         className={classNameMerge(
           "fixed top-0 z-[150] w-full bg-primary font-manrope transition-opacity ease-linear  lg:bg-opacity-30 lg:backdrop-blur-[50px]",
@@ -232,6 +224,6 @@ export const Navbar = () => {
           </motion.div>
         )}
       </div>
-    </motion.div>
+    </>
   );
 };
