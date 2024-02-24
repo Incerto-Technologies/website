@@ -133,7 +133,7 @@ const anomalyDetection = {
     icon: Code,
     video: {
       src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1708783447/RootCauseAnalysis_zv5n8x.mp4",
-      type: "video/mkv",
+      type: "video/mp4",
       thumbnail: "/video/rca-thumbnail.webp",
     },
   },
