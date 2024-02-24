@@ -29,10 +29,8 @@ export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
               ? `${description.slice(0, 123)}...`
               : description}
           </p>
-          <div className="w-full rounded-[20px] border border-accent-light bg-transparent px-5 py-[14px]">
-            <p className="text-center font-bold tracking-[1%] text-accent-light">
-              Read More
-            </p>
+          <div className="w-full rounded-[20px] border border-accent-light bg-transparent px-5 py-[14px] text-accent-light transition-all duration-200 ease-in hover:bg-accent-light hover:text-[#0a0a0a]">
+            <p className="text-center font-bold tracking-[1%]">Read More</p>
           </div>
         </div>
       </BlogLink>
