@@ -1,4 +1,3 @@
-import { Activity } from "@/components/elements/icons/Activity";
 import { Cloud } from "@/components/elements/icons/Cloud";
 import { Code } from "@/components/elements/icons/Code";
 import { Document } from "@/components/elements/icons/Document";
@@ -10,7 +9,7 @@ const CloudMetrics = {
     icon_title: "Host Metrics",
     icon: Cloud,
     video: {
-      src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1708764614/HM_video_fjkoay.mp4",
+      src: "https://res.cloudinary.com/dcpurzjra/video/upload/v1708866429/WhatsApp_Video_2024-02-24_at_9.01.35_PM_ucuikh.mp4",
       type: "video/mp4",
       thumbnail: "/video/hm-thumbnail.webp",
     },
