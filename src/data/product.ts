@@ -13,6 +13,9 @@ const CloudMetrics = {
       type: "video/mp4",
       thumbnail: "/video/hm-thumbnail.webp",
     },
+    btnLink:
+      "https://play.incerto.in/d/d4fa3dfc-caf7-4b96-bfd1-e307b09f2dc2/host-metrics?orgId=1&from=now-6h&to=now&var-traceID=All&var-spanID=All&var-SeverityText=All&var-ServiceName=All&var-SpanTypes=All&var-AttributeValue=All",
+    btnName: "Host metrics",
   },
   products: [
     {
@@ -69,6 +72,9 @@ const tracesAndLogs = {
       type: "video/mp4",
       thumbnail: "/video/thumbnail.webp",
     },
+    btnLink:
+      "https://play.incerto.in/d/c2b6ab52-c500-4cc6-93a0-1871b9207a8a/traces-and-logs?orgId=1&from=now-6h&to=now&var-ServiceName=All&var-HostName=All",
+    btnName: "Traces & logs",
   },
   products: [
     {
@@ -135,6 +141,9 @@ const anomalyDetection = {
       type: "video/mp4",
       thumbnail: "/video/rca-thumbnail.webp",
     },
+    btnLink:
+      "https://play.incerto.in/d/a9ad271e-8686-4f1a-9e72-88e10db510ad/anomly-detection-dashboard?orgId=1",
+    btnName: "Root Cause Analysis",
   },
   products: [
     {
