@@ -56,7 +56,7 @@ export const LoginForm = () => {
       // @ts-ignore
       userData = await createUser(userLoginCredentials);
     }
-    if (userData.success && userData.user) {
+    if (userData.success && userData.user && userData.token) {
       router.push("/blog/add");
       console.log(userData.token);
 

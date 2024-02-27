@@ -1,4 +1,4 @@
-import mongoose, { Document, Schema, model, Model, models } from "mongoose";
+import mongoose, { Document, Schema, model, models } from "mongoose";
 import userModel, { User } from "./user";
 
 export type Blog = {

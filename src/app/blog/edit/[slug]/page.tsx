@@ -3,7 +3,7 @@ import { AddBlogForm } from "@/components/modules/AddBlogForm";
 import { BlogNotFound } from "@/components/modules/BlogNotFound";
 import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
 import { connectDb } from "@/database";
-import { BlogModel } from "@/database/model/blog";
+import BlogModel from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
 
 export default async function page({ params }: { params: { slug: string } }) {

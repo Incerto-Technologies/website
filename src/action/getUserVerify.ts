@@ -1,7 +1,7 @@
 "use server";
 
 import { connectDb } from "@/database";
-import { UserModel } from "@/database/model/user";
+import UserModel from "@/database/model/user";
 import { sendMail } from "@/utils/sendMail";
 
 export const getUserVerify = async (token: string) => {
