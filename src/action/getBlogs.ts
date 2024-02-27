@@ -1,5 +1,5 @@
 import { connectDb } from "@/database";
-import { BlogModel } from "@/database/model/blog";
+import BlogModel from "@/database/model/blog";
 import { Blog } from "@/types/Blogs";
 
 export const getBlogs = async () => {

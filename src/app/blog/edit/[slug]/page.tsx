@@ -13,7 +13,9 @@ export default async function page({ params }: { params: { slug: string } }) {
 
   await connectDb();
 
-  const [data] = await Promise.all([BlogModel.findById(params.slug).lean()]);
+  const [data] = await Promise.all([
+    BlogModel.findById(params.slug).populate("author").lean(),
+  ]);
 
   if (!data) {
     return <BlogNotFound />;

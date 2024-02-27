@@ -1,16 +1,15 @@
-import { Document, Schema, model, Model } from "mongoose";
-
+import { Document, Schema, model, Model, models } from "mongoose";
+import BlogModel from "./blog";
 export type User = {
   email: string;
   password: string;
-
   userName: string;
-
   lastLogin: Date;
   isAdmin: boolean;
   verified: boolean;
   profile?: string;
   verificationToken?: string;
+  description: string;
 };
 
 // Interface to model the User Schema.
@@ -22,6 +21,7 @@ const UserSchema = new Schema<IUserDocument>({
   userName: { type: String, required: true },
   password: { type: String, required: true, select: false },
   profile: { type: String, required: false },
+  description: { type: String, required: true },
   lastLogin: { type: Date, required: true, default: Date.now() },
   isAdmin: { type: Boolean, required: true, default: false },
   verified: { type: Boolean, required: true, default: false },
@@ -29,14 +29,4 @@ const UserSchema = new Schema<IUserDocument>({
 });
 
 // Using the singleton pattern to prevent model redefinition
-let UserModel: Model<IUserDocument>;
-
-try {
-  // check model is already defined
-  UserModel = model<IUserDocument>("User");
-} catch {
-  // is not defined, define it
-  UserModel = model<IUserDocument>("User", UserSchema);
-}
-
-export { UserModel };
+export default models["User"] || model("User", UserSchema);

@@ -52,7 +52,8 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
     if (!createBlog) return;
 
     Object.keys(createBlog).forEach((key) => {
-      if (key == "draft" || key == "__v" || key == "_id") return;
+      if (key == "draft" || key == "__v" || key == "_id" || key == "author")
+        return;
       if (!createBlog[key as keyof typeof createBlog]) {
         alert("All fields are required");
         console.log("this fields is required", key);
@@ -145,19 +146,6 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
                 categories: e.target.value
                   .split(",")
                   .map((item) => item.trim()),
-              }),
-            );
-          }}
-        />
-        <Input
-          placeholder="author"
-          value={createBlog?.author}
-          labelName="author"
-          onChange={(e) => {
-            dispatch(
-              setCreateBlog({
-                ...createBlog,
-                author: e.target.value,
               }),
             );
           }}
