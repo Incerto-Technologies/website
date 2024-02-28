@@ -6,6 +6,7 @@ import { BackToTop } from "../elements/BackToTop";
 import { navRoutes } from "@/data/navRoutes";
 
 import { v4 as uuid } from "uuid";
+import { Youtube } from "../elements/icons/Youtube";
 
 type FooterProps = {
   isBackground?: boolean;
@@ -80,12 +81,24 @@ export const Footer = ({
               <div className="mt-6 flex w-full justify-end md:hidden">
                 <BackToTop />
               </div>
-              <Link
-                className="hidden h-11 w-11 items-center justify-center rounded-full bg-secondary bg-opacity-10 md:flex"
-                href={"https://www.linkedin.com/company/incerto-technologies/"}
-              >
-                <LinkedIn />
-              </Link>
+              <div className="flex items-center gap-[30px]">
+                <Link
+                  className="hidden h-11 w-11 items-center justify-center rounded-full bg-secondary bg-opacity-10 md:flex"
+                  href={
+                    "https://www.youtube.com/channel/UCGMqTLUaCiMsP_N3gSJ4liQ"
+                  }
+                >
+                  <Youtube />
+                </Link>
+                <Link
+                  className="hidden h-11 w-11 items-center justify-center rounded-full bg-secondary bg-opacity-10 md:flex"
+                  href={
+                    "https://www.linkedin.com/company/incerto-technologies/"
+                  }
+                >
+                  <LinkedIn />
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -93,12 +106,22 @@ export const Footer = ({
           <div className="mt-6 h-[1px] w-full bg-[#929292] md:hidden"></div>
 
           <div className="mt-4 flex items-center justify-between md:hidden">
-            <Link
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary bg-opacity-10 "
-              href={"https://www.linkedin.com/company/incerto-technologies/"}
-            >
-              <LinkedIn />
-            </Link>
+            <div className="flex items-center gap-[15px]">
+              <Link
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary bg-opacity-10 "
+                href={
+                  "https://www.youtube.com/channel/UCGMqTLUaCiMsP_N3gSJ4liQ"
+                }
+              >
+                <Youtube />
+              </Link>
+              <Link
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary bg-opacity-10 "
+                href={"https://www.linkedin.com/company/incerto-technologies/"}
+              >
+                <LinkedIn />
+              </Link>
+            </div>
             <div className="flex flex-col">
               <Link
                 href={"mailto:support@incerto.com"}
