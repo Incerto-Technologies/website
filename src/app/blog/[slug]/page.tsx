@@ -5,6 +5,7 @@ import AppMarkDown from "@/components/modules/AppMarkDown";
 // ssr: false,
 //});
 
+import UserModel from "@/database/model/user";
 const GoPreviousPageButton = dynamic(
   () => import("@/components/elements/GoPreviousPageButton"),
   {
@@ -81,7 +82,10 @@ export default async function page({ params }: Props) {
 
   const [data, blogs] = await Promise.all([
     getBlogById(params.slug),
-    BlogModel.find({}).limit(3).lean(),
+    BlogModel.find({})
+      .populate({ path: "author", model: UserModel })
+      .limit(3)
+      .lean(),
   ]);
 
   if (!data || blogs.length === 0) {
