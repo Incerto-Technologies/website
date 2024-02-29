@@ -88,11 +88,3 @@ export const BlogHeader = (props: { blog: Blog }) => {
     </div>
   );
 };
-//<AboutAuthor />
-//  {author.profile && author.description ? (
-//          <>
-//            <AboutAuthor author={author} />
-//          </>
-//        ) : (
-//          <></>
-//        )}
