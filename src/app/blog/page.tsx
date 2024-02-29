@@ -20,6 +20,8 @@ export const revalidate = 30;
 export default async function Blog() {
   const blogs = await getBlogs();
 
+  console.log(blogs);
+
   return (
     <DefaultLayout>
       <ReduxProdiver>

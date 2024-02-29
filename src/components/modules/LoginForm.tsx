@@ -12,6 +12,7 @@ type LoginForm = {
   password: string;
   profile?: string;
   userName?: string;
+  description?: string;
 };
 export const LoginForm = () => {
   const [userLoginCredentials, setUserLoginCredentials] = useState<LoginForm>({
@@ -19,6 +20,7 @@ export const LoginForm = () => {
     password: "",
     profile: "",
     userName: "",
+    description: "",
   });
 
   const router = useRouter();
@@ -45,10 +47,16 @@ export const LoginForm = () => {
         alert("User Name is required");
         return;
       }
+
+      if (!userLoginCredentials.description) {
+        alert("Description is required");
+        return;
+      }
+
       // @ts-ignore
       userData = await createUser(userLoginCredentials);
     }
-    if (userData.success && userData.user) {
+    if (userData.success && userData.user && userData.token) {
       router.push("/blog/add");
       console.log(userData.token);
 
@@ -95,12 +103,19 @@ export const LoginForm = () => {
               onChange={handleChange}
             />
             <Input
+              labelName="Description"
+              name="description"
+              type="text"
+              placeholder="Description"
+              onChange={handleChange}
+            />
+            <Input
               labelName="Profile"
               name="profile"
               type="text"
               placeholder="Profile (Use cloudinary to get url)"
               onChange={handleChange}
-            />
+            />{" "}
           </>
         )}
         <Button className="rounded-md" role="submit" onClick={handleSubmit}>

@@ -2,8 +2,8 @@
 import jwt from "jsonwebtoken";
 
 import { Blog } from "@/types/Blogs";
-import { UserModel } from "@/database/model/user";
-import { BlogModel } from "@/database/model/blog";
+import UserModel from "@/database/model/user";
+import BlogModel from "@/database/model/blog";
 import { revalidatePath } from "next/cache";
 
 interface BlogRequest extends Blog {

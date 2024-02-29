@@ -1,6 +1,6 @@
 "use server";
 import { connectDb } from "@/database";
-import { User, UserModel } from "@/database/model/user";
+import UserModel, { User } from "@/database/model/user";
 import jwt from "jsonwebtoken";
 
 export const getUser = async (token: string) => {
@@ -11,15 +11,15 @@ export const getUser = async (token: string) => {
 
     await connectDb();
 
-    const user = await UserModel.findOne({
+    const user = (await UserModel.findOne({
       email,
-    }).lean();
+    }).lean()) as User;
 
     if (!user) {
       return null;
     }
 
-    return { user: user as User, token };
+    return { user: user, token };
     // return null;
   } catch (error) {
     console.log(error, "error");

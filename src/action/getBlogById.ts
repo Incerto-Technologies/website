@@ -1,8 +1,8 @@
 "use server";
 import { connectDb } from "@/database";
-import { BlogModel } from "@/database/model/blog";
+import BlogModel from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
-import { Blog } from "@/types/Blogs";
+import UserModel from "@/database/model/user";
 export const getBlogById = async (id: string) => {
   try {
     if (!isValidObjectId(id)) {
@@ -13,7 +13,9 @@ export const getBlogById = async (id: string) => {
     }
 
     await connectDb();
-    const blog = await BlogModel.findById(id).lean();
+    const blog = await BlogModel.findById(id)
+      .populate({ path: "author", model: UserModel })
+      .exec();
 
     if (!blog) {
       return {
@@ -29,7 +31,7 @@ export const getBlogById = async (id: string) => {
   } catch (err) {
     console.log(err);
     return {
-      message: "Not Found 404",
+      message: "Something went wrong",
       success: false,
     };
   }

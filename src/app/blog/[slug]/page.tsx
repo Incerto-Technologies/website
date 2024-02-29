@@ -5,6 +5,7 @@ import AppMarkDown from "@/components/modules/AppMarkDown";
 // ssr: false,
 //});
 
+import UserModel from "@/database/model/user";
 const GoPreviousPageButton = dynamic(
   () => import("@/components/elements/GoPreviousPageButton"),
   {
@@ -34,7 +35,7 @@ import { BlogNotFound } from "@/components/modules/BlogNotFound";
 import { BookDemo } from "@/components/modules/BookDemo";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
-import { BlogModel } from "@/database/model/blog";
+import BlogModel from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
 
 import { Metadata } from "next";
@@ -67,6 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [blog.image],
       description: blog.description,
       title: blog.title,
+      authors: blog.author.userName,
     },
   };
 }
@@ -79,15 +81,18 @@ export default async function page({ params }: Props) {
   await connectDb();
 
   const [data, blogs] = await Promise.all([
-    BlogModel.findById(params.slug).lean(),
-    BlogModel.find({}).limit(3).lean(),
+    getBlogById(params.slug),
+    BlogModel.find({})
+      .populate({ path: "author", model: UserModel })
+      .limit(3)
+      .lean(),
   ]);
 
   if (!data || blogs.length === 0) {
     return <BlogNotFound />;
   }
 
-  const blog = data;
+  const blog = data.blog;
 
   return (
     <main className="h-full w-full bg-[#D5E5DF]  font-manrope">
@@ -95,8 +100,7 @@ export default async function page({ params }: Props) {
         <GoPreviousPageButton />
       </div>
       <section className="mx-auto w-full max-w-[740px] px-4 md:px-0">
-        {/* @ts-ignore */}
-        <BlogHeader {...blog} />
+        <BlogHeader blog={blog} />
         <div className="overflow text-black">
           <AppMarkDown markdown={blog.markdown || ""} />
         </div>

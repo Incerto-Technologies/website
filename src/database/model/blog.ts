@@ -1,4 +1,5 @@
-import { Document, Schema, model, Model, Types } from "mongoose";
+import mongoose, { Document, Schema, model, models } from "mongoose";
+import userModel, { User } from "./user";
 
 export type Blog = {
   title: { type: String; required: true };
@@ -7,12 +8,11 @@ export type Blog = {
   date: string;
   image: string;
   categories: string[];
-  author: string;
+  author: User;
   tags: string[];
   draft: false;
   markdown: string;
-  profile?: string;
-  createdBy?: Types.ObjectId;
+  createdBy?: mongoose.Schema.Types.ObjectId;
 };
 
 // Interface to model the User Schema.
@@ -26,23 +26,18 @@ const BlogSchema = new Schema<IBlogDocument>({
   date: { type: String, required: false, default: new Date().toISOString() },
   image: { type: String, required: true },
   categories: { type: [String], required: true },
-  author: { type: String, required: true },
+  author: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   tags: { type: [String], required: true },
   draft: { type: Boolean, required: false, default: false },
   markdown: { type: String, required: true },
-  profile: { type: String, required: false },
-  createdBy: { type: Types.ObjectId, ref: "user" },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
 // Using the singleton pattern to prevent model redefinition
-let BlogModel: Model<IBlogDocument>;
+//
 
-try {
-  // check model is already defined
-  BlogModel = model<IBlogDocument>("blog");
-} catch {
-  // is not defined, define it
-  BlogModel = model<IBlogDocument>("blog", BlogSchema);
-}
-
-export { BlogModel };
+export default models["Blog"] || model("Blog", BlogSchema);

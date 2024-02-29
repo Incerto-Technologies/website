@@ -1,11 +1,14 @@
 import { connectDb } from "@/database";
-import { BlogModel } from "@/database/model/blog";
+import BlogModel from "@/database/model/blog";
 import { Blog } from "@/types/Blogs";
 
+import UserModel from "@/database/model/user";
 export const getBlogs = async () => {
   try {
     await connectDb();
-    const blogs = (await BlogModel.find().lean()) as Blog[];
+    const blogs = (await BlogModel.find()
+      .populate({ path: "author", model: UserModel })
+      .exec()) as Blog[];
 
     if (!blogs) {
       return [];

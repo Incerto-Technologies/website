@@ -1,6 +1,6 @@
 "use server";
 import { connectDb } from "@/database";
-import { UserModel } from "@/database/model/user";
+import UserModel from "@/database/model/user";
 import { sendMail } from "@/utils/sendMail";
 import bycrpt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -9,13 +9,15 @@ export const createUser = async (user: {
   password: string;
   profile: string;
   userName: string;
+  description: string;
 }) => {
   try {
     if (
       !user.email ||
       !user.password ||
       user.profile === "" ||
-      user.userName === ""
+      user.userName === "" ||
+      user.description === ""
     )
       return {
         message: "All fields are required",
@@ -48,6 +50,7 @@ Click here: https://${process.env.WEB_URL!}/login/verify/${verificationToken}  `
         password: password,
         userName: user.userName,
         profile: user.profile,
+        description: user.description,
         verificationToken,
       }),
     ]);

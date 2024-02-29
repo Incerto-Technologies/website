@@ -19,7 +19,7 @@ export const BlogCardMobile = ({ image, title, author, _id }: Props) => {
         />
         <h3 className="mt-[24px] font-bold leading-6">{title}</h3>
         <div className="mt-4 flex items-center gap-2.5">
-          <p className="text-sm capitalize">{author}</p>
+          <p className="text-sm capitalize">{author.userName}</p>
         </div>
       </div>
     </BlogLink>

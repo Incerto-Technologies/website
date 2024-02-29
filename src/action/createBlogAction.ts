@@ -2,9 +2,9 @@
 
 import jwt from "jsonwebtoken";
 import { connectDb } from "@/database";
-import { BlogModel } from "@/database/model/blog";
+import BlogModel from "@/database/model/blog";
 import { Blog } from "@/types/Blogs";
-import { UserModel } from "@/database/model/user";
+import UserModel from "@/database/model/user";
 import { revalidatePath } from "next/cache";
 
 interface BlogRequest extends Blog {
@@ -46,7 +46,7 @@ export const createBlogAction = async (blog: BlogRequest) => {
 
     const newBlog = await BlogModel.create({
       ...blog,
-      profile: user.profile,
+      author: user._id,
       createdBy: user._id,
     });
     const blogJSON = newBlog.toJSON();
