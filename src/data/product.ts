@@ -19,7 +19,7 @@ const CloudMetrics = {
   },
   products: [
     {
-      image: "/images/products/hm1.gif",
+      image: "/images/products/hm11.mp4",
       title: "Important/ Numbers",
       lists: [
         "See important metrics like CPU Load, Network throughput, free RAM, etc on top",

@@ -20,13 +20,14 @@ export const Products = () => {
           )}
         >
           <div className="flex h-full w-full items-center justify-center">
-            <Image
+            {/* <Image
               alt={title}
               src={image}
               width={3440}
               height={3440}
               className="w-full rounded-xl md:rounded-[20px]"
-            />
+            /> */}
+            <video src={image} loop autoPlay></video>
           </div>
           <div className="w-full">
             <h3 className="text-[24px] font-medium leading-8 tracking-tighter md:text-[34px] md:leading-[50px] md:tracking-[-0.68px]">
