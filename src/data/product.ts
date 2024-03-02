@@ -19,7 +19,7 @@ const CloudMetrics = {
   },
   products: [
     {
-      image: "/images/products/hm11.mp4",
+      image: "/images/products/hm1.mp4",
       title: "Important/ Numbers",
       lists: [
         "See important metrics like CPU Load, Network throughput, free RAM, etc on top",
@@ -30,7 +30,7 @@ const CloudMetrics = {
       ],
     },
     {
-      image: "/images/products/hm2.gif",
+      image: "/images/products/hm2.mp4",
       title: "All/ Integration",
       lists: [
         "Check the process details like threads, physical or virtual memory per PID and more",
@@ -79,7 +79,7 @@ const tracesAndLogs = {
   products: [
     {
       title: "Distributed/ Tracing",
-      image: "/images/products/trace1.gif",
+      image: "/images/products/trace1.mp4",
       lists: [
         "Trace the user request across service and infrastructure",
         "Limitless custom dimension for each span",
@@ -88,7 +88,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/trace2.gif",
+      image: "/images/products/trace2.mp4",
       title: "Centralised/ logs",
       lists: [
         "See logs from every service",
@@ -98,7 +98,7 @@ const tracesAndLogs = {
       ],
     },
     {
-      image: "/images/products/trace3.gif",
+      image: "/images/products/trace3.mp4",
       title: "Correlation/ &  Filtering",
       lists: [
         "Overview of various important metrics helping you to choose the time interval when the error occurred",
@@ -147,7 +147,7 @@ const anomalyDetection = {
   },
   products: [
     {
-      image: "/images/products/rca1.gif",
+      image: "/images/products/rca1.mp4",
       title: "Error/ Status",
       lists: [
         "Errors across traces and logs grouped by Service.",
@@ -156,7 +156,7 @@ const anomalyDetection = {
       ],
     },
     {
-      image: "/images/products/rca2.gif",
+      image: "/images/products/rca2.mp4",
       title: "Dynamic/ distribution",
       lists: [
         "Select the dimensions and dynamically see the pie charts.",
