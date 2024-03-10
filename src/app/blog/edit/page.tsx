@@ -4,6 +4,7 @@ import { Footer } from "@/components/modules/Footer";
 import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
 import { BlogHero } from "@/components/templates/Blog/BlogHero";
 import { BlogsContainer } from "@/components/templates/Blog/BlogsContainer";
+import { Blog } from "@/types/Blogs";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Incerto Blogs: Know more about our work. ",
@@ -28,7 +29,7 @@ export default async function page() {
     <DefaultLayout>
       <ReduxProdiver>
         <BlogHero />
-        <BlogsContainer blogs={blogs} />
+        <BlogsContainer blogs={blogs as Blog[]} />
         <Footer isBackground={false} />
       </ReduxProdiver>
     </DefaultLayout>

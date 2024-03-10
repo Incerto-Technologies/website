@@ -1,11 +1,8 @@
 import { getBlogById } from "@/action/getBlogById";
 import dynamic from "next/dynamic";
 import AppMarkDown from "@/components/modules/AppMarkDown";
-//const AppMarkDown = dynamic(() => import("@/components/modules/AppMarkDown"), {
-// ssr: false,
-//});
 
-import UserModel from "@/database/model/user";
+import { UserModel } from "@/database/model/user";
 const GoPreviousPageButton = dynamic(
   () => import("@/components/elements/GoPreviousPageButton"),
   {
@@ -35,7 +32,7 @@ import { BlogNotFound } from "@/components/modules/BlogNotFound";
 import { BookDemo } from "@/components/modules/BookDemo";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
-import BlogModel from "@/database/model/blog";
+import { BlogModel } from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
 
 import { Metadata } from "next";
