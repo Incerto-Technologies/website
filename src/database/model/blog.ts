@@ -1,8 +1,8 @@
-import mongoose, { Document, Schema, model, models } from "mongoose";
-import userModel, { User } from "./user";
+import mongoose, { Document, Model, Schema, model } from "mongoose";
+import { User } from "./user";
 
 export type Blog = {
-  title: { type: String; required: true };
+  title: string;
   meta_title: string;
   description: string;
   date: string;
@@ -40,4 +40,15 @@ const BlogSchema = new Schema<IBlogDocument>({
 // Using the singleton pattern to prevent model redefinition
 //
 
-export default models["Blog"] || model("Blog", BlogSchema);
+// export default models["Blog"] || model("Blog", BlogSchema);
+let BlogModel: Model<IBlogDocument>;
+
+try {
+  // check model is already defined
+  BlogModel = model<IBlogDocument>("blog");
+} catch {
+  // is not defined, define it
+  BlogModel = model<IBlogDocument>("blog", BlogSchema);
+}
+
+export { BlogModel };
