@@ -1,6 +1,8 @@
 import { getBlogs } from "@/action/getBlogs";
 import { MetadataRoute } from "next";
 
+export const revalidate = 30;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getBlogs();
 
