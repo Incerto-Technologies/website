@@ -1,5 +1,4 @@
-import { Document, Schema, model, Model, models } from "mongoose";
-import BlogModel from "./blog";
+import { Document, Schema, model, Model } from "mongoose";
 export type User = {
   email: string;
   password: string;
@@ -29,4 +28,14 @@ const UserSchema = new Schema<IUserDocument>({
 });
 
 // Using the singleton pattern to prevent model redefinition
-export default models["User"] || model("User", UserSchema);
+let UserModel: Model<IUserDocument>;
+
+try {
+  // check model is already defined
+  UserModel = model<IUserDocument>("User");
+} catch {
+  // is not defined, define it
+  UserModel = model<IUserDocument>("User", UserSchema);
+}
+
+export { UserModel };

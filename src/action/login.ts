@@ -1,7 +1,7 @@
 "use server";
 
 import { connectDb } from "@/database";
-import UserModel from "@/database/model/user";
+import { UserModel } from "@/database/model/user";
 import { validateEmail } from "@/utils/validateEmail";
 import jwt from "jsonwebtoken";
 import bycrpt from "bcrypt";

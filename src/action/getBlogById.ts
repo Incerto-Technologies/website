@@ -1,8 +1,8 @@
 "use server";
 import { connectDb } from "@/database";
-import BlogModel from "@/database/model/blog";
+import { BlogModel } from "@/database/model/blog";
 import { isValidObjectId } from "mongoose";
-import UserModel from "@/database/model/user";
+import { UserModel } from "@/database/model/user";
 export const getBlogById = async (id: string) => {
   try {
     if (!isValidObjectId(id)) {

@@ -1,6 +1,6 @@
 "use server";
 import { connectDb } from "@/database";
-import UserModel, { User } from "@/database/model/user";
+import { User, UserModel } from "@/database/model/user";
 import jwt from "jsonwebtoken";
 
 export const getUser = async (token: string) => {

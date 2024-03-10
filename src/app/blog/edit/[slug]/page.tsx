@@ -1,27 +1,20 @@
+import { getBlogById } from "@/action/getBlogById";
 import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 import { AddBlogForm } from "@/components/modules/AddBlogForm";
 import { BlogNotFound } from "@/components/modules/BlogNotFound";
 import { ReduxProdiver } from "@/components/modules/ReduxProdiver";
-import { connectDb } from "@/database";
-import BlogModel from "@/database/model/blog";
-import { isValidObjectId } from "mongoose";
+
+export const revalidate = 30;
 
 export default async function page({ params }: { params: { slug: string } }) {
-  if (!isValidObjectId(params.slug)) {
+  const data = await getBlogById(params.slug);
+
+  console.log(data);
+  if (!data.success) {
     return <BlogNotFound />;
   }
 
-  await connectDb();
-
-  const [data] = await Promise.all([
-    BlogModel.findById(params.slug).populate("author").lean(),
-  ]);
-
-  if (!data) {
-    return <BlogNotFound />;
-  }
-
-  const blog = data;
+  const blog = data.blog;
 
   return (
     <DefaultLayout>
