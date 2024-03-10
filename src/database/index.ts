@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose, { Connection } from "mongoose";
 
-let cachedConnection: typeof mongoose | undefined;
+let cachedConnection: Connection | undefined;
 
 export const connectDb = async () => {
   try {
@@ -11,15 +11,13 @@ export const connectDb = async () => {
 
     const connection = await mongoose.connect(
       process.env.MONGODB_URI!.replace("myFirstDatabase", "incerto") as string,
-      {
-        retryWrites: false,
-      },
     );
 
     console.log("Database connected");
-    cachedConnection = connection;
-    return connection;
+    cachedConnection = connection.connection; // Use `connection.connection` to get the underlying Connection object
+    return cachedConnection;
   } catch (error) {
-    console.log(error);
+    console.error("Error connecting to the database:", error);
+    throw error; // Rethrow the error to indicate that the connection failed
   }
 };

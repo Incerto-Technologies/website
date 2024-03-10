@@ -6,7 +6,6 @@ import { setSearch, setSearchTag } from "@/store/slice/blog.slice";
 import { Tags } from "@/types/Blogs";
 import { classNameMerge } from "@/utils/classNameMerge";
 import { useState } from "react";
-import { motion } from "framer-motion";
 export const BlogHero = () => {
   const dispatch = useAppDispatch();
   const [open, setOpen] = useState(false);
