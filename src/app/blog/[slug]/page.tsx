@@ -33,24 +33,29 @@ import { BookDemo } from "@/components/modules/BookDemo";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
-import { isValidObjectId } from "mongoose";
 
 import { Metadata } from "next";
 import { getBlogs } from "@/action/getBlogs";
+import { getBlogByTitle } from "@/action/getBlogByTitle";
+import { Blog } from "@/types/Blogs";
+
 type Props = {
   params: { slug: string };
 };
+
 export const revalidate = 30;
+
 export async function generateStaticParams() {
   const blogs = await getBlogs();
   return blogs.map((blog) => ({
-    slug: blog._id.toString(),
+    slug: encodeURIComponent(
+      blog.title.replace(/\s+/g, "-").replace(/\./g, "").toLowerCase(),
+    ),
   }));
 }
 
-// export const runtime = "edge"; // 'nodejs' (default) | 'edge'
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { blog } = await getBlogById(params.slug);
+  const { blog } = await getBlogByTitle(params.slug);
 
   if (!blog) {
     return {
@@ -71,25 +76,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function page({ params }: Props) {
-  if (!isValidObjectId(params.slug)) {
-    return <BlogNotFound />;
-  }
-
   await connectDb();
 
   const [data, blogs] = await Promise.all([
-    getBlogById(params.slug),
+    getBlogByTitle(params.slug),
     BlogModel.find({})
       .populate({ path: "author", model: UserModel })
       .limit(3)
       .lean(),
   ]);
 
-  if (!data || blogs.length === 0) {
+  if (!data.success || !data.blog || blogs.length === 0) {
     return <BlogNotFound />;
   }
 
-  const blog = data.blog;
+  const blog = data.blog as Blog;
 
   return (
     <main className="h-full w-full bg-[#D5E5DF]  font-manrope">

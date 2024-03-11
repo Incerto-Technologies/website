@@ -5,7 +5,7 @@ import { BlogLink } from "./BlogLink";
 export const BlogCard = ({ image, title, description, author, _id }: Blog) => {
   return (
     <div className="mx-auto  h-full min-h-[372px] w-4/5 max-w-[350px] md:w-full">
-      <BlogLink id={_id}>
+      <BlogLink title={title}>
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[30px]">
           <Image
             src={image}

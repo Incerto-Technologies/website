@@ -8,7 +8,7 @@ interface Props extends Blog {
 
 export const BlogCardMobile = ({ image, title, author, _id }: Props) => {
   return (
-    <BlogLink id={_id}>
+    <BlogLink title={title}>
       <div className="mt-16 px-[20px]">
         <Image
           className="rounded-[30px]"
