@@ -10,8 +10,8 @@ import { AppTextArea } from "../elements/AppTextArea";
 import { useEffect, useState } from "react";
 import { editBlogAction } from "@/action/editBlogAction";
 import { useRouter } from "next/navigation";
-import { getUser } from "@/action/getUser";
 import { isValidCloudinaryUrl } from "@/utils/isValidCloudinaryUrl";
+import { getUser } from "@/action/getUser";
 
 type Props = {
   isEdit?: boolean;
@@ -35,8 +35,8 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
       return;
     }
     setToken(token);
-    getUser(token).then((res) => {
-      if (!res?.user.verified) {
+    getUser().then((res) => {
+      if (!res?.user?.verified) {
         router.push("/login/verify");
         return;
       }

@@ -7,6 +7,7 @@ export const getUser = async () => {
   try {
     const token = cookies().get("token")?.value;
     const data = await getUserByToken(token || "");
+
     if (!data) {
       return {
         message: "Unable to fetch the user",
