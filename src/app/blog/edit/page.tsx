@@ -1,5 +1,4 @@
 import { getBlogs } from "@/action/getBlogs";
-import { getUser } from "@/action/getUser";
 import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 import { Footer } from "@/components/modules/Footer";
 import { Protected } from "@/components/modules/Protected";
