@@ -13,8 +13,8 @@ export const NeedVerification = () => {
       return;
     }
 
-    getUser(token).then((res) => {
-      if (res?.user.verified && res?.user.isAdmin) router.push("/blog/add");
+    getUser().then((res) => {
+      if (res?.user?.verified && res?.user.isAdmin) router.push("/blog/add");
     });
   }, [router]);
 

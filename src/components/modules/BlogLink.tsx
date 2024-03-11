@@ -3,15 +3,27 @@ import Link from "next/link";
 import React from "react";
 type Props = {
   children: React.ReactNode;
-  id: string;
+  title: string;
 };
-export const BlogLink = ({ children, id }: Props) => {
+export const BlogLink = ({ children, title }: Props) => {
+  console.log(
+    encodeURIComponent(
+      title.replace(/\s+/g, "-").replace(/\./g, "").toLowerCase(),
+    ),
+  );
+
   return (
     <Link
       href={
         window.location.pathname.includes("edit")
-          ? "/blog/edit/" + id
-          : "/blog/" + id
+          ? "/blog/edit/" +
+            encodeURIComponent(
+              title.replace(/\s+/g, "-").replace(/\./g, "").toLowerCase(),
+            )
+          : "/blog/" +
+            encodeURIComponent(
+              title.replace(/\s+/g, "-").replace(/\./g, "").toLowerCase(),
+            )
       }
     >
       {children}

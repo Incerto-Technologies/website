@@ -17,10 +17,9 @@ export const NotFound = ({
         {text}
       </h1>
       <div
-        className="mt-2 flex min-h-[80vh] flex-col justify-end bg-contain pt-[200px]"
+        className="flex min-h-[80vh] w-full flex-col justify-end bg-cover bg-top pt-[200px] md:bg-top xl:pt-[100px]"
         style={{
           backgroundImage: `url("/backgrounds/404.png")`,
-          backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}
       >

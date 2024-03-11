@@ -1,11 +1,15 @@
 import { getBlogs } from "@/action/getBlogs";
 import { MetadataRoute } from "next";
 
+export const revalidate = 30;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getBlogs();
 
   const blogsSiteMap: MetadataRoute.Sitemap = blogs.map((blog) => ({
-    url: `https://incerto.in/blog/${blog._id}`,
+    url: `https://incerto.in/blog/${encodeURIComponent(
+      blog.title.replace(/\s+/g, "-").replace(/\./g, "").toLowerCase(),
+    )}`,
     lastModified: blog.date.toString(),
     changeFrequency: "weekly",
     priority: 1,

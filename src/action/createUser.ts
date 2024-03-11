@@ -4,6 +4,7 @@ import { UserModel } from "@/database/model/user";
 import { sendMail } from "@/utils/sendMail";
 import bycrpt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { cookies } from "next/headers";
 export const createUser = async (user: {
   email: string;
   password: string;
@@ -71,6 +72,7 @@ Click here: https://${process.env.WEB_URL!}/login/verify/${verificationToken}  `
 
     const token = jwt.sign(user.email, process.env.JWT_SECRET!);
 
+    cookies().set("token", token);
     return {
       message: "User created",
       success: true,

@@ -10,6 +10,7 @@ import { AppTextArea } from "../elements/AppTextArea";
 import { useEffect, useState } from "react";
 import { editBlogAction } from "@/action/editBlogAction";
 import { useRouter } from "next/navigation";
+import { isValidCloudinaryUrl } from "@/utils/isValidCloudinaryUrl";
 import { getUser } from "@/action/getUser";
 
 type Props = {
@@ -34,8 +35,8 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
       return;
     }
     setToken(token);
-    getUser(token).then((res) => {
-      if (!res?.user.verified) {
+    getUser().then((res) => {
+      if (!res?.user?.verified) {
         router.push("/login/verify");
         return;
       }
@@ -51,15 +52,28 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
     // validate the createblog object
     if (!createBlog) return;
 
+    let isError = false;
     Object.keys(createBlog).forEach((key) => {
       if (key == "draft" || key == "__v" || key == "_id" || key == "author")
         return;
+      if (
+        key == "image" &&
+        createBlog.image &&
+        !isValidCloudinaryUrl(createBlog.image)
+      ) {
+        alert("Enter a valid cloudinary url!!!");
+        isError = true;
+        return;
+      }
+
       if (!createBlog[key as keyof typeof createBlog]) {
         alert("All fields are required");
-        console.log("this fields is required", key);
+        isError = true;
         return;
       }
     });
+
+    if (isError) return;
 
     let newBlog;
     // dispatch the createBlog action
