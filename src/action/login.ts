@@ -5,6 +5,7 @@ import { UserModel } from "@/database/model/user";
 import { validateEmail } from "@/utils/validateEmail";
 import jwt from "jsonwebtoken";
 import bycrpt from "bcrypt";
+import { cookies } from "next/headers";
 
 export const login = async (user: { email: string; password: string }) => {
   try {
@@ -42,6 +43,7 @@ export const login = async (user: { email: string; password: string }) => {
 
       const token = jwt.sign(user.email, process.env.JWT_SECRET!);
 
+      cookies().set("token", token);
       return {
         message: "Login successful",
         success: true,

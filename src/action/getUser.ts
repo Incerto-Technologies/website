@@ -1,29 +1,28 @@
 "use server";
-import { connectDb } from "@/database";
-import { User, UserModel } from "@/database/model/user";
-import jwt from "jsonwebtoken";
 
-export const getUser = async (token: string) => {
+import { cookies } from "next/headers";
+import { getUserByToken } from "./getUserByToken";
+
+export const getUser = async () => {
   try {
-    const email = jwt.verify(token, process.env.JWT_SECRET!);
-
-    console.log(email, "email");
-
-    await connectDb();
-
-    const user = (await UserModel.findOne({
-      email,
-    }).lean()) as User;
-
-    if (!user) {
-      return null;
+    const token = cookies().get("token")?.value;
+    const data = await getUserByToken(token || "");
+    if (!data) {
+      return {
+        message: "Unable to fetch the user",
+        success: false,
+      };
     }
-
-    return { user: user, token };
-    // return null;
-  } catch (error) {
-    console.log(error, "error");
-
-    return null;
+    return {
+      message: "successfully fetch user data",
+      success: true,
+      user: data.user,
+    };
+  } catch (err) {
+    console.log(err);
+    return {
+      message: "Unable to fetch the user",
+      success: false,
+    };
   }
 };
