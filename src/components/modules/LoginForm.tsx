@@ -58,7 +58,6 @@ export const LoginForm = () => {
     }
     if (userData.success && userData.user && userData.token) {
       router.push("/blog/add");
-      console.log(userData.token);
 
       localStorage.setItem("token", userData.token);
     } else {
