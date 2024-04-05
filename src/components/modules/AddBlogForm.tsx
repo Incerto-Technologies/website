@@ -53,13 +53,16 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
     if (!createBlog) return;
 
     let isError = false;
+
     Object.keys(createBlog).forEach((key) => {
+      console.log(createBlog.image, key);
       if (key == "draft" || key == "__v" || key == "_id" || key == "author")
         return;
+
+      // !isValidCloudinaryUrl(createBlog.image)
       if (
         key == "image" &&
-        createBlog.image &&
-        !isValidCloudinaryUrl(createBlog.image)
+        (!createBlog[key] || !isValidCloudinaryUrl(createBlog.image as string))
       ) {
         alert("Enter a valid cloudinary url!!!");
         isError = true;

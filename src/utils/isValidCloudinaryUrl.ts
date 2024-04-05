@@ -1,6 +1,6 @@
-export const isValidCloudinaryUrl = (url: string) => {
+export const isValidCloudinaryUrl = (url: string): boolean => {
   const cloudinaryUrlPattern =
-    /^(https:\/\/res\.cloudinary\.com\/[a-zA-Z0-9_-]+\/image\/upload\/v\d+\/[a-zA-Z0-9_-]+\.\w+)$/;
+    /^https?:\/\/res\.cloudinary\.com\/[a-z0-9_-]+\/image\/upload\/v[0-9]+\/[a-z0-9_./-]+$/;
 
   return cloudinaryUrlPattern.test(url);
 };
