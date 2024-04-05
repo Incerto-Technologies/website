@@ -34,8 +34,11 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
       router.push("/login");
       return;
     }
+
     setToken(token);
     getUser().then((res) => {
+      console.log(res);
+
       if (!res?.user?.verified) {
         router.push("/login/verify");
         return;
@@ -94,7 +97,7 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
 
     alert(newBlog.message);
     if (newBlog.success) {
-      router.back();
+      router.push("/blog");
     }
   };
 

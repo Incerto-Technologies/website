@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 export const NeedVerification = () => {
   const router = useRouter();
+
   useEffect(() => {
     const token = localStorage.getItem("token");
 
