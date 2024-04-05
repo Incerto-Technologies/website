@@ -34,13 +34,14 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
       router.push("/login");
       return;
     }
+
     setToken(token);
     getUser().then((res) => {
-      if (!res?.user?.verified) {
-        router.push("/login/verify");
-        return;
+      console.log(res);
+      if (res.message) alert(res.message);
+      if (res.redirect) {
+        router.push(res.redirect);
       }
-      if (!res?.user.isAdmin) router.push("/login");
     });
 
     if (isEdit && blog) dispatch(setCreateBlog(blog));
@@ -53,13 +54,16 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
     if (!createBlog) return;
 
     let isError = false;
+
     Object.keys(createBlog).forEach((key) => {
+      console.log(createBlog.image, key);
       if (key == "draft" || key == "__v" || key == "_id" || key == "author")
         return;
+
+      // !isValidCloudinaryUrl(createBlog.image)
       if (
         key == "image" &&
-        createBlog.image &&
-        !isValidCloudinaryUrl(createBlog.image)
+        (!createBlog[key] || !isValidCloudinaryUrl(createBlog.image as string))
       ) {
         alert("Enter a valid cloudinary url!!!");
         isError = true;
@@ -91,7 +95,7 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
 
     alert(newBlog.message);
     if (newBlog.success) {
-      router.back();
+      router.push("/blog");
     }
   };
 
