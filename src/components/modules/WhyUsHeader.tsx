@@ -25,4 +25,3 @@ export const WhyUsHeader = () => {
     </div>
   );
 };
-// todo team
