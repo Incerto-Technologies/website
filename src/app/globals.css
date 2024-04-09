@@ -266,3 +266,6 @@ body {
 .table-border > table {
   border: 1px solid #000;
 }
+.table-border > table > tr {
+  border: 1px solid #000;
+}
