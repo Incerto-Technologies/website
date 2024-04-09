@@ -99,7 +99,7 @@ export default async function page({ params }: Props) {
       </div>
       <section className="mx-auto w-full max-w-[740px] px-4 md:px-0">
         <BlogHeader blog={blog} />
-        <div className="overflow table-border text-black">
+        <div className="overflow text-black">
           <AppMarkDown markdown={blog.markdown || ""} />
         </div>
         <div>
