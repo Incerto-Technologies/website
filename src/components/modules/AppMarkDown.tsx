@@ -132,6 +132,19 @@ const AppMarkDown = ({ markdown }: Props) => {
             </a>
           );
         },
+        table(props) {
+          return (
+            <table className="table-border table-auto border-collapse border border-black">
+              {props.children}
+            </table>
+          );
+        },
+        td(props) {
+          return <td className="border border-black p-1">{props.children}</td>;
+        },
+        th(props) {
+          return <th className="border border-black p-1">{props.children}</th>;
+        },
       }}
     >
       {markdown}
