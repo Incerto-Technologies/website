@@ -262,3 +262,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.table-border > table {
+  border: 1px solid #000;
+}

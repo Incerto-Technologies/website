@@ -37,7 +37,6 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
 
     setToken(token);
     getUser().then((res) => {
-      console.log(res);
       if (res.message) alert(res.message);
       if (res.redirect) {
         router.push(res.redirect);
@@ -56,7 +55,6 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
     let isError = false;
 
     Object.keys(createBlog).forEach((key) => {
-      console.log(createBlog.image, key);
       if (key == "draft" || key == "__v" || key == "_id" || key == "author")
         return;
 
