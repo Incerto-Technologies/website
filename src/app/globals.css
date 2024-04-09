@@ -266,6 +266,11 @@ body {
 .table-border > table {
   border: 1px solid #000;
 }
-.table-border > table > tr {
+
+.table-border > table > th {
+  border: 1px solid #000;
+}
+
+.table-border > table > td {
   border: 1px solid #000;
 }
