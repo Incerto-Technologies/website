@@ -29,6 +29,10 @@ export const productNavRoutes = {
 
 export const navRoutes = [
   {
+    name: "Our pricing",
+    path: "/pricing",
+  },
+  {
     name: "About us",
     path: "/about",
   },
