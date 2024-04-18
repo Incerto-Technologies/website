@@ -20,7 +20,7 @@ const inputDetails = [
     max: 500,
     min: 10,
     defaultValue: 10,
-    unit: "User",
+    unit: "Users",
     step: 1,
   },
   {
@@ -111,12 +111,12 @@ export const PricingSelector = () => {
         Lorem Ipsum is simply dummy text of the printing and typesetting
       </p>
       <div className="mt-[32px] flex flex-col-reverse gap-[48px] md:gap-[90px] lg:mt-[60px] lg:flex-row">
-        <section className="mx-auto flex w-[90%] flex-col gap-[48px] lg:w-1/2 lg:gap-[60px]">
+        <section className="mx-auto flex w-[90%] flex-col gap-[48px] lg:w-1/2 lg:gap-[23px]">
           <RangeInputs onChange={handleChange} inputData={inputData} />
         </section>
         <section className="w-full lg:w-1/2">
           <IncertoPricing inputData={inputData} />
-          <div className="mt-[32px] hidden lg:block">
+          <div className="mt-[72px] hidden lg:block">
             <OthersPricing inputData={inputData} />
           </div>
         </section>
@@ -180,24 +180,24 @@ const RangeInputs = ({
           >
             {data.labelName}
           </label>
-          <input
-            id={data.name}
-            name={data.name}
-            type="range"
-            step={data.step}
-            onChange={onChange}
-            defaultValue={data.defaultValue}
-            max={data.max}
-            min={data.min}
-            className="mb-[16px] mt-[18px] h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#0F937C] lg:mb-[18px] lg:mt-[28px]"
-          />
-          <p className="text-[14px] leading-[28px] tracking-[0.28] text-[#888] md:text-[16px] md:tracking-[0.32px]">
-            {data.description}
-            <span className="text-white">
+          <div className="mb-[16px] mt-[18px] flex items-center gap-5 lg:mb-[12px] lg:mt-[10px]">
+            <input
+              id={data.name}
+              name={data.name}
+              type="range"
+              step={data.step}
+              onChange={onChange}
+              defaultValue={data.defaultValue}
+              max={data.max}
+              min={data.min}
+              className=" h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#0F937C] "
+            />
+
+            <span className="w-3/12 rounded-xl bg-[#0F937C] px-2 py-1 text-center text-[18px] font-bold tracking-[-0.36px] md:text-[24px] md:tracking-[-0.48px]">
               {` ${inputData[data.name as keyof InputData]} ${data.unit}`}
               <sup>*</sup>
             </span>
-          </p>
+          </div>
         </div>
       ))}
     </>

@@ -65,7 +65,7 @@ const InfoCard = ({
                   : `rounded-[25px] bg-[#1E1E1E] p-[12.5px] md:rounded-[40px] md:p-[20px]`
               }
             >
-              <p className="text-[12px] font-medium leading-[30px] tracking-[-0.24px] md:text-[18px] md:leading-[40px] md:tracking-[-0.36px]">
+              <p className="text-[12px] font-semibold leading-[30px] tracking-[-0.24px] md:text-[24px] md:leading-[40px] md:tracking-[-0.36px]">
                 {name}
               </p>
             </div>
