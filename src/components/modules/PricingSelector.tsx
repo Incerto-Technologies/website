@@ -8,6 +8,7 @@ const inputDetails = [
     name: "ingestion",
     description: "Lorem Ipsum is simply dummy text of the",
     max: 10000,
+    min: 100,
     defaultValue: 1000,
     unit: "GB",
     step: 100,
@@ -17,6 +18,7 @@ const inputDetails = [
     name: "user",
     description: "Lorem Ipsum is simply dummy text of the",
     max: 500,
+    min: 10,
     defaultValue: 10,
     unit: "User",
     step: 1,
@@ -26,6 +28,7 @@ const inputDetails = [
     name: "retention",
     description: "Lorem Ipsum is simply dummy text of the",
     max: 60,
+    min: 1,
     defaultValue: 1,
     unit: "Month",
     step: 1,
@@ -78,7 +81,7 @@ const OthersPricingDetails = [
 ];
 
 const incertoPricingDetails = {
-  name: "incerto’s EXPECTED PRICING*",
+  name: "Incerto",
   color: "#FFFFFF50",
   getPrice: (data: InputData) =>
     Math.max(135, 0.2367 * OthersPricingDetails[0].getPrice(data)),
@@ -129,10 +132,10 @@ const IncertoPricing = ({ inputData }: { inputData: InputData }) => {
   return (
     <div className="flex items-center justify-center bg-[url('/images/pricing/pricing_card.webp')] px-[20px] py-[38px] md:p-[38px] lg:rounded-[20px]">
       <div>
-        <h5 className="font-bold uppercase leading-[28px] tracking-[1.68px] text-[#FFFFFF50]">
+        <h5 className="text-2xl font-bold uppercase leading-[32px] tracking-[1.68px] text-[#FFFFFF]">
           {incertoPricingDetails.name}
         </h5>
-        <h2 className="font-bold leading-[50px] tracking-[-0.88px] md:text-[44px]">
+        <h2 className="font-bold leading-[50px] tracking-[-0.88px] text-white md:text-[44px]">
           {`$ ${Math.round(incertoPricingDetails.getPrice(inputData)).toLocaleString()}`}
         </h2>
       </div>
@@ -146,7 +149,7 @@ const OthersPricing = ({ inputData }: { inputData: InputData }) => {
       {OthersPricingDetails.map(({ name, color, getPrice }, i) => (
         <div key={name}>
           <h6
-            className={`text-[12px] font-bold uppercase leading-[28px] tracking-[1.44px] md:text-[14px] md:tracking-[1.68px]`}
+            className={`text-lg font-bold uppercase leading-[28px] tracking-[1.44px] md:text-xl md:tracking-[1.68px]`}
             style={{
               color: color,
             }}
@@ -185,6 +188,7 @@ const RangeInputs = ({
             onChange={onChange}
             defaultValue={data.defaultValue}
             max={data.max}
+            min={data.min}
             className="mb-[16px] mt-[18px] h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#0F937C] lg:mb-[18px] lg:mt-[28px]"
           />
           <p className="text-[14px] leading-[28px] tracking-[0.28] text-[#888] md:text-[16px] md:tracking-[0.32px]">
