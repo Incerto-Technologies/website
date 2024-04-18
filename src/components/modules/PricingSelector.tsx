@@ -4,28 +4,31 @@ import { ChangeEvent, ChangeEventHandler, useState } from "react";
 
 const inputDetails = [
   {
-    labelName: "Visualization",
-    name: "user",
+    labelName: "Ingestion",
+    name: "ingestion",
     description: "Lorem Ipsum is simply dummy text of the",
-    max: 1000,
-    defaultValue: 10,
-    unit: "user",
+    max: 10000,
+    defaultValue: 1000,
+    unit: "GB",
+    step: 100,
   },
   {
-    labelName: "Data Warehouse",
+    labelName: "Users",
+    name: "user",
+    description: "Lorem Ipsum is simply dummy text of the",
+    max: 500,
+    defaultValue: 10,
+    unit: "User",
+    step: 1,
+  },
+  {
+    labelName: "Retention",
     name: "retention",
     description: "Lorem Ipsum is simply dummy text of the",
     max: 60,
-    defaultValue: 3,
-    unit: "month",
-  },
-  {
-    labelName: "ELT/Ingestion",
-    name: "ingestion",
-    description: "Lorem Ipsum is simply dummy text of the",
-    max: 1024,
-    defaultValue: 512,
-    unit: "gb",
+    defaultValue: 1,
+    unit: "Month",
+    step: 1,
   },
 ];
 
@@ -37,34 +40,40 @@ type InputData = {
 
 const OthersPricingDetails = [
   {
-    name: "SIGNOZ",
+    name: "Signoz",
     color: "#F25733",
     getPrice: (data: InputData) =>
-      Math.max(199, data.ingestion * 0.4 + data.retention * 0.4),
+      Math.max(
+        199,
+        data.ingestion * 0.49 + data.retention * 0.4 + data.user * 0,
+      ),
   },
   {
-    name: "grafana",
+    name: "Grafana",
     color: "#FFA900",
     getPrice: (data: InputData) =>
-      data.ingestion * 0.5 + data.retention * 0.5 + data.user * 40,
+      Math.max(
+        413,
+        data.ingestion * 0.59 + data.retention * 0.5 + data.user * 40,
+      ),
   },
   {
-    name: "datadog",
+    name: "New Relic",
+    color: "#00CAFF",
+    getPrice: (data: InputData) =>
+      (data.ingestion - 100) * 0.44 + data.retention * 0.35 + data.user * 75,
+  },
+  {
+    name: "Datadog",
     color: "#5920AD",
     getPrice: (data: InputData) =>
       2.25 *
-        ((data.ingestion - 100) * 0.35 +
+        ((data.ingestion - 100) * 0.44 +
           data.retention * 0.35 +
           data.user * 75) +
-      data.ingestion * 0.2 +
+      data.ingestion * 0.29 +
       data.retention * 0.3 +
       data.user * 28,
-  },
-  {
-    name: "New relic",
-    color: "#00CAFF",
-    getPrice: (data: InputData) =>
-      (data.ingestion - 100) * 0.35 + data.retention * 0.35 + data.user * 75,
   },
 ];
 
@@ -72,22 +81,22 @@ const incertoPricingDetails = {
   name: "incerto’s EXPECTED PRICING*",
   color: "#FFFFFF50",
   getPrice: (data: InputData) =>
-    Math.max(134, (data.ingestion / 112) * 7.5 + data.retention * 0.047),
+    Math.max(135, 0.2367 * OthersPricingDetails[0].getPrice(data)),
 };
 
 export const PricingSelector = () => {
   const [inputData, setInputData] = useState<InputData>({
-    ingestion: inputDetails[2].defaultValue,
-    retention: inputDetails[1].defaultValue,
-    user: inputDetails[0].defaultValue,
+    ingestion: inputDetails[0].defaultValue,
+    retention: inputDetails[2].defaultValue,
+    user: inputDetails[1].defaultValue,
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.name, parseInt(e.target.value));
     setInputData({
       ...inputData,
       [e.target.name]: parseInt(e.target.value),
     });
-    console.log(inputData);
   };
 
   return (
@@ -124,7 +133,7 @@ const IncertoPricing = ({ inputData }: { inputData: InputData }) => {
           {incertoPricingDetails.name}
         </h5>
         <h2 className="font-bold leading-[50px] tracking-[-0.88px] md:text-[44px]">
-          {`$ ${incertoPricingDetails.getPrice(inputData).toLocaleString()}`}
+          {`$ ${Math.round(incertoPricingDetails.getPrice(inputData)).toLocaleString()}`}
         </h2>
       </div>
     </div>
@@ -144,7 +153,7 @@ const OthersPricing = ({ inputData }: { inputData: InputData }) => {
           >
             {name}
           </h6>
-          <h4>{`$ ${getPrice(inputData).toLocaleString()}`}</h4>
+          <h4 className="text-[18px] font-bold tracking-[-0.36px] md:text-[24px] md:tracking-[-0.48px]">{`$ ${Math.round(getPrice(inputData)).toLocaleString()}`}</h4>
         </div>
       ))}
     </div>
@@ -172,6 +181,7 @@ const RangeInputs = ({
             id={data.name}
             name={data.name}
             type="range"
+            step={data.step}
             onChange={onChange}
             defaultValue={data.defaultValue}
             max={data.max}
