@@ -130,7 +130,7 @@ export const PricingSelector = () => {
 
 const IncertoPricing = ({ inputData }: { inputData: InputData }) => {
   return (
-    <div className="flex items-center justify-center bg-[url('/images/pricing/pricing_card.webp')] px-[20px] py-[38px] md:p-[38px] lg:rounded-[20px]">
+    <div className="flex items-start justify-start bg-[url('/images/pricing/pricing_card.webp')] px-[20px] py-[38px] md:p-[38px] lg:rounded-[20px]">
       <div>
         <h5 className="text-2xl font-bold uppercase leading-[32px] tracking-[1.68px] text-[#FFFFFF]">
           {incertoPricingDetails.name}
@@ -193,7 +193,7 @@ const RangeInputs = ({
               className=" h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#0F937C] "
             />
 
-            <span className="w-3/12 rounded-xl bg-[#0F937C] px-2 py-1 text-center text-[18px] font-bold tracking-[-0.36px] md:text-[24px] md:tracking-[-0.48px]">
+            <span className="w-3/12 text-wrap rounded-xl bg-[#0F937C]  px-2 py-1 text-center text-[18px] font-bold tracking-[-0.36px] md:text-[24px] md:tracking-[-0.48px]">
               {` ${inputData[data.name as keyof InputData]} ${data.unit}`}
               <sup>*</sup>
             </span>

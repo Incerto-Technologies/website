@@ -37,7 +37,7 @@ const FeaturesData: FeatureCardProps[] = [
 
 export const Features = () => {
   return (
-    <div className="w-container px-3">
+    <div className="w-container mt-[150px] px-3 md:mt-[200px]">
       <h2 className="text-center font-gotham text-2xl font-medium leading-[33px] tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
         Limitations of Legacy
         <span className="features-title text-clip-all">

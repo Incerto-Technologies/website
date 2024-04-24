@@ -26,7 +26,7 @@ export const PricingInfo = () => {
       </div>
       <div className="mx-auto aspect-[3/4] w-full rounded-[12px] bg-[url('/images/pricing/card.webp')] bg-cover bg-right-bottom bg-no-repeat p-[28px] lg:w-1/2 lg:rounded-[20px] lg:p-[44px]">
         <h3 className="text-[28px] leading-[32px] tracking-[-0.56px] text-[#ffffff50]  md:text-[44px] md:leading-[50px] md:tracking-tightest">
-          Only pay for the
+          Only pay forthe
           <span className="text-white"> compute</span> about
         </h3>
         <div className="mt-[40px] ">

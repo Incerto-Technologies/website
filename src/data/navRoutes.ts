@@ -1,10 +1,9 @@
-import { Activity } from "@/components/elements/icons/Activity";
 import { Cloud } from "@/components/elements/icons/Cloud";
 import { Code } from "@/components/elements/icons/Code";
 import { Document } from "@/components/elements/icons/Document";
 
 export const productNavRoutes = {
-  name: "Our Products",
+  name: "Products",
   options: [
     {
       name: "Host metrics",
@@ -29,11 +28,11 @@ export const productNavRoutes = {
 
 export const navRoutes = [
   {
-    name: "Our pricing",
+    name: "Pricing",
     path: "/pricing",
   },
   {
-    name: "About us",
+    name: "About Us",
     path: "/about",
   },
   {

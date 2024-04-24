@@ -70,7 +70,7 @@ export const Footer = ({
                 Incerto Technologies is a ....
               </p>
             </div>
-            <div className="mt-0 flex w-full flex-col md:flex-row md:gap-10 lg:gap-28 xl:gap-40">
+            <div className="mt-0 flex w-full flex-col  md:gap-10 xl:flex-row xl:gap-28">
               <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-16">
                 {navRoutes.slice(0, -1).map(({ name, path }) => (
                   <Link href={path} key={uuid()} className="min-w-28">

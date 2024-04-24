@@ -8,19 +8,19 @@ import Marquee from "react-fast-marquee";
 
 const CustomersLogoData = [
   {
-    src: "/logos/customers/dhruv.png",
+    src: "/logos/customers/dhruv.svg",
     alt: "dhruv logo",
   },
   {
-    src: "/logos/customers/fyers.png",
+    src: "/logos/customers/fyers.svg",
     alt: "fyers logo",
   },
   {
-    src: "/logos/customers/nuva-retail.png",
+    src: "/logos/customers/nuvoretail.svg",
     alt: "nuva-retail logo",
   },
   {
-    src: "/logos/customers/ving.png",
+    src: "/logos/customers/ving.svg",
     alt: "ving logo",
   },
 ];
@@ -28,7 +28,7 @@ const CustomersLogoData = [
 export const Customers = () => {
   return (
     // <div className="mt-10 md:mt-[171px]">
-    <div className="mt-5">
+    <div className="">
       <Marquee autoFill>
         {CustomersLogoData.map((logo, index) => (
           <CustomerLogo

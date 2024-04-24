@@ -42,7 +42,7 @@ export const Testimonial = () => {
   };
 
   return (
-    <div className="w-container relative mt-[100px]">
+    <div className="w-container relative mt-[0px]">
       <div className="">
         <h3 className="mx-auto w-5/6 text-center font-gotham text-2xl font-medium leading-8 tracking-tighter md:text-[34px] md:leading-[3rem] md:tracking-[-0.68]">
           Ready for the Real World –{" "}
@@ -52,7 +52,7 @@ export const Testimonial = () => {
         </h3>
       </div>
 
-      <div className="mx-auto mt-14 h-[600px] w-[300px] md:h-[400px] md:w-[500px] lg:mt-36 lg:w-[80%] lg:max-w-[900px]">
+      <div className="mx-auto mt-14 h-[600px] w-[300px] md:h-[400px] md:w-[500px] lg:mt-14 lg:w-[80%] lg:max-w-[900px]">
         <TestimonialCarousel
           cards={TestimonialCards}
           setCurrentCardId={setCurrentCardId}

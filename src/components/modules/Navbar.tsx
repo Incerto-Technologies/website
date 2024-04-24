@@ -196,7 +196,7 @@ export const Navbar = () => {
             }}
           >
             <div className="mt-[10px] rounded-2xl  bg-white bg-opacity-10 px-[45px] py-[28px] backdrop-blur-[50px] transition-all">
-              <h5 className="text-[24px]">Our Products</h5>
+              <h5 className="text-[24px]">Products</h5>
               <div className="mt-[28px] flex gap-5">
                 {productNavRoutes.options.map(
                   ({ description, name, path, icon }) => (
