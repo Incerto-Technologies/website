@@ -28,6 +28,10 @@ export const productNavRoutes = {
 
 export const navRoutes = [
   {
+    name: "Brokerage",
+    path: "/brokerage",
+  },
+  {
     name: "Pricing",
     path: "/pricing",
   },

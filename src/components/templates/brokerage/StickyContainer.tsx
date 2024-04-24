@@ -1,18 +1,14 @@
 "use client";
-import { useState } from "react";
-import { WhyUsCard } from "../../modules/WhyUsCard";
-import data from "@/data/WhyUs.json";
-import { WhyUsHeader } from "@/components/modules/WhyUsHeader";
+import React, { useState } from "react";
+import data from "@/data/brokerageSticky.json";
+import { WhyUsCard } from "@/components/modules/WhyUsCard";
 import { WhyUsSlider } from "@/components/modules/WhyUsSlider";
 
-export const WhyUs = () => {
+export const StickyContainer = () => {
   const [currentViewSlide, setCurrentViewSlide] = useState(0);
-
   return (
-    <section className="w-container mt-[200px] md:px-4 lg:px-8">
-      <WhyUsHeader />
-
-      <div className="relative mx-auto hidden w-5/6 gap-14 px-5 lg:flex">
+    <div>
+      <div className="relative mx-auto hidden w-5/6 justify-center gap-14 px-5 lg:flex">
         {/* Side bar */}
         <div className="w-[16px]">
           {/* <div className="top-sticky sticky  flex w-full scale-75 flex-col items-center justify-center gap-14 py-5 xl:scale-100"> */}
@@ -30,7 +26,7 @@ export const WhyUs = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex h-full w-full flex-col items-center justify-center gap-[28px]">
+        <div className="flex h-full w-full max-w-[980px] flex-col items-center justify-center gap-[28px]">
           {data.data.map((item, index) => {
             return (
               <WhyUsCard
@@ -43,9 +39,7 @@ export const WhyUs = () => {
           })}
         </div>
       </div>
-
-      {/* Mobile and Table */}
       <WhyUsSlider Cards={data} />
-    </section>
+    </div>
   );
 };

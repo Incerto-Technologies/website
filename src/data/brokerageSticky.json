@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "title": "Compliance",
+      "description": "Painful to pinpoint the relevant data from a stack of logs\n Time intensive to fetch from archival/blob storage\n Easily retrieve any data requested by the auditors\n Maximum Storage Efficiency with 20x data compression\n Sub-second data retrieval\n Ensure complete data retention\n Identify missing information",
+      "image": "/images/Stack/slide5.png",
+      "list": true,
+      "id": 0
+    },
+    {
+      "title": "Customer Satisfaction",
+      "description": "Understanding users painpoint can be a daunting task\n Lack of insights  hinders  user satisfaction and platform efficiency\n User to backend integration using Traces\n Session Replay\n All crucial metrics and traces\n Customised metrics",
+      "image": "/images/Stack/slide6.png",
+      "list": true,
+      "id": 1
+    },
+    {
+      "title": "Analytics and Reporting",
+      "description": "Traditional database’s slow processing analytical queries\n Delayed access to data affects decision-making processes\n Query time in sub second from hours\n Efficient Query\n Storage reduced 30x ",
+      "image": "/images/Stack/slide4.png",
+      "list": true,
+      "id": 2
+    },
+    {
+      "title": "Observability",
+      "description": "Problem with sharing data due to compliance\n High costs from observability vendors\n On infra observability with personalized dashboards\n 85% recurring vendor cost cut\nRight observability Practices",
+      "image": "/images/Stack/slide2.png",
+      "list": true,
+      "id": 3
+    }
+  ]
+}

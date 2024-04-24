@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
 
-import Cards from "@/data/WhyUs.json";
 import Image from "next/image";
 
 import { v4 as uuid } from "uuid";
@@ -43,7 +42,7 @@ const sliderTextTransition = {
   stiffness: 300,
 };
 
-export const WhyUsSlider = () => {
+export const WhyUsSlider = ({ Cards }: any) => {
   const [[imageCount, direction], setImageCount] = useState<
     [imageCount: number, direction: number]
   >([0, 0]);
@@ -121,19 +120,38 @@ export const WhyUsSlider = () => {
             transition={sliderTextTransition}
             className="mt-5 px-[42px]"
           >
-            <h4 className="font-gotham font-bold leading-6 text-secondary text-opacity-85">
+            <h4 className="font-gotham text-[32px] font-bold leading-[38px] text-secondary text-opacity-85">
               {Cards.data[activeImageIndex].title}
             </h4>
 
-            <p className="mt-3 text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
-              {Cards.data[activeImageIndex].description}
-            </p>
+            {Cards.data[activeImageIndex].list ? (
+              <ul className="mt-4 list-disc text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
+                {Cards.data[activeImageIndex].description
+                  .split("\n")
+                  .map((line: string, index: number) => (
+                    <li key={index} className="ml-[17px]">
+                      {line}
+                    </li>
+                  ))}
+              </ul>
+            ) : (
+              <p className="mt-3 text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
+                {Cards.data[activeImageIndex].description
+                  .split("\n")
+                  .map((line: string, index: number) => (
+                    <React.Fragment key={index}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+              </p>
+            )}
           </motion.div>
         </motion.div>
       </div>
 
       <div className="mt-9 flex w-full items-center justify-center gap-4">
-        {Cards.data.map((image) => (
+        {Cards.data.map((image: any) => (
           <div
             key={image.title}
             onClick={() => skipToImage(image.id)}
