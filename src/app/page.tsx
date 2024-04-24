@@ -63,6 +63,7 @@ import { WhyUs } from "@/components/templates/Home/WhyUs";
 import { Modal } from "@/components/elements/Modal";
 
 export default function Home() {
+  // home page
   return (
     <DefaultLayout>
       <Hero />
