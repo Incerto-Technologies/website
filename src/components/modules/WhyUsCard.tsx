@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { useInView } from "framer-motion";
 import React, { Dispatch, SetStateAction, useEffect, useRef } from "react";
+import { DEFAULT_SANS_SERIF_FONT } from "next/dist/shared/lib/constants";
 
-type Props = {
+export type StickyProps = {
   title: string;
-  description: string;
+  description:
+    | string
+    | {
+        problems: string[];
+        solution: string[];
+      };
   image: string;
   id: number;
   setCurrentViewSlide: Dispatch<SetStateAction<number>>;
@@ -18,7 +24,7 @@ export const WhyUsCard = ({
   id,
   setCurrentViewSlide,
   list = false,
-}: Props) => {
+}: StickyProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -29,6 +35,8 @@ export const WhyUsCard = ({
       setCurrentViewSlide(id);
     }
   }, [isInView, setCurrentViewSlide, id]);
+
+  console.log(typeof description, " desctio");
 
   return (
     <div
@@ -42,14 +50,33 @@ export const WhyUsCard = ({
         <h1 className="font-medium leading-6 text-[#EDEDED] text-opacity-85 md:text-[40px] md:font-bold md:leading-[44px]">
           {title}
         </h1>
-        {list ? (
-          <ul className="mt-[22px] list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
-            {description.split("\n").map((line, index) => (
-              <li className="ml-[17px]" key={index}>
-                {line}
-              </li>
-            ))}
-          </ul>
+        {typeof description != "string" ? (
+          <div>
+            <div className="mt-[22px]">
+              <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+                Problems
+              </h4>
+              <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
+                {description.problems.map((line: string, index: number) => (
+                  <li className="ml-[17px]" key={index}>
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-[22px]">
+              <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+                Solution
+              </h4>
+              <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
+                {description.solution.map((line: string, index: number) => (
+                  <li className="ml-[17px]" key={index}>
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         ) : (
           <p className="mt-[22px] text-[16px] font-medium leading-[26px] tracking-wide text-[#888]">
             {description.split("\n").map((line, index) => (

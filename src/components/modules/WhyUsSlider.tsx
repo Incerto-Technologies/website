@@ -5,6 +5,7 @@ import { wrap } from "@popmotion/popcorn";
 import Image from "next/image";
 
 import { v4 as uuid } from "uuid";
+import { StickyProps } from "./WhyUsCard";
 
 const sliderVariants = {
   incoming: {
@@ -42,7 +43,7 @@ const sliderTextTransition = {
   stiffness: 300,
 };
 
-export const WhyUsSlider = ({ Cards }: any) => {
+export const WhyUsSlider = ({ Cards }: { Cards: { data: StickyProps[] } }) => {
   const [[imageCount, direction], setImageCount] = useState<
     [imageCount: number, direction: number]
   >([0, 0]);
@@ -124,19 +125,43 @@ export const WhyUsSlider = ({ Cards }: any) => {
               {Cards.data[activeImageIndex].title}
             </h4>
 
-            {Cards.data[activeImageIndex].list ? (
-              <ul className="mt-4 list-disc text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
-                {Cards.data[activeImageIndex].description
-                  .split("\n")
-                  .map((line: string, index: number) => (
-                    <li key={index} className="ml-[17px]">
-                      {line}
-                    </li>
-                  ))}
-              </ul>
+            {typeof Cards.data[activeImageIndex].description == "object" ? (
+              <div>
+                <div className="mt-[22px]">
+                  <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+                    Problems
+                  </h4>
+                  <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
+                    {/* @ts-ignore */}
+                    {Cards.data[activeImageIndex].description.problems.map(
+                      (line: string, index: number) => (
+                        <li className="ml-[17px]" key={index}>
+                          {line}
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </div>
+                <div className="mt-[22px]">
+                  <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+                    Solution
+                  </h4>
+                  <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
+                    {/* @ts-ignore */}
+                    {Cards.data[activeImageIndex].description.solution.map(
+                      (line: string, index: number) => (
+                        <li className="ml-[17px]" key={index}>
+                          {line}
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </div>
+              </div>
             ) : (
               <p className="mt-3 text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
                 {Cards.data[activeImageIndex].description
+                  .toString()
                   .split("\n")
                   .map((line: string, index: number) => (
                     <React.Fragment key={index}>

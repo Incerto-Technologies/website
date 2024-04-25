@@ -2,28 +2,71 @@
   "data": [
     {
       "title": "Compliance",
-      "description": "Painful to pinpoint the relevant data from a stack of logs\n Time intensive to fetch from archival/blob storage\n Easily retrieve any data requested by the auditors\n Maximum Storage Efficiency with 20x data compression\n Sub-second data retrieval\n Ensure complete data retention\n Identify missing information",
+      "description": {
+        "problems": [
+          "Painful to pinpoint the relevant data asked by Auditors",
+          "Takes days to fetch from archival/blob storage"
+        ],
+        "solution": [
+          "We implements efficient data store and auditor friendly dashboards",
+          "Easily retrieve any data requested by the auditors",
+          "Maximum Storage Efficiency with 20x data compression",
+          "Sub-second data retrieval",
+          "Ensure complete data retention, identify missing information"
+        ]
+      },
       "image": "/images/Stack/slide5.png",
       "list": true,
       "id": 0
     },
     {
       "title": "Customer Satisfaction",
-      "description": "Understanding users painpoint can be a daunting task\n Lack of insights  hinders  user satisfaction and platform efficiency\n User to backend integration using Traces\n Session Replay\n All crucial metrics and traces\n Customised metrics",
+      "description": {
+        "problems": [
+          "Understanding users pain point is a daunting task",
+          "Resolving issue requires back and forth b/w support team and users"
+        ],
+        "solution": [
+          "Get alerts when any user faces errors",
+          "Session Replay allowing seamless resolution",
+          "All performance metrics and UI - backend traces"
+        ]
+      },
       "image": "/images/Stack/slide6.png",
       "list": true,
       "id": 1
     },
     {
       "title": "Analytics and Reporting",
-      "description": "Traditional database’s slow processing analytical queries\n Delayed access to data affects decision-making processes\n Query time in sub second from hours\n Efficient Query\n Storage reduced 30x ",
+      "description": {
+        "problems": [
+          "Analytical queries taking hours due to transactional databases",
+          "Affecting data analysis and user accessing historical data"
+        ],
+        "solution": [
+          "Effective storage using OLAP S3 backed database",
+          "Query time in sub second from hours",
+          "Leverage custom data pattern",
+          "Storage reduced 30x"
+        ]
+      },
       "image": "/images/Stack/slide4.png",
       "list": true,
       "id": 2
     },
     {
       "title": "Observability",
-      "description": "Problem with sharing data due to compliance\n High costs from observability vendors\n On infra observability with personalized dashboards\n 85% recurring vendor cost cut\nRight observability Practices",
+      "description": {
+        "problems": [
+          "Problem with sharing data due to compliance",
+          "High costs from observability vendors"
+        ],
+        "solution": [
+          "On infra observability with personalized dashboards",
+          "85% recurring vendor cost cut",
+          "Right observability Practices"
+        ]
+      },
       "image": "/images/Stack/slide2.png",
       "list": true,
       "id": 3
