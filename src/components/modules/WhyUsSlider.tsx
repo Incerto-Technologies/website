@@ -43,7 +43,11 @@ const sliderTextTransition = {
   stiffness: 300,
 };
 
-export const WhyUsSlider = ({ Cards }: { Cards: { data: StickyProps[] } }) => {
+export const WhyUsSlider = ({
+  Cards,
+}: {
+  Cards: { data: Omit<StickyProps, "setCurrentViewSlide">[] };
+}) => {
   const [[imageCount, direction], setImageCount] = useState<
     [imageCount: number, direction: number]
   >([0, 0]);
