@@ -15,8 +15,8 @@ export const Hero = () => {
             </h1>
           </div>
           <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
-            Build observability that adapts to your infra, not the other way
-            around
+             Brokerage domain knowledge. Sharp problem solving. Right
+            technology. Fast execution.
           </p>
           <div className="flex flex-col gap-[10px] md:flex-row">
             <Link
