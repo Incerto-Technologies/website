@@ -46,7 +46,16 @@ export const Products = () => {
                     <Graph />
                   </div>
                   <p className="text-sm leading-6 tracking-wide text-[#959595] md:text-secondary">
-                    {list}
+                    {list.includes("\b") ? (
+                      <>
+                        <span className="font-extrabold text-[#0f9]">
+                          {list.split("\b")[0]}
+                        </span>
+                        <span>{list.split("\b")[1]}</span>
+                      </>
+                    ) : (
+                      <span>{list}</span>
+                    )}
                   </p>
                 </div>
               ))}
