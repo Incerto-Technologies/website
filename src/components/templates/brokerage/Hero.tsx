@@ -14,9 +14,11 @@ export const Hero = () => {
               </span>
             </h1>
           </div>
-          <p className=" text-center font-medium leading-7 tracking-wide md:leading-[26px]">
-             Brokerage domain knowledge. Sharp problem solving. Right
-            technology. Fast execution.
+          <p className="text-center font-medium leading-7 tracking-wide md:leading-[26px]">
+            <span className="ml-2">Brokerage domain knowledge.</span>
+            <span className="ml-3">Sharp problem solving.</span>
+            <span className="ml-3">Right technology.</span>
+            <span className="ml-3">Fast execution.</span>
           </p>
           <div className="flex flex-col gap-[10px] md:flex-row">
             <Link

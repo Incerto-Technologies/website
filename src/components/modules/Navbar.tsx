@@ -7,14 +7,12 @@ import { navRoutes, productNavRoutes } from "@/data/navRoutes";
 import { v4 as uuid } from "uuid";
 import { AnimatePresence, motion } from "framer-motion";
 import { classNameMerge } from "@/utils/classNameMerge";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const router = useRouter();
   const [productNavbarOpen, setProductNavbarOpen] = useState(false);
   const [productNavbarOpenMobile, setProductNavbarOpenMobile] = useState(false);
-  const pathname = usePathname();
-  const [isHomePage] = useState(pathname == "/" || pathname == "/#contact");
 
   return (
     <>
@@ -197,14 +195,14 @@ export const Navbar = () => {
           >
             <div className="mt-[10px] rounded-2xl  bg-white bg-opacity-10 px-[45px] py-[28px] backdrop-blur-[50px] transition-all">
               <h5 className="text-[24px]">Products</h5>
-              <div className="mt-[28px] flex gap-5">
+              <div className="mt-[28px] flex flex-wrap gap-5">
                 {productNavRoutes.options.map(
                   ({ description, name, path, icon }) => (
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className="min-w-[170px] rounded-lg border border-white border-opacity-20 bg-white bg-opacity-20 py-[28px] pl-[16px]"
+                      className="w-1/4 min-w-[170px] rounded-lg border border-white border-opacity-20 bg-white bg-opacity-20 py-[28px] pl-[16px]"
                       key={name}
                     >
                       <Link href={path}>

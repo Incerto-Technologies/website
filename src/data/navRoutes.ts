@@ -23,6 +23,12 @@ export const productNavRoutes = {
       path: "/product?product_name=anomaly_detection",
       icon: Code,
     },
+    {
+      name: "Real user monitoring",
+      description: "Resolve the Problem",
+      path: "/product?product_name=rum",
+      icon: Code,
+    },
   ],
 };
 

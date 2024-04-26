@@ -36,8 +36,6 @@ export const WhyUsCard = ({
     }
   }, [isInView, setCurrentViewSlide, id]);
 
-  console.log(typeof description, " desctio");
-
   return (
     <div
       style={{

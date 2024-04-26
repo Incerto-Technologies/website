@@ -188,8 +188,120 @@ const anomalyDetection = {
     ],
   },
 };
+
+const rum = {
+  hero: {
+    title: "Real User Monitoring",
+    description:
+      "Detects and resolves infrastructure wide issues from a single dashboard",
+    icon_title: "Real User Monitoring",
+    icon: Code,
+    video: {
+      src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1708783447/RootCauseAnalysis_zv5n8x.mp4",
+      type: "video/mp4",
+      thumbnail: "/video/rca-thumbnail.webp",
+    },
+    btnLink: "/#contact",
+    btnName: "Contact us",
+  },
+  products: [
+    {
+      image: "/images/products/rum/SessionReplayWeb.mp4",
+      title: "Session/ Replays",
+      lists: [
+        "Trace the user request across service and infrastructure",
+        "Limitless custom dimension for each span.",
+        "Filter based on dimension, latency, errors, services and more",
+        "Correlated with corresponding logs",
+      ],
+    },
+    {
+      image: "/images/products/rum/HeatMapsWeb.mp4",
+      title: "Heatmaps",
+      lists: [
+        "See logs from every service",
+        `Every log is colour coded based on the severity text`,
+        "Pinpoint the logs via different filters present in realtime",
+        "High dimensionality data giving all the context without instrumentation",
+      ],
+    },
+    {
+      image: "/images/products/rum/WebTracesWeb.mp4",
+      title: "Web/ Traces",
+      lists: [
+        "Overview of various important metrics helping you to choose the time interval when the error occurred",
+        `Correlated traces, metrics and logs based on spanId, TraceID and time`,
+        "Search for any attribute, resource, substring in logs to filter relevant data",
+        "See the aggregated dimensions having errors e.g. ports, urls, traces, hosts",
+      ],
+    },
+    {
+      image: "/images/products/rum/MetricsWeb.mp4",
+      title: "Metrics",
+      lists: [
+        "See logs from every service",
+        `Every log is colour coded based on the severity text`,
+        "Pinpoint the logs via different filters present in realtime",
+        "High dimensionality data giving all the context without instrumentation",
+      ],
+    },
+    {
+      image: "/images/products/rum/EndToEndCorrelationWeb.mp4",
+      title: "End to End/ Correlations",
+      lists: [
+        "See logs from every service",
+        `Every log is colour coded based on the severity text`,
+        "Pinpoint the logs via different filters present in realtime",
+        "High dimensionality data giving all the context without instrumentation",
+      ],
+    },
+    {
+      image: "/images/products/rum/UserAnalyticsWeb.mp4",
+      title: "User/ Analytics",
+      lists: [
+        "See logs from every service",
+        `Every log is colour coded based on the severity text`,
+        "Pinpoint the logs via different filters present in realtime",
+        "High dimensionality data giving all the context without instrumentation",
+      ],
+    },
+    {
+      image: "/images/products/rum/WebVitalsWeb.mp4",
+      title: "Web/ Vitals",
+      lists: [
+        "See logs from every service",
+        `Every log is colour coded based on the severity text`,
+        "Pinpoint the logs via different filters present in realtime",
+        "High dimensionality data giving all the context without instrumentation",
+      ],
+    },
+  ],
+  otherProducts: {
+    title: "Explore Our /Other Products",
+    products: [
+      {
+        icon: Cloud,
+        image: "/images/products/card.webp",
+        title: "Host mertics",
+        path: "/product?product_name=host_metrics",
+        description: "Monitor complete machine behavior",
+      },
+
+      {
+        icon: Document,
+        image: "/images/products/card.webp",
+        path: "/product?product_name=trace_and_logs",
+        title: "Distributed Tracing and Centralised Logging",
+        description:
+          "Detect and resolve infrastructure wide issues from a single dashboard",
+      },
+    ],
+  },
+};
+
 export const productData = {
   CloudMetrics,
   tracesAndLogs,
   anomalyDetection,
+  rum,
 };
