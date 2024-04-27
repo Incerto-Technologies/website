@@ -7,8 +7,12 @@ import { WhyUsSlider } from "@/components/modules/WhyUsSlider";
 export const StickyContainer = () => {
   const [currentViewSlide, setCurrentViewSlide] = useState(0);
   return (
-    <div>
-      <div className="relative mx-auto mt-[160px] hidden w-5/6 justify-center gap-14 px-5 lg:flex">
+    <div className="mt-[160px]">
+      <h3 className="mx-auto w-4/6 text-center font-bold leading-6 text-opacity-85 md:text-[40px] md:leading-[44px]">
+        Every trading platform is different.
+        <br /> Then why use the same cookie-cutter legacy SaaS tools?
+      </h3>
+      <div className="relative mx-auto mt-[50px] hidden w-5/6 justify-center gap-14 px-5 lg:flex">
         {/* Side bar */}
         <div className="w-[16px]">
           {/* <div className="top-sticky sticky  flex w-full scale-75 flex-col items-center justify-center gap-14 py-5 xl:scale-100"> */}
