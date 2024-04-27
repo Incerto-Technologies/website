@@ -11,15 +11,16 @@ export const Faq = ({ faq }: { faq: FAQ[] }) => {
   const [currentOpenIndex, setCurrentOpenIndex] = useState(0);
   return (
     <section className="px-10 py-10 sm:py-16">
-      <div className="mx-auto max-w-3xl space-y-4">
+      <div className="mx-auto max-w-3xl space-y-4 transition-transform duration-1000">
         {faq.map(({ question, answer }, index) => (
           <div
             key={index}
-            className="shadow-lg cursor-pointer rounded-2xl border border-accent outline-none transition-all duration-500 focus:outline-none lg:hover:bg-accent"
+            className="shadow-lg cursor-pointer rounded-2xl border border-accent transition-all duration-500 focus:outline-none lg:hover:bg-accent"
           >
             <button
+              className="flex w-full items-center justify-between px-4 py-5 outline-none  focus:outline-none sm:p-6"
               type="button"
-              className="flex w-full items-center justify-between px-4 py-5 sm:p-6"
+              aria-label={question}
               onClick={() => {
                 if (currentOpenIndex === index) {
                   setCurrentOpenIndex(-1);
