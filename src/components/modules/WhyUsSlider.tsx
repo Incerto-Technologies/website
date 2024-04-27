@@ -133,18 +133,9 @@ export const WhyUsSlider = ({
               <div>
                 <div className="mt-[22px]">
                   <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
-                    Problems
-                  </h4>
-                  <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
                     {/* @ts-ignore */}
-                    {Cards.data[activeImageIndex].description.problems.map(
-                      (line: string, index: number) => (
-                        <li className="ml-[17px]" key={index}>
-                          {line}
-                        </li>
-                      ),
-                    )}
-                  </ul>
+                    {Cards.data[activeImageIndex].description.problems}
+                  </h4>
                 </div>
                 <div className="mt-[22px]">
                   <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">

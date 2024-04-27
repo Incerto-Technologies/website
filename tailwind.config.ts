@@ -58,6 +58,5 @@ const config: Config = {
       "3xl": "0 0 300px rgba(0, 255, 153, 0.3)",
     },
   },
-  plugins: [],
 };
 export default config;

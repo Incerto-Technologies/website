@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { ICard } from "./TestimonialCarousel";
 import { Button } from "../elements/Button";
+import Link from "next/link";
 
 export const TestimonialCard = ({
   profile,
-  companyLogo,
   message,
   name,
   position,
@@ -36,15 +36,12 @@ export const TestimonialCard = ({
         </div>
         <div className="hidden md:block">
           {/* <div className="hidden md:block"> */}
-          <Button className="h-[46px] w-[121px] rounded-[10px] py-0">
-            <Image
-              src={companyLogo}
-              width={100}
-              height={100}
-              alt={position}
-              className="object-contian h-full w-full py-1"
-            />
-          </Button>
+          <Link
+            href={"/blog"}
+            className="h-[46px] w-[121px] rounded-[10px] bg-accent px-[18px] py-2.5 font-bold"
+          >
+            Blog
+          </Link>
         </div>
       </div>
     </div>

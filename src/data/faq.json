@@ -1,0 +1,28 @@
+{
+  "brokerage": {
+    "name": "FAQ about brokerage",
+    "description": "Lorem Ipsum is simply dummy",
+    "faq": [
+      {
+        "question": "What specific regulatory compliance standards does Incerto's observability solution adhere to?",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "question": "How does Incerto ensure data security and privacy for brokerage firms?",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "question": "Can Incerto's platform integrate with our existing brokerage systems and tools?",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "question": "What level of support and training does Incerto provide for implementing and using the observability solution?",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "question": "What are the pricing options and packages available for brokerage firms interested in Incerto's observability platform?",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      }
+    ]
+  }
+}

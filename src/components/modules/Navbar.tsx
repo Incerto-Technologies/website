@@ -3,11 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight } from "../elements/icons/ArrowRight";
-import { navRoutes, productNavRoutes } from "@/data/navRoutes";
+import {
+  navRoutes,
+  productNavRoutes,
+  solutionsNavRoutes,
+} from "@/data/navRoutes";
 import { v4 as uuid } from "uuid";
 import { AnimatePresence, motion } from "framer-motion";
 import { classNameMerge } from "@/utils/classNameMerge";
 import { useRouter } from "next/navigation";
+
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const router = useRouter();
@@ -155,6 +160,31 @@ export const Navbar = () => {
               }}
             >
               {productNavRoutes.name}
+            </div>
+
+            <div className="group relative mr-[60px] inline h-full items-center justify-center bg-transparent py-[21px]">
+              <p className="cursor-pointer">{solutionsNavRoutes.name}</p>
+              <div className="fixed top-[60px] hidden rounded-2xl bg-primary px-[45px] py-[18px] transition-all group-hover:block">
+                {solutionsNavRoutes.options.map((col, index) => (
+                  <div key={index} className="py-5">
+                    <h5 className="text-[24px] font-semibold">{col.name}</h5>
+                    <div className="mt-2 flex flex-col gap-3">
+                      {col.links.map((link) => (
+                        <Link
+                          key={link.path}
+                          href={link.path}
+                          className="group/link flex items-center gap-5 text-[18px] transition-all duration-300"
+                        >
+                          <div className="h-5 w-5 rounded-full bg-accent group-hover/link:bg-accent-light"></div>
+                          <p className="group-hover/link:text-accent-light">
+                            {link.name}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <ul className="flex h-full items-center gap-x-[60px] py-2.5">

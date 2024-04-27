@@ -3,10 +3,7 @@
     {
       "title": "Compliance",
       "description": {
-        "problems": [
-          "Painful to pinpoint the relevant data asked by Auditors",
-          "Takes days to fetch from archival/blob storage"
-        ],
+        "problems": "Auditing is cumbersome, demanding time and effort to retrieve the requested data.",
         "solution": [
           "We implements efficient data store and auditor friendly dashboards",
           "Easily retrieve any data requested by the auditors",
@@ -22,10 +19,7 @@
     {
       "title": "Customer Satisfaction",
       "description": {
-        "problems": [
-          "Understanding users pain point is a daunting task",
-          "Resolving issue requires back and forth b/w support team and users"
-        ],
+        "problems": "Solving the support tickets requires a lot of back and forth with users.",
         "solution": [
           "Get alerts when any user faces errors",
           "Session Replay allowing seamless resolution",
@@ -39,10 +33,7 @@
     {
       "title": "Analytics and Reporting",
       "description": {
-        "problems": [
-          "Analytical queries taking hours due to transactional databases",
-          "Affecting data analysis and user accessing historical data"
-        ],
+        "problems": "Analytical queries are slow with older databases and systems especially for generating contract notes, trade books, P&L",
         "solution": [
           "Effective storage using OLAP S3 backed database",
           "Query time in sub second from hours",
@@ -57,10 +48,7 @@
     {
       "title": "Observability",
       "description": {
-        "problems": [
-          "Problem with sharing data due to compliance",
-          "High costs from observability vendors"
-        ],
+        "problems": "Can’t share data due to compliance issues",
         "solution": [
           "On infra observability with personalized dashboards",
           "85% recurring vendor cost cut",

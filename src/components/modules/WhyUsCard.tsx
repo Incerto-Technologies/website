@@ -8,7 +8,7 @@ export type StickyProps = {
   description:
     | string
     | {
-        problems: string[];
+        problems: string;
         solution: string[];
       };
   image: string;
@@ -52,15 +52,8 @@ export const WhyUsCard = ({
           <div>
             <div className="mt-[22px]">
               <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
-                Problems
+                {description.problems}
               </h4>
-              <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
-                {description.problems.map((line: string, index: number) => (
-                  <li className="ml-[17px]" key={index}>
-                    {line}
-                  </li>
-                ))}
-              </ul>
             </div>
             <div className="mt-[22px]">
               <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
