@@ -34,10 +34,17 @@ export const productNavRoutes = {
 
 export const solutionsNavRoutes = {
   name: "Solution",
+  description: "lorem loremloremlorem",
   options: [
     {
       name: "By industry",
-      links: [{ name: "Brokerage", path: "/solution/brokerage" }],
+      links: [
+        {
+          name: "Brokerage",
+          path: "/solution/brokerage",
+          description: "lorem loremloremlorem",
+        },
+      ],
     },
   ],
 };

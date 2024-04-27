@@ -41,10 +41,10 @@ export const WhyUsCard = ({
       style={{
         position: "sticky",
       }}
-      className="top-sticky sticky flex h-[450px] w-full max-w-[980px] scale-90 items-center justify-between  rounded-[20px]  bg-[#121815] px-[63px] py-[68px]"
+      className="top-sticky sticky flex h-[460px] w-full max-w-[980px] scale-[0.95] items-center justify-between  rounded-[20px]  bg-[#121815] px-[63px] py-[68px]"
       ref={ref}
     >
-      <div className="w-3/4">
+      <div className="w-full">
         <h1 className="font-medium leading-6 text-[#EDEDED] text-opacity-85 md:text-[40px] md:font-bold md:leading-[44px]">
           {title}
         </h1>
@@ -57,7 +57,7 @@ export const WhyUsCard = ({
             </div>
             <div className="mt-[22px]">
               <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
-                Solution
+                The Incerto edge:
               </h4>
               <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
                 {description.solution.map((line: string, index: number) => (
@@ -80,7 +80,7 @@ export const WhyUsCard = ({
         )}
       </div>
       {/* <div className="flex h-full w-full items-center justify-end overflow-hidden p-4"> */}
-      <div className="flex h-full w-[340px] items-center justify-end overflow-hidden">
+      <div className="flex h-full w-[320px] items-center justify-end overflow-hidden">
         <Image
           width={1200}
           data-id={id}

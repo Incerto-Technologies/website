@@ -7,7 +7,7 @@ type Props = {
 
 export const CustomerLogo = ({ src, alt }: Props) => {
   return (
-    <div className="mx-[35px] h-[75px] w-auto opacity-70 md:mx-[50px]">
+    <div className="mx-[35px] h-[60px] w-auto opacity-70 md:mx-[50px]">
       <Image
         src={src}
         alt={alt}

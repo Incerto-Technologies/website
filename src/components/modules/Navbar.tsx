@@ -15,10 +15,13 @@ import { useRouter } from "next/navigation";
 
 export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const router = useRouter();
   const [productNavbarOpen, setProductNavbarOpen] = useState(false);
   const [productNavbarOpenMobile, setProductNavbarOpenMobile] = useState(false);
 
+  const [solutionNavbarOpen, setSolutionNavbarOpen] = useState(false);
+  const [solutionNavbarOpenMobile, setSolutionNavbarOpenMobile] =
+    useState(false);
+  const router = useRouter();
   return (
     <>
       <header
@@ -125,8 +128,47 @@ export const Navbar = () => {
                       </div>
                     )}
                   </AnimatePresence>
+                  <div className="h-[1px] w-full bg-[#373737]"></div>
+                  <div
+                    onClick={() => {
+                      setSolutionNavbarOpenMobile(!solutionNavbarOpenMobile);
+                    }}
+                    className="flex w-full items-center justify-between font-gotham leading-8 tracking-[-0.48px]"
+                  >
+                    <p>{solutionsNavRoutes.name}</p> <ArrowRight />
+                  </div>
+                  <AnimatePresence>
+                    {solutionNavbarOpenMobile && (
+                      <div className="mt-[30px] flex flex-col gap-[28px]">
+                        {solutionsNavRoutes.options.map(({ name, links }) => (
+                          <motion.div
+                            initial={{ x: -400 }}
+                            animate={{ x: 0, transitionBehavior: "ease-in" }}
+                            key={uuid()}
+                            onClick={() => {
+                              setNavbarOpen(false);
+                            }}
+                          >
+                            <div>
+                              {links.map((link) => (
+                                <Link
+                                  className="flex w-full items-center gap-[8px]"
+                                  href={link.path}
+                                  key={link.path}
+                                >
+                                  <p className="leading-[20px] tracking-[0.32px]">
+                                    {link.name}
+                                  </p>
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    )}
+                  </AnimatePresence>
+                  <div className="my-[18px] h-[1px] w-full bg-[#373737]"></div>
                   <ul>
-                    <div className="my-[18px] h-[1px] w-full bg-[#373737]"></div>
                     {navRoutes.map(({ path, name }) => (
                       <li key={uuid()}>
                         <Link
@@ -162,29 +204,19 @@ export const Navbar = () => {
               {productNavRoutes.name}
             </div>
 
-            <div className="group relative mr-[60px] inline h-full items-center justify-center bg-transparent py-[21px]">
-              <p className="cursor-pointer">{solutionsNavRoutes.name}</p>
-              <div className="fixed top-[60px] hidden rounded-2xl bg-primary px-[45px] py-[18px] transition-all group-hover:block">
-                {solutionsNavRoutes.options.map((col, index) => (
-                  <div key={index} className="py-5">
-                    <h5 className="text-[24px] font-semibold">{col.name}</h5>
-                    <div className="mt-2 flex flex-col gap-3">
-                      {col.links.map((link) => (
-                        <Link
-                          key={link.path}
-                          href={link.path}
-                          className="group/link flex items-center gap-5 text-[18px] transition-all duration-300"
-                        >
-                          <div className="h-5 w-5 rounded-full bg-accent group-hover/link:bg-accent-light"></div>
-                          <p className="group-hover/link:text-accent-light">
-                            {link.name}
-                          </p>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div
+              className="mr-[60px] inline h-full cursor-pointer items-center justify-center py-[21px]"
+              onMouseEnter={() => {
+                setSolutionNavbarOpen(true);
+              }}
+              onMouseLeave={() => {
+                setSolutionNavbarOpen(false);
+              }}
+              onClick={() => {
+                setSolutionNavbarOpen(!solutionNavbarOpen);
+              }}
+            >
+              {solutionsNavRoutes.name}
             </div>
 
             <ul className="flex h-full items-center gap-x-[60px] py-2.5">
@@ -247,6 +279,52 @@ export const Navbar = () => {
                     </motion.div>
                   ),
                 )}
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {solutionNavbarOpen && (
+          <motion.div
+            className="fixed top-[68px] z-[99] w-full max-w-[640px] bg-transparent transition-all"
+            key="product-nav"
+            onMouseEnter={() => {
+              setSolutionNavbarOpen(true);
+            }}
+            onMouseLeave={() => {
+              setSolutionNavbarOpen(false);
+            }}
+            style={{
+              right: "calc( 40% - 250px )",
+            }}
+          >
+            <div className="mt-[10px] rounded-2xl  bg-white bg-opacity-10 px-[45px] py-[28px] backdrop-blur-[50px] transition-all">
+              <h5 className="text-[24px] font-bold">Solution</h5>
+              <div className="flex flex-wrap gap-5">
+                {solutionsNavRoutes.options.map(({ name, links }) => (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    key={name}
+                  >
+                    <h5 className="text-[24px] font-semibold text-accent">
+                      {name}
+                    </h5>
+                    <div className="mt-[28px] w-1/4  min-w-[170px] rounded-lg border border-white border-opacity-20 bg-white bg-opacity-20 py-[28px] pl-[16px]">
+                      {links.map((link) => (
+                        <Link href={link.path} key={link.path}>
+                          <h3 className="mt-[8px] w-full font-semibold leading-5 tracking-tight text-white">
+                            {link.name}
+                          </h3>
+                          <p className="mt-[6px] text-xs font-medium tracking-tight text-[#c9c9c9]">
+                            {link.description}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </motion.div>

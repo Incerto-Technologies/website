@@ -139,7 +139,7 @@ export const WhyUsSlider = ({
                 </div>
                 <div className="mt-[22px]">
                   <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
-                    Solution
+                    The Incerto edge:
                   </h4>
                   <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
                     {/* @ts-ignore */}
