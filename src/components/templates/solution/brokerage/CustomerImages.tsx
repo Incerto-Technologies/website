@@ -27,7 +27,7 @@ export const CustomerImages = () => {
           </div>
         ))}
       </div>
-      <h3 className="mt-[50px] text-center text-[32px] font-bold leading-6 text-opacity-85 md:text-[52px] md:leading-[44px]">
+      <h3 className="mt-[50px] text-center text-[38px] font-bold leading-[40px] text-opacity-85 md:text-[52px] md:leading-[44px]">
         Auditing made easy:
       </h3>
       <div className="mt-[50px] flex flex-wrap items-center justify-center gap-[30px]">

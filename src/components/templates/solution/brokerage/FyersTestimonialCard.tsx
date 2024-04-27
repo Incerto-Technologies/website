@@ -5,7 +5,7 @@ import { SingleTestimonialCard } from "@/components/modules/SingleTestimonialCar
 export const FyersTestimonialCard = () => {
   return (
     <div className="mt-[160px] flex flex-col items-center justify-center gap-10">
-      <h3 className="font-medium leading-6 text-opacity-85 md:text-[40px] md:font-bold md:leading-[44px]">
+      <h3 className="text-[32px] font-bold leading-6 text-opacity-85 md:text-[40px] md:font-bold md:leading-[44px]">
         Testimonial
       </h3>
       <SingleTestimonialCard testimonial={testimonial.data[0]} />
