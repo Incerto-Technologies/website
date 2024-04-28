@@ -89,7 +89,7 @@ export const Navbar = () => {
                   animate={{ opacity: 1, x: 0, transform: "ease-in" }}
                   exit={{ opacity: 0, x: -1000, transform: "ease-in" }}
                   className={
-                    "absolute right-0 top-[75px] z-[100] flex h-[500px] w-full flex-col gap-3 bg-black bg-opacity-20 px-5 pt-10 backdrop-blur-[50px]"
+                    "absolute right-0 top-[75px] z-[100] flex h-[500px] w-full flex-col gap-3 bg-black bg-opacity-20 px-5 pt-[18px] backdrop-blur-[50px]"
                   }
                 >
                   <div
@@ -133,7 +133,7 @@ export const Navbar = () => {
                     onClick={() => {
                       setSolutionNavbarOpenMobile(!solutionNavbarOpenMobile);
                     }}
-                    className="flex w-full items-center justify-between font-gotham leading-8 tracking-[-0.48px]"
+                    className="flex w-full items-center justify-between leading-8 tracking-[-0.48px]"
                   >
                     <p>{solutionsNavRoutes.name}</p> <ArrowRight />
                   </div>
@@ -167,7 +167,7 @@ export const Navbar = () => {
                       </div>
                     )}
                   </AnimatePresence>
-                  <div className="my-[18px] h-[1px] w-full bg-[#373737]"></div>
+                  <div className="h-[1px] w-full bg-[#373737]"></div>
                   <ul>
                     {navRoutes.map(({ path, name }) => (
                       <li key={uuid()}>
