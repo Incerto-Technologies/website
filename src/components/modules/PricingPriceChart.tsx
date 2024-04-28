@@ -11,7 +11,7 @@ export const PricingPriceChart = () => {
           alt="pricing_chart"
           height={1080}
           width={1080}
-          className="object-cover lg:w-4/5"
+          className="rounded-xl bg-[#121815] object-cover p-5 lg:w-4/5 lg:rounded-[20px] lg:p-[50px]"
         />
       </div>
     </div>

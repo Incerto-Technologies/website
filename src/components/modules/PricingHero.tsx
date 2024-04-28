@@ -6,10 +6,13 @@ export const PricingHero = () => {
       <div className="w-container flex flex-col items-center justify-center gap-[32px] px-6 md:gap-[34px]">
         <div className="mx-auto w-full lg:w-5/6 2xl:w-4/6">
           <h1 className="relative text-center font-gotham text-[30px] font-bold leading-[40px]  tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[50px] md:tracking-tightest">
-            Lorem Ipsum is simply dummy text of the
-            <span className="text-[#0F9]"> printing and typesetting</span>
+            Explore Our
+            <span className="text-[#0F9]"> Superior Pricing</span>
           </h1>
         </div>
+        <p className="text-center font-medium leading-7 tracking-wide md:leading-[26px]">
+          Elevate Your Observability at Affordable Pricing with Incerto!
+        </p>
         <div className="flex flex-col gap-[10px] md:flex-row">
           <Link
             href={"/#contact"}

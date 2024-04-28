@@ -7,6 +7,7 @@ import { PricingPriceChart } from "@/components/modules/PricingPriceChart";
 import { PricingSelector } from "@/components/modules/PricingSelector";
 import { GetInTouch } from "@/components/templates/About/GetInTouch";
 import { FooterBackground } from "@/components/templates/Home/FooterBackground";
+import { PricingFooter } from "@/components/templates/pricing/Footer";
 
 export default function page() {
   return (
@@ -18,8 +19,7 @@ export default function page() {
       <PricingSelector />
       <div className="mt-[150px] md:mt-[200px]">
         <FooterBackground className="">
-          {/* <FooterBackground className="bg-center md:bg-center xl:bg-top"> */}
-          <GetInTouch />
+          <PricingFooter />
           <Footer isBackground />
         </FooterBackground>
       </div>

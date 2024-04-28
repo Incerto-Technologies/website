@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ChangeEvent, ChangeEventHandler, useState } from "react";
 
 const inputDetails = [
@@ -105,10 +106,20 @@ export const PricingSelector = () => {
   return (
     <div className="w-container mx-auto my-[150px] w-[100%] lg:w-[90%]">
       <h3 className="text-center text-[24px] font-medium tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
-        <span className="font-bold text-[#0F9]">Pricing</span> Plans per Month
+        Monthly
+        <span className="font-bold text-[#0F9]"> Pricing Plan</span>
       </h3>
       <p className="text-center text-[14px] leading-[28px] tracking-[0.28] md:text-[16px] md:tracking-[0.32px]">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
+        {`Here's a cost comparison analysis for monitoring the entire tech stack
+        based on the publicly-available list price`}
+      </p>
+
+      <p className="text-center text-[14px] leading-[28px] tracking-[0.28] md:text-[16px] md:tracking-[0.32px]">
+        You can have a look at our complete cost comparison analysis{" "}
+        <Link href={""} className="text-blue-400 underline underline-offset-4">
+          here
+        </Link>
+        .
       </p>
       <div className="mt-[32px] flex flex-col-reverse gap-[48px] md:gap-[90px] lg:mt-[60px] lg:flex-row">
         <section className="mx-auto flex w-[90%] flex-col gap-[48px] lg:w-1/2 lg:gap-[23px]">

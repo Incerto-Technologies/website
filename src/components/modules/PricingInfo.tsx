@@ -16,20 +16,30 @@ export const PricingInfo = () => {
   return (
     <div className="w-container mt-[200px] flex w-[95%] flex-col justify-between gap-5 lg:flex-row">
       <div className="mx-auto w-full rounded-[12px] bg-[#121815] p-[28px] lg:w-1/2 lg:rounded-[20px] lg:p-[44px]">
-        <h3 className="text-[28px] leading-[32px] tracking-[-0.56px] text-[#888]  md:text-[44px] md:leading-[50px] md:tracking-tightest">
-          With Incerto, You
-          <span className="text-white"> don’t hav to worry</span> about
-        </h3>
-        <div className="mt-[40px] ">
+        <div className="lg:h-[130px]">
+          <h3 className="text-[28px] leading-[32px] tracking-[-0.56px] text-[#888]  md:text-[44px] md:leading-[50px] md:tracking-tightest">
+            With Incerto, <br /> You
+            <span className="text-white">
+              {" "}
+              don’t have <br /> to worry
+            </span>{" "}
+            about
+          </h3>
+        </div>
+        <div className="mt-[64px]">
           <InfoCard data={data.leftContainer} />
         </div>
       </div>
-      <div className="mx-auto aspect-[3/4] w-full rounded-[12px] bg-[url('/images/pricing/card.webp')] bg-cover bg-right-bottom bg-no-repeat p-[28px] lg:w-1/2 lg:rounded-[20px] lg:p-[44px]">
-        <h3 className="text-[28px] leading-[32px] tracking-[-0.56px] text-[#ffffff50]  md:text-[44px] md:leading-[50px] md:tracking-tightest">
-          Only pay forthe
-          <span className="text-white"> compute</span> about
-        </h3>
-        <div className="mt-[40px] ">
+      <div className="mx-auto aspect-[3.5/4] w-full rounded-[12px] bg-[url('/images/pricing/card.webp')] bg-cover bg-right-bottom bg-no-repeat p-[28px] lg:w-1/2 lg:rounded-[20px] lg:p-[44px]">
+        <div className="lg:h-[130px]">
+          <h3 className="text-[28px] leading-[32px] tracking-[-0.56px] text-[#ffffff50]  md:text-[44px] md:leading-[50px] md:tracking-tightest">
+            Only pay for
+            <br />
+            the
+            <span className="text-white"> compute</span>
+          </h3>
+        </div>
+        <div className="mt-[64px]">
           <InfoCard data={data.rightContainer} dark />
         </div>
       </div>
@@ -61,11 +71,11 @@ const InfoCard = ({
               key={i}
               className={
                 !dark
-                  ? `rounded-[25px] border border-[#0F937C] p-[12.5px] md:rounded-[40px] md:p-[20px]`
-                  : `rounded-[25px] bg-[#1E1E1E] p-[12.5px] md:rounded-[40px] md:p-[20px]`
+                  ? `rounded-[25px] border border-[#0F937C] p-[12.5px] md:rounded-[40px] md:p-[15px]`
+                  : `rounded-[25px] bg-[#1E1E1E] p-[12.5px] md:rounded-[40px] md:p-[15px]`
               }
             >
-              <p className="text-[12px] font-semibold leading-[30px] tracking-[-0.24px] md:text-[24px] md:leading-[40px] md:tracking-[-0.36px]">
+              <p className="ml-1 text-[12px] font-semibold leading-[30px] tracking-[-0.24px] md:text-[22px] md:leading-[25px] md:tracking-[-0.36px]">
                 {name}
               </p>
             </div>

@@ -1,11 +1,6 @@
 import Image from "next/image";
 import { Graph } from "../elements/icons/Graph";
-const list = [
-  "Lorem Ipsum is simply dummy text of the printing and typesetting",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting",
-];
+import pricing from "@/data/pricing.json";
 
 export const PricingComparison = () => {
   return (
@@ -32,7 +27,7 @@ export const PricingComparison = () => {
             Cost of telemetry data retention
           </h3>
           <div className="lg:[40px] mt-[32px] flex flex-col gap-[30px]">
-            {list.map((name) => (
+            {pricing.rentention.map((name) => (
               <div key={name} className="flex gap-[19px]">
                 <div className="w-10">
                   <Graph />
