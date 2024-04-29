@@ -20,7 +20,7 @@ const CustomersLogoData = [
     alt: "nuva-retail logo",
   },
   {
-    src: "/logos/customers/ving.svg",
+    src: "/logos/customers/ving.png",
     alt: "ving logo",
   },
 ];

@@ -45,23 +45,24 @@ export const WhyUsCard = ({
       ref={ref}
     >
       <div className="w-full">
-        <h1 className="font-medium leading-6 text-[#EDEDED] text-opacity-85 md:text-[40px] md:font-bold md:leading-[44px]">
-          {title}
-        </h1>
+        <h4 className="text-lg font-bold md:text-2xl ">{title}</h4>
         {typeof description != "string" ? (
           <div>
-            <div className="mt-[22px]">
-              <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+            <div className="mt-[12px]">
+              <h4 className="w-5/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
                 {description.problems}
               </h4>
             </div>
-            <div className="mt-[22px]">
-              <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+            <div className="mt-[12px]">
+              <p className="w-4/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
                 The Incerto edge:
-              </h4>
-              <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
+              </p>
+              <ul className="mt-[8px] list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
                 {description.solution.map((line: string, index: number) => (
-                  <li className="ml-[17px]" key={index}>
+                  <li
+                    className="ml-[17px] text-sm font-medium leading-[22px] tracking-wide text-[#959595]"
+                    key={index}
+                  >
                     {line}
                   </li>
                 ))}

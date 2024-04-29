@@ -125,27 +125,30 @@ export const WhyUsSlider = ({
             transition={sliderTextTransition}
             className="mt-5 px-[42px]"
           >
-            <h4 className="font-gotham text-[32px] font-bold leading-[38px] text-secondary text-opacity-85">
+            <h4 className="text-lg font-bold md:text-2xl ">
               {Cards.data[activeImageIndex].title}
             </h4>
 
             {typeof Cards.data[activeImageIndex].description == "object" ? (
               <div>
-                <div className="mt-[22px]">
-                  <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+                <div className="mt-[12px]">
+                  <h4 className="w-5/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
                     {/* @ts-ignore */}
                     {Cards.data[activeImageIndex].description.problems}
                   </h4>
                 </div>
-                <div className="mt-[22px]">
-                  <h4 className="text-[20px] font-extrabold tracking-[2%] text-[#888888]">
+                <div className="mt-[12px]">
+                  <h4 className="w-4/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
                     The Incerto edge:
                   </h4>
                   <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
                     {/* @ts-ignore */}
                     {Cards.data[activeImageIndex].description.solution.map(
                       (line: string, index: number) => (
-                        <li className="ml-[17px]" key={index}>
+                        <li
+                          className="ml-[17px] text-sm font-medium leading-[22px] tracking-wide text-[#959595]"
+                          key={index}
+                        >
                           {line}
                         </li>
                       ),

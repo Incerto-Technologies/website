@@ -93,7 +93,7 @@ export default async function page({ params }: Props) {
   const blog = data.blog as Blog;
 
   return (
-    <main className="h-full w-full bg-[#D5E5DF]  font-manrope">
+    <main className="h-full w-full bg-[#D5E5DF]">
       <div className="w-container">
         <GoPreviousPageButton />
       </div>

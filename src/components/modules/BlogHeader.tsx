@@ -3,6 +3,7 @@ import { Folder } from "../elements/icons/Folder";
 import { Calendar } from "../elements/icons/Calendar";
 import { Blog } from "@/types/Blogs";
 import Image from "next/image";
+import Link from "next/link";
 export const BlogHeader = (props: { blog: Blog }) => {
   const { title, author, tags, date } = props.blog;
   const inputDate = new Date(date);
@@ -17,7 +18,7 @@ export const BlogHeader = (props: { blog: Blog }) => {
   const formatedDate = inputDate.toLocaleDateString("en-US", options);
 
   return (
-    <div className="mb-[50px] mt-5 text-black md:mb-[100px] md:mt-[40px]">
+    <div className="mb-[20px] mt-5 text-black md:mb-[30px] md:mt-[40px]">
       <h1 className="text-[22px] font-bold leading-8 tracking-tighter md:text-[32px] md:leading-[46px] md:tracking-[-0.64px]">
         {`${title}`}
       </h1>
@@ -66,22 +67,24 @@ export const BlogHeader = (props: { blog: Blog }) => {
         </div>
       </div>
       <div>
-        <div className="mt-[30px] flex flex-col gap-[25px]  md:flex-row md:items-center">
-          <div className="w-full max-w-[250px]">
+        <div className="mt-[20px] flex flex-col gap-[10px]  md:flex-row md:items-center">
+          <div className="">
             <Image
               src={author.profile || ""}
               width={1080}
               height={1080}
-              className="w-[250px] rounded-[20px] object-cover"
+              className="w-[50px] rounded-full object-cover"
               alt={author.userName}
             />
           </div>
-          <div className="border-l-[3px] border-solid border-[#0F937C] pl-[15px]">
-            <h1 className="text-[22px] font-bold leading-9 text-[#0F937C] md:text-[32px]">
+          <div className="">
+            <p className="text-sm font-medium">Authored by</p>
+            <Link
+              href={"/about"}
+              className="text-[18px] font-bold text-[#0F937C] md:text-[20px]"
+            >
               {author.userName}
-            </h1>
-            <p className="mb-1 font-semibold">Authored by</p>
-            <p>{author.description || "hi"}</p>
+            </Link>
           </div>
         </div>
       </div>

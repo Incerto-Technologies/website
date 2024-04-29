@@ -8,9 +8,12 @@ export const StickyContainer = () => {
   const [currentViewSlide, setCurrentViewSlide] = useState(0);
   return (
     <div className="mt-[160px]">
-      <h3 className="mx-auto w-4/6 text-center font-bold leading-6 text-opacity-85 md:text-[40px] md:leading-[44px]">
+      <h3 className="mx-auto text-center font-gotham text-[24px] font-medium leading-[33px] tracking-[-0.48px] md:text-[34px] md:leading-[48px] md:tracking-[-0.68px]">
         Every trading platform is different.
-        <br /> Then why use the same cookie-cutter legacy SaaS tools?
+        <br />{" "}
+        <span className="text-accent-light">
+          Then why use the same cookie-cutter legacy SaaS tools?
+        </span>
       </h3>
       <div className="relative mx-auto mt-[50px] hidden w-5/6 justify-center gap-14 px-5 lg:flex">
         {/* Side bar */}

@@ -66,10 +66,10 @@ export default function Home() {
   return (
     <DefaultLayout>
       <Hero />
-      <Testimonial />
       <Features />
       <WhyUs />
       <FlowGraph />
+      <Testimonial />
       <FooterBackground>
         <Contact />
         <Footer isBackground />
