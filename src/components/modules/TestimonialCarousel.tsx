@@ -14,6 +14,7 @@ const Carousel = dynamic(() => import("react-spring-3d-carousel"), {
 
 export type ICard = {
   name: string;
+  link: string;
   message: string;
   companyLogo: string;
   position: string;

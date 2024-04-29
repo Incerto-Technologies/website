@@ -125,7 +125,7 @@ export const WhyUsSlider = ({
             transition={sliderTextTransition}
             className="mt-5 px-[42px]"
           >
-            <h4 className="text-lg font-bold md:text-2xl ">
+            <h4 className="text-lg font-bold text-accent-light md:text-2xl ">
               {Cards.data[activeImageIndex].title}
             </h4>
 
@@ -134,12 +134,12 @@ export const WhyUsSlider = ({
                 <div className="mt-[12px]">
                   <h4 className="w-5/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
                     {/* @ts-ignore */}
-                    {Cards.data[activeImageIndex].description.problems}
+                    {`"${Cards.data[activeImageIndex].description.problems}"`}
                   </h4>
                 </div>
                 <div className="mt-[12px]">
-                  <h4 className="w-4/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
-                    The Incerto edge:
+                  <h4 className="w-4/6 text-[16px] font-medium leading-7 tracking-wide text-accent-light">
+                    Solution
                   </h4>
                   <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
                     {/* @ts-ignore */}

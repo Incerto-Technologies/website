@@ -201,10 +201,10 @@ const RangeInputs = ({
               defaultValue={data.defaultValue}
               max={data.max}
               min={data.min}
-              className=" h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#0F937C] "
+              className=" selector-ranger-color h-2 w-full cursor-pointer appearance-none rounded-lg  bg-[#0F937C] "
             />
 
-            <span className="w-3/12 text-wrap rounded-xl bg-[#0F937C]  px-2 py-1 text-center text-[18px] font-bold tracking-[-0.36px] md:text-[24px] md:tracking-[-0.48px]">
+            <span className="w-4/12 text-wrap rounded-xl bg-[#0F937C]  px-2 py-1 text-center text-[18px] font-bold tracking-[-0.36px] md:text-[24px] md:tracking-[-0.48px]">
               {` ${inputData[data.name as keyof InputData]} ${data.unit}`}
               <sup>*</sup>
             </span>
@@ -214,3 +214,4 @@ const RangeInputs = ({
     </>
   );
 };
+// className=" h-2 w-full cursor-pointer appearance-none rounded-lg bg-[#0F937C] "

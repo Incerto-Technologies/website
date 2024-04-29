@@ -8,7 +8,9 @@ export const TestimonialCard = ({
   profile,
   message,
   name,
+  companyLogo,
   position,
+  link,
 }: ICard) => {
   return (
     <div
@@ -31,16 +33,27 @@ export const TestimonialCard = ({
           />
           <div>
             <h4 className="text-[18px] font-bold">{name}</h4>
-            <p className="text-[14px] text-[#929292]">{position}</p>
+            <div className="flex gap-2">
+              <p className="text-[14px] text-[#929292]">{position}</p>
+            </div>
           </div>
         </div>
         <div className="hidden md:block">
           {/* <div className="hidden md:block"> */}
           <Link
-            href={"/blog"}
-            className="h-[46px] w-[121px] rounded-[10px] bg-accent px-[18px] py-2.5 font-bold"
+            href={link}
+            className="flex h-[46px] w-full rounded-[10px] bg-accent px-[18px] py-2.5 font-bold"
           >
-            Blog
+            <div className="flex gap-2">
+              <Image
+                src={companyLogo}
+                alt="company logo"
+                width={400}
+                height={400}
+                className="max-w-[70px] object-contain"
+              />
+              <p>Case study</p>
+            </div>
           </Link>
         </div>
       </div>

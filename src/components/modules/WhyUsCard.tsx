@@ -45,17 +45,19 @@ export const WhyUsCard = ({
       ref={ref}
     >
       <div className="w-full">
-        <h4 className="text-lg font-bold md:text-2xl ">{title}</h4>
+        <h4 className="text-lg font-bold text-accent-light md:text-2xl">
+          {title}
+        </h4>
         {typeof description != "string" ? (
           <div>
             <div className="mt-[12px]">
               <h4 className="w-5/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
-                {description.problems}
+                {`"${description.problems}"`}
               </h4>
             </div>
             <div className="mt-[12px]">
-              <p className="w-4/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
-                The Incerto edge:
+              <p className="w-4/6 text-[16px] font-medium leading-7 tracking-wide text-accent-light">
+                Solution
               </p>
               <ul className="mt-[8px] list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
                 {description.solution.map((line: string, index: number) => (
@@ -81,7 +83,7 @@ export const WhyUsCard = ({
         )}
       </div>
       {/* <div className="flex h-full w-full items-center justify-end overflow-hidden p-4"> */}
-      <div className="flex h-full w-[320px] items-center justify-end overflow-hidden">
+      <div className="flex h-full w-[420px] items-center justify-end overflow-hidden">
         <Image
           width={1200}
           data-id={id}

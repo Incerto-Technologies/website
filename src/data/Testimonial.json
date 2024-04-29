@@ -6,6 +6,7 @@
       "position": "Senior VP Engineering at Fyers",
       "profile": "/logos/avatar/pranav-khambayatkar.webp",
       "companyLogo": "/logos/customers/fyers.svg",
+      "link": "/blog/india-s-leading-brokerage-firm-unlocks-85-cost-savings-using-incerto-s-industry-first-custom-observability-solution-powered-by-opentelemetry",
       "message": "Incerto has been a great help in transforming Fyers observability landscape. Their end-to-end implementation with open source technologies provided meaningful insights into our infrastructure. Real-time observability and proactive alerting mitigated issues swiftly, reducing MTTR (Mean time to resolve) significantly. Crucially, Incerto ensured seamless SIEM compliance and delivered a highly customized solution tailored to our unique needs."
     },
     {
@@ -14,6 +15,7 @@
       "position": "Co-Founder Discite Analytics & AI",
       "profile": "/logos/avatar/kunalsingh.webp",
       "companyLogo": "/logos/customers/discite.svg",
+      "link": "/blog",
       "message": "I would highly recommend them. They bring very high ownership to the projects they work on with no followups required, and they are really good problem solvers so its easy to trust them with some critical issues you are facing."
     },
     {
@@ -22,6 +24,7 @@
       "position": "Director Dhruv Technology Solutions",
       "profile": "/logos/avatar/sunilnaik.webp",
       "companyLogo": "/logos/customers/dhruv.svg",
+      "link": "/blog",
       "message": "This team has some rare skills with incredible flexibility and subject matter expertise. They have worked diligently to meet and exceed our expectations."
     },
     {
@@ -30,6 +33,7 @@
       "position": "CEO Ving",
       "profile": "/logos/avatar/adityapushpati.webp",
       "companyLogo": "/logos/customers/ving.svg",
+      "link": "/blog",
       "message": "Meticulous. That’s the word I would use to describe our engagement with Incerto Technologies. Their planning and attention to detail was commendable. The team looked into aspects that we missed and suggested the multiple options to choose from, in terms of approach to meet our product goals. Very professional and consultative."
     },
     {
@@ -38,6 +42,7 @@
       "position": "CEO Nuvo Retail",
       "profile": "/logos/avatar/vishalsharma.webp",
       "companyLogo": "/logos/customers/nuvoretail.svg",
+      "link": "/blog",
       "message": "Incerto has been instrumental in our app development efforts. Their expertise in software architecture has significantly improved our application. With a keen eye for detail, they addressed and resolved security issues, maintaining a strong and secure codebase. Incerto’s consultative approach makes them our preferred choice for tackling software challenges. Highly recommended for their proficiency and dedication!"
     }
   ]
