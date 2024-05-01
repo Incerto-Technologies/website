@@ -227,9 +227,9 @@ const anomalyDetection = {
 
 const rum = {
   hero: {
-    title: "Real User Monitoring",
-    description:
+    title:
       "Detects and resolves infrastructure wide issues from a single dashboard",
+    description: "",
     icon_title: "Real User Monitoring",
     icon: Code,
     video: {
