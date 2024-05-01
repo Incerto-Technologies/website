@@ -235,7 +235,7 @@ const rum = {
     video: {
       src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1714558453/SirRumDraft4_-_Made_with_Clipchamp_nralrn.mp4",
       type: "video/mp4",
-      thumbnail: "/video/rum-thumbnail.webp",
+      thumbnail: "/video/rum-thumbnail.png",
     },
     btnLink: "/#contact",
     btnName: "Contact us",
