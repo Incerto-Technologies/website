@@ -9,10 +9,6 @@ export const Contact = () => {
           {/* Find issues before your users do! */}
           Find Issues Before Your Users Do!
         </h3>
-        <p className="mx-auto mt-6 w-5/6 text-center text-sm font-medium leading-7 tracking-wide">
-          Drop your mail below and relax! We will contact you back as soon as
-          possible
-        </p>
       </div>
       <div className="mx-auto mt-14">
         <ContactCard />

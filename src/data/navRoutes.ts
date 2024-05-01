@@ -42,7 +42,7 @@ export const solutionsNavRoutes = {
         {
           name: "Brokerage",
           path: "/solution/brokerage",
-          description: "lorem loremloremlorem",
+          description: "Solutions for Brokerage firms",
         },
       ],
     },

@@ -29,7 +29,7 @@ export const ContactCard = () => {
         <div
           ref={containerRef}
           className="calendly-inline-widget absolute h-screen w-full lg:h-[90vh]"
-          data-url={`https://calendly.com/shikharsharma/incerto-s-observability-demo?month=2024-04`}
+          data-url={`https://calendly.com/shikhar-sharma-rz9m/incerto-s-observability-demo`}
         ></div>
         {loading && (
           <div className="shadow-2xl mx-auto my-10 flex h-full w-full items-center justify-center gap-3 rounded-3xl bg-accent shadow-sky-950 lg:h-[40vh] xl:w-1/2">

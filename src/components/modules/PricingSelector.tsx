@@ -156,7 +156,7 @@ const IncertoPricing = ({ inputData }: { inputData: InputData }) => {
 
 const OthersPricing = ({ inputData }: { inputData: InputData }) => {
   return (
-    <div className="grid grid-cols-3 grid-rows-2 gap-y-[32px] md:grid-cols-4 lg:grid-cols-2">
+    <div className="grid grid-cols-2 grid-rows-2 gap-y-[32px] md:grid-cols-4 lg:grid-cols-2">
       {OthersPricingDetails.map(({ name, color, getPrice }, i) => (
         <div key={name}>
           <h6
@@ -191,7 +191,7 @@ const RangeInputs = ({
           >
             {data.labelName}
           </label>
-          <div className="mb-[16px] mt-[18px] flex items-center gap-5 lg:mb-[12px] lg:mt-[10px]">
+          <div className="mb-[16px] mt-[18px] flex flex-col gap-5 lg:mb-[12px]  lg:mt-[10px] lg:flex-row lg:items-center">
             <input
               id={data.name}
               name={data.name}
@@ -204,7 +204,7 @@ const RangeInputs = ({
               className=" selector-ranger-color h-2 w-full cursor-pointer appearance-none rounded-lg  bg-[#0F937C] "
             />
 
-            <span className="w-4/12 text-wrap rounded-xl bg-[#0F937C]  px-2 py-1 text-center text-[18px] font-bold tracking-[-0.36px] md:text-[24px] md:tracking-[-0.48px]">
+            <span className="w-4/12 text-wrap rounded-xl bg-[#0F937C] px-2  py-1 text-center text-[18px] font-bold tracking-[-0.36px] md:min-w-[150px] md:text-[24px] md:tracking-[-0.48px]">
               {` ${inputData[data.name as keyof InputData]} ${data.unit}`}
               <sup>*</sup>
             </span>

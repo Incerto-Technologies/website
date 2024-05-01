@@ -233,9 +233,9 @@ const rum = {
     icon_title: "Real User Monitoring",
     icon: Code,
     video: {
-      src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1708783447/RootCauseAnalysis_zv5n8x.mp4",
+      src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1714558453/SirRumDraft4_-_Made_with_Clipchamp_nralrn.mp4",
       type: "video/mp4",
-      thumbnail: "/video/rca-thumbnail.webp",
+      thumbnail: "/video/rum-thumbnail.webp",
     },
     btnLink: "/#contact",
     btnName: "Contact us",

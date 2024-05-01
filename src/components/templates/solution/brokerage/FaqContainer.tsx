@@ -10,9 +10,6 @@ export const FaqContainer = () => {
           {data.brokerage.name.split("\b")[1]}
         </span>
       </h3>
-      <p className="mx-auto mt-8 w-3/4 text-center text-sm font-medium leading-6 tracking-wide text-[#959595] md:mt-[22px] md:w-4/6 md:text-[16px] md:leading-7 md:tracking-wide md:text-secondary">
-        {data.brokerage.description}
-      </p>
       <Faq faq={data.brokerage.faq} />
     </div>
   );
