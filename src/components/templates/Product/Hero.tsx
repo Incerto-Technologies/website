@@ -20,7 +20,7 @@ export const Hero = () => {
         </p>
       </div>
       <div className="mt-[40px] px-5">
-        <h1 className="text-center text-[34px] font-semibold leading-10 tracking-[-0.68px] md:text-[44px] md:leading-[60px]">
+        <h1 className="mx-auto max-w-[750px] text-center text-[34px] font-semibold leading-10 tracking-[-0.68px] md:text-[44px] md:leading-[60px]">
           <span className="product-title">
             {productData.hero.title.split("/")[0]}
           </span>{" "}

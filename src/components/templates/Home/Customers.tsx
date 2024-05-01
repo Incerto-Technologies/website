@@ -1,14 +1,10 @@
 // "use client";
-// import dynamic from "next/dynamic";
 import { CustomerLogo } from "../../modules/CustomerLogo";
 import Marquee from "react-fast-marquee";
-// const Marquee = dynamic(() =>
-//   import("react-fast-marquee").then((mod) => mod.default),
-// );
 
 const CustomersLogoData = [
   {
-    src: "/logos/customers/dhruv.png",
+    src: "/logos/customers/dhruv.svg",
     alt: "dhruv logo",
   },
   {
@@ -16,7 +12,11 @@ const CustomersLogoData = [
     alt: "fyers logo",
   },
   {
-    src: "/logos/customers/nuva-retail.png",
+    src: "/logos/customers/dhan.png",
+    alt: "dhan logo",
+  },
+  {
+    src: "/logos/customers/nuvoretail.svg",
     alt: "nuva-retail logo",
   },
   {
@@ -28,7 +28,7 @@ const CustomersLogoData = [
 export const Customers = () => {
   return (
     // <div className="mt-10 md:mt-[171px]">
-    <div className="mt-5">
+    <div className="">
       <Marquee autoFill>
         {CustomersLogoData.map((logo, index) => (
           <CustomerLogo

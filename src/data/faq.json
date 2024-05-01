@@ -1,0 +1,30 @@
+{
+  "brokerage": {
+    "name": "FAQ about brokerage",
+    "description": "Lorem Ipsum is simply dummy",
+    "faq": [
+      {
+        "question": "How does Incerto ensure data security and privacy for brokerage firms?",
+        "answer": "Incerto's solution sits completely on your infrastructure allowing 100% control and secrecy over the data. All the sensitive information is redacted when stored in clickhouse and stored with encryption inside a process. Moreover, we only use secured connections to transport telemetry data using GRPC."
+      },
+      {
+        "question": "Can Incerto's platform integrate with our existing brokerage systems and tools?",
+        "answer": "Yes. We use Opentelemetry which allows getting data from various sources via push or pull mechanism. Moreover, we write custom codes to make sure all the data you require available for querying and visualization. We have done integration with OMS vendor's libraries (Kamabla), Kafka, Redis, Mysql, Python, Java, Go, C++ services to name a few."
+      },
+      {
+        "question": "What level of support and training does Incerto provide for implementing and using the observability solution?",
+        "answer": " We provide 24 * 7 support for critical issues. We provide knowledge transfer to teams using hands-on tasks, documentation, and video tutorials.  We also manage the solution if you want to just focus on your core business and want 100% carefree solution. "
+      },
+      {
+        "question": "What are the pricing options and packages available for brokerage firms interested in Incerto's observability platform?",
+        "answer": "We charge for initial setup (depending upon work put and products used). If you choose to self manage it, we don't charge anything thereafter. We have  a fixed monthly charge depending upon the complexity of solution. For more please visit the pricing page"
+      }
+    ]
+  },
+  "temp": [
+    {
+      "question": "What specific regulatory compliance standards does Incerto's observability solution adhere to?",
+      "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }
+  ]
+}

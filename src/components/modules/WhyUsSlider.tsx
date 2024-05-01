@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
 
-import Cards from "@/data/WhyUs.json";
 import Image from "next/image";
 
 import { v4 as uuid } from "uuid";
+import { StickyProps } from "./WhyUsCard";
 
 const sliderVariants = {
   incoming: {
@@ -43,7 +43,11 @@ const sliderTextTransition = {
   stiffness: 300,
 };
 
-export const WhyUsSlider = () => {
+export const WhyUsSlider = ({
+  Cards,
+}: {
+  Cards: { data: Omit<StickyProps, "setCurrentViewSlide">[] };
+}) => {
   const [[imageCount, direction], setImageCount] = useState<
     [imageCount: number, direction: number]
   >([0, 0]);
@@ -121,19 +125,56 @@ export const WhyUsSlider = () => {
             transition={sliderTextTransition}
             className="mt-5 px-[42px]"
           >
-            <h4 className="font-gotham font-bold leading-6 text-secondary text-opacity-85">
+            <h4 className="text-lg font-bold text-accent-light md:text-2xl ">
               {Cards.data[activeImageIndex].title}
             </h4>
 
-            <p className="mt-3 text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
-              {Cards.data[activeImageIndex].description}
-            </p>
+            {typeof Cards.data[activeImageIndex].description == "object" ? (
+              <div>
+                <div className="mt-[12px]">
+                  <h4 className="w-5/6 text-[16px] font-medium leading-7 tracking-wide text-secondary">
+                    {/* @ts-ignore */}
+                    {`"${Cards.data[activeImageIndex].description.problems}"`}
+                  </h4>
+                </div>
+                <div className="mt-[12px]">
+                  <h4 className="w-4/6 text-[16px] font-medium leading-7 tracking-wide text-accent-light">
+                    Solution
+                  </h4>
+                  <ul className="list-disc text-[16px] font-bold leading-[26px] tracking-wide text-[#888]">
+                    {/* @ts-ignore */}
+                    {Cards.data[activeImageIndex].description.solution.map(
+                      (line: string, index: number) => (
+                        <li
+                          className="ml-[17px] text-sm font-medium leading-[22px] tracking-wide text-[#959595]"
+                          key={index}
+                        >
+                          {line}
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <p className="mt-3 text-sm leading-[18px] tracking-wide text-[#919191] md:text-[16px]">
+                {Cards.data[activeImageIndex].description
+                  .toString()
+                  .split("\n")
+                  .map((line: string, index: number) => (
+                    <React.Fragment key={index}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+              </p>
+            )}
           </motion.div>
         </motion.div>
       </div>
 
       <div className="mt-9 flex w-full items-center justify-center gap-4">
-        {Cards.data.map((image) => (
+        {Cards.data.map((image: any) => (
           <div
             key={image.title}
             onClick={() => skipToImage(image.id)}

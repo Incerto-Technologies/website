@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "title": "Compliance",
+      "description": {
+        "problems": "Auditing is cumbersome, demanding time and effort to retrieve the requested data.",
+        "solution": [
+          "We implements efficient data store and auditor friendly dashboards",
+          "Easily retrieve any data requested by the auditors",
+          "Maximum Storage Efficiency with 20x data compression",
+          "Sub-second data retrieval",
+          "Ensure complete data retention, identify missing information"
+        ]
+      },
+      "image": "/images/Stack/slide5.png",
+      "list": true,
+      "id": 0
+    },
+    {
+      "title": "Customer Satisfaction",
+      "description": {
+        "problems": "Solving the support tickets requires a lot of back and forth with users.",
+        "solution": [
+          "Get alerts when any user faces errors",
+          "Session Replay allowing seamless resolution",
+          "All performance metrics and UI - backend traces"
+        ]
+      },
+      "image": "/images/Stack/slide6.png",
+      "list": true,
+      "id": 1
+    },
+    {
+      "title": "Analytics and Reporting",
+      "description": {
+        "problems": "Analytical queries are slow with older databases and systems especially for generating contract notes, trade books, P&L",
+        "solution": [
+          "Effective storage using OLAP S3 backed database",
+          "Query time in sub second from hours",
+          "Leverage custom data pattern",
+          "Storage reduced 30x"
+        ]
+      },
+      "image": "/images/Stack/slide4.png",
+      "list": true,
+      "id": 2
+    },
+    {
+      "title": "Observability",
+      "description": {
+        "problems": "Can’t share data due to compliance issues",
+        "solution": [
+          "On infra observability with personalized dashboards",
+          "85% recurring vendor cost cut",
+          "Right observability Practices"
+        ]
+      },
+      "image": "/images/Stack/slide2.png",
+      "list": true,
+      "id": 3
+    }
+  ]
+}

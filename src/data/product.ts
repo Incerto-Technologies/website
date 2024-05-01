@@ -2,6 +2,42 @@ import { Cloud } from "@/components/elements/icons/Cloud";
 import { Code } from "@/components/elements/icons/Code";
 import { Document } from "@/components/elements/icons/Document";
 
+const productsBreif = [
+  {
+    id: 0,
+    title: "Distributed Tracing and Centralised Logging",
+    icon: Document,
+    image: "/images/products/card.webp",
+    description:
+      "Detect and resolve infrastructure wide issues from a single dashboard",
+    path: "/product?product_name=trace_and_logs",
+  },
+  {
+    id: 1,
+    icon: Code,
+    image: "/images/products/card.webp",
+    title: "Root Cause Analysis",
+    description: "Dynamically narrow down on root cause.",
+    path: "/product?product_name=anomaly_detection",
+  },
+  {
+    id: 2,
+    icon: Cloud,
+    image: "/images/products/card.webp",
+    title: "Host mertics",
+    path: "/product?product_name=host_metrics",
+    description: "Monitor complete machine behavior",
+  },
+  {
+    id: 3,
+    icon: Cloud,
+    image: "/images/products/card.webp",
+    title: "Host mertics",
+    path: "/product?product_name=host_metrics",
+    description: "Monitor complete machine behavior",
+  },
+];
+
 const CloudMetrics = {
   hero: {
     title: "Host/ metrics",
@@ -188,8 +224,115 @@ const anomalyDetection = {
     ],
   },
 };
+
+const rum = {
+  hero: {
+    title:
+      "Detects and resolves infrastructure wide issues from a single dashboard",
+    description: "",
+    icon_title: "Real User Monitoring",
+    icon: Code,
+    video: {
+      src: "https://res.cloudinary.com/drghyxg2r/video/upload/v1714558453/SirRumDraft4_-_Made_with_Clipchamp_nralrn.mp4",
+      type: "video/mp4",
+      thumbnail: "/video/rum-thumbnail.webp",
+    },
+    btnLink: "/#contact",
+    btnName: "Contact us",
+  },
+  products: [
+    {
+      image: "/images/products/rum/SessionReplayWeb.mp4",
+      title: "Session/ Replays",
+      lists: [
+        "Record Interactions:\b Capture user actions in your app for analysis.",
+        "Targeted Retrieval:\b Retrieve specific sessions by user ID and timestamp.",
+        "Event Insights:\b Get detailed breakdowns of user actions during replays.",
+        "API Tracking:\b Trace API calls alongside user interactions for seamless journey analysis. ",
+      ],
+    },
+    {
+      image: "/images/products/rum/HeatMapsWeb.mp4",
+      title: "Heatmaps",
+      lists: [
+        "Visualization:\b Visualize user engagement, optimizing web page design.",
+        `Increase Engagement:\b Guide content and marketing strategies for audience engagement.`,
+        "Identify Trends:\b Refine content for audience preferences.",
+        "Coldspots:\b Highlight areas needing attention for improved engagement.",
+      ],
+    },
+    {
+      image: "/images/products/rum/WebTracesWeb.mp4",
+      title: "Web/ Traces",
+      lists: [
+        "Filtering Options:\b Filter via span attributes and resource attributes for precise analysis.",
+        "Comprehensive Visibility:\b Access all user session traces and logs to gain contextual insights into specific issues or errors.",
+      ],
+    },
+    {
+      image: "/images/products/rum/MetricsWeb.mp4",
+      title: "Metrics",
+      lists: [
+        "Load Time Insights:\b See how fast users access your site, without any changes made to speed it up.",
+        "Request Count Transparency:\b Understand clearly how your server communicates with your site, without any optimization changes.",
+        "Rendering Analysis:\b Know how different elements affect how quickly your site shows up on screen, without any tweaks.",
+        "Content Visibility:\b Learn how quickly your content appears to users, without any adjustments to speed.",
+      ],
+    },
+    {
+      image: "/images/products/rum/EndToEndCorrelationWeb.mp4",
+      title: "End to End/ Correlations",
+      lists: [
+        "Effortless Sync:\b Sync every API request and response, ensuring no gaps in tracing between frontend and backend.",
+        "Holistic Performance Insight:\b Enable faster issue resolution and performance optimization.",
+      ],
+    },
+    {
+      image: "/images/products/rum/UserAnalyticsWeb.mp4",
+      title: "User/ Analytics",
+      lists: [
+        "Session Tracking:\b Monitor the total number of sessions to gauge user engagement and measure overall site activity.",
+        "Page View Analysis:\b Understand user navigation patterns and identify popular content areas or potential bottlenecks.",
+        "Error Monitoring:\b Keep a close eye on errors encountered by users to promptly address issues and ensure a smooth browsing experience.",
+        "Action Tracking:\b Analyze actions performed within each session to gain insights into user behavior and meet users' needs effectively.",
+      ],
+    },
+    {
+      image: "/images/products/rum/WebVitalsWeb.mp4",
+      title: "Web/ Vitals",
+      lists: [
+        "Largest Contentful Paint:\b Measure page loading speed with the largest content element.",
+        "First Input Delay: Gauge:\b User interactivity by assessing response delay.",
+        "Cumulative Layout Shift:\b Evaluate visual stability by quantifying layout shifts during page load.",
+      ],
+    },
+  ],
+  otherProducts: {
+    title: "Explore Our /Other Products",
+    products: [
+      {
+        icon: Cloud,
+        image: "/images/products/card.webp",
+        title: "Host mertics",
+        path: "/product?product_name=host_metrics",
+        description: "Monitor complete machine behavior",
+      },
+
+      {
+        icon: Document,
+        image: "/images/products/card.webp",
+        path: "/product?product_name=trace_and_logs",
+        title: "Distributed Tracing and Centralised Logging",
+        description:
+          "Detect and resolve infrastructure wide issues from a single dashboard",
+      },
+    ],
+  },
+};
+
 export const productData = {
   CloudMetrics,
   tracesAndLogs,
   anomalyDetection,
+  rum,
 };

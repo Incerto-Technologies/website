@@ -45,7 +45,7 @@ export const WhyUs = () => {
       </div>
 
       {/* Mobile and Table */}
-      <WhyUsSlider />
+      <WhyUsSlider Cards={data} />
     </section>
   );
 };

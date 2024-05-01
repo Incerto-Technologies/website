@@ -1,10 +1,9 @@
-import { Activity } from "@/components/elements/icons/Activity";
 import { Cloud } from "@/components/elements/icons/Cloud";
 import { Code } from "@/components/elements/icons/Code";
 import { Document } from "@/components/elements/icons/Document";
 
 export const productNavRoutes = {
-  name: "Our Products",
+  name: "Products",
   options: [
     {
       name: "Host metrics",
@@ -24,12 +23,39 @@ export const productNavRoutes = {
       path: "/product?product_name=anomaly_detection",
       icon: Code,
     },
+    {
+      name: "Real user monitoring",
+      description: "Resolve the Problem",
+      path: "/product?product_name=rum",
+      icon: Code,
+    },
+  ],
+};
+
+export const solutionsNavRoutes = {
+  name: "Solution",
+  description: "lorem loremloremlorem",
+  options: [
+    {
+      name: "By industry",
+      links: [
+        {
+          name: "Brokerage",
+          path: "/solution/brokerage",
+          description: "Solutions for Brokerage firms",
+        },
+      ],
+    },
   ],
 };
 
 export const navRoutes = [
   {
-    name: "About us",
+    name: "Pricing",
+    path: "/pricing",
+  },
+  {
+    name: "About Us",
     path: "/about",
   },
   {

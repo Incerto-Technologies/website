@@ -2,13 +2,15 @@
 import Image from "next/image";
 import { ICard } from "./TestimonialCarousel";
 import { Button } from "../elements/Button";
+import Link from "next/link";
 
 export const TestimonialCard = ({
   profile,
-  companyLogo,
   message,
   name,
+  companyLogo,
   position,
+  link,
 }: ICard) => {
   return (
     <div
@@ -31,20 +33,28 @@ export const TestimonialCard = ({
           />
           <div>
             <h4 className="text-[18px] font-bold">{name}</h4>
-            <p className="text-[14px] text-[#929292]">{position}</p>
+            <div className="flex gap-2">
+              <p className="text-[14px] text-[#929292]">{position}</p>
+            </div>
           </div>
         </div>
         <div className="hidden md:block">
           {/* <div className="hidden md:block"> */}
-          <Button className="h-[46px] w-[121px] rounded-[10px] py-0">
-            <Image
-              src={companyLogo}
-              width={100}
-              height={100}
-              alt={position}
-              className="object-contian h-full w-full py-1"
-            />
-          </Button>
+          <Link
+            href={link}
+            className="flex h-[46px] w-full rounded-[10px] bg-accent px-[18px] py-2.5 font-bold"
+          >
+            <div className="flex gap-2">
+              <Image
+                src={companyLogo}
+                alt="company logo"
+                width={400}
+                height={400}
+                className="max-w-[70px] object-contain"
+              />
+              <p>Case study</p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

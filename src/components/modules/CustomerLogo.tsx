@@ -7,12 +7,12 @@ type Props = {
 
 export const CustomerLogo = ({ src, alt }: Props) => {
   return (
-    <div className="mx-[35px] h-[50px] opacity-70 md:mx-[80px]">
+    <div className="mx-[35px] h-[60px] w-auto opacity-70 md:mx-[50px]">
       <Image
         src={src}
         alt={alt}
-        width={"100"}
-        height={"48"}
+        width={"300"}
+        height={"1080"}
         loading="lazy"
         className="h-full object-contain object-center"
       />

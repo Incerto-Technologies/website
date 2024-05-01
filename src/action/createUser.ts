@@ -39,10 +39,9 @@ export const createUser = async (user: {
 
     const [isMailSent, newUser] = await Promise.all([
       sendMail(
-        "Icerto verification",
+        "Incerto verification",
         `
 Dear Admin,
-
 Enthusiastic ${user.email.split("@")[0]} writer here, interested in contributing to Incerto Technologies! I would like to add some blogs. Kindly grant me access.
 Click here: https://${process.env.WEB_URL!}/login/verify/${verificationToken}  `,
       ),
