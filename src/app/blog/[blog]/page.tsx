@@ -40,7 +40,7 @@ import { getBlogByTitle } from "@/action/getBlogByTitle";
 import { Blog } from "@/types/Blogs";
 
 type Props = {
-  params: { slug: string };
+  params: { blog: string };
 };
 
 export const revalidate = 30;
@@ -48,14 +48,14 @@ export const revalidate = 30;
 export async function generateStaticParams() {
   const blogs = await getBlogs();
   return blogs.map((blog) => ({
-    slug: encodeURIComponent(
+    blog: encodeURIComponent(
       blog.title.replace(/\s+/g, "-").replace(/\./g, "").toLowerCase(),
     ),
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { blog } = await getBlogByTitle(params.slug);
+  const { blog } = await getBlogByTitle(params.blog);
 
   if (!blog) {
     return {
@@ -79,7 +79,7 @@ export default async function page({ params }: Props) {
   await connectDb();
 
   const [data, blogs] = await Promise.all([
-    getBlogByTitle(params.slug),
+    getBlogByTitle(params.blog),
     BlogModel.find({})
       .populate({ path: "author", model: UserModel })
       .limit(3)
@@ -93,7 +93,7 @@ export default async function page({ params }: Props) {
   const blog = data.blog as Blog;
 
   return (
-    <main className="h-full w-full bg-[#D5E5DF]">
+    <main className="h-full w-full bg-[#D5E5DF]  font-manrope">
       <div className="w-container">
         <GoPreviousPageButton />
       </div>
