@@ -1,9 +1,5 @@
-import { DefaultLayout } from "@/components/layouts/DefaultLayout";
-import { Hero } from "@/components/templates/Product/Hero";
-import { OtherProducts } from "@/components/templates/Product/OtherProducts";
-import { Products } from "@/components/templates/Product/Products";
 import { Metadata } from "next";
-import { Suspense } from "react";
+import { redirect } from "next/navigation";
 export const metadata: Metadata = {
   title: "Incerto's Traces and Logs: Correlated and blazing fast.",
   description:
@@ -15,14 +11,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function page() {
-  return (
-    <DefaultLayout>
-      <Suspense fallback={<>Loading</>}>
-        <Hero />
-        <Products />
-        <OtherProducts />
-      </Suspense>
-    </DefaultLayout>
-  );
+export default function page({
+  searchParams,
+}: {
+  searchParams: {
+    product_name: string;
+  };
+}) {
+  const productUrl = searchParams.product_name
+    ? `/product/${searchParams.product_name}`
+    : "/product/host_metrics";
+  redirect(productUrl);
 }

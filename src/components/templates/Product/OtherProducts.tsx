@@ -3,11 +3,10 @@ import Image from "next/image";
 import { v4 as uuid } from "uuid";
 import { FooterBackground } from "../Home/FooterBackground";
 import { Footer } from "@/components/modules/Footer";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { getProductData } from "@/utils/getProductData";
 import { useLenis } from "@studio-freight/react-lenis";
-export const OtherProducts = () => {
-  const searchParams = useSearchParams();
+export const OtherProducts = ({ productName }: { productName: string }) => {
   const lenis = useLenis(() => {});
 
   const router = useRouter();
@@ -16,7 +15,8 @@ export const OtherProducts = () => {
     lenis?.scrollTo(0);
   };
 
-  const productData = getProductData(searchParams.get("product_name"));
+  const productData = getProductData(productName);
+
   return (
     <section className="mt-[200px] bg-accent pt-[50px] md:pt-[70px]">
       <h3 className="text-center text-[24px] font-semibold tracking-tighter md:text-[34px] md:leading-[50px] md:tracking-[0.68px]">

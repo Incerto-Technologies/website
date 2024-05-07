@@ -1,14 +1,10 @@
-"use client";
 import React from "react";
 import Video from "next-video";
-import { useSearchParams } from "next/navigation";
 import { getProductData } from "@/utils/getProductData";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-export const Hero = () => {
-  const searchParams = useSearchParams();
-  const productData = getProductData(searchParams.get("product_name"));
-  const router = useRouter();
+export const Hero = ({ productName }: { productName: string }) => {
+  const productData = getProductData(productName);
+  console.log(productData.hero.title, productName);
   return (
     <div
       className={`bg-[url("/backgrounds/product-mobile.png")] bg-cover bg-no-repeat pt-[200px] md:bg-[url("/backgrounds/product.png")] md:bg-cover md:bg-left-top md:pt-[150px]`}
@@ -36,26 +32,18 @@ export const Hero = () => {
           >
             <p>{productData.hero.btnName}</p>
           </Link>
-          <button
-            onClick={() => {
-              router.push("/#contact");
-            }}
+          <Link
+            href={"/#contact"}
             className="rounded-[14px] bg-accent px-[22px] py-[12px] font-bold tracking-[1%] text-secondary transition-all duration-200  ease-in  hover:bg-[#035749]"
           >
             <div className="flex items-center justify-center gap-2.5">
               <p> Book a Demo</p>
             </div>
-          </button>
+          </Link>
         </div>
       </div>
 
       <div className="mx-auto mt-[145px] w-full max-w-[980px] overflow-hidden rounded-[20px] px-[20px] md:mt-[110px] md:px-10">
-        {/* <video controls>
-          <source
-            src={productData.hero.video.src}
-            type={productData.hero.video.type}
-          />
-        </video> */}
         <Video
           src={productData.hero.video.src}
           accentColor="#0F937C"
