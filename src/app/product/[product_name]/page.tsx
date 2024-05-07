@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: productData.hero.title.replaceAll("/", ""),
       description: productData.hero.description.replaceAll("/", ""),
+      images: [productData.hero.video.thumbnail],
     },
   };
 }
