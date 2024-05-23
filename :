@@ -118,7 +118,7 @@ export const PricingSelector = () => {
         <span className="font-bold text-[#0F9]"> Pricing Plan</span>
       </h3>
 
-      <p className="mt-4 text-center text-[14px] leading-[28px] tracking-[0.28] md:text-[16px] md:tracking-[0.32px]">
+      <p className="text-center text-[14px] leading-[28px] tracking-[0.28] md:text-[16px] md:tracking-[0.32px]">
         For more in-depth details{" "}
         <Link
           href={

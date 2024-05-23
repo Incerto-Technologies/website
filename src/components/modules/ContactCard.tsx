@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Loader } from "../elements/Loader";
 
@@ -38,11 +37,6 @@ export const ContactCard = () => {
           </div>
         )}
       </section>
-      <Script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async
-      />
     </>
   );
 };

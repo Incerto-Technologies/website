@@ -24,7 +24,7 @@ const productsBreif = [
     id: 2,
     icon: Cloud,
     image: "/images/products/card.webp",
-    title: "Host mertics",
+    title: "Host metrics",
     path: "/product?product_name=host_metrics",
     description: "Monitor complete machine behavior",
   },
@@ -32,7 +32,7 @@ const productsBreif = [
     id: 3,
     icon: Cloud,
     image: "/images/products/card.webp",
-    title: "Host mertics",
+    title: "Host metrics",
     path: "/product?product_name=host_metrics",
     description: "Monitor complete machine behavior",
   },
@@ -150,7 +150,7 @@ const tracesAndLogs = {
       {
         icon: Cloud,
         image: "/images/products/card.webp",
-        title: "Host mertics",
+        title: "Host metrics",
         description: "Monitor complete machine behavior",
         path: "/product?product_name=host_metrics",
       },
@@ -208,7 +208,7 @@ const anomalyDetection = {
       {
         icon: Cloud,
         image: "/images/products/card.webp",
-        title: "Host mertics",
+        title: "Host metrics",
         path: "/product?product_name=host_metrics",
         description: "Monitor complete machine behavior",
       },
@@ -313,7 +313,7 @@ const rum = {
       {
         icon: Cloud,
         image: "/images/products/card.webp",
-        title: "Host mertics",
+        title: "Host metrics",
         path: "/product?product_name=host_metrics",
         description: "Monitor complete machine behavior",
       },
@@ -322,7 +322,7 @@ const rum = {
         icon: Document,
         image: "/images/products/card.webp",
         path: "/product?product_name=trace_and_logs",
-        title: "Distributed Tracing and Centralised Logging",
+        title: "Distributed Tracing & Centralised Logging",
         description:
           "Detect and resolve infrastructure wide issues from a single dashboard",
       },

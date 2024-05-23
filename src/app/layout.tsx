@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 import { manrope } from "./fonts";
 import { ModalProvider } from "@/components/elements/ModalProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -58,6 +59,12 @@ export default function RootLayout({
           <ModalProvider>{children}</ModalProvider>
         </MomentumScroll>
         <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_GTAG!} />
+
+        <Script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async
+        />
       </body>
     </html>
   );
