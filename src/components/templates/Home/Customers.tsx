@@ -23,6 +23,10 @@ const CustomersLogoData = [
     src: "/logos/customers/ving.png",
     alt: "ving logo",
   },
+  {
+    src: "/logos/customers/Kevit.svg",
+    alt: "kevit logo",
+  },
 ];
 
 export const Customers = () => {
