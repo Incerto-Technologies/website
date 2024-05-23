@@ -149,7 +149,7 @@ export const ContactCard = () => {
   };
 
   return (
-    <section className="mx-auto w-full max-w-[400px] rounded-[20px] bg-[#121815] px-[18px] py-[38px] md:p-9">
+    <section className="rounded-[20px] bg-[#121815] px-[18px] py-[38px] md:p-9">
       <div>
         <Input
           labelName="Email"
