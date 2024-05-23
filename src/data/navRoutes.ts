@@ -14,13 +14,13 @@ export const productNavRoutes = {
   options: [
     {
       name: "Host Metrics",
-      description: "Infrastructure health",
+      description: "Infrastructure Health",
       path: "/product/host_metrics",
       icon: Cloud,
     },
     {
       name: "Trace and Logs",
-      description: "Detect the Problems ",
+      description: "Detect the Problem",
       path: "/product/trace_and_logs",
       icon: Document,
     },
@@ -32,7 +32,7 @@ export const productNavRoutes = {
     },
     {
       name: "Real User Monitoring",
-      description: "Monitor user experience",
+      description: "Monitor User Experience",
       path: "/product/rum",
       icon: Code,
     },

@@ -47,6 +47,7 @@ export async function POST(request: Request) {
       
       Best,
       Incerto Technologies`,
+        email
     );
 
     if (!isMailSent) {
