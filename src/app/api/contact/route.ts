@@ -47,7 +47,6 @@ export async function POST(request: Request) {
       
       Best,
       Incerto Technologies`,
-        email
     );
 
     if (!isMailSent) {
@@ -65,7 +64,7 @@ export async function POST(request: Request) {
     return Response.json(
       {
         message:
-          "Thanks for showing interest. Our engineers will reach back soon.",
+          "Thanks for showing interest. Our team will reach back to you soon.",
         success: true,
       },
       {
