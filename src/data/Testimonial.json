@@ -44,6 +44,15 @@
       "companyLogo": "/logos/customers/nuvoretail.svg",
       "link": "/blog",
       "message": "Incerto has been instrumental in our app development efforts. Their expertise in software architecture has significantly improved our application. With a keen eye for detail, they addressed and resolved security issues, maintaining a strong and secure codebase. Incerto’s consultative approach makes them our preferred choice for tackling software challenges. Highly recommended for their proficiency and dedication!"
+    },
+    {
+      "id": 5,
+      "name": "Dhruman Bhadeshiya",
+      "position": "CTO & Co-Founder",
+      "profile": "/logos/avatar/dhruman.jpeg",
+      "companyLogo": "/logos/customers/Kevit.svg",
+      "link": "/blog",
+      "message": "Transforming observability in the CPaaS sector, Kevit is setting new standards with Incerto’s custom-built observability platform. By migrating from New Relic, we have unlocked unparalleled cost efficiency, achieving a 90% reduction in monthly expenses and significant savings on cloud egress costs. Incerto’s tailored stack, featuring custom OTTL receiver components and S3 integrations, ensures seamless data retention for one year, meeting our stringent audit and compliance requirements. With complete data ownership our infrastructure is now optimised for peak performance. Kevit is proud to lead the way in advanced observability solutions, harnessing the power of Incerto to deliver exceptional results."
     }
   ]
 }
