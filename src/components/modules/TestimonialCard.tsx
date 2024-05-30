@@ -15,7 +15,7 @@ export const TestimonialCard = ({
   return (
     <div
       className={
-        "relative flex h-fit w-[300px] flex-col justify-center rounded-[20px] bg-[#121815] px-8 py-9 backdrop-blur-[27px] md:h-fit md:w-[632px] md:px-16 md:py-10"
+        "relative flex h-fit w-[300px] flex-col justify-center rounded-[20px] bg-[#121815] px-4 py-9 backdrop-blur-[27px] md:h-fit md:w-[632px] md:px-16 md:py-10"
       }
     >
       <div>
