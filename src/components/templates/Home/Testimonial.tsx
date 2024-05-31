@@ -52,7 +52,7 @@ export const Testimonial = () => {
         </h3>
       </div>
 
-      <div className="mx-auto mt-14 h-[700px] w-[99%] md:h-[400px] md:w-[500px] lg:mt-14 lg:w-[80%] lg:max-w-[900px]">
+      <div className="mx-auto mt-14 h-[550px] w-[99%] md:h-[400px] md:w-[500px] lg:mt-14 lg:w-[80%] lg:max-w-[900px]">
         <TestimonialCarousel
           cards={TestimonialCards}
           setCurrentCardId={setCurrentCardId}
@@ -66,7 +66,7 @@ export const Testimonial = () => {
         />
       </div>
 
-      <div className="mt-8 md:mt-2">
+      <div className="mt-4 md:mt-2">
         <TestimonialNavigator
           numberOfSlides={TestimonialCards.length}
           currentSlide={goToSlide}
