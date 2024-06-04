@@ -22,6 +22,7 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
   const { createBlog } = useTypedSelector((state) => state.blog);
 
   const [token, setToken] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
 
@@ -49,6 +50,12 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
   // if no token is found, redirect to login page
 
   const handleSubmit = async () => {
+    if(loading) 
+    {
+      alert("Loading...")
+      return;
+    }
+
     // validate the createblog object
     if (!createBlog) return;
 
@@ -76,6 +83,7 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
     });
 
     if (isError) return;
+    setLoading(true)
 
     let newBlog;
     // dispatch the createBlog action
@@ -91,6 +99,7 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
       });
     }
 
+    setLoading(false)
     alert(newBlog.message);
     if (newBlog.success) {
       router.push("/blog");
@@ -202,7 +211,7 @@ export const AddBlogForm = ({ isEdit = false, blog }: Props) => {
             handleSubmit();
           }}
         >
-          Save
+        {loading?"Loading...":"Save"}
         </Button>
       </div>
     </div>
