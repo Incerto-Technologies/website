@@ -11,6 +11,15 @@
     },
     {
       "id": 1,
+      "name": "Dhruman Bhadeshiya",
+      "position": "CTO & Co-Founder",
+      "profile": "/logos/avatar/dhruman.jpeg",
+      "companyLogo": "/logos/customers/Kevit.svg",
+      "link": "/blog",
+      "message": "Transforming observability in the CPaaS sector, Kevit is setting new standards with Incerto’s custom-built platform. Migrating from New Relic, we've achieved a 90% reduction in monthly expenses and significant savings on cloud egress costs. Incerto’s tailored stack ensures seamless data retention for one year, meeting our audit and compliance requirements. With complete data ownership, our infrastructure is now optimized for peak performance. Kevit is proud to lead the way in advanced observability solutions with Incerto."
+    },
+    {
+      "id": 2,
       "name": "Kunal Singh",
       "position": "Co-Founder Discite Analytics & AI",
       "profile": "/logos/avatar/kunalsingh.webp",
@@ -19,7 +28,7 @@
       "message": "I would highly recommend them. They bring very high ownership to the projects they work on with no followups required, and they are really good problem solvers so its easy to trust them with some critical issues you are facing."
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Sunil Naik",
       "position": "Director Dhruv Technology Solutions",
       "profile": "/logos/avatar/sunilnaik.webp",
@@ -28,7 +37,7 @@
       "message": "This team has some rare skills with incredible flexibility and subject matter expertise. They have worked diligently to meet and exceed our expectations."
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Aditya Pushpati",
       "position": "CEO Ving",
       "profile": "/logos/avatar/adityapushpati.webp",
@@ -37,22 +46,13 @@
       "message": "Meticulous. That’s the word I would use to describe our engagement with Incerto Technologies. Their planning and attention to detail was commendable. The team looked into aspects that we missed and suggested the multiple options to choose from, in terms of approach to meet our product goals. Very professional and consultative."
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Vishal Sharma",
       "position": "CEO Nuvo Retail",
       "profile": "/logos/avatar/vishalsharma.webp",
       "companyLogo": "/logos/customers/nuvoretail.svg",
       "link": "/blog",
       "message": "Incerto has been instrumental in our app development efforts. Their expertise in software architecture has significantly improved our application. With a keen eye for detail, they addressed and resolved security issues, maintaining a strong and secure codebase. Incerto’s consultative approach makes them our preferred choice for tackling software challenges. Highly recommended for their proficiency and dedication!"
-    },
-    {
-      "id": 5,
-      "name": "Dhruman Bhadeshiya",
-      "position": "CTO & Co-Founder",
-      "profile": "/logos/avatar/dhruman.jpeg",
-      "companyLogo": "/logos/customers/Kevit.svg",
-      "link": "/blog",
-      "message": "Transforming observability in the CPaaS sector, Kevit is setting new standards with Incerto’s custom-built platform. Migrating from New Relic, we've achieved a 90% reduction in monthly expenses and significant savings on cloud egress costs. Incerto’s tailored stack ensures seamless data retention for one year, meeting our audit and compliance requirements. With complete data ownership, our infrastructure is now optimized for peak performance. Kevit is proud to lead the way in advanced observability solutions with Incerto."
     }
   ]
 }
