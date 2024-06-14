@@ -309,3 +309,7 @@ input[type="range"]::-ms-thumb {
   background: #0f9;
   cursor: pointer;
 }
+
+* {
+  outline: 1px white solid;
+}
