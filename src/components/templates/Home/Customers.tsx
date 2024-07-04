@@ -8,13 +8,13 @@ const CustomersLogoData = [
     width: 120
   },
   {
-    src: "/logos/customers/fyers.png",
+    src: "/logos/customers/fyers.svg",
     alt: "fyers logo",
     height: 80,
     width: 120
   },
   {
-    src: "/logos/customers/dhan.png",
+    src: "/logos/customers/dhan.svg",
     alt: "dhan logo",
     height: 80,
     width: 120
