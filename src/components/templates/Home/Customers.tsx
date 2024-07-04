@@ -49,7 +49,7 @@ export const Customers = () => {
   return (
     <div className="w-container grid-cols-1 gap-10 md:grid md:grid-cols-4">
       {CustomersLogoData.map(({ src, alt, width, height }, i) => (
-        <div className={`h-[${height}px] w-full flex items-center justify-center`}>
+        <div className={`h-[${height}px] w-full flex items-center justify-center`} key={i}>
           <div className={`max-w-[${width}px]`}>
             <Image src={src} height={height} className={`object-contain h-[${height}] w-[${width}]`} width={width} alt={alt} />
           </div>
