@@ -50,9 +50,9 @@ export const Customers = () => {
         {" "}
         at
       </h2>
-      <div className="grid grid-cols-2 max-w-[1000px] gap-12 md:gap-10 w-3/4 md:w-1/2 mx-auto md:grid-cols-3 mt-20">
+      <div className="grid grid-cols-2 max-w-[1000px] gap-y-7 gap-x-8 md:gap-10 w-3/4 md:w-1/2 mx-auto md:grid-cols-3 mt-2 md:mt-20">
         {CustomersLogoData.map(({ src, alt, width, height }, i) => (
-          <div className={`h-[120px] mt-10 md:mt-0 flex justify-start`} key={i}>
+          <div className={`md:h-[120px] mt-10 md:mt-0 flex justify-start`} key={i}>
             <Image src={src} className="h-[50px] w-full object-contain" height={height} width={width} alt={alt} />
           </div >
         ))}
