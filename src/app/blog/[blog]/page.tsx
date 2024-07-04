@@ -1,4 +1,3 @@
-import { getBlogById } from "@/action/getBlogById";
 import dynamic from "next/dynamic";
 import AppMarkDown from "@/components/modules/AppMarkDown";
 
@@ -93,7 +92,7 @@ export default async function page({ params }: Props) {
   const blog = data.blog as Blog;
 
   return (
-    <main className="h-full w-full bg-[#D5E5DF]  font-manrope">
+    <main className="h-full w-full bg-gray-200 font-manrope">
       <div className="w-container">
         <GoPreviousPageButton />
       </div>

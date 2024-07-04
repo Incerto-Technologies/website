@@ -32,13 +32,7 @@ export const Navbar = () => {
       >
         <div className="w-container flex items-center justify-between  px-5 py-8 md:px-20 lg:py-0">
           {/* Logo */}
-          <Link href="/" className="flex gap-3">
-            <Image
-              src={"/logos/logo_green.svg"}
-              alt="incerto logo green"
-              width={"17"}
-              height={"17"}
-            />
+          <Link href="/">
             <Image
               src={"/logos/logo100x100.webp"}
               alt="incerto logo"
