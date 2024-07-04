@@ -110,26 +110,7 @@ export default async function page({ params }: Props) {
         <div>
           <BookDemo />
         </div>
-        <div className="mt-[94px] md:mt-[144px]">
-          <h3 className="text-center text-[22px] font-bold leading-10 tracking-tighter text-black md:text-[32px]">
-            Read other articles
-          </h3>
-        </div>
       </section>
-      <div className="w-container mt-[24px] text-black md:mt-[40px]">
-        <div className="md:hidden">
-          {/* @ts-ignore */}
-          <BlogCardMobile {...blogs[0]} />
-        </div>
-        <div className="mx-auto hidden w-5/6 grid-cols-2  gap-11 text-black md:grid xl:grid-cols-3">
-          {blogs.map((blog, index) => (
-            <div key={index}>
-              {/* @ts-ignore */}
-              <BlogCard {...blog} />
-            </div>
-          ))}
-        </div>
-      </div>
       <Footer isBackground isTextWhite />
     </main>
   );
