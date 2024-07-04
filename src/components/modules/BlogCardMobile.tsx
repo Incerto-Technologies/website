@@ -9,13 +9,14 @@ interface Props extends Blog {
 export const BlogCardMobile = ({ image, title, author, _id }: Props) => {
   return (
     <BlogLink title={title}>
-      <div className="mt-16 mx-[20px] rounded-xl border border-gray-700 bg-gray-900 p-[20px]">
+      <div className="mt-16 mx-[20px] rounded-xl border border-gray-700 bg-gray-900 p-[12px]">
         <Image
-          className="rounded-md"
+          className="rounded-md w-full h-full object-cover"
           src={image}
           alt={title}
           width={350}
           height={200}
+
         />
         <h3 className="mt-[24px] font-bold leading-6">{title}</h3>
         <div className="mt-4 flex items-center gap-2.5">

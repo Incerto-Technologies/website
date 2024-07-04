@@ -58,56 +58,56 @@ const AppMarkDown = ({ markdown }: Props) => {
         },
         h1(props) {
           return (
-            <h1 className="my-[20px] text-[22px] font-bold leading-[46px] tracking-[-0.44px] text-black md:text-[32px] md:tracking-[-0.64px]">
+            <h1 className="my-[10px] text-[1.25rem] font-semibold leading-[22px] tracking-[-0.32px] text-black md:text-[32px] md:tracking-[-0.64px]">
               {props.children}
             </h1>
           );
         },
         h2(props) {
           return (
-            <h1 className="my-[20px] text-[22px] font-bold leading-[46px] tracking-[-0.44px] text-black md:text-[32px] md:tracking-[-0.64px]">
+            <h1 className="my-[10px] text-[1.25rem] font-semibod leading-[22px] tracking-[-0.32px] text-black md:text-[32px] md:tracking-[-0.64px]">
               {props.children}
             </h1>
           );
         },
         h3(props) {
           return (
-            <h1 className="my-[20px] text-[22px] font-bold leading-[46px] tracking-[-0.44px] text-black md:text-[32px] md:tracking-[-0.64px]">
+            <h1 className="my-[10px] text-[1.25rem] font-semibod leading-[22px] tracking-[-0.32px] text-black md:text-[32px] md:tracking-[-0.64px]">
               {props.children}
             </h1>
           );
         },
         h4(props) {
           return (
-            <h1 className="my-[20px] text-[22px] font-bold leading-[46px] tracking-[-0.44px] text-black md:text-[32px] md:tracking-[-0.64px]">
+            <h1 className="my-[10px] text-[1.25rem] font-semibod leading-[22px] tracking-[-0.32px] text-black md:text-[32px] md:tracking-[-0.64px]">
               {props.children}
             </h1>
           );
         },
         h5(props) {
           return (
-            <h1 className="my-[20px] text-[22px] font-bold leading-[46px] tracking-[-0.44px] text-black md:text-[32px] md:tracking-[-0.64px]">
+            <h1 className="my-[10px] text-[1.25rem] font-semibod leading-[22px] tracking-[-0.32px] text-black md:text-[32px] md:tracking-[-0.64px]">
               {props.children}
             </h1>
           );
         },
         h6(props) {
           return (
-            <h1 className="my-[20px] text-[22px] font-bold leading-[46px] tracking-[-0.44px] text-black md:text-[32px] md:tracking-[-0.64px]">
+            <h1 className="my-[10px] text-[1.25rem] font-semibod leading-[22px] tracking-[-0.32px] text-black md:text-[32px] md:tracking-[-0.64px]">
               {props.children}
             </h1>
           );
         },
         p(props) {
           return (
-            <p className="my-[20px] text-[16px] font-medium leading-[28px] tracking-[-0.32px] text-[#5D5D5D]">
+            <p className="my-[20px] text-[14px] font-medium leading-[28px] tracking-[-0.32px] text-black">
               {props.children}
             </p>
           );
         },
         ul(props) {
           return (
-            <ul className="my-[20px] ml-5 list-disc text-[16px] font-medium leading-[28px] tracking-[-0.32px] text-[#5D5D5D]">
+            <ul className="my-[20px] ml-5 list-disc text-[14px] font-medium leading-[28px] tracking-[-0.32px] text-black">
               {props.children}
             </ul>
           );

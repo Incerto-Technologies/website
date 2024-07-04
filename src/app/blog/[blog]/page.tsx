@@ -45,7 +45,7 @@ type Props = {
 
 
 const heebo = Heebo({
-  weight: '500', subsets: ['latin']
+  weight: '400', subsets: ['latin']
 })
 
 export const revalidate = 30;
