@@ -17,7 +17,9 @@ export const metadata: Metadata = {
       "Learn using open-source tools to achieve the most flexible observability and real impact.",
   },
 };
+
 export const revalidate = 30;
+
 export default async function Blog() {
   const blogs = await getBlogs();
 
