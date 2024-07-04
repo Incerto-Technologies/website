@@ -32,6 +32,7 @@ import { BookDemo } from "@/components/modules/BookDemo";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
+import { Heebo } from "next/font/google"
 
 import { Metadata } from "next";
 import { getBlogs } from "@/action/getBlogs";
@@ -41,6 +42,11 @@ import { Blog } from "@/types/Blogs";
 type Props = {
   params: { blog: string };
 };
+
+
+const heebo = Heebo({
+  weight: '500', subsets: ['latin']
+})
 
 export const revalidate = 30;
 
@@ -92,7 +98,7 @@ export default async function page({ params }: Props) {
   const blog = data.blog as Blog;
 
   return (
-    <main className="h-full w-full bg-gray-200 font-manrope">
+    <main className={"h-full w-full bg-gray-200 " + heebo.className}>
       <div className="w-container">
         <GoPreviousPageButton />
       </div>
