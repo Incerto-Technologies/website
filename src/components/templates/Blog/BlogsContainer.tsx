@@ -29,7 +29,7 @@ export const BlogsContainer = ({ blogs }: Props) => {
           <BlogCardMobile {...blog} key={index + blog.title} />
         ))}
       </div>
-      <div className="hidden grid-cols-1 gap-10 md:grid md:w-4/6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="hidden grid-cols-1 gap-x-[60px] gap-y-[80px] md:grid md:grid-cols-3">
         {Blogs.map((blog, index) => (
           <BlogCard {...blog} key={index} />
         ))}

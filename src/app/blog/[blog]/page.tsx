@@ -1,4 +1,3 @@
-import { getBlogById } from "@/action/getBlogById";
 import dynamic from "next/dynamic";
 import AppMarkDown from "@/components/modules/AppMarkDown";
 
@@ -33,6 +32,7 @@ import { BookDemo } from "@/components/modules/BookDemo";
 import { Footer } from "@/components/modules/Footer";
 import { connectDb } from "@/database";
 import { BlogModel } from "@/database/model/blog";
+import { Heebo } from "next/font/google"
 
 import { Metadata } from "next";
 import { getBlogs } from "@/action/getBlogs";
@@ -42,6 +42,11 @@ import { Blog } from "@/types/Blogs";
 type Props = {
   params: { blog: string };
 };
+
+
+const heebo = Heebo({
+  weight: '400', subsets: ['latin']
+})
 
 export const revalidate = 30;
 
@@ -93,7 +98,7 @@ export default async function page({ params }: Props) {
   const blog = data.blog as Blog;
 
   return (
-    <main className="h-full w-full bg-[#D5E5DF]  font-manrope">
+    <main className={"h-full w-full bg-gray-200 " + heebo.className}>
       <div className="w-container">
         <GoPreviousPageButton />
       </div>
@@ -105,26 +110,7 @@ export default async function page({ params }: Props) {
         <div>
           <BookDemo />
         </div>
-        <div className="mt-[94px] md:mt-[144px]">
-          <h3 className="text-center text-[22px] font-bold leading-10 tracking-tighter text-black md:text-[32px]">
-            Read other articles
-          </h3>
-        </div>
       </section>
-      <div className="w-container mt-[24px] text-black md:mt-[40px]">
-        <div className="md:hidden">
-          {/* @ts-ignore */}
-          <BlogCardMobile {...blogs[0]} />
-        </div>
-        <div className="mx-auto hidden w-5/6 grid-cols-2  gap-11 text-black md:grid xl:grid-cols-3">
-          {blogs.map((blog, index) => (
-            <div key={index}>
-              {/* @ts-ignore */}
-              <BlogCard {...blog} />
-            </div>
-          ))}
-        </div>
-      </div>
       <Footer isBackground isTextWhite />
     </main>
   );
