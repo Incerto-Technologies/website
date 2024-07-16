@@ -20,14 +20,4 @@ export const teamMembers = [
     image: "/images/team/shiva.webp",
     linkedIn: "https://www.linkedin.com/in/shivapundir/",
   },
-  {
-    name: "Shikhar Sharma",
-    position: "Co-founder",
-    experience: "Uni Cards",
-    education: "IIT Kanpur",
-    description:
-      "Hi, I’m Shikhar. I like solving hard problems that challenges my critical thinking skills and push me to learn and grow.",
-    image: "/images/team/shikhar.webp",
-    linkedIn: "https://www.linkedin.com/in/shikharparhoon/",
-  },
 ];

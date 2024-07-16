@@ -9,7 +9,7 @@ export const Team = () => {
         Real tech. Real people
       </h3>
       <div className="mt-10 flex w-full items-center justify-center md:mt-[71px]">
-        <div className="mx-auto grid grid-cols-1 gap-9 md:gap-x-[50px] md:gap-y-28 md:px-2 lg:grid-cols-3 lg:gap-x-[110px]">
+        <div className="mx-auto grid grid-cols-1 gap-9 md:gap-x-[50px] md:gap-y-28 md:px-2 lg:grid-cols-2 lg:gap-x-[110px]">
           {teamMembers.map((member) => (
             <div
               key={uuid()}
