@@ -10,8 +10,8 @@ const CustomersLogoData = [
   {
     src: "/logos/customers/fyers.png",
     alt: "fyers logo",
-    height: 80,
-    width: 120,
+    height: 120,
+    width: 160,
   },
   {
     src: "/logos/customers/dhan.svg",
