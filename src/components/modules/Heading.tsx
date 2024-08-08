@@ -8,6 +8,9 @@ export const Heading = () => {
     <>
       {/* <section> */}
       <section className="w-container mt-[54px] flex flex-col items-center justify-center gap-[32px] px-6 md:w-5/6 md:gap-[34px]">
+        <div className="flex justify-center">
+          <Link href="https://www.producthunt.com/posts/incerto-observability?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-incerto&#0045;observability" target="_blank"><Image src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=477450&theme=dark" alt="Incerto&#0032;Observability - Open&#0032;source&#0032;observability&#0032;fully&#0032;custom&#0045;built&#0032;on&#0032;your&#0032;infra | Product Hunt" style={{ width: "250px", height: "54px" }} width="250" height="54" /></Link>
+        </div>
         <div className="mx-auto w-full lg:w-5/6 2xl:w-4/6">
           <h1 className="relative text-center font-gotham text-[30px] font-bold leading-[40px]  tracking-[-1.2px] md:text-[44px] md:font-medium md:leading-[50px] md:tracking-tightest">
             {/* <TextAnimation text={heading} once className="" el="span" /> */}
