@@ -1,5 +1,7 @@
 import { Customers } from "./Customers";
 import { Heading } from "../../modules/Heading";
+import Link from "next/link";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
